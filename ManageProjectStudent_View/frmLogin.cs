@@ -7,28 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ManageProjectStudent_Interface;
-using Unity;
 
 namespace ManageProjectStudent_View
 {
     public partial class frmLogin : Form
     {
-        private IGarena _IG = Config.Container.Resolve<IGarena>();
         public frmLogin()
         {
             InitializeComponent();
         }
 
-        private void txtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        private void gunaGradientButton2_Click(object sender, EventArgs e)
         {
-            if (_IG._checkCharacterNumber(e.KeyChar))
-            {
-                e.Handled = true;
-                txtPhoneNumber.Focus();
-                string _STRMesge = "Không được nhập ký tự chữ, chỉ được nhập số.";
-                MessageBox.Show(_STRMesge, "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            this.Close();
         }
     }
 }

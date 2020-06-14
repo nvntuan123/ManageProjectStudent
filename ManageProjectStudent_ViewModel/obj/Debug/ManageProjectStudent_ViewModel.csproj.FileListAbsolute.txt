@@ -9,3 +9,14 @@ C:\Users\NhatTuan-PC\Desktop\ManageProjectStudent\ManageProjectStudent_ViewModel
 C:\Users\NhatTuan-PC\Desktop\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.csproj.CopyComplete
 C:\Users\NhatTuan-PC\Desktop\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.dll
 C:\Users\NhatTuan-PC\Desktop\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.pdb
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_ViewModel.dll
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_ViewModel.pdb
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_Interface.dll
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_Model.dll
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_Interface.pdb
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_Model.pdb
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.csprojAssemblyReference.cache
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.csproj.CopyComplete
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.dll
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.pdb

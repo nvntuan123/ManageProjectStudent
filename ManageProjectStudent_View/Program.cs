@@ -31,7 +31,7 @@ namespace ManageProjectStudent_View
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin_Test());
+            Application.Run(new frmLogin());
         }
     }
 }

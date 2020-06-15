@@ -10,3 +10,8 @@ C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectS
 C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.csproj.CoreCompileInputs.cache
 C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.dll
 C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.pdb
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_Model\bin\Debug\ManageProjectStudent_Model.dll
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_Model\bin\Debug\ManageProjectStudent_Model.pdb
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.csprojAssemblyReference.cache
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.dll
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.pdb

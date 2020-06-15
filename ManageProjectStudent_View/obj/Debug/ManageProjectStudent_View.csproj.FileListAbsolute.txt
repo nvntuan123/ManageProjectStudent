@@ -403,4 +403,9 @@ C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_
 C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmViewDeadlineProject.resources
 C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.exe.licenses
 C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmManageLanguageMain.resources
+<<<<<<< HEAD
 >>>>>>> Xong Form cua Thu
+=======
+C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmChangeLanguage.resources
+C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmManageMultiLanguage.resources
+>>>>>>> complete_form

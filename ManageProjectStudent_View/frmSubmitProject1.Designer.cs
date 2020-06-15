@@ -39,7 +39,7 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(59, 131);
+            this.gridControl1.Location = new System.Drawing.Point(58, 161);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(865, 165);
@@ -86,7 +86,7 @@
             this.btnNextListProject.ForeColor = System.Drawing.Color.Black;
             this.btnNextListProject.Image = null;
             this.btnNextListProject.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnNextListProject.Location = new System.Drawing.Point(385, 354);
+            this.btnNextListProject.Location = new System.Drawing.Point(384, 384);
             this.btnNextListProject.Name = "btnNextListProject";
             this.btnNextListProject.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(231)))), ((int)(((byte)(250)))));
             this.btnNextListProject.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
@@ -103,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(983, 513);
+            this.ClientSize = new System.Drawing.Size(999, 552);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.btnNextListProject);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -30,6 +30,11 @@
         {
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label6 = new System.Windows.Forms.Label();
@@ -53,11 +58,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -79,7 +79,7 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(22, 308);
+            this.gridControl1.Location = new System.Drawing.Point(32, 330);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(620, 181);
@@ -102,6 +102,41 @@
             this.gridView1.OptionsView.ShowViewCaption = true;
             this.gridView1.ViewCaption = "Danh sách đồ án";
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Mã đồ án";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Tên đồ án";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Tên môn học";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Ngày bắt đầu";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Ngày kết thúc";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
+            // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.comboBoxEdit1);
@@ -115,7 +150,7 @@
             this.groupControl1.Controls.Add(this.label3);
             this.groupControl1.Controls.Add(this.textEdit1);
             this.groupControl1.Controls.Add(this.label11);
-            this.groupControl1.Location = new System.Drawing.Point(22, 23);
+            this.groupControl1.Location = new System.Drawing.Point(32, 45);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(620, 261);
             this.groupControl1.TabIndex = 18;
@@ -180,7 +215,7 @@
             this.simpleButton11.Name = "simpleButton11";
             this.simpleButton11.Size = new System.Drawing.Size(130, 23);
             this.simpleButton11.TabIndex = 21;
-            this.simpleButton11.Text = "Add";
+            this.simpleButton11.Text = "Thêm";
             // 
             // label4
             // 
@@ -231,7 +266,7 @@
             this.groupControl4.Controls.Add(this.simpleButton6);
             this.groupControl4.Controls.Add(this.simpleButton8);
             this.groupControl4.Controls.Add(this.simpleButton5);
-            this.groupControl4.Location = new System.Drawing.Point(648, 308);
+            this.groupControl4.Location = new System.Drawing.Point(658, 330);
             this.groupControl4.Name = "groupControl4";
             this.groupControl4.Size = new System.Drawing.Size(313, 181);
             this.groupControl4.TabIndex = 17;
@@ -267,7 +302,7 @@
             this.groupControl2.Controls.Add(this.simpleButton10);
             this.groupControl2.Controls.Add(this.textEdit4);
             this.groupControl2.Controls.Add(this.groupBox1);
-            this.groupControl2.Location = new System.Drawing.Point(648, 23);
+            this.groupControl2.Location = new System.Drawing.Point(658, 45);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(313, 261);
             this.groupControl2.TabIndex = 16;
@@ -329,46 +364,11 @@
             this.radioButton3.Text = "Mã đồ án";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Mã đồ án";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Tên đồ án";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "Tên môn học";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.Caption = "Ngày bắt đầu";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "Ngày kết thúc";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
-            // 
             // frmManageProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(983, 513);
+            this.ClientSize = new System.Drawing.Size(999, 552);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupControl4);

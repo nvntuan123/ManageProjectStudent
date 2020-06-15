@@ -93,7 +93,7 @@
             this.btnViewDeadlineStudent.Name = "btnViewDeadlineStudent";
             this.btnViewDeadlineStudent.Size = new System.Drawing.Size(174, 50);
             this.btnViewDeadlineStudent.TabIndex = 4;
-            this.btnViewDeadlineStudent.Text = "Xem hạn nộp";
+            this.btnViewDeadlineStudent.Text = "Thay đổi ngôn ngữ";
             this.btnViewDeadlineStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnViewDeadlineStudent.UseVisualStyleBackColor = true;
             // 
@@ -109,7 +109,7 @@
             this.btnSubmitProject.Name = "btnSubmitProject";
             this.btnSubmitProject.Size = new System.Drawing.Size(174, 50);
             this.btnSubmitProject.TabIndex = 2;
-            this.btnSubmitProject.Text = "Nộp đồ án";
+            this.btnSubmitProject.Text = "Quản lý ngôn ngữ";
             this.btnSubmitProject.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSubmitProject.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSubmitProject.UseVisualStyleBackColor = true;

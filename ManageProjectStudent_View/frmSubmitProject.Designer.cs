@@ -103,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(983, 513);
+            this.ClientSize = new System.Drawing.Size(999, 552);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.btnNextListProject);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

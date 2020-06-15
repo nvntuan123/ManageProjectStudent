@@ -154,6 +154,12 @@
     <Compile Include="frmDecentralization.Designer.cs">
       <DependentUpon>frmDecentralization.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmChangeLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangeLanguage.Designer.cs">
+      <DependentUpon>frmChangeLanguage.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +223,12 @@
     <Compile Include="frmManageLanguageMain.Designer.cs">
       <DependentUpon>frmManageLanguageMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmManageMultiLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageMultiLanguage.Designer.cs">
+      <DependentUpon>frmManageMultiLanguage.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmManageProject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +276,9 @@
     <Compile Include="ThemeColorHome.cs" />
     <Compile Include="ThemeColorManageProjectLecturer.cs" />
     <Compile Include="ThemeColorManageProjectStudent.cs" />
+    <EmbeddedResource Include="frmChangeLanguage.resx">
+      <DependentUpon>frmChangeLanguage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmManageLanguageMain.resx">
       <DependentUpon>frmManageLanguageMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageMultiLanguage.resx">
+      <DependentUpon>frmManageMultiLanguage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmManageProject.resx">
       <DependentUpon>frmManageProject.cs</DependentUpon>

@@ -154,6 +154,12 @@
     <Compile Include="frmDecentralization.Designer.cs">
       <DependentUpon>frmDecentralization.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,62 @@
     <EmbeddedResource Include="frmDecentralization.resx">
       <DependentUpon>frmDecentralization.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="frmManageLanguageMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageLanguageMain.Designer.cs">
+      <DependentUpon>frmManageLanguageMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageProject.Designer.cs">
+      <DependentUpon>frmManageProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageProjectMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageProjectMain.Designer.cs">
+      <DependentUpon>frmManageProjectMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageProjectStudentMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageProjectStudentMain.Designer.cs">
+      <DependentUpon>frmManageProjectStudentMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSubmitProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubmitProject.Designer.cs">
+      <DependentUpon>frmSubmitProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSubmitProject1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubmitProject1.Designer.cs">
+      <DependentUpon>frmSubmitProject1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSumitProject2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSumitProject2.Designer.cs">
+      <DependentUpon>frmSumitProject2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewDeadlineProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewDeadlineProject.Designer.cs">
+      <DependentUpon>frmViewDeadlineProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThemeColorHome.cs" />
+    <Compile Include="ThemeColorManageProjectLecturer.cs" />
+    <Compile Include="ThemeColorManageProjectStudent.cs" />
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +287,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmManageStudentInformationMain.resx">
       <DependentUpon>frmManageStudentInformationMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageLanguageMain.resx">
+      <DependentUpon>frmManageLanguageMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageProject.resx">
+      <DependentUpon>frmManageProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageProjectMain.resx">
+      <DependentUpon>frmManageProjectMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageProjectStudentMain.resx">
+      <DependentUpon>frmManageProjectStudentMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubmitProject.resx">
+      <DependentUpon>frmSubmitProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubmitProject1.resx">
+      <DependentUpon>frmSubmitProject1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSumitProject2.resx">
+      <DependentUpon>frmSumitProject2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewDeadlineProject.resx">
+      <DependentUpon>frmViewDeadlineProject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

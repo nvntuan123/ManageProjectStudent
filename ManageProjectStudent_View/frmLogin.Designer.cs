@@ -36,8 +36,6 @@
             this.gunaTextBox2 = new Guna.UI.WinForms.GunaTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaCheckBox2 = new Guna.UI.WinForms.GunaCheckBox();
-            this.gunaCheckBox1 = new Guna.UI.WinForms.GunaCheckBox();
             this.gunaGradientButton2 = new Guna.UI.WinForms.GunaGradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,9 +57,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(265, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(264, 37);
+            this.label1.Size = new System.Drawing.Size(161, 37);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Here you can Login";
+            this.label1.Text = "Đăng Nhập";
             // 
             // label2
             // 
@@ -70,9 +68,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(176)))), ((int)(((byte)(242)))));
             this.label2.Location = new System.Drawing.Point(269, 114);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 16);
+            this.label2.Size = new System.Drawing.Size(84, 16);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Phone";
+            this.label2.Text = "Số điện thoại";
             // 
             // gunaTextBox1
             // 
@@ -120,9 +118,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(176)))), ((int)(((byte)(242)))));
             this.label3.Location = new System.Drawing.Point(269, 201);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 16);
+            this.label3.Size = new System.Drawing.Size(62, 16);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Password";
+            this.label3.Text = "Mật khẩu";
             // 
             // gunaGradientButton1
             // 
@@ -147,36 +145,8 @@
             this.gunaGradientButton1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaGradientButton1.Size = new System.Drawing.Size(111, 37);
             this.gunaGradientButton1.TabIndex = 9;
-            this.gunaGradientButton1.Text = "Login";
+            this.gunaGradientButton1.Text = "Đăng nhập";
             this.gunaGradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // gunaCheckBox2
-            // 
-            this.gunaCheckBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaCheckBox2.CheckedOffColor = System.Drawing.Color.Gray;
-            this.gunaCheckBox2.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaCheckBox2.FillColor = System.Drawing.Color.White;
-            this.gunaCheckBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaCheckBox2.ForeColor = System.Drawing.Color.White;
-            this.gunaCheckBox2.Location = new System.Drawing.Point(473, 277);
-            this.gunaCheckBox2.Name = "gunaCheckBox2";
-            this.gunaCheckBox2.Size = new System.Drawing.Size(76, 20);
-            this.gunaCheckBox2.TabIndex = 11;
-            this.gunaCheckBox2.Text = "Student";
-            // 
-            // gunaCheckBox1
-            // 
-            this.gunaCheckBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaCheckBox1.CheckedOffColor = System.Drawing.Color.Gray;
-            this.gunaCheckBox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaCheckBox1.FillColor = System.Drawing.Color.White;
-            this.gunaCheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaCheckBox1.ForeColor = System.Drawing.Color.White;
-            this.gunaCheckBox1.Location = new System.Drawing.Point(272, 277);
-            this.gunaCheckBox1.Name = "gunaCheckBox1";
-            this.gunaCheckBox1.Size = new System.Drawing.Size(79, 20);
-            this.gunaCheckBox1.TabIndex = 12;
-            this.gunaCheckBox1.Text = "Lecturer";
             // 
             // gunaGradientButton2
             // 
@@ -201,7 +171,7 @@
             this.gunaGradientButton2.OnPressedColor = System.Drawing.Color.Black;
             this.gunaGradientButton2.Size = new System.Drawing.Size(111, 37);
             this.gunaGradientButton2.TabIndex = 13;
-            this.gunaGradientButton2.Text = "Exit";
+            this.gunaGradientButton2.Text = "Thoát";
             this.gunaGradientButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaGradientButton2.Click += new System.EventHandler(this.gunaGradientButton2_Click);
             // 
@@ -212,8 +182,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(77)))));
             this.ClientSize = new System.Drawing.Size(846, 529);
             this.Controls.Add(this.gunaGradientButton2);
-            this.Controls.Add(this.gunaCheckBox1);
-            this.Controls.Add(this.gunaCheckBox2);
             this.Controls.Add(this.gunaGradientButton1);
             this.Controls.Add(this.gunaTextBox2);
             this.Controls.Add(this.label3);
@@ -240,8 +208,6 @@
         private Guna.UI.WinForms.GunaTextBox gunaTextBox2;
         private System.Windows.Forms.Label label3;
         private Guna.UI.WinForms.GunaGradientButton gunaGradientButton1;
-        private Guna.UI.WinForms.GunaCheckBox gunaCheckBox2;
-        private Guna.UI.WinForms.GunaCheckBox gunaCheckBox1;
         private Guna.UI.WinForms.GunaGradientButton gunaGradientButton2;
     }
 }

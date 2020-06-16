@@ -403,9 +403,26 @@ C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_
 C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmViewDeadlineProject.resources
 C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.exe.licenses
 C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmManageLanguageMain.resources
-<<<<<<< HEAD
 >>>>>>> Xong Form cua Thu
-=======
 C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmChangeLanguage.resources
 C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmManageMultiLanguage.resources
 >>>>>>> complete_form
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmCreateClass.resources
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_GUI.frmDecentralization.resources
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmChangeLanguage.resources
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmHome.resources
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmManageClass.resources
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmManageFaculty.resources
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmManageFacultyMain.resources
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmManageStudentInformation.resources
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmManageStudentInformationMain.resources
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmManageLanguageMain.resources
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmManageMultiLanguage.resources
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmManageProject.resources
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmManageProjectMain.resources
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmManageProjectStudentMain.resources
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmSubmitProject.resources
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmSubmitProject1.resources
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmSumitProject2.resources
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmViewDeadlineProject.resources
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.exe.licenses

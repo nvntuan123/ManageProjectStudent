@@ -2204,21 +2204,21 @@ The DefaultLevelIndent field is set to -1.</para>
     </member>
     <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Appearance">
       <summary>
-        <para>Gets the appearance settings used to paint the row&#39;s cells.</para>
+        <para>Provides access to appearance settings used to paint row cells. This property is obsolete, use <see cref="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.AppearanceCell"/> instead.</para>
       </summary>
-      <value>An <see cref="T:DevExpress.Utils.AppearanceObjectEx"/> object that provides the appearance settings used to paint the row&#39;s cells.</value>
+      <value>An <see cref="T:DevExpress.Utils.AppearanceObjectEx"/> object that provides appearance settings used to paint row cells.</value>
     </member>
     <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.AppearanceCell">
       <summary>
-        <para></para>
+        <para>Provides access to appearance settings used to paint row cells.</para>
       </summary>
-      <value></value>
+      <value>An <see cref="T:DevExpress.Utils.AppearanceObjectEx"/> object that provides appearance settings used to paint row cells.</value>
     </member>
     <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.AppearanceHeader">
       <summary>
-        <para></para>
+        <para>Provides access to appearance settings used to paint row headers.</para>
       </summary>
-      <value></value>
+      <value>An <see cref="T:DevExpress.Utils.AppearanceObjectEx"/> object that provides appearance settings used to paint row headers.</value>
     </member>
     <member name="M:DevExpress.XtraVerticalGrid.Rows.BaseRow.AssignTo(DevExpress.XtraVerticalGrid.Rows.BaseRow)">
       <summary>
@@ -2388,7 +2388,7 @@ The DefaultLevelIndent field is set to -1.</para>
     </member>
     <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.StyleName">
       <summary>
-        <para>Gets or sets the name of the custom style to be applied to the current row.</para>
+        <para>Gets or sets the name of the custom style to be applied to the current row. This property is obsolete, use <see cref="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.AppearanceCell"/> instead.</para>
       </summary>
       <value>A string representing the name of the custom style set for the current row.</value>
     </member>
@@ -4349,11 +4349,11 @@ This property is only in effect for the <see cref="T:DevExpress.XtraVerticalGrid
     </member>
     <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.DropRow(DevExpress.XtraVerticalGrid.Rows.BaseRow,DevExpress.XtraVerticalGrid.Rows.BaseRow,System.Boolean)">
       <summary>
-        <para></para>
+        <para>For internal use.</para>
       </summary>
-      <param name="source"></param>
-      <param name="destinationRow"></param>
-      <param name="insertBefore"></param>
+      <param name="source">For internal use.</param>
+      <param name="destinationRow">For internal use.</param>
+      <param name="insertBefore">For internal use.</param>
     </member>
     <member name="P:DevExpress.XtraVerticalGrid.VGridControlBase.EditingValue">
       <summary>

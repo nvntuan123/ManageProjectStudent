@@ -10,10 +10,8 @@ using System.Runtime.CompilerServices;
 
 namespace ManageProjectStudent_ViewModel
 {
-    public class GarenaViewModel : INotifyPropertyChanged, IGarena
+    public class GarenaViewModel : IGarena
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-
         public bool _checkCharacterNumber(char _C)
         {
             //if ((_C >= '0' && _C <= '9') && ((Keys)_C != Keys.Back) && ((Keys)_C != Keys.Enter))

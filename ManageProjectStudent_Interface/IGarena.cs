@@ -9,8 +9,6 @@ namespace ManageProjectStudent_Interface
 {
     public interface IGarena
     {
-        event PropertyChangedEventHandler PropertyChanged;
-
         bool _checkCharacterNumber(char _C);
     }
 }

@@ -15,7 +15,7 @@ namespace ManageProjectStudent_View
 
         public static void Register()
         {
-            Container.RegisterType<IGarena, GarenaViewModel>();
+            Container.RegisterType<IManageStudentInformation, ManageStudentInformationViewModel>();
         }
     }
 
@@ -31,7 +31,7 @@ namespace ManageProjectStudent_View
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmHome());
+            Application.Run(new frmManageStudentInformation());
         }
     }
 }

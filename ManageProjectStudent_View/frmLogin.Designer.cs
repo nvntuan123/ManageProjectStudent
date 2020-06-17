@@ -90,7 +90,6 @@
             this.gunaTextBox1.SelectedText = "";
             this.gunaTextBox1.Size = new System.Drawing.Size(277, 32);
             this.gunaTextBox1.TabIndex = 6;
-            this.gunaTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gunaTextBox1_KeyPress);
             // 
             // gunaTextBox2
             // 

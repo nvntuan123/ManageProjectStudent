@@ -33,7 +33,6 @@
             this.btnExitForm = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnManageClass = new System.Windows.Forms.Button();
-            this.btnCreateClass = new System.Windows.Forms.Button();
             this.btnManageFaculty = new System.Windows.Forms.Button();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.btnCloseChildForm = new System.Windows.Forms.Button();
@@ -49,7 +48,6 @@
             this.panelMenu.Controls.Add(this.btnExitForm);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Controls.Add(this.btnManageClass);
-            this.panelMenu.Controls.Add(this.btnCreateClass);
             this.panelMenu.Controls.Add(this.btnManageFaculty);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -65,7 +63,7 @@
             this.btnExitForm.ForeColor = System.Drawing.Color.White;
             this.btnExitForm.Image = ((System.Drawing.Image)(resources.GetObject("btnExitForm.Image")));
             this.btnExitForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExitForm.Location = new System.Drawing.Point(3, 261);
+            this.btnExitForm.Location = new System.Drawing.Point(3, 206);
             this.btnExitForm.Name = "btnExitForm";
             this.btnExitForm.Size = new System.Drawing.Size(171, 50);
             this.btnExitForm.TabIndex = 6;
@@ -100,23 +98,6 @@
             this.btnManageClass.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnManageClass.UseVisualStyleBackColor = true;
             this.btnManageClass.Click += new System.EventHandler(this.btnManageClass_Click);
-            // 
-            // btnCreateClass
-            // 
-            this.btnCreateClass.FlatAppearance.BorderSize = 0;
-            this.btnCreateClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreateClass.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateClass.ForeColor = System.Drawing.Color.White;
-            this.btnCreateClass.Image = ((System.Drawing.Image)(resources.GetObject("btnCreateClass.Image")));
-            this.btnCreateClass.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCreateClass.Location = new System.Drawing.Point(0, 205);
-            this.btnCreateClass.Name = "btnCreateClass";
-            this.btnCreateClass.Size = new System.Drawing.Size(174, 50);
-            this.btnCreateClass.TabIndex = 3;
-            this.btnCreateClass.Text = "Tạo lớp học";
-            this.btnCreateClass.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCreateClass.UseVisualStyleBackColor = true;
-            this.btnCreateClass.Click += new System.EventHandler(this.btnCreateClass_Click);
             // 
             // btnManageFaculty
             // 
@@ -206,7 +187,6 @@
         private System.Windows.Forms.Button btnExitForm;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Button btnManageClass;
-        private System.Windows.Forms.Button btnCreateClass;
         private System.Windows.Forms.Button btnManageFaculty;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Button btnCloseChildForm;

@@ -118,17 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnExitFormProjectStudent.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAT9JREFUSEvt
-        ljFOw0AQRd0RjgdKC5RI4T4gCgracBMEJwDBPWjMe9bEzmKvQpYVLpIvPcXzZzQ/shNrm8NW27YLWMEj
-        rCvhLneeREwqGoa+wgc4fF8Jd33CM4zDMf1Wb7AIq5rYeQrvcB3WIMxbeIiyutxtRpSDMLtbE2V1Zfcf
-        g7eFfw6XUWblDJxFmcjdEuWgbAPhu/DLz7BGoncVMxdhJcLfP1jRW4KLV2H10oveMqyR6JUFKxdDEu51
-        eNlQRb88WBkAXXiwM1Qx87dgxdzmmcvOH51yt0Q5KNuYkGHwv8HM9Lc38Hr0g/spZsqDDYAuNCy9X4XT
-        Lwt2MSShG+lFLxtOb/9g/HleIPjzvDJr6BjcC3O2o49/l1kOex5vX8Dj7RNMnZFLcFf+eKtoGH4Dd9A9
-        kwq4y7s5HXogappvCGCQyg1nnR0AAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="panelLogo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABGdBTUEAALGPC/xhBQAADINJREFUeF7t

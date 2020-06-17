@@ -61,13 +61,13 @@
             this.btnExitFormProjectStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExitFormProjectStudent.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExitFormProjectStudent.ForeColor = System.Drawing.Color.White;
-            this.btnExitFormProjectStudent.Image = ((System.Drawing.Image)(resources.GetObject("btnExitFormProjectStudent.Image")));
+            this.btnExitFormProjectStudent.Image = global::ManageProjectStudent_View.Properties.Resources.return_30px;
             this.btnExitFormProjectStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExitFormProjectStudent.Location = new System.Drawing.Point(0, 205);
             this.btnExitFormProjectStudent.Name = "btnExitFormProjectStudent";
             this.btnExitFormProjectStudent.Size = new System.Drawing.Size(171, 50);
             this.btnExitFormProjectStudent.TabIndex = 6;
-            this.btnExitFormProjectStudent.Text = "Thoát";
+            this.btnExitFormProjectStudent.Text = "Trở về";
             this.btnExitFormProjectStudent.UseVisualStyleBackColor = true;
             this.btnExitFormProjectStudent.Click += new System.EventHandler(this.btnExitFormProjectStudent_Click);
             // 
@@ -149,7 +149,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(371, 31);
+            this.lblTitle.Location = new System.Drawing.Point(355, 31);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(285, 22);
             this.lblTitle.TabIndex = 0;
@@ -173,6 +173,7 @@
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmManageProjectStudentMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmManageProjectStudentMain";
             this.panelMenu.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);

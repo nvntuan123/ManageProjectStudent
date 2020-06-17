@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace ManageProjectStudent_View
 {
-    public partial class frmSubmitProject1 : Form
+    public partial class frmManageLecturerInformation : Form
     {
-        public frmSubmitProject1()
+        public frmManageLecturerInformation()
         {
             InitializeComponent();
+        }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+
         }
     }
 }

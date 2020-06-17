@@ -25,13 +25,13 @@ namespace ManageProjectStudent_View
 
         private Color SelectThemeColor()
         {
-            int index = random.Next(ThemeColorManageProjectStudent.ColorList.Count);
+            int index = random.Next(ThemeColor.ColorList.Count);
             while (tempIndex == index)
             {
-                index = random.Next(ThemeColorManageProjectStudent.ColorList.Count);
+                index = random.Next(ThemeColor.ColorList.Count);
             }
             tempIndex = index;
-            string color = ThemeColorManageProjectStudent.ColorList[index];
+            string color = ThemeColor.ColorList[index];
             return ColorTranslator.FromHtml(color);
         }
 
@@ -48,9 +48,9 @@ namespace ManageProjectStudent_View
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new System.Drawing.Font("Arial", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     panelTitleBar.BackColor = color;
-                    panelLogo.BackColor = ThemeColorManageProjectStudent.ChangeColorBrightness(color, -0.3);
-                    ThemeColorManageProjectStudent.PrimaryColor = color;
-                    ThemeColorManageProjectStudent.SecondaryColor = ThemeColorManageProjectStudent.ChangeColorBrightness(color, -0.3);
+                    panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+                    ThemeColor.PrimaryColor = color;
+                    ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     btnCloseChildForm.Visible = true;
                 }
             }
@@ -90,7 +90,7 @@ namespace ManageProjectStudent_View
         private void btnSubmitProject_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ManageProjectStudent_View.frmSubmitProject(), sender);
-            lblTitle.Text = "Danh Sách Đồ Án";
+            lblTitle.Text = "Nộp File Cho Nhiệm Vụ";
         }
 
         private void btnViewDeadlineStudent_Click(object sender, EventArgs e)
@@ -101,6 +101,9 @@ namespace ManageProjectStudent_View
         private void btnExitFormProjectStudent_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            this.Hide();
+            frmHome frmHome = new frmHome();
+            frmHome.ShowDialog();
             this.Close();
         }
 

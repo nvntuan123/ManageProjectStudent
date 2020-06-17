@@ -94,7 +94,7 @@
             this.btnManageClass.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageClass.Location = new System.Drawing.Point(3, 149);
             this.btnManageClass.Name = "btnManageClass";
-            this.btnManageClass.Size = new System.Drawing.Size(174, 50);
+            this.btnManageClass.Size = new System.Drawing.Size(171, 50);
             this.btnManageClass.TabIndex = 4;
             this.btnManageClass.Text = "Quản lý lớp";
             this.btnManageClass.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManageLanguageMain));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnExitFormProjectStudent = new System.Windows.Forms.Button();
+            this.btnExitFormManageLanguage = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.btnViewDeadlineStudent = new System.Windows.Forms.Button();
-            this.btnSubmitProject = new System.Windows.Forms.Button();
+            this.btnChangeLanguage = new System.Windows.Forms.Button();
+            this.btnManageLanguage = new System.Windows.Forms.Button();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -45,30 +45,31 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(77)))));
-            this.panelMenu.Controls.Add(this.btnExitFormProjectStudent);
+            this.panelMenu.Controls.Add(this.btnExitFormManageLanguage);
             this.panelMenu.Controls.Add(this.panelLogo);
-            this.panelMenu.Controls.Add(this.btnViewDeadlineStudent);
-            this.panelMenu.Controls.Add(this.btnSubmitProject);
+            this.panelMenu.Controls.Add(this.btnChangeLanguage);
+            this.panelMenu.Controls.Add(this.btnManageLanguage);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(174, 639);
             this.panelMenu.TabIndex = 3;
             // 
-            // btnExitFormProjectStudent
+            // btnExitFormManageLanguage
             // 
-            this.btnExitFormProjectStudent.FlatAppearance.BorderSize = 0;
-            this.btnExitFormProjectStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExitFormProjectStudent.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExitFormProjectStudent.ForeColor = System.Drawing.Color.White;
-            this.btnExitFormProjectStudent.Image = ((System.Drawing.Image)(resources.GetObject("btnExitFormProjectStudent.Image")));
-            this.btnExitFormProjectStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExitFormProjectStudent.Location = new System.Drawing.Point(0, 205);
-            this.btnExitFormProjectStudent.Name = "btnExitFormProjectStudent";
-            this.btnExitFormProjectStudent.Size = new System.Drawing.Size(171, 50);
-            this.btnExitFormProjectStudent.TabIndex = 6;
-            this.btnExitFormProjectStudent.Text = "Thoát";
-            this.btnExitFormProjectStudent.UseVisualStyleBackColor = true;
+            this.btnExitFormManageLanguage.FlatAppearance.BorderSize = 0;
+            this.btnExitFormManageLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExitFormManageLanguage.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitFormManageLanguage.ForeColor = System.Drawing.Color.White;
+            this.btnExitFormManageLanguage.Image = global::ManageProjectStudent_View.Properties.Resources.return_30px;
+            this.btnExitFormManageLanguage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExitFormManageLanguage.Location = new System.Drawing.Point(0, 205);
+            this.btnExitFormManageLanguage.Name = "btnExitFormManageLanguage";
+            this.btnExitFormManageLanguage.Size = new System.Drawing.Size(171, 50);
+            this.btnExitFormManageLanguage.TabIndex = 6;
+            this.btnExitFormManageLanguage.Text = "Trở về";
+            this.btnExitFormManageLanguage.UseVisualStyleBackColor = true;
+            this.btnExitFormManageLanguage.Click += new System.EventHandler(this.btnExitFormManageLanguage_Click);
             // 
             // panelLogo
             // 
@@ -81,38 +82,40 @@
             this.panelLogo.Size = new System.Drawing.Size(174, 87);
             this.panelLogo.TabIndex = 5;
             // 
-            // btnViewDeadlineStudent
+            // btnChangeLanguage
             // 
-            this.btnViewDeadlineStudent.FlatAppearance.BorderSize = 0;
-            this.btnViewDeadlineStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewDeadlineStudent.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewDeadlineStudent.ForeColor = System.Drawing.Color.White;
-            this.btnViewDeadlineStudent.Image = ((System.Drawing.Image)(resources.GetObject("btnViewDeadlineStudent.Image")));
-            this.btnViewDeadlineStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnViewDeadlineStudent.Location = new System.Drawing.Point(0, 149);
-            this.btnViewDeadlineStudent.Name = "btnViewDeadlineStudent";
-            this.btnViewDeadlineStudent.Size = new System.Drawing.Size(174, 50);
-            this.btnViewDeadlineStudent.TabIndex = 4;
-            this.btnViewDeadlineStudent.Text = "Thay đổi ngôn ngữ";
-            this.btnViewDeadlineStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnViewDeadlineStudent.UseVisualStyleBackColor = true;
+            this.btnChangeLanguage.FlatAppearance.BorderSize = 0;
+            this.btnChangeLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangeLanguage.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangeLanguage.ForeColor = System.Drawing.Color.White;
+            this.btnChangeLanguage.Image = ((System.Drawing.Image)(resources.GetObject("btnChangeLanguage.Image")));
+            this.btnChangeLanguage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChangeLanguage.Location = new System.Drawing.Point(0, 149);
+            this.btnChangeLanguage.Name = "btnChangeLanguage";
+            this.btnChangeLanguage.Size = new System.Drawing.Size(174, 50);
+            this.btnChangeLanguage.TabIndex = 4;
+            this.btnChangeLanguage.Text = "Thay đổi ngôn ngữ";
+            this.btnChangeLanguage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnChangeLanguage.UseVisualStyleBackColor = true;
+            this.btnChangeLanguage.Click += new System.EventHandler(this.btnChangeLanguage_Click);
             // 
-            // btnSubmitProject
+            // btnManageLanguage
             // 
-            this.btnSubmitProject.FlatAppearance.BorderSize = 0;
-            this.btnSubmitProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmitProject.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmitProject.ForeColor = System.Drawing.Color.White;
-            this.btnSubmitProject.Image = ((System.Drawing.Image)(resources.GetObject("btnSubmitProject.Image")));
-            this.btnSubmitProject.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSubmitProject.Location = new System.Drawing.Point(0, 93);
-            this.btnSubmitProject.Name = "btnSubmitProject";
-            this.btnSubmitProject.Size = new System.Drawing.Size(174, 50);
-            this.btnSubmitProject.TabIndex = 2;
-            this.btnSubmitProject.Text = "Quản lý ngôn ngữ";
-            this.btnSubmitProject.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSubmitProject.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSubmitProject.UseVisualStyleBackColor = true;
+            this.btnManageLanguage.FlatAppearance.BorderSize = 0;
+            this.btnManageLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageLanguage.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageLanguage.ForeColor = System.Drawing.Color.White;
+            this.btnManageLanguage.Image = ((System.Drawing.Image)(resources.GetObject("btnManageLanguage.Image")));
+            this.btnManageLanguage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageLanguage.Location = new System.Drawing.Point(0, 93);
+            this.btnManageLanguage.Name = "btnManageLanguage";
+            this.btnManageLanguage.Size = new System.Drawing.Size(174, 50);
+            this.btnManageLanguage.TabIndex = 2;
+            this.btnManageLanguage.Text = "Quản lý ngôn ngữ";
+            this.btnManageLanguage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageLanguage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnManageLanguage.UseVisualStyleBackColor = true;
+            this.btnManageLanguage.Click += new System.EventHandler(this.btnManageLanguage_Click);
             // 
             // panelTitleBar
             // 
@@ -138,6 +141,7 @@
             this.btnCloseChildForm.Size = new System.Drawing.Size(75, 87);
             this.btnCloseChildForm.TabIndex = 1;
             this.btnCloseChildForm.UseVisualStyleBackColor = true;
+            this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
             // 
             // lblTitle
             // 
@@ -169,6 +173,7 @@
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmManageLanguageMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmManageLanguageMain";
             this.panelMenu.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);
@@ -180,10 +185,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Button btnExitFormProjectStudent;
+        private System.Windows.Forms.Button btnExitFormManageLanguage;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Button btnViewDeadlineStudent;
-        private System.Windows.Forms.Button btnSubmitProject;
+        private System.Windows.Forms.Button btnChangeLanguage;
+        private System.Windows.Forms.Button btnManageLanguage;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Button btnCloseChildForm;
         private System.Windows.Forms.Label lblTitle;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManageProjectStudent_GUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,13 +24,13 @@ namespace ManageProjectStudent_View
 
         private Color SelectThemeColor()
         {
-            int index = random.Next(ThemeColorHome.ColorList.Count);
+            int index = random.Next(ThemeColor.ColorList.Count);
             while (tempIndex == index)
             {
-                index = random.Next(ThemeColorHome.ColorList.Count);
+                index = random.Next(ThemeColor.ColorList.Count);
             }
             tempIndex = index;
-            string color = ThemeColorHome.ColorList[index];
+            string color = ThemeColor.ColorList[index];
             return ColorTranslator.FromHtml(color);
 
         }
@@ -91,6 +92,22 @@ namespace ManageProjectStudent_View
                 panelMenuHome.Height = 647;
                 panelMenuHome.Width = 264;
             }
+        }
+
+        private void itemManageMultiLanguage_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        {
+            this.Hide();
+            frmManageLanguageMain frmManageLanguageMain = new frmManageLanguageMain();
+            frmManageLanguageMain.ShowDialog();
+            this.Close();
+        }
+
+        private void itemDecentralization_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        {
+            this.Hide();
+            frmDecentralization frmDecentralization = new frmDecentralization();
+            frmDecentralization.ShowDialog();
+            this.Close();
         }
     }
 }

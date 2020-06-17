@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ManageProjectStudent_View
 {
-    public partial class frmSumitProject2 : Form
+    public partial class frmAddGroupForSubject : Form
     {
-        public frmSumitProject2()
+        public frmAddGroupForSubject()
         {
             InitializeComponent();
         }

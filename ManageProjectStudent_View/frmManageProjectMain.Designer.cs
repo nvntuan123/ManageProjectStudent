@@ -61,13 +61,13 @@
             this.btnExitForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExitForm.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExitForm.ForeColor = System.Drawing.Color.White;
-            this.btnExitForm.Image = ((System.Drawing.Image)(resources.GetObject("btnExitForm.Image")));
+            this.btnExitForm.Image = global::ManageProjectStudent_View.Properties.Resources.return_30px;
             this.btnExitForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExitForm.Location = new System.Drawing.Point(0, 205);
             this.btnExitForm.Name = "btnExitForm";
             this.btnExitForm.Size = new System.Drawing.Size(174, 50);
             this.btnExitForm.TabIndex = 6;
-            this.btnExitForm.Text = "Thoát";
+            this.btnExitForm.Text = "Trở về";
             this.btnExitForm.UseVisualStyleBackColor = true;
             this.btnExitForm.Click += new System.EventHandler(this.btnExitForm_Click);
             // 
@@ -173,6 +173,7 @@
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmManageProjectMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmManageProjectMain";
             this.panelMenu.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);

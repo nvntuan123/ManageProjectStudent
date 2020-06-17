@@ -9,3 +9,24 @@ C:\Users\NhatTuan-PC\Desktop\ManageProjectStudent\ManageProjectStudent_ViewModel
 C:\Users\NhatTuan-PC\Desktop\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.csproj.CopyComplete
 C:\Users\NhatTuan-PC\Desktop\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.dll
 C:\Users\NhatTuan-PC\Desktop\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.pdb
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_ViewModel.dll
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_ViewModel.pdb
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_Interface.dll
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_Model.dll
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_Interface.pdb
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_Model.pdb
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.csprojAssemblyReference.cache
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.csproj.CopyComplete
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.dll
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.pdb
+C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_ViewModel.dll
+C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_ViewModel.pdb
+C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_Interface.dll
+C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_Model.dll
+C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_Interface.pdb
+C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_Model.pdb
+C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.csprojAssemblyReference.cache
+C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.csproj.CopyComplete
+C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.dll
+C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.pdb

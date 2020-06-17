@@ -15,7 +15,7 @@ namespace ManageProjectStudent_View
 
         public static void Register()
         {
-            Container.RegisterType<IGarena, GarenaViewModel>();
+            Container.RegisterType<IManageStudentInformation, ManageStudentInformationViewModel>();
         }
     }
 

@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ManageProjectStudent_Interface;
+using Unity;
 
 namespace ManageProjectStudent_View
 {
     public partial class frmManageStudentInformation : Form
     {
+        private IManageStudentInformation IMSI = Config.Container.Resolve<IManageStudentInformation>();
         public frmManageStudentInformation()
         {
             InitializeComponent();
+
+            txtPhoneNumber.KeyPress += new KeyPressEventHandler(IMSI.txtPhoneNumber_KeyPress);
+            txtID.KeyPress += new KeyPressEventHandler(IMSI.txtID_KeyPress);
+            txtFullName.KeyPress += new KeyPressEventHandler(IMSI.txtFullName_KeyPress);
         }
     }
 }

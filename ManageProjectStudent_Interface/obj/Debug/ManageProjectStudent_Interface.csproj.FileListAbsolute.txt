@@ -3,3 +3,8 @@ C:\Users\NhatTuan-PC\Desktop\ManageProjectStudent\ManageProjectStudent_Interface
 C:\Users\NhatTuan-PC\Desktop\ManageProjectStudent\ManageProjectStudent_Interface\obj\Debug\ManageProjectStudent_Interface.csproj.CoreCompileInputs.cache
 C:\Users\NhatTuan-PC\Desktop\ManageProjectStudent\ManageProjectStudent_Interface\obj\Debug\ManageProjectStudent_Interface.dll
 C:\Users\NhatTuan-PC\Desktop\ManageProjectStudent\ManageProjectStudent_Interface\obj\Debug\ManageProjectStudent_Interface.pdb
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_Interface\bin\Debug\ManageProjectStudent_Interface.dll
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_Interface\bin\Debug\ManageProjectStudent_Interface.pdb
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_Interface\obj\Debug\ManageProjectStudent_Interface.dll
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_Interface\obj\Debug\ManageProjectStudent_Interface.pdb
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_Interface\obj\Debug\ManageProjectStudent_Interface.csprojAssemblyReference.cache

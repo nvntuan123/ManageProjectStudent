@@ -110,11 +110,7 @@ namespace ManageProjectStudent_View
             lblTitle.Text = "Quản lý lớp";
         }
 
-        private void btnCreateClass_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new ManageProjectStudent_View.frmCreateClass(), sender);
-            lblTitle.Text = "Tạo lớp học";
-        }
+       
 
         private void btnExitForm_Click(object sender, EventArgs e)
         {

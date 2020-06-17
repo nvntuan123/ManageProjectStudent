@@ -10,9 +10,9 @@ using System.Runtime.CompilerServices;
 
 namespace ManageProjectStudent_ViewModel
 {
-    public class GarenaViewModel : IGarena
+    public class GarenaViewModel
     {
-        public bool _checkCharacterNumber(char _C)
+        public static bool _checkCharacterNumber(char _C)
         {
             //if ((_C >= '0' && _C <= '9') && ((Keys)_C != Keys.Back) && ((Keys)_C != Keys.Enter))
             //{
@@ -23,6 +23,15 @@ namespace ManageProjectStudent_ViewModel
                 && ((Keys)_C != Keys.Back)
                 && ((Keys)_C != Keys.Enter)
                 );
+        }
+        public static bool _checkCharacterChar(char _C)
+        {
+            if (((_C >= 65 && _C <= 90) || (_C >= 97 && _C <= 122))
+                && ((Keys)_C != Keys.Back) && ((Keys)_C != Keys.Enter))
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

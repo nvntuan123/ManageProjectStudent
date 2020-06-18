@@ -22,6 +22,18 @@ namespace ManageProjectStudent_View
             txtPhoneNumber.KeyPress += new KeyPressEventHandler(IMSI.txtPhoneNumber_KeyPress);
             txtID.KeyPress += new KeyPressEventHandler(IMSI.txtID_KeyPress);
             txtFullName.KeyPress += new KeyPressEventHandler(IMSI.txtFullName_KeyPress);
+            txtEmail.KeyPress += new KeyPressEventHandler(IMSI.txtEmail_KeyPress);
+            txtIDCard.KeyPress += new KeyPressEventHandler(IMSI.txtIDCard_KeyPress);
+            radNam.CheckedChanged += new EventHandler(IMSI.radNam_CheckedChanged);
+            radNu.CheckedChanged += new EventHandler(IMSI.radNu_CheckedChanged);
         }
+        
+
+        private void txtAddress_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        
     }
 }

@@ -424,3 +424,9 @@ C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProject
 C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.exe
 C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.pdb
 >>>>>>> 0346127f21a2602d002befd99ac1e28ee35353c7
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmAddGroupForSubject.resources
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmAddStudentSubject.resources
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmManageCourse.resources
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmManageLecturerInformation.resources
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmManageSubject.resources
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_View\obj\Debug\ManageProjectStudent_View.frmManageSubjectMain.resources

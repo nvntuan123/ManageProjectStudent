@@ -33,5 +33,21 @@ namespace ManageProjectStudent_ViewModel
             }
             return false;
         }
+        public static bool checkEmail(string _STR_Email)
+        {
+            return (_STR_Email.IndexOf("@gmail.com") >= 0);
+        }
+        public static bool checkIDCard(string _STR_IDCard)
+        {
+            if ((_STR_IDCard.Length > 9) || (_STR_IDCard.Length <= 10))
+                return false;
+            return true;
+        }
+        public static bool checkPhoneNumber(string _STR_PhoneNumber)
+        {
+            if ((_STR_PhoneNumber.Length < 10) || (_STR_PhoneNumber.Length > 10))
+                return false;
+            return true;
+        }
     }
 }

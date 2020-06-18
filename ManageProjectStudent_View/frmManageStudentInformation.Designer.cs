@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtIDCard = new System.Windows.Forms.TextBox();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colStudentID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -53,7 +52,6 @@
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -64,12 +62,15 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.radUnavailable = new System.Windows.Forms.RadioButton();
+            this.radAvailable = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radNu = new System.Windows.Forms.RadioButton();
+            this.radNam = new System.Windows.Forms.RadioButton();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -78,14 +79,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(1041, 60);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(187, 21);
-            this.textBox8.TabIndex = 35;
             // 
             // label9
             // 
@@ -98,13 +91,14 @@
             this.label9.TabIndex = 34;
             this.label9.Text = "Trạng thái";
             // 
-            // textBox7
+            // txtAddress
             // 
-            this.textBox7.Location = new System.Drawing.Point(579, 279);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(187, 21);
-            this.textBox7.TabIndex = 33;
+            this.txtAddress.Location = new System.Drawing.Point(579, 279);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(187, 21);
+            this.txtAddress.TabIndex = 33;
+            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddress_KeyPress);
             // 
             // label8
             // 
@@ -128,13 +122,13 @@
             this.simpleButton1.TabIndex = 28;
             this.simpleButton1.Text = "Thêm";
             // 
-            // textBox5
+            // txtEmail
             // 
-            this.textBox5.Location = new System.Drawing.Point(579, 139);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(187, 21);
-            this.textBox5.TabIndex = 26;
+            this.txtEmail.Location = new System.Drawing.Point(579, 139);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(187, 21);
+            this.txtEmail.TabIndex = 26;
             // 
             // txtPhoneNumber
             // 
@@ -144,13 +138,13 @@
             this.txtPhoneNumber.Size = new System.Drawing.Size(187, 21);
             this.txtPhoneNumber.TabIndex = 25;
             // 
-            // textBox6
+            // txtIDCard
             // 
-            this.textBox6.Location = new System.Drawing.Point(579, 208);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(187, 21);
-            this.textBox6.TabIndex = 27;
+            this.txtIDCard.Location = new System.Drawing.Point(579, 208);
+            this.txtIDCard.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIDCard.Name = "txtIDCard";
+            this.txtIDCard.Size = new System.Drawing.Size(187, 21);
+            this.txtIDCard.TabIndex = 27;
             // 
             // gridControl1
             // 
@@ -341,21 +335,14 @@
             this.simpleButton4.TabIndex = 31;
             this.simpleButton4.Text = "Lưu";
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(1041, 212);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(187, 21);
-            this.textBox4.TabIndex = 23;
-            // 
             // txtFullName
             // 
             this.txtFullName.Location = new System.Drawing.Point(139, 139);
             this.txtFullName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(187, 21);
-            this.txtFullName.TabIndex = 21;            // 
+            this.txtFullName.TabIndex = 21;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -443,26 +430,27 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.textBox10);
+            this.groupControl1.Controls.Add(this.comboBox3);
+            this.groupControl1.Controls.Add(this.comboBox2);
+            this.groupControl1.Controls.Add(this.comboBox1);
+            this.groupControl1.Controls.Add(this.radUnavailable);
+            this.groupControl1.Controls.Add(this.radAvailable);
             this.groupControl1.Controls.Add(this.label12);
-            this.groupControl1.Controls.Add(this.radioButton2);
-            this.groupControl1.Controls.Add(this.radioButton1);
+            this.groupControl1.Controls.Add(this.radNu);
+            this.groupControl1.Controls.Add(this.radNam);
             this.groupControl1.Controls.Add(this.label11);
-            this.groupControl1.Controls.Add(this.textBox9);
             this.groupControl1.Controls.Add(this.label10);
             this.groupControl1.Controls.Add(this.simpleButton4);
             this.groupControl1.Controls.Add(this.simpleButton2);
-            this.groupControl1.Controls.Add(this.textBox8);
             this.groupControl1.Controls.Add(this.simpleButton3);
             this.groupControl1.Controls.Add(this.label9);
-            this.groupControl1.Controls.Add(this.textBox7);
+            this.groupControl1.Controls.Add(this.txtAddress);
             this.groupControl1.Controls.Add(this.label8);
             this.groupControl1.Controls.Add(this.simpleButton1);
-            this.groupControl1.Controls.Add(this.textBox6);
-            this.groupControl1.Controls.Add(this.textBox5);
+            this.groupControl1.Controls.Add(this.txtIDCard);
+            this.groupControl1.Controls.Add(this.txtEmail);
             this.groupControl1.Controls.Add(this.txtPhoneNumber);
             this.groupControl1.Controls.Add(this.dateEdit1);
-            this.groupControl1.Controls.Add(this.textBox4);
             this.groupControl1.Controls.Add(this.txtFullName);
             this.groupControl1.Controls.Add(this.label7);
             this.groupControl1.Controls.Add(this.label6);
@@ -479,13 +467,53 @@
             this.groupControl1.TabIndex = 43;
             this.groupControl1.Text = "Thông tin";
             // 
-            // textBox10
+            // comboBox3
             // 
-            this.textBox10.Location = new System.Drawing.Point(1041, 283);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(187, 21);
-            this.textBox10.TabIndex = 42;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(1011, 284);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(188, 21);
+            this.comboBox3.TabIndex = 46;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(1011, 212);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(188, 21);
+            this.comboBox2.TabIndex = 45;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(1011, 143);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(188, 21);
+            this.comboBox1.TabIndex = 44;
+            // 
+            // radUnavailable
+            // 
+            this.radUnavailable.AutoSize = true;
+            this.radUnavailable.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radUnavailable.Location = new System.Drawing.Point(1155, 60);
+            this.radUnavailable.Name = "radUnavailable";
+            this.radUnavailable.Size = new System.Drawing.Size(53, 24);
+            this.radUnavailable.TabIndex = 43;
+            this.radUnavailable.TabStop = true;
+            this.radUnavailable.Text = "Nghỉ";
+            this.radUnavailable.UseVisualStyleBackColor = true;
+            // 
+            // radAvailable
+            // 
+            this.radAvailable.AutoSize = true;
+            this.radAvailable.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.radAvailable.Location = new System.Drawing.Point(1011, 60);
+            this.radAvailable.Name = "radAvailable";
+            this.radAvailable.Size = new System.Drawing.Size(89, 21);
+            this.radAvailable.TabIndex = 42;
+            this.radAvailable.TabStop = true;
+            this.radAvailable.Text = "Đang học";
+            this.radAvailable.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
@@ -496,31 +524,32 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(42, 17);
             this.label12.TabIndex = 41;
-            this.label12.Text = "Khóa";
+            this.label12.Text = "Khoa";
             // 
-            // radioButton2
+            // radNu
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(283, 280);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(44, 24);
-            this.radioButton2.TabIndex = 40;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nữ";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radNu.AutoSize = true;
+            this.radNu.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radNu.Location = new System.Drawing.Point(283, 280);
+            this.radNu.Name = "radNu";
+            this.radNu.Size = new System.Drawing.Size(44, 24);
+            this.radNu.TabIndex = 40;
+            this.radNu.TabStop = true;
+            this.radNu.Text = "Nữ";
+            this.radNu.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radNam
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.radioButton1.Location = new System.Drawing.Point(139, 280);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(57, 21);
-            this.radioButton1.TabIndex = 39;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nam";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radNam.AutoSize = true;
+            this.radNam.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.radNam.Location = new System.Drawing.Point(139, 280);
+            this.radNam.Name = "radNam";
+            this.radNam.Size = new System.Drawing.Size(57, 21);
+            this.radNam.TabIndex = 39;
+            this.radNam.TabStop = true;
+            this.radNam.Text = "Nam";
+            this.radNam.UseVisualStyleBackColor = true;
+
             // 
             // label11
             // 
@@ -532,14 +561,6 @@
             this.label11.Size = new System.Drawing.Size(62, 17);
             this.label11.TabIndex = 38;
             this.label11.Text = "Giới tính";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(1041, 143);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(187, 21);
-            this.textBox9.TabIndex = 37;
             // 
             // label10
             // 
@@ -576,16 +597,14 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label8;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private DevExpress.XtraGrid.Columns.GridColumn colSex;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtIDCard;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colStudentID;
@@ -601,7 +620,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -613,12 +631,15 @@
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraGrid.Columns.GridColumn colCourse;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radNu;
+        private System.Windows.Forms.RadioButton radNam;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.RadioButton radUnavailable;
+        private System.Windows.Forms.RadioButton radAvailable;
     }
 }

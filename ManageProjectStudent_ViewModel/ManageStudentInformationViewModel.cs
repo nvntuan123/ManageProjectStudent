@@ -40,5 +40,33 @@ namespace ManageProjectStudent_ViewModel
                 MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        public void txtIDCard_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (GarenaViewModel._checkCharacterNumber(e.KeyChar))
+            {
+                e.Handled = true;
+                ((TextBox)sender).Focus();
+                string _STRMesge = "Không được nhập ký tự chữ, chỉ được nhập số.";
+                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        public void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+        public void radNam_CheckedChanged(object sender, EventArgs e)
+        {
+            if (((RadioButton)sender).Checked)
+            {
+                
+            }
+        }
+        public void radNu_CheckedChanged(object sender, EventArgs e)
+        {
+            if (((RadioButton)sender).Checked)
+            {
+
+            }
+        }
     }
 }

@@ -9822,7 +9822,7 @@ Allows you to initialize the data source and (optionally) return an initial batc
       <summary>
         <para>Specifies the parameter type.</para>
       </summary>
-      <value>The parameter type.</value>
+      <value>A <see cref="T:System.Type"/> value, specifying the parameter type.</value>
     </member>
     <member name="P:DevExpress.DataAccess.DataSourceParameterBase.Value">
       <summary>
@@ -9854,7 +9854,7 @@ Allows you to initialize the data source and (optionally) return an initial batc
     </member>
     <member name="T:DevExpress.DataAccess.Expression">
       <summary>
-        <para>An expression assigned to a data source parameter.</para>
+        <para>An expression assigned to a <see cref="T:DevExpress.DataAccess.Sql.QueryParameter"/>, <see cref="T:DevExpress.DataAccess.EntityFramework.EFParameter"/>, or <see cref="T:DevExpress.DataAccess.ObjectBinding.Parameter"/>.</para>
       </summary>
     </member>
     <member name="M:DevExpress.DataAccess.Expression.#ctor">
@@ -17378,20 +17378,20 @@ Also <see cref="P:DevExpress.Utils.FormatInfo.FormatString"/> is set to &quot;d&
     </member>
     <member name="T:DevExpress.XtraEditors.Filtering.IFilterParameter">
       <summary>
-        <para>If implemented by a class, this interface provides information about a parameter.</para>
+        <para></para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.Filtering.IFilterParameter.Name">
       <summary>
-        <para>If implemented by a class, this property returns the parameter name.</para>
+        <para></para>
       </summary>
-      <value>The parameter name.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraEditors.Filtering.IFilterParameter.Type">
       <summary>
-        <para>If implemented by a class, this property returns the parameter type.</para>
+        <para></para>
       </summary>
-      <value>The parameter type.</value>
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraEditors.IRangeControlClient">
       <summary>

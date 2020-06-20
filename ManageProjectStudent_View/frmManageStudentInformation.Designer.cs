@@ -31,7 +31,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.txtIDCard = new System.Windows.Forms.TextBox();
@@ -48,10 +47,7 @@
             this.colSex = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCourse = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.dteBirthday = new DevExpress.XtraEditors.DateEdit();
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -61,10 +57,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.grpInformationStudent = new DevExpress.XtraEditors.GroupControl();
+            this.lkeFaculty = new DevExpress.XtraEditors.LookUpEdit();
+            this.lkeCourse = new DevExpress.XtraEditors.LookUpEdit();
+            this.lkeClass = new DevExpress.XtraEditors.LookUpEdit();
+            this.btnSaveStudent = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.radUnavailable = new System.Windows.Forms.RadioButton();
             this.radAvailable = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
@@ -74,10 +74,13 @@
             this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpInformationStudent)).BeginInit();
+            this.grpInformationStudent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lkeFaculty.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkeCourse.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkeClass.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -98,7 +101,6 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(187, 21);
             this.txtAddress.TabIndex = 33;
-            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddress_KeyPress);
             // 
             // label8
             // 
@@ -110,17 +112,6 @@
             this.label8.Size = new System.Drawing.Size(53, 17);
             this.label8.TabIndex = 32;
             this.label8.Text = "Địa chỉ";
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(197, 360);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(128, 30);
-            this.simpleButton1.TabIndex = 28;
-            this.simpleButton1.Text = "Thêm";
             // 
             // txtEmail
             // 
@@ -289,51 +280,18 @@
             this.colCourse.VisibleIndex = 10;
             this.colCourse.Width = 100;
             // 
-            // dateEdit1
+            // dteBirthday
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(139, 208);
-            this.dateEdit1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dteBirthday.EditValue = null;
+            this.dteBirthday.Location = new System.Drawing.Point(139, 208);
+            this.dteBirthday.Margin = new System.Windows.Forms.Padding(4);
+            this.dteBirthday.Name = "dteBirthday";
+            this.dteBirthday.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dteBirthday.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(188, 20);
-            this.dateEdit1.TabIndex = 24;
-            // 
-            // simpleButton3
-            // 
-            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.simpleButton3.Appearance.Options.UseFont = true;
-            this.simpleButton3.Location = new System.Drawing.Point(418, 360);
-            this.simpleButton3.Margin = new System.Windows.Forms.Padding(4);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(128, 30);
-            this.simpleButton3.TabIndex = 30;
-            this.simpleButton3.Text = "Xóa";
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Location = new System.Drawing.Point(661, 360);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(128, 30);
-            this.simpleButton2.TabIndex = 29;
-            this.simpleButton2.Text = "Sửa";
-            // 
-            // simpleButton4
-            // 
-            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.simpleButton4.Appearance.Options.UseFont = true;
-            this.simpleButton4.Location = new System.Drawing.Point(866, 360);
-            this.simpleButton4.Margin = new System.Windows.Forms.Padding(4);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(128, 30);
-            this.simpleButton4.TabIndex = 31;
-            this.simpleButton4.Text = "Lưu";
+            this.dteBirthday.Size = new System.Drawing.Size(188, 20);
+            this.dteBirthday.TabIndex = 24;
             // 
             // txtFullName
             // 
@@ -428,76 +386,171 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "MSSV";
             // 
-            // groupControl1
+            // grpInformationStudent
             // 
-            this.groupControl1.Controls.Add(this.comboBox3);
-            this.groupControl1.Controls.Add(this.comboBox2);
-            this.groupControl1.Controls.Add(this.comboBox1);
-            this.groupControl1.Controls.Add(this.radUnavailable);
-            this.groupControl1.Controls.Add(this.radAvailable);
-            this.groupControl1.Controls.Add(this.label12);
-            this.groupControl1.Controls.Add(this.radNu);
-            this.groupControl1.Controls.Add(this.radNam);
-            this.groupControl1.Controls.Add(this.label11);
-            this.groupControl1.Controls.Add(this.label10);
-            this.groupControl1.Controls.Add(this.simpleButton4);
-            this.groupControl1.Controls.Add(this.simpleButton2);
-            this.groupControl1.Controls.Add(this.simpleButton3);
-            this.groupControl1.Controls.Add(this.label9);
-            this.groupControl1.Controls.Add(this.txtAddress);
-            this.groupControl1.Controls.Add(this.label8);
-            this.groupControl1.Controls.Add(this.simpleButton1);
-            this.groupControl1.Controls.Add(this.txtIDCard);
-            this.groupControl1.Controls.Add(this.txtEmail);
-            this.groupControl1.Controls.Add(this.txtPhoneNumber);
-            this.groupControl1.Controls.Add(this.dateEdit1);
-            this.groupControl1.Controls.Add(this.txtFullName);
-            this.groupControl1.Controls.Add(this.label7);
-            this.groupControl1.Controls.Add(this.label6);
-            this.groupControl1.Controls.Add(this.label5);
-            this.groupControl1.Controls.Add(this.label4);
-            this.groupControl1.Controls.Add(this.label3);
-            this.groupControl1.Controls.Add(this.label2);
-            this.groupControl1.Controls.Add(this.txtID);
-            this.groupControl1.Controls.Add(this.label1);
-            this.groupControl1.Location = new System.Drawing.Point(13, 13);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1255, 415);
-            this.groupControl1.TabIndex = 43;
-            this.groupControl1.Text = "Thông tin";
+            this.grpInformationStudent.Controls.Add(this.lkeFaculty);
+            this.grpInformationStudent.Controls.Add(this.lkeCourse);
+            this.grpInformationStudent.Controls.Add(this.lkeClass);
+            this.grpInformationStudent.Controls.Add(this.btnSaveStudent);
+            this.grpInformationStudent.Controls.Add(this.simpleButton6);
+            this.grpInformationStudent.Controls.Add(this.simpleButton7);
+            this.grpInformationStudent.Controls.Add(this.btnLuu);
+            this.grpInformationStudent.Controls.Add(this.radUnavailable);
+            this.grpInformationStudent.Controls.Add(this.radAvailable);
+            this.grpInformationStudent.Controls.Add(this.label12);
+            this.grpInformationStudent.Controls.Add(this.radNu);
+            this.grpInformationStudent.Controls.Add(this.radNam);
+            this.grpInformationStudent.Controls.Add(this.label11);
+            this.grpInformationStudent.Controls.Add(this.label10);
+            this.grpInformationStudent.Controls.Add(this.label9);
+            this.grpInformationStudent.Controls.Add(this.txtAddress);
+            this.grpInformationStudent.Controls.Add(this.label8);
+            this.grpInformationStudent.Controls.Add(this.txtIDCard);
+            this.grpInformationStudent.Controls.Add(this.txtEmail);
+            this.grpInformationStudent.Controls.Add(this.txtPhoneNumber);
+            this.grpInformationStudent.Controls.Add(this.dteBirthday);
+            this.grpInformationStudent.Controls.Add(this.txtFullName);
+            this.grpInformationStudent.Controls.Add(this.label7);
+            this.grpInformationStudent.Controls.Add(this.label6);
+            this.grpInformationStudent.Controls.Add(this.label5);
+            this.grpInformationStudent.Controls.Add(this.label4);
+            this.grpInformationStudent.Controls.Add(this.label3);
+            this.grpInformationStudent.Controls.Add(this.label2);
+            this.grpInformationStudent.Controls.Add(this.txtID);
+            this.grpInformationStudent.Controls.Add(this.label1);
+            this.grpInformationStudent.Location = new System.Drawing.Point(13, 13);
+            this.grpInformationStudent.Margin = new System.Windows.Forms.Padding(4);
+            this.grpInformationStudent.Name = "grpInformationStudent";
+            this.grpInformationStudent.Size = new System.Drawing.Size(1255, 415);
+            this.grpInformationStudent.TabIndex = 43;
+            this.grpInformationStudent.Text = "Thông tin";
             // 
-            // comboBox3
+            // lkeFaculty
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(1011, 284);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(188, 21);
-            this.comboBox3.TabIndex = 46;
+            this.lkeFaculty.Location = new System.Drawing.Point(1011, 284);
+            this.lkeFaculty.Name = "lkeFaculty";
+            this.lkeFaculty.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkeFaculty.Size = new System.Drawing.Size(188, 20);
+            this.lkeFaculty.TabIndex = 115;
             // 
-            // comboBox2
+            // lkeCourse
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(1011, 212);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(188, 21);
-            this.comboBox2.TabIndex = 45;
+            this.lkeCourse.Location = new System.Drawing.Point(1011, 143);
+            this.lkeCourse.Name = "lkeCourse";
+            this.lkeCourse.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkeCourse.Size = new System.Drawing.Size(188, 20);
+            this.lkeCourse.TabIndex = 114;
             // 
-            // comboBox1
+            // lkeClass
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1011, 143);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(188, 21);
-            this.comboBox1.TabIndex = 44;
+            this.lkeClass.Location = new System.Drawing.Point(1011, 212);
+            this.lkeClass.Name = "lkeClass";
+            this.lkeClass.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkeClass.Size = new System.Drawing.Size(188, 20);
+            this.lkeClass.TabIndex = 113;
+            // 
+            // btnSaveStudent
+            // 
+            this.btnSaveStudent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSaveStudent.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.btnSaveStudent.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSaveStudent.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnSaveStudent.Appearance.Options.UseBackColor = true;
+            this.btnSaveStudent.Appearance.Options.UseFont = true;
+            this.btnSaveStudent.Appearance.Options.UseForeColor = true;
+            this.btnSaveStudent.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.btnSaveStudent.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSaveStudent.AppearanceHovered.Options.UseBackColor = true;
+            this.btnSaveStudent.AppearanceHovered.Options.UseFont = true;
+            this.btnSaveStudent.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnSaveStudent.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnSaveStudent.Location = new System.Drawing.Point(858, 353);
+            this.btnSaveStudent.Name = "btnSaveStudent";
+            this.btnSaveStudent.Size = new System.Drawing.Size(127, 28);
+            this.btnSaveStudent.TabIndex = 112;
+            this.btnSaveStudent.TabStop = false;
+            this.btnSaveStudent.Text = "Lưu";
+            // 
+            // simpleButton6
+            // 
+            this.simpleButton6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton6.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.simpleButton6.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.simpleButton6.Appearance.ForeColor = System.Drawing.Color.White;
+            this.simpleButton6.Appearance.Options.UseBackColor = true;
+            this.simpleButton6.Appearance.Options.UseFont = true;
+            this.simpleButton6.Appearance.Options.UseForeColor = true;
+            this.simpleButton6.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.simpleButton6.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.simpleButton6.AppearanceHovered.Options.UseBackColor = true;
+            this.simpleButton6.AppearanceHovered.Options.UseFont = true;
+            this.simpleButton6.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.simpleButton6.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.simpleButton6.Location = new System.Drawing.Point(651, 353);
+            this.simpleButton6.Name = "simpleButton6";
+            this.simpleButton6.Size = new System.Drawing.Size(127, 28);
+            this.simpleButton6.TabIndex = 111;
+            this.simpleButton6.TabStop = false;
+            this.simpleButton6.Text = "Sửa ";
+            // 
+            // simpleButton7
+            // 
+            this.simpleButton7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton7.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.simpleButton7.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.simpleButton7.Appearance.ForeColor = System.Drawing.Color.White;
+            this.simpleButton7.Appearance.Options.UseBackColor = true;
+            this.simpleButton7.Appearance.Options.UseFont = true;
+            this.simpleButton7.Appearance.Options.UseForeColor = true;
+            this.simpleButton7.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.simpleButton7.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.simpleButton7.AppearanceHovered.Options.UseBackColor = true;
+            this.simpleButton7.AppearanceHovered.Options.UseFont = true;
+            this.simpleButton7.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.simpleButton7.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.simpleButton7.Location = new System.Drawing.Point(439, 353);
+            this.simpleButton7.Name = "simpleButton7";
+            this.simpleButton7.Size = new System.Drawing.Size(127, 28);
+            this.simpleButton7.TabIndex = 110;
+            this.simpleButton7.TabStop = false;
+            this.simpleButton7.Text = "Xóa";
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLuu.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.btnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnLuu.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnLuu.Appearance.Options.UseBackColor = true;
+            this.btnLuu.Appearance.Options.UseFont = true;
+            this.btnLuu.Appearance.Options.UseForeColor = true;
+            this.btnLuu.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.btnLuu.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnLuu.AppearanceHovered.Options.UseBackColor = true;
+            this.btnLuu.AppearanceHovered.Options.UseFont = true;
+            this.btnLuu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnLuu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnLuu.Location = new System.Drawing.Point(219, 353);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(127, 28);
+            this.btnLuu.TabIndex = 109;
+            this.btnLuu.TabStop = false;
+            this.btnLuu.Text = "Thêm";
             // 
             // radUnavailable
             // 
             this.radUnavailable.AutoSize = true;
-            this.radUnavailable.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radUnavailable.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radUnavailable.Location = new System.Drawing.Point(1155, 60);
             this.radUnavailable.Name = "radUnavailable";
-            this.radUnavailable.Size = new System.Drawing.Size(53, 24);
+            this.radUnavailable.Size = new System.Drawing.Size(55, 21);
             this.radUnavailable.TabIndex = 43;
             this.radUnavailable.TabStop = true;
             this.radUnavailable.Text = "Nghỉ";
@@ -549,7 +602,6 @@
             this.radNam.TabStop = true;
             this.radNam.Text = "Nam";
             this.radNam.UseVisualStyleBackColor = true;
-
             // 
             // label11
             // 
@@ -579,7 +631,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1305, 696);
             this.Controls.Add(this.gridControl1);
-            this.Controls.Add(this.groupControl1);
+            this.Controls.Add(this.grpInformationStudent);
             this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -587,11 +639,14 @@
             this.Text = "frmManageStudentInformation";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpInformationStudent)).EndInit();
+            this.grpInformationStudent.ResumeLayout(false);
+            this.grpInformationStudent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lkeFaculty.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkeCourse.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkeClass.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -600,7 +655,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label8;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private DevExpress.XtraGrid.Columns.GridColumn colSex;
@@ -616,10 +670,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colEmail;
         private DevExpress.XtraGrid.Columns.GridColumn colFaculty;
         private DevExpress.XtraGrid.Columns.GridColumn colStatus;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.DateEdit dteBirthday;
         private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -629,17 +680,21 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.GroupControl grpInformationStudent;
         private DevExpress.XtraGrid.Columns.GridColumn colCourse;
         private System.Windows.Forms.RadioButton radNu;
         private System.Windows.Forms.RadioButton radNam;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.RadioButton radUnavailable;
         private System.Windows.Forms.RadioButton radAvailable;
+        private DevExpress.XtraEditors.SimpleButton btnSaveStudent;
+        private DevExpress.XtraEditors.SimpleButton simpleButton6;
+        private DevExpress.XtraEditors.SimpleButton simpleButton7;
+        private DevExpress.XtraEditors.SimpleButton btnLuu;
+        private DevExpress.XtraEditors.LookUpEdit lkeFaculty;
+        private DevExpress.XtraEditors.LookUpEdit lkeCourse;
+        private DevExpress.XtraEditors.LookUpEdit lkeClass;
     }
 }

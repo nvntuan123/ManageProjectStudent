@@ -41,23 +41,15 @@
             this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.label5 = new System.Windows.Forms.Label();
-            this.simpleButton11 = new DevExpress.XtraEditors.SimpleButton();
             this.label4 = new System.Windows.Forms.Label();
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.label3 = new System.Windows.Forms.Label();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.label11 = new System.Windows.Forms.Label();
-            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.btnSaveLecturer = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton9 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton10 = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -69,12 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
-            this.groupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
-            this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -82,7 +68,7 @@
             this.gridControl1.Location = new System.Drawing.Point(32, 330);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(620, 181);
+            this.gridControl1.Size = new System.Drawing.Size(934, 181);
             this.gridControl1.TabIndex = 19;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -139,12 +125,15 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.btnSaveLecturer);
+            this.groupControl1.Controls.Add(this.simpleButton6);
+            this.groupControl1.Controls.Add(this.simpleButton7);
+            this.groupControl1.Controls.Add(this.btnLuu);
             this.groupControl1.Controls.Add(this.comboBoxEdit1);
             this.groupControl1.Controls.Add(this.label6);
             this.groupControl1.Controls.Add(this.dateEdit2);
             this.groupControl1.Controls.Add(this.dateEdit1);
             this.groupControl1.Controls.Add(this.label5);
-            this.groupControl1.Controls.Add(this.simpleButton11);
             this.groupControl1.Controls.Add(this.label4);
             this.groupControl1.Controls.Add(this.textEdit2);
             this.groupControl1.Controls.Add(this.label3);
@@ -152,13 +141,13 @@
             this.groupControl1.Controls.Add(this.label11);
             this.groupControl1.Location = new System.Drawing.Point(32, 45);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(620, 261);
+            this.groupControl1.Size = new System.Drawing.Size(934, 261);
             this.groupControl1.TabIndex = 18;
             this.groupControl1.Text = "Nhập thông tin đồ án";
             // 
             // comboBoxEdit1
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(117, 177);
+            this.comboBoxEdit1.Location = new System.Drawing.Point(221, 175);
             this.comboBoxEdit1.Name = "comboBoxEdit1";
             this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -169,7 +158,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 178);
+            this.label6.Location = new System.Drawing.Point(110, 176);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 16);
             this.label6.TabIndex = 25;
@@ -178,7 +167,7 @@
             // dateEdit2
             // 
             this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(427, 40);
+            this.dateEdit2.Location = new System.Drawing.Point(597, 43);
             this.dateEdit2.Name = "dateEdit2";
             this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -190,7 +179,7 @@
             // dateEdit1
             // 
             this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(427, 112);
+            this.dateEdit1.Location = new System.Drawing.Point(597, 115);
             this.dateEdit1.Name = "dateEdit1";
             this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -203,25 +192,17 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(327, 113);
+            this.label5.Location = new System.Drawing.Point(497, 116);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 16);
             this.label5.TabIndex = 22;
             this.label5.Text = "Ngày kết thúc";
             // 
-            // simpleButton11
-            // 
-            this.simpleButton11.Location = new System.Drawing.Point(259, 218);
-            this.simpleButton11.Name = "simpleButton11";
-            this.simpleButton11.Size = new System.Drawing.Size(130, 23);
-            this.simpleButton11.TabIndex = 21;
-            this.simpleButton11.Text = "Thêm";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(329, 44);
+            this.label4.Location = new System.Drawing.Point(499, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 16);
             this.label4.TabIndex = 4;
@@ -229,7 +210,7 @@
             // 
             // textEdit2
             // 
-            this.textEdit2.Location = new System.Drawing.Point(117, 112);
+            this.textEdit2.Location = new System.Drawing.Point(221, 110);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Size = new System.Drawing.Size(168, 20);
             this.textEdit2.TabIndex = 3;
@@ -238,7 +219,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 113);
+            this.label3.Location = new System.Drawing.Point(110, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 16);
             this.label3.TabIndex = 2;
@@ -246,7 +227,7 @@
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(117, 45);
+            this.textEdit1.Location = new System.Drawing.Point(221, 43);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(168, 20);
             this.textEdit1.TabIndex = 1;
@@ -255,114 +236,103 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 44);
+            this.label11.Location = new System.Drawing.Point(110, 47);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(67, 16);
             this.label11.TabIndex = 0;
             this.label11.Text = "Mã đồ án";
             // 
-            // groupControl4
+            // btnSaveLecturer
             // 
-            this.groupControl4.Controls.Add(this.simpleButton6);
-            this.groupControl4.Controls.Add(this.simpleButton8);
-            this.groupControl4.Controls.Add(this.simpleButton5);
-            this.groupControl4.Location = new System.Drawing.Point(658, 330);
-            this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(313, 181);
-            this.groupControl4.TabIndex = 17;
-            this.groupControl4.Text = "Action";
+            this.btnSaveLecturer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSaveLecturer.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.btnSaveLecturer.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSaveLecturer.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnSaveLecturer.Appearance.Options.UseBackColor = true;
+            this.btnSaveLecturer.Appearance.Options.UseFont = true;
+            this.btnSaveLecturer.Appearance.Options.UseForeColor = true;
+            this.btnSaveLecturer.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.btnSaveLecturer.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSaveLecturer.AppearanceHovered.Options.UseBackColor = true;
+            this.btnSaveLecturer.AppearanceHovered.Options.UseFont = true;
+            this.btnSaveLecturer.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnSaveLecturer.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnSaveLecturer.Location = new System.Drawing.Point(638, 219);
+            this.btnSaveLecturer.Name = "btnSaveLecturer";
+            this.btnSaveLecturer.Size = new System.Drawing.Size(127, 28);
+            this.btnSaveLecturer.TabIndex = 120;
+            this.btnSaveLecturer.TabStop = false;
+            this.btnSaveLecturer.Text = "Lưu";
             // 
             // simpleButton6
             // 
-            this.simpleButton6.Location = new System.Drawing.Point(97, 120);
+            this.simpleButton6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton6.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.simpleButton6.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.simpleButton6.Appearance.ForeColor = System.Drawing.Color.White;
+            this.simpleButton6.Appearance.Options.UseBackColor = true;
+            this.simpleButton6.Appearance.Options.UseFont = true;
+            this.simpleButton6.Appearance.Options.UseForeColor = true;
+            this.simpleButton6.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.simpleButton6.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.simpleButton6.AppearanceHovered.Options.UseBackColor = true;
+            this.simpleButton6.AppearanceHovered.Options.UseFont = true;
+            this.simpleButton6.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.simpleButton6.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.simpleButton6.Location = new System.Drawing.Point(475, 219);
             this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(109, 23);
-            this.simpleButton6.TabIndex = 2;
-            this.simpleButton6.Text = "Lưu";
+            this.simpleButton6.Size = new System.Drawing.Size(127, 28);
+            this.simpleButton6.TabIndex = 119;
+            this.simpleButton6.TabStop = false;
+            this.simpleButton6.Text = "Sửa ";
             // 
-            // simpleButton8
+            // simpleButton7
             // 
-            this.simpleButton8.Location = new System.Drawing.Point(27, 50);
-            this.simpleButton8.Name = "simpleButton8";
-            this.simpleButton8.Size = new System.Drawing.Size(109, 23);
-            this.simpleButton8.TabIndex = 4;
-            this.simpleButton8.Text = "Cập nhật";
+            this.simpleButton7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton7.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.simpleButton7.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.simpleButton7.Appearance.ForeColor = System.Drawing.Color.White;
+            this.simpleButton7.Appearance.Options.UseBackColor = true;
+            this.simpleButton7.Appearance.Options.UseFont = true;
+            this.simpleButton7.Appearance.Options.UseForeColor = true;
+            this.simpleButton7.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.simpleButton7.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.simpleButton7.AppearanceHovered.Options.UseBackColor = true;
+            this.simpleButton7.AppearanceHovered.Options.UseFont = true;
+            this.simpleButton7.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.simpleButton7.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.simpleButton7.Location = new System.Drawing.Point(303, 219);
+            this.simpleButton7.Name = "simpleButton7";
+            this.simpleButton7.Size = new System.Drawing.Size(127, 28);
+            this.simpleButton7.TabIndex = 118;
+            this.simpleButton7.TabStop = false;
+            this.simpleButton7.Text = "Xóa";
             // 
-            // simpleButton5
+            // btnLuu
             // 
-            this.simpleButton5.Location = new System.Drawing.Point(169, 50);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(109, 23);
-            this.simpleButton5.TabIndex = 3;
-            this.simpleButton5.Text = "Xóa";
-            // 
-            // groupControl2
-            // 
-            this.groupControl2.Controls.Add(this.simpleButton9);
-            this.groupControl2.Controls.Add(this.simpleButton10);
-            this.groupControl2.Controls.Add(this.textEdit4);
-            this.groupControl2.Controls.Add(this.groupBox1);
-            this.groupControl2.Location = new System.Drawing.Point(658, 45);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(313, 261);
-            this.groupControl2.TabIndex = 16;
-            this.groupControl2.Text = "Tìm kiếm đồ án";
-            // 
-            // simpleButton9
-            // 
-            this.simpleButton9.Location = new System.Drawing.Point(189, 227);
-            this.simpleButton9.Name = "simpleButton9";
-            this.simpleButton9.Size = new System.Drawing.Size(109, 23);
-            this.simpleButton9.TabIndex = 3;
-            this.simpleButton9.Text = "Trở về";
-            // 
-            // simpleButton10
-            // 
-            this.simpleButton10.Location = new System.Drawing.Point(190, 155);
-            this.simpleButton10.Name = "simpleButton10";
-            this.simpleButton10.Size = new System.Drawing.Size(109, 23);
-            this.simpleButton10.TabIndex = 2;
-            this.simpleButton10.Text = "Tìm";
-            // 
-            // textEdit4
-            // 
-            this.textEdit4.Location = new System.Drawing.Point(189, 54);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(110, 20);
-            this.textEdit4.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radioButton4);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Location = new System.Drawing.Point(5, 46);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(169, 204);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Điều kiện tìm kiếm";
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(36, 138);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(73, 17);
-            this.radioButton4.TabIndex = 1;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Tên đồ án";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(36, 73);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(69, 17);
-            this.radioButton3.TabIndex = 0;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Mã đồ án";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLuu.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.btnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnLuu.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnLuu.Appearance.Options.UseBackColor = true;
+            this.btnLuu.Appearance.Options.UseFont = true;
+            this.btnLuu.Appearance.Options.UseForeColor = true;
+            this.btnLuu.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.btnLuu.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnLuu.AppearanceHovered.Options.UseBackColor = true;
+            this.btnLuu.AppearanceHovered.Options.UseFont = true;
+            this.btnLuu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnLuu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnLuu.Location = new System.Drawing.Point(113, 219);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(127, 28);
+            this.btnLuu.TabIndex = 117;
+            this.btnLuu.TabStop = false;
+            this.btnLuu.Text = "Thêm";
             // 
             // frmManageProject
             // 
@@ -371,8 +341,6 @@
             this.ClientSize = new System.Drawing.Size(999, 552);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.groupControl1);
-            this.Controls.Add(this.groupControl4);
-            this.Controls.Add(this.groupControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmManageProject";
             this.Text = "frmManageProject";
@@ -388,13 +356,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
-            this.groupControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
-            this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -414,22 +375,14 @@
         private DevExpress.XtraEditors.DateEdit dateEdit2;
         private DevExpress.XtraEditors.DateEdit dateEdit1;
         private System.Windows.Forms.Label label5;
-        private DevExpress.XtraEditors.SimpleButton simpleButton11;
         private System.Windows.Forms.Label label4;
         private DevExpress.XtraEditors.TextEdit textEdit2;
         private System.Windows.Forms.Label label3;
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private System.Windows.Forms.Label label11;
-        private DevExpress.XtraEditors.GroupControl groupControl4;
+        private DevExpress.XtraEditors.SimpleButton btnSaveLecturer;
         private DevExpress.XtraEditors.SimpleButton simpleButton6;
-        private DevExpress.XtraEditors.SimpleButton simpleButton8;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
-        private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton9;
-        private DevExpress.XtraEditors.SimpleButton simpleButton10;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton7;
+        private DevExpress.XtraEditors.SimpleButton btnLuu;
     }
 }

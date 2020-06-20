@@ -26,11 +26,7 @@ namespace ManageProjectStudent_View
             txtIDCard.KeyPress += new KeyPressEventHandler(IMSI.txtIDCard_KeyPress);
             radNam.CheckedChanged += new EventHandler(IMSI.radNam_CheckedChanged);
             radNu.CheckedChanged += new EventHandler(IMSI.radNu_CheckedChanged);
-        }
-        
-
-        private void txtAddress_KeyPress(object sender, KeyPressEventArgs e)
-        {
+            btnSaveStudent.Click += delegate { IMSI.btnSaveStudent_Click(txtID, txtFullName, dteBirthday, radNam, radNu, txtPhoneNumber, txtEmail, txtIDCard, txtAddress, radAvailable, radUnavailable, lkeCourse, lkeClass, lkeFaculty); };
             
         }
 

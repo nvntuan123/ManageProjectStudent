@@ -142,5 +142,9 @@ namespace ManageProjectStudent_ViewModel
 
     internal class Student
     {
+        public void txtAddress_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

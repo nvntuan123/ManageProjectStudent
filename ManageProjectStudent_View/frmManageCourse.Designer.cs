@@ -54,16 +54,16 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
-            this.label8 = new System.Windows.Forms.Label();
+            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
+            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtIDCourse = new System.Windows.Forms.TextBox();
             this.panelMenu.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -75,11 +75,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -323,6 +322,7 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.txtIDCourse);
             this.groupControl2.Controls.Add(this.dateEdit2);
             this.groupControl2.Controls.Add(this.dateEdit1);
             this.groupControl2.Controls.Add(this.simpleButton3);
@@ -331,7 +331,6 @@
             this.groupControl2.Controls.Add(this.btnLuu);
             this.groupControl2.Controls.Add(this.label6);
             this.groupControl2.Controls.Add(this.label7);
-            this.groupControl2.Controls.Add(this.textEdit6);
             this.groupControl2.Controls.Add(this.label8);
             this.groupControl2.Location = new System.Drawing.Point(180, 93);
             this.groupControl2.Name = "groupControl2";
@@ -339,42 +338,29 @@
             this.groupControl2.TabIndex = 25;
             this.groupControl2.Text = "Information";
             // 
-            // label6
+            // dateEdit2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(234, 128);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 16);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Year End";
+            this.dateEdit2.EditValue = null;
+            this.dateEdit2.Location = new System.Drawing.Point(357, 127);
+            this.dateEdit2.Name = "dateEdit2";
+            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit2.Size = new System.Drawing.Size(314, 20);
+            this.dateEdit2.TabIndex = 98;
             // 
-            // label7
+            // dateEdit1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(234, 87);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 16);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Year Start";
-            // 
-            // textEdit6
-            // 
-            this.textEdit6.Location = new System.Drawing.Point(357, 45);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Size = new System.Drawing.Size(314, 20);
-            this.textEdit6.TabIndex = 1;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(234, 44);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 16);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Course ID";
+            this.dateEdit1.EditValue = null;
+            this.dateEdit1.Location = new System.Drawing.Point(357, 86);
+            this.dateEdit1.Name = "dateEdit1";
+            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Size = new System.Drawing.Size(314, 20);
+            this.dateEdit1.TabIndex = 97;
             // 
             // simpleButton3
             // 
@@ -468,29 +454,43 @@
             this.btnLuu.TabStop = false;
             this.btnLuu.Text = "Thêm";
             // 
-            // dateEdit1
+            // label6
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(357, 86);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(314, 20);
-            this.dateEdit1.TabIndex = 97;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(234, 128);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 16);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Year End";
             // 
-            // dateEdit2
+            // label7
             // 
-            this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(357, 127);
-            this.dateEdit2.Name = "dateEdit2";
-            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Size = new System.Drawing.Size(314, 20);
-            this.dateEdit2.TabIndex = 98;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(234, 87);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 16);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Year Start";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(234, 44);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(69, 16);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Course ID";
+            // 
+            // txtIDCourse
+            // 
+            this.txtIDCourse.Location = new System.Drawing.Point(360, 43);
+            this.txtIDCourse.Name = "txtIDCourse";
+            this.txtIDCourse.Size = new System.Drawing.Size(311, 21);
+            this.txtIDCourse.TabIndex = 99;
+            this.txtIDCourse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIDCourse_KeyPress);
             // 
             // frmManageCourse
             // 
@@ -518,11 +518,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -556,7 +555,6 @@
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
         private System.Windows.Forms.Label label8;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
@@ -564,5 +562,6 @@
         private DevExpress.XtraEditors.SimpleButton btnLuu;
         private DevExpress.XtraEditors.DateEdit dateEdit2;
         private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private System.Windows.Forms.TextBox txtIDCourse;
     }
 }

@@ -27,11 +27,13 @@ namespace ManageProjectStudent_ViewModel
         public static bool _checkCharacterChar(char _C)
         {
             if (((_C >= 65 && _C <= 90) || (_C >= 97 && _C <= 122))
-                && ((Keys)_C != Keys.Back) && ((Keys)_C != Keys.Enter))
+                || ((Keys)_C != Keys.Back) || ((Keys)_C != Keys.Enter))
             {
                 return true;
             }
             return false;
+            
+            
         }
         public static bool checkEmail(string _STR_Email)
         {

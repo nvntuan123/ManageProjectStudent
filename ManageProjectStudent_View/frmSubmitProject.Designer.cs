@@ -214,6 +214,7 @@
             // 
             // textEdit1
             // 
+            this.textEdit1.EditValue = " ";
             this.textEdit1.Location = new System.Drawing.Point(107, 48);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(295, 20);

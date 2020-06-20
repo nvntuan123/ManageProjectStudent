@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ManageProjectStudent_Interface;
+using Unity;
 
 namespace ManageProjectStudent_View
 {
@@ -15,6 +17,11 @@ namespace ManageProjectStudent_View
         public frmManageCourse()
         {
             InitializeComponent();
+        }
+
+        private void txtIDCourse_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

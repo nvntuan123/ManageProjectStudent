@@ -17,6 +17,14 @@ namespace ManageProjectStudent_View
         {
             Container.RegisterType<IManageStudentInformation, ManageStudentInformationViewModel>();
             Container.RegisterType<IManageLecturerInformation, ManageLecturerInformationViewModel>();
+<<<<<<< HEAD
+=======
+            Container.RegisterType<IManageClass, ManageClassViewModel>();
+            Container.RegisterType<IManageFaculty, ManageFacultyViewModel>();
+            Container.RegisterType<IManageCourse, ManageCourseViewModel>();
+            Container.RegisterType<IManageSubject, ManageSubjectViewModel>();
+            Container.RegisterType<ISubmitProject, SubmitProjectViewModel>();
+>>>>>>> 3b8fef094b12103194859e67a1d5ed8d19da9f5e
         }
     }
 

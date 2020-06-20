@@ -7,14 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ManageProjectStudent_Interface;
+using Unity;
 
 namespace ManageProjectStudent_View
 {
+    
     public partial class frmManageSubject : Form
     {
+        private IManageSubject IMSub = Config.Container.Resolve<IManageSubject>();
         public frmManageSubject()
         {
             InitializeComponent();
+            
+        }
+
+        private void txtIDCourse_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtNameCourse_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

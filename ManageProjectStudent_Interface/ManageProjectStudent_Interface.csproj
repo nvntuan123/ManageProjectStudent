@@ -42,7 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IManageClass.cs" />
+    <Compile Include="IManageCourse.cs" />
+    <Compile Include="IManageFaculty.cs" />
+    <Compile Include="IManageLecturerInformation.cs" />
     <Compile Include="IManageStudentInformation.cs" />
+    <Compile Include="IManageSubject.cs" />
+    <Compile Include="ISubmitProject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

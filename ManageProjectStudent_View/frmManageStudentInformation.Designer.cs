@@ -98,7 +98,6 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(187, 21);
             this.txtAddress.TabIndex = 33;
-            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddress_KeyPress);
             // 
             // label8
             // 
@@ -549,7 +548,6 @@
             this.radNam.TabStop = true;
             this.radNam.Text = "Nam";
             this.radNam.UseVisualStyleBackColor = true;
-
             // 
             // label11
             // 

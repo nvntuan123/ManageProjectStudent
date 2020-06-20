@@ -16,5 +16,6 @@ namespace ManageProjectStudent_Interface
         void txtEmail_KeyPress(object sender, KeyPressEventArgs e);
         void radNam_CheckedChanged(object sender, EventArgs e);
         void radNu_CheckedChanged(object sender, EventArgs e);
+        void txtAddress_KeyPress(object sender, KeyPressEventArgs e);
     }
 }

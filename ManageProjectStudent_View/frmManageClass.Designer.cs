@@ -39,20 +39,16 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtClassName = new System.Windows.Forms.TextBox();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.label10 = new System.Windows.Forms.Label();
             this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtIDClass = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -61,6 +57,10 @@
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
+            this.lookUpEdit2 = new DevExpress.XtraEditors.LookUpEdit();
+            this.lookUpEdit3 = new DevExpress.XtraEditors.LookUpEdit();
+            this.lookUpEdit4 = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gvClassList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -68,6 +68,10 @@
             this.groupControl1.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit4.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gvClassList
@@ -163,20 +167,6 @@
             this.label8.TabIndex = 67;
             this.label8.Text = "Phòng";
             // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(741, 42);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(148, 21);
-            this.textBox7.TabIndex = 71;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(741, 193);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(148, 21);
-            this.textBox6.TabIndex = 72;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -197,19 +187,13 @@
             this.label6.TabIndex = 68;
             this.label6.Text = "Giáo viên CN";
             // 
-            // textBox8
+            // txtClassName
             // 
-            this.textBox8.Location = new System.Drawing.Point(741, 113);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(148, 21);
-            this.textBox8.TabIndex = 70;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(281, 42);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(148, 21);
-            this.textBox3.TabIndex = 74;
+            this.txtClassName.Location = new System.Drawing.Point(281, 42);
+            this.txtClassName.Name = "txtClassName";
+            this.txtClassName.Size = new System.Drawing.Size(167, 21);
+            this.txtClassName.TabIndex = 74;
+
             // 
             // simpleButton5
             // 
@@ -253,20 +237,20 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.lookUpEdit4);
+            this.groupControl1.Controls.Add(this.lookUpEdit3);
+            this.groupControl1.Controls.Add(this.lookUpEdit2);
+            this.groupControl1.Controls.Add(this.lookUpEdit1);
             this.groupControl1.Controls.Add(this.label2);
-            this.groupControl1.Controls.Add(this.textBox1);
-            this.groupControl1.Controls.Add(this.textBox9);
+            this.groupControl1.Controls.Add(this.txtIDClass);
             this.groupControl1.Controls.Add(this.label5);
             this.groupControl1.Controls.Add(this.simpleButton7);
             this.groupControl1.Controls.Add(this.label10);
             this.groupControl1.Controls.Add(this.simpleButton4);
             this.groupControl1.Controls.Add(this.simpleButton5);
-            this.groupControl1.Controls.Add(this.textBox3);
-            this.groupControl1.Controls.Add(this.textBox8);
+            this.groupControl1.Controls.Add(this.txtClassName);
             this.groupControl1.Controls.Add(this.label6);
             this.groupControl1.Controls.Add(this.label9);
-            this.groupControl1.Controls.Add(this.textBox6);
-            this.groupControl1.Controls.Add(this.textBox7);
             this.groupControl1.Controls.Add(this.label8);
             this.groupControl1.Location = new System.Drawing.Point(180, 93);
             this.groupControl1.Name = "groupControl1";
@@ -284,19 +268,12 @@
             this.label2.TabIndex = 75;
             this.label2.Text = "Mã lớp";
             // 
-            // textBox1
+            // txtIDClass
             // 
-            this.textBox1.Location = new System.Drawing.Point(281, 115);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(148, 21);
-            this.textBox1.TabIndex = 76;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(281, 191);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(148, 21);
-            this.textBox9.TabIndex = 69;
+            this.txtIDClass.Location = new System.Drawing.Point(281, 115);
+            this.txtIDClass.Name = "txtIDClass";
+            this.txtIDClass.Size = new System.Drawing.Size(167, 21);
+            this.txtIDClass.TabIndex = 76;
             // 
             // label5
             // 
@@ -400,6 +377,42 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Quản lý lớp";
             // 
+            // lookUpEdit1
+            // 
+            this.lookUpEdit1.Location = new System.Drawing.Point(281, 195);
+            this.lookUpEdit1.Name = "lookUpEdit1";
+            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit1.Size = new System.Drawing.Size(167, 20);
+            this.lookUpEdit1.TabIndex = 77;
+            // 
+            // lookUpEdit2
+            // 
+            this.lookUpEdit2.Location = new System.Drawing.Point(729, 39);
+            this.lookUpEdit2.Name = "lookUpEdit2";
+            this.lookUpEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit2.Size = new System.Drawing.Size(167, 20);
+            this.lookUpEdit2.TabIndex = 78;
+            // 
+            // lookUpEdit3
+            // 
+            this.lookUpEdit3.Location = new System.Drawing.Point(729, 119);
+            this.lookUpEdit3.Name = "lookUpEdit3";
+            this.lookUpEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit3.Size = new System.Drawing.Size(167, 20);
+            this.lookUpEdit3.TabIndex = 79;
+            // 
+            // lookUpEdit4
+            // 
+            this.lookUpEdit4.Location = new System.Drawing.Point(729, 192);
+            this.lookUpEdit4.Name = "lookUpEdit4";
+            this.lookUpEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit4.Size = new System.Drawing.Size(167, 20);
+            this.lookUpEdit4.TabIndex = 80;
+            // 
             // frmManageClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,6 +434,10 @@
             this.panelMenu.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit4.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -434,20 +451,16 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtClassName;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private System.Windows.Forms.Label label10;
         private DevExpress.XtraEditors.SimpleButton simpleButton7;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtIDClass;
         private System.Windows.Forms.Label label5;
         
         
@@ -462,5 +475,9 @@
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Button btnCloseChildForm;
         private System.Windows.Forms.Label lblTitle;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEdit4;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEdit3;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEdit2;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
     }
 }

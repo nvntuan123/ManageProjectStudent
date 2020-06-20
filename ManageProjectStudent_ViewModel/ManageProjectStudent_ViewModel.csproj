@@ -43,8 +43,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GarenaViewModel.cs" />
+    <Compile Include="ManageClassViewModel.cs" />
+    <Compile Include="ManageCourseViewModel.cs" />
+    <Compile Include="ManageFacultyViewModel.cs" />
+    <Compile Include="ManageLecturerInformationViewModel.cs" />
     <Compile Include="ManageStudentInformationViewModel.cs" />
+    <Compile Include="ManageSubjectViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubmitProjectViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageProjectStudent_Interface\ManageProjectStudent_Interface.csproj">

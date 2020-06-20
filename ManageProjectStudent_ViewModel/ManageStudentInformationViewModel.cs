@@ -68,5 +68,9 @@ namespace ManageProjectStudent_ViewModel
 
             }
         }
+        public void txtAddress_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

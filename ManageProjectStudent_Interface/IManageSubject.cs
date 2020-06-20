@@ -11,6 +11,5 @@ namespace ManageProjectStudent_Interface
     {
         void txtIDCourse_KeyPress(object sender, KeyPressEventArgs e);
         void txtNameCourse_KeyPress(object sender, KeyPressEventArgs e);
-
     }
 }

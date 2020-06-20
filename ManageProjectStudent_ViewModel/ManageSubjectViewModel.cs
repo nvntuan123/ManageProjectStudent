@@ -10,7 +10,9 @@ namespace ManageProjectStudent_ViewModel
 {
     public class ManageSubjectViewModel : IManageSubject
     {
-       public void txtIDCourse_KeyPress(object sender, KeyPressEventArgs e)
+        #region Event
+        // Thong
+        public void txtIDCourse_KeyPress(object sender, KeyPressEventArgs e)
         {
             {
                 e.Handled = true;
@@ -29,5 +31,11 @@ namespace ManageProjectStudent_ViewModel
                 MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        // Thong
+        #endregion
+        #region Method
+        #endregion
+        #region Properties
+        #endregion
     }
 }

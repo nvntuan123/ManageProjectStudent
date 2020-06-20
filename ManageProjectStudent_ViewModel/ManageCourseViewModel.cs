@@ -11,6 +11,7 @@ namespace ManageProjectStudent_ViewModel
 {
    public class ManageCourseViewModel :IManageCourse
     {
+        #region Event
         public void txtIDCourse_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!GarenaViewModel._checkCharacterChar(e.KeyChar))
@@ -21,5 +22,6 @@ namespace ManageProjectStudent_ViewModel
                 MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        #endregion
     }
 }

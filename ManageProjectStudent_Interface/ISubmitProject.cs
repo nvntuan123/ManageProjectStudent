@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace ManageProjectStudent_Interface
 {
-   public interface ISubmitProject
+    public interface ISubmitProject
     {
 
     }

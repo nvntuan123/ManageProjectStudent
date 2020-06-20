@@ -15,16 +15,17 @@ namespace ManageProjectStudent_View
 
         public static void Register()
         {
+            // Thu
             Container.RegisterType<IManageStudentInformation, ManageStudentInformationViewModel>();
             Container.RegisterType<IManageLecturerInformation, ManageLecturerInformationViewModel>();
-<<<<<<< HEAD
-=======
+            // Thu
+            // Thong
             Container.RegisterType<IManageClass, ManageClassViewModel>();
             Container.RegisterType<IManageFaculty, ManageFacultyViewModel>();
             Container.RegisterType<IManageCourse, ManageCourseViewModel>();
             Container.RegisterType<IManageSubject, ManageSubjectViewModel>();
             Container.RegisterType<ISubmitProject, SubmitProjectViewModel>();
->>>>>>> 3b8fef094b12103194859e67a1d5ed8d19da9f5e
+            // Thong
         }
     }
 

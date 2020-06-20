@@ -12,6 +12,7 @@ namespace ManageProjectStudent_ViewModel
 {
     public class GarenaViewModel
     {
+        #region Method
         public static bool _checkCharacterNumber(char _C)
         {
             //if ((_C >= '0' && _C <= '9') && ((Keys)_C != Keys.Back) && ((Keys)_C != Keys.Enter))
@@ -51,5 +52,6 @@ namespace ManageProjectStudent_ViewModel
                 return false;
             return true;
         }
+        #endregion
     }
 }

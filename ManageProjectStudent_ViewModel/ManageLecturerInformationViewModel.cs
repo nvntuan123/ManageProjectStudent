@@ -11,7 +11,8 @@ namespace ManageProjectStudent_ViewModel
 {
     public class ManageLecturerInformationViewModel : IManageLecturerInformation
     {
-        //MNAT
+        #region
+        // Thu
         public void btnSaveLecturer_Click(TextBox txtID, TextBox txtFullName, TextBox txtIDCard, DateEdit dteBirthday, TextBox txtAddress, TextBox txtPhoneNumber, TextBox txtEmail, LookUpEdit lkeFaculty, RadioButton radNam, RadioButton radNu, RadioButton radAvailable, RadioButton radUnavailable)
         {
 
@@ -61,7 +62,7 @@ namespace ManageProjectStudent_ViewModel
                 MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        //fish
+        // Thu
 
         // Thong
         public void txtID_KeyPress(object sender, KeyPressEventArgs e)
@@ -127,5 +128,6 @@ namespace ManageProjectStudent_ViewModel
             }
         }
         //thong
+        #endregion
     }
 }

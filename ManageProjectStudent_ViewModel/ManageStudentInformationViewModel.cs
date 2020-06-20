@@ -11,17 +11,8 @@ namespace ManageProjectStudent_ViewModel
 {
     public class ManageStudentInformationViewModel : IManageStudentInformation
     {
-       
-        Student student = null;
-        int _iStatusForm = 0; // 0: view, 1: add, 2: edit.
-        public void _setStatus(TextBox txtID, TextBox txtFullName, DateEdit dteBirthday, RadioButton radNam, RadioButton radNu, TextBox txtPhoneNumber, TextBox txtEmail, TextBox txtIDCard, TextBox txtAddress, RadioButton radAvailable, RadioButton radUnavailable, LookUpEdit lkeCourse, LookUpEdit lkeClass, LookUpEdit lkeFaculty)
-        {
-            txtID.ReadOnly = true;
-            switch (_iStatusForm)
-            {
-                
-            }    
-        }
+        #region Event
+        // Thong
         public void txtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (GarenaViewModel._checkCharacterNumber(e.KeyChar))
@@ -32,7 +23,7 @@ namespace ManageProjectStudent_ViewModel
                 MessageBox.Show(_STRMesge, "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-       public void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        public void txtID_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (GarenaViewModel._checkCharacterNumber(e.KeyChar))
             {
@@ -70,7 +61,7 @@ namespace ManageProjectStudent_ViewModel
         {
             if (((RadioButton)sender).Checked)
             {
-                
+
             }
         }
         public void radNu_CheckedChanged(object sender, EventArgs e)
@@ -80,6 +71,12 @@ namespace ManageProjectStudent_ViewModel
 
             }
         }
+        public void txtAddress_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+        // Thong
+        // Thu
         public void btnSaveStudent_Click(TextBox txtID, TextBox txtFullName, DateEdit dteBirthday, RadioButton radNam, RadioButton radNu, TextBox txtPhoneNumber, TextBox txtEmail, TextBox txtIDCard, TextBox txtAddress, RadioButton radAvailable, RadioButton radUnavailable, LookUpEdit lkeCourse, LookUpEdit lkeClass, LookUpEdit lkeFaculty)
         {
             if (txtFullName.Text == "")
@@ -122,7 +119,7 @@ namespace ManageProjectStudent_ViewModel
                 string _STRMesge = "Bạn chưa chọn Trạng thái";
                 MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if(lkeCourse.EditValue == null)
+            else if (lkeCourse.EditValue == null)
             {
                 string _STRMesge = "Bạn chưa chọn Khóa học";
                 MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -137,14 +134,25 @@ namespace ManageProjectStudent_ViewModel
                 string _STRMesge = "Bạn chưa chọn Khoa";
                 MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-    }
+            else
+            {
 
-    internal class Student
-    {
-        public void txtAddress_KeyPress(object sender, KeyPressEventArgs e)
+            }
+        }
+        // Thu
+        #endregion
+        #region Method
+        // Thu
+        public void _setStatus(TextBox txtID, TextBox txtFullName, DateEdit dteBirthday, RadioButton radNam, RadioButton radNu, TextBox txtPhoneNumber, TextBox txtEmail, TextBox txtIDCard, TextBox txtAddress, RadioButton radAvailable, RadioButton radUnavailable, LookUpEdit lkeCourse, LookUpEdit lkeClass, LookUpEdit lkeFaculty)
         {
-
+            txtID.ReadOnly = true;
         }
+        // Thu
+        #endregion
+        #region Properties
+        // Thu
+        int _itatusForm = 0; // 0: view, 1: add, 2: edit.
+        // Thu
+        #endregion
     }
 }

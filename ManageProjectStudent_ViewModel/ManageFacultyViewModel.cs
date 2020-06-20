@@ -10,6 +10,7 @@ namespace ManageProjectStudent_ViewModel
 {
     public class ManageFacultyViewModel : IManageFaculty
     {
+        #region Event
         public void txtIDFaculty_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (GarenaViewModel._checkCharacterNumber(e.KeyChar))
@@ -20,5 +21,6 @@ namespace ManageProjectStudent_ViewModel
                 MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        #endregion
     }
 }

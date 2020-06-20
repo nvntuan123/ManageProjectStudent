@@ -11,5 +11,11 @@ namespace ManageProjectStudent_ViewModel
 {
     public class SubmitProjectViewModel : ISubmitProject
     {
+        #region Event
+        #endregion
+        #region Method
+        #endregion
+        #region Properties
+        #endregion
     }
 }

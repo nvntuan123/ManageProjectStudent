@@ -10,6 +10,7 @@ namespace ManageProjectStudent_Interface
 {
     public interface IManageStudentInformation
     {
+        // Thong
         void txtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e);
         void txtID_KeyPress(object sender, KeyPressEventArgs e);
         void txtFullName_KeyPress(object sender, KeyPressEventArgs e);
@@ -17,11 +18,11 @@ namespace ManageProjectStudent_Interface
         void txtEmail_KeyPress(object sender, KeyPressEventArgs e);
         void radNam_CheckedChanged(object sender, EventArgs e);
         void radNu_CheckedChanged(object sender, EventArgs e);
-<<<<<<< HEAD
+        // Thong
+        // Thu
         void btnSaveStudent_Click(TextBox txtID, TextBox txtFullName, DateEdit dteBirthday, RadioButton radNam, RadioButton radNu, TextBox txtPhoneNumber, TextBox txtEmail, TextBox txtIDCard, TextBox txtAddress, RadioButton radAvailable, RadioButton radUnavailable, LookUpEdit lkeCourse , LookUpEdit lkeClass, LookUpEdit lkeFaculty);
         void _setStatus(TextBox txtID, TextBox txtFullName, DateEdit dteBirthday, RadioButton radNam, RadioButton radNu, TextBox txtPhoneNumber, TextBox txtEmail, TextBox txtIDCard, TextBox txtAddress, RadioButton radAvailable, RadioButton radUnavailable, LookUpEdit lkeCourse, LookUpEdit lkeClass, LookUpEdit lkeFaculty);
-=======
         void txtAddress_KeyPress(object sender, KeyPressEventArgs e);
->>>>>>> 3b8fef094b12103194859e67a1d5ed8d19da9f5e
+        // Thu
     }
 }

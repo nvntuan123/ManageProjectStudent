@@ -66,3 +66,7 @@ C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_
 C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\es\DevExpress.Pdf.v19.2.Core.resources.dll
 C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ja\DevExpress.Pdf.v19.2.Core.resources.dll
 C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ru\DevExpress.Pdf.v19.2.Core.resources.dll
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.csprojAssemblyReference.cache
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.dll
+C:\Users\NhatTuan-PC\Desktop\project-1-kem-3\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.pdb

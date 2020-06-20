@@ -43,12 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-=======
     <Compile Include="IManageClass.cs" />
     <Compile Include="IManageCourse.cs" />
     <Compile Include="IManageFaculty.cs" />
->>>>>>> 3b8fef094b12103194859e67a1d5ed8d19da9f5e
     <Compile Include="IManageLecturerInformation.cs" />
     <Compile Include="IManageStudentInformation.cs" />
     <Compile Include="IManageSubject.cs" />

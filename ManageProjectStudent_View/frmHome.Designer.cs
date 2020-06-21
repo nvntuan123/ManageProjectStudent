@@ -235,6 +235,7 @@
             this.itemManageStudent.Id = 44;
             this.itemManageStudent.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.itemManageStudent.Name = "itemManageStudent";
+            this.itemManageStudent.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.itemManageStudent_ItemClick);
             // 
             // itemManageLecturer
             // 
@@ -256,6 +257,7 @@
             this.itemManageLecturer.Id = 43;
             this.itemManageLecturer.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.itemManageLecturer.Name = "itemManageLecturer";
+            this.itemManageLecturer.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.itemManageLecturer_ItemClick);
             // 
             // tileGroup5
             // 
@@ -281,6 +283,7 @@
             this.itemManageFaculty.Id = 51;
             this.itemManageFaculty.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.itemManageFaculty.Name = "itemManageFaculty";
+            this.itemManageFaculty.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.itemManageFaculty_ItemClick);
             // 
             // tileItem13
             // 
@@ -342,6 +345,7 @@
             this.Controls.Add(this.panelMenuHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmHome";
             this.panelMenuHome.ResumeLayout(false);
             this.ResumeLayout(false);

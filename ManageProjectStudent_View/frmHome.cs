@@ -96,7 +96,7 @@ namespace ManageProjectStudent_View
 
         private void itemManageMultiLanguage_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             frmManageLanguageMain frmManageLanguageMain = new frmManageLanguageMain();
             frmManageLanguageMain.ShowDialog();
             this.Close();
@@ -104,10 +104,30 @@ namespace ManageProjectStudent_View
 
         private void itemDecentralization_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             frmDecentralization frmDecentralization = new frmDecentralization();
             frmDecentralization.ShowDialog();
             this.Close();
+        }
+
+        private void itemManageStudent_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        {
+            //this.Hide();
+            frmManageStudentInformationMain frmMaStudentInfoMain = new frmManageStudentInformationMain();
+            frmMaStudentInfoMain.ShowDialog();
+            this.Close();
+        }
+
+        private void itemManageLecturer_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        {
+            frmManageLecturerInformation frm = new frmManageLecturerInformation();
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void itemManageFaculty_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        {
+
         }
     }
 }

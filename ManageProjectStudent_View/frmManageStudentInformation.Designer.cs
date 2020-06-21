@@ -35,7 +35,7 @@
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.txtIDCard = new System.Windows.Forms.TextBox();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gvManageStudentInfomation = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colStudentID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStudentName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIndentifiCard = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -73,7 +73,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvManageStudentInfomation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpInformationStudent)).BeginInit();
@@ -87,7 +87,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label9.Location = new System.Drawing.Point(853, 64);
+            this.label9.Location = new System.Drawing.Point(795, 41);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(72, 17);
@@ -96,7 +96,7 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(579, 279);
+            this.txtAddress.Location = new System.Drawing.Point(514, 163);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(187, 21);
@@ -106,7 +106,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.Location = new System.Drawing.Point(453, 282);
+            this.label8.Location = new System.Drawing.Point(424, 168);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 17);
@@ -115,7 +115,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(579, 139);
+            this.txtEmail.Location = new System.Drawing.Point(514, 76);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(187, 21);
@@ -123,7 +123,7 @@
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(579, 64);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(514, 37);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(187, 21);
@@ -131,7 +131,7 @@
             // 
             // txtIDCard
             // 
-            this.txtIDCard.Location = new System.Drawing.Point(579, 208);
+            this.txtIDCard.Location = new System.Drawing.Point(514, 119);
             this.txtIDCard.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDCard.Name = "txtIDCard";
             this.txtIDCard.Size = new System.Drawing.Size(187, 21);
@@ -140,28 +140,38 @@
             // gridControl1
             // 
             this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.gridControl1.Location = new System.Drawing.Point(13, 436);
-            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Location = new System.Drawing.Point(8, 285);
+            this.gridControl1.MainView = this.gvManageStudentInfomation;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1255, 238);
+            this.gridControl1.Size = new System.Drawing.Size(1127, 307);
             this.gridControl1.TabIndex = 41;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gvManageStudentInfomation});
             // 
-            // gridView1
+            // gvManageStudentInfomation
             // 
-            this.gridView1.Appearance.EvenRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gridView1.Appearance.EvenRow.Options.UseFont = true;
-            this.gridView1.Appearance.OddRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gridView1.Appearance.OddRow.Options.UseFont = true;
-            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gridView1.Appearance.Row.Options.UseFont = true;
-            this.gridView1.Appearance.SelectedRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gridView1.Appearance.SelectedRow.Options.UseFont = true;
-            this.gridView1.Appearance.ViewCaption.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gridView1.Appearance.ViewCaption.Options.UseFont = true;
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvManageStudentInfomation.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.gvManageStudentInfomation.Appearance.EvenRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvManageStudentInfomation.Appearance.EvenRow.Options.UseBackColor = true;
+            this.gvManageStudentInfomation.Appearance.EvenRow.Options.UseFont = true;
+            this.gvManageStudentInfomation.Appearance.GroupPanel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvManageStudentInfomation.Appearance.GroupPanel.Options.UseFont = true;
+            this.gvManageStudentInfomation.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvManageStudentInfomation.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gvManageStudentInfomation.Appearance.OddRow.BackColor = System.Drawing.Color.White;
+            this.gvManageStudentInfomation.Appearance.OddRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvManageStudentInfomation.Appearance.OddRow.Options.UseBackColor = true;
+            this.gvManageStudentInfomation.Appearance.OddRow.Options.UseFont = true;
+            this.gvManageStudentInfomation.Appearance.Row.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvManageStudentInfomation.Appearance.Row.Options.UseFont = true;
+            this.gvManageStudentInfomation.Appearance.SelectedRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvManageStudentInfomation.Appearance.SelectedRow.Options.UseFont = true;
+            this.gvManageStudentInfomation.Appearance.ViewCaption.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvManageStudentInfomation.Appearance.ViewCaption.Options.UseFont = true;
+            this.gvManageStudentInfomation.AppearancePrint.HeaderPanel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvManageStudentInfomation.AppearancePrint.HeaderPanel.Options.UseFont = true;
+            this.gvManageStudentInfomation.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colStudentID,
             this.colStudentName,
             this.colIndentifiCard,
@@ -173,14 +183,18 @@
             this.colSex,
             this.colStatus,
             this.colCourse});
-            this.gridView1.DetailHeight = 458;
-            this.gridView1.FixedLineWidth = 3;
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.EnableAppearanceEvenRow = true;
-            this.gridView1.OptionsView.EnableAppearanceOddRow = true;
-            this.gridView1.OptionsView.ShowViewCaption = true;
-            this.gridView1.ViewCaption = "Danh sách sinh viên";
+            this.gvManageStudentInfomation.DetailHeight = 458;
+            this.gvManageStudentInfomation.FixedLineWidth = 3;
+            this.gvManageStudentInfomation.GridControl = this.gridControl1;
+            this.gvManageStudentInfomation.Name = "gvManageStudentInfomation";
+            this.gvManageStudentInfomation.OptionsBehavior.Editable = false;
+            this.gvManageStudentInfomation.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvManageStudentInfomation.OptionsView.EnableAppearanceOddRow = true;
+            this.gvManageStudentInfomation.OptionsView.ShowGroupPanel = false;
+            this.gvManageStudentInfomation.OptionsView.ShowViewCaption = true;
+            this.gvManageStudentInfomation.ViewCaption = "Danh sách sinh viên";
+            this.gvManageStudentInfomation.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gv_CustomDrawRowIndicator);
+            this.gvManageStudentInfomation.RowCountChanged += new System.EventHandler(this.gv_RowCountChanged);
             // 
             // colStudentID
             // 
@@ -269,7 +283,7 @@
             this.colStatus.MinWidth = 27;
             this.colStatus.Name = "colStatus";
             this.colStatus.Visible = true;
-            this.colStatus.VisibleIndex = 9;
+            this.colStatus.VisibleIndex = 10;
             this.colStatus.Width = 100;
             // 
             // colCourse
@@ -277,13 +291,13 @@
             this.colCourse.Caption = "Khóa";
             this.colCourse.Name = "colCourse";
             this.colCourse.Visible = true;
-            this.colCourse.VisibleIndex = 10;
+            this.colCourse.VisibleIndex = 9;
             this.colCourse.Width = 100;
             // 
             // dteBirthday
             // 
             this.dteBirthday.EditValue = null;
-            this.dteBirthday.Location = new System.Drawing.Point(139, 208);
+            this.dteBirthday.Location = new System.Drawing.Point(111, 119);
             this.dteBirthday.Margin = new System.Windows.Forms.Padding(4);
             this.dteBirthday.Name = "dteBirthday";
             this.dteBirthday.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -295,7 +309,7 @@
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(139, 139);
+            this.txtFullName.Location = new System.Drawing.Point(112, 76);
             this.txtFullName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(187, 21);
@@ -305,7 +319,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(853, 212);
+            this.label7.Location = new System.Drawing.Point(833, 122);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(34, 17);
@@ -316,7 +330,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(449, 212);
+            this.label6.Location = new System.Drawing.Point(426, 122);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 17);
@@ -327,7 +341,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(449, 140);
+            this.label5.Location = new System.Drawing.Point(427, 80);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 17);
@@ -338,7 +352,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(449, 68);
+            this.label4.Location = new System.Drawing.Point(439, 41);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 17);
@@ -349,7 +363,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(25, 212);
+            this.label3.Location = new System.Drawing.Point(9, 122);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 17);
@@ -360,7 +374,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(25, 140);
+            this.label2.Location = new System.Drawing.Point(31, 80);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 17);
@@ -369,7 +383,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(139, 64);
+            this.txtID.Location = new System.Drawing.Point(112, 37);
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(187, 21);
@@ -379,7 +393,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(25, 68);
+            this.label1.Location = new System.Drawing.Point(33, 41);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 17);
@@ -418,44 +432,48 @@
             this.grpInformationStudent.Controls.Add(this.label2);
             this.grpInformationStudent.Controls.Add(this.txtID);
             this.grpInformationStudent.Controls.Add(this.label1);
-            this.grpInformationStudent.Location = new System.Drawing.Point(13, 13);
+            this.grpInformationStudent.Location = new System.Drawing.Point(8, 4);
             this.grpInformationStudent.Margin = new System.Windows.Forms.Padding(4);
             this.grpInformationStudent.Name = "grpInformationStudent";
-            this.grpInformationStudent.Size = new System.Drawing.Size(1255, 415);
+            this.grpInformationStudent.Size = new System.Drawing.Size(1127, 273);
             this.grpInformationStudent.TabIndex = 43;
             this.grpInformationStudent.Text = "Thông tin";
             // 
             // lkeFaculty
             // 
-            this.lkeFaculty.Location = new System.Drawing.Point(1011, 284);
+            this.lkeFaculty.Location = new System.Drawing.Point(898, 161);
             this.lkeFaculty.Name = "lkeFaculty";
+            this.lkeFaculty.Properties.Appearance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lkeFaculty.Properties.Appearance.Options.UseFont = true;
             this.lkeFaculty.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lkeFaculty.Size = new System.Drawing.Size(188, 20);
+            this.lkeFaculty.Size = new System.Drawing.Size(188, 24);
             this.lkeFaculty.TabIndex = 115;
             // 
             // lkeCourse
             // 
-            this.lkeCourse.Location = new System.Drawing.Point(1011, 143);
+            this.lkeCourse.Location = new System.Drawing.Point(898, 77);
             this.lkeCourse.Name = "lkeCourse";
+            this.lkeCourse.Properties.Appearance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lkeCourse.Properties.Appearance.Options.UseFont = true;
             this.lkeCourse.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lkeCourse.Size = new System.Drawing.Size(188, 20);
+            this.lkeCourse.Size = new System.Drawing.Size(188, 24);
             this.lkeCourse.TabIndex = 114;
             // 
             // lkeClass
             // 
-            this.lkeClass.Location = new System.Drawing.Point(1011, 212);
+            this.lkeClass.Location = new System.Drawing.Point(898, 118);
             this.lkeClass.Name = "lkeClass";
+            this.lkeClass.Properties.Appearance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lkeClass.Properties.Appearance.Options.UseFont = true;
             this.lkeClass.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lkeClass.Size = new System.Drawing.Size(188, 20);
+            this.lkeClass.Size = new System.Drawing.Size(188, 24);
             this.lkeClass.TabIndex = 113;
             // 
             // btnSaveStudent
             // 
-            this.btnSaveStudent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveStudent.Appearance.BackColor = System.Drawing.Color.Silver;
             this.btnSaveStudent.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSaveStudent.Appearance.ForeColor = System.Drawing.Color.White;
@@ -468,7 +486,7 @@
             this.btnSaveStudent.AppearanceHovered.Options.UseFont = true;
             this.btnSaveStudent.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnSaveStudent.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnSaveStudent.Location = new System.Drawing.Point(858, 353);
+            this.btnSaveStudent.Location = new System.Drawing.Point(793, 224);
             this.btnSaveStudent.Name = "btnSaveStudent";
             this.btnSaveStudent.Size = new System.Drawing.Size(127, 28);
             this.btnSaveStudent.TabIndex = 112;
@@ -477,8 +495,6 @@
             // 
             // simpleButton6
             // 
-            this.simpleButton6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.simpleButton6.Appearance.BackColor = System.Drawing.Color.Silver;
             this.simpleButton6.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.simpleButton6.Appearance.ForeColor = System.Drawing.Color.White;
@@ -491,7 +507,7 @@
             this.simpleButton6.AppearanceHovered.Options.UseFont = true;
             this.simpleButton6.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.simpleButton6.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton6.Location = new System.Drawing.Point(651, 353);
+            this.simpleButton6.Location = new System.Drawing.Point(586, 224);
             this.simpleButton6.Name = "simpleButton6";
             this.simpleButton6.Size = new System.Drawing.Size(127, 28);
             this.simpleButton6.TabIndex = 111;
@@ -500,8 +516,6 @@
             // 
             // simpleButton7
             // 
-            this.simpleButton7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.simpleButton7.Appearance.BackColor = System.Drawing.Color.Silver;
             this.simpleButton7.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.simpleButton7.Appearance.ForeColor = System.Drawing.Color.White;
@@ -514,7 +528,7 @@
             this.simpleButton7.AppearanceHovered.Options.UseFont = true;
             this.simpleButton7.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.simpleButton7.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton7.Location = new System.Drawing.Point(439, 353);
+            this.simpleButton7.Location = new System.Drawing.Point(374, 224);
             this.simpleButton7.Name = "simpleButton7";
             this.simpleButton7.Size = new System.Drawing.Size(127, 28);
             this.simpleButton7.TabIndex = 110;
@@ -523,8 +537,6 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLuu.Appearance.BackColor = System.Drawing.Color.Silver;
             this.btnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnLuu.Appearance.ForeColor = System.Drawing.Color.White;
@@ -537,7 +549,7 @@
             this.btnLuu.AppearanceHovered.Options.UseFont = true;
             this.btnLuu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnLuu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnLuu.Location = new System.Drawing.Point(219, 353);
+            this.btnLuu.Location = new System.Drawing.Point(154, 224);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(127, 28);
             this.btnLuu.TabIndex = 109;
@@ -548,7 +560,7 @@
             // 
             this.radUnavailable.AutoSize = true;
             this.radUnavailable.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radUnavailable.Location = new System.Drawing.Point(1155, 60);
+            this.radUnavailable.Location = new System.Drawing.Point(1046, 41);
             this.radUnavailable.Name = "radUnavailable";
             this.radUnavailable.Size = new System.Drawing.Size(55, 21);
             this.radUnavailable.TabIndex = 43;
@@ -560,7 +572,7 @@
             // 
             this.radAvailable.AutoSize = true;
             this.radAvailable.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.radAvailable.Location = new System.Drawing.Point(1011, 60);
+            this.radAvailable.Location = new System.Drawing.Point(898, 41);
             this.radAvailable.Name = "radAvailable";
             this.radAvailable.Size = new System.Drawing.Size(89, 21);
             this.radAvailable.TabIndex = 42;
@@ -572,7 +584,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label12.Location = new System.Drawing.Point(853, 283);
+            this.label12.Location = new System.Drawing.Point(825, 166);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(42, 17);
@@ -583,7 +595,7 @@
             // 
             this.radNu.AutoSize = true;
             this.radNu.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radNu.Location = new System.Drawing.Point(283, 280);
+            this.radNu.Location = new System.Drawing.Point(256, 162);
             this.radNu.Name = "radNu";
             this.radNu.Size = new System.Drawing.Size(44, 24);
             this.radNu.TabIndex = 40;
@@ -595,7 +607,7 @@
             // 
             this.radNam.AutoSize = true;
             this.radNam.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.radNam.Location = new System.Drawing.Point(139, 280);
+            this.radNam.Location = new System.Drawing.Point(113, 163);
             this.radNam.Name = "radNam";
             this.radNam.Size = new System.Drawing.Size(57, 21);
             this.radNam.TabIndex = 39;
@@ -607,7 +619,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label11.Location = new System.Drawing.Point(25, 287);
+            this.label11.Location = new System.Drawing.Point(20, 168);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(62, 17);
@@ -618,7 +630,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label10.Location = new System.Drawing.Point(853, 143);
+            this.label10.Location = new System.Drawing.Point(825, 80);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(42, 17);
@@ -629,7 +641,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1305, 696);
+            this.ClientSize = new System.Drawing.Size(1148, 605);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.grpInformationStudent);
             this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -638,7 +650,7 @@
             this.Name = "frmManageStudentInformation";
             this.Text = "frmManageStudentInformation";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvManageStudentInfomation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpInformationStudent)).EndInit();
@@ -660,7 +672,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colSex;
         private System.Windows.Forms.TextBox txtIDCard;
         private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvManageStudentInfomation;
         private DevExpress.XtraGrid.Columns.GridColumn colStudentID;
         private DevExpress.XtraGrid.Columns.GridColumn colStudentName;
         private DevExpress.XtraGrid.Columns.GridColumn colIndentifiCard;

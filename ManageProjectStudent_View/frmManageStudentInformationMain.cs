@@ -88,11 +88,6 @@ namespace ManageProjectStudent_View
             //lblTitle.Text = childForm.Text;
         }
 
-        
-
-        
-       
-
         private void Reset()
         {
             DisableButton();

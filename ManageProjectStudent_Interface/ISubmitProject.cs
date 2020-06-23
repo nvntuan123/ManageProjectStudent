@@ -9,6 +9,9 @@ namespace ManageProjectStudent_Interface
 {
     public interface ISubmitProject
     {
-
+        // Thong
+        void txtName_KeyPress(object sender, KeyPressEventArgs e);
+        void txtAuthor_KeyPress(object sender, KeyPressEventArgs e);
+        //Thong
     }
 }

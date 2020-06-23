@@ -43,11 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddGroupForSubjectViewModel.cs" />
     <Compile Include="GarenaViewModel.cs" />
     <Compile Include="ManageClassViewModel.cs" />
     <Compile Include="ManageCourseViewModel.cs" />
     <Compile Include="ManageFacultyViewModel.cs" />
     <Compile Include="ManageLecturerInformationViewModel.cs" />
+    <Compile Include="ManageMultiLanguageViewModel.cs" />
+    <Compile Include="ManageProjectViewModel.cs" />
     <Compile Include="ManageStudentInformationViewModel.cs" />
     <Compile Include="ManageSubjectViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

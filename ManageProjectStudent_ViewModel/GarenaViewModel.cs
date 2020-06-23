@@ -34,7 +34,6 @@ namespace ManageProjectStudent_ViewModel
             }
             return false;
             
-            
         }
         public static bool checkEmail(string _STR_Email)
         {

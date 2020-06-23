@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.gcPhanQuyen = new DevExpress.XtraGrid.GridControl();
             this.gvChooseStudent = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colChucNang = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -47,7 +45,6 @@
             this.repositoryItemCheckEdit_Full = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPhanQuyen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvChooseStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit_Frm)).BeginInit();
@@ -244,7 +241,6 @@
             this.Text = "frmAddStudentSubject";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPhanQuyen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvChooseStudent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit_Frm)).EndInit();
@@ -261,7 +257,6 @@
 
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private DevExpress.XtraEditors.SimpleButton btnLuu;
         private DevExpress.XtraGrid.GridControl gcPhanQuyen;
         private DevExpress.XtraGrid.Views.Grid.GridView gvChooseStudent;

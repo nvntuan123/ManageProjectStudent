@@ -12,3 +12,4 @@ C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProject
 C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_Model\bin\Debug\ManageProjectStudent_Model.pdb
 C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.dll
 C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.pdb
+C:\Users\Le Chi Thong\Desktop\Project_Winform\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.csprojAssemblyReference.cache

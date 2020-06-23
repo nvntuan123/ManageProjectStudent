@@ -36,9 +36,7 @@
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,11 +56,11 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtAuthor = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcPhanQuyen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvChooseTask)).BeginInit();
@@ -184,9 +182,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textEdit2);
+            this.groupBox1.Controls.Add(this.txtAuthor);
+            this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.labelControl2);
-            this.groupBox1.Controls.Add(this.textEdit1);
             this.groupBox1.Controls.Add(this.labelControl1);
             this.groupBox1.Location = new System.Drawing.Point(428, 36);
             this.groupBox1.Name = "groupBox1";
@@ -194,13 +192,6 @@
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enter Information";
-            // 
-            // textEdit2
-            // 
-            this.textEdit2.Location = new System.Drawing.Point(107, 101);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(295, 20);
-            this.textEdit2.TabIndex = 3;
             // 
             // labelControl2
             // 
@@ -211,14 +202,6 @@
             this.labelControl2.Size = new System.Drawing.Size(49, 19);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "Tác giả";
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.EditValue = " ";
-            this.textEdit1.Location = new System.Drawing.Point(107, 48);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(295, 20);
-            this.textEdit1.TabIndex = 1;
             // 
             // labelControl1
             // 
@@ -434,6 +417,20 @@
             this.comboBox1.Size = new System.Drawing.Size(188, 21);
             this.comboBox1.TabIndex = 0;
             // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(173, 49);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(265, 21);
+            this.txtName.TabIndex = 3;
+            // 
+            // txtAuthor
+            // 
+            this.txtAuthor.Location = new System.Drawing.Point(173, 105);
+            this.txtAuthor.Name = "txtAuthor";
+            this.txtAuthor.Size = new System.Drawing.Size(265, 21);
+            this.txtAuthor.TabIndex = 4;
+            // 
             // frmSubmitProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -449,8 +446,6 @@
             this.groupControl2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcPhanQuyen)).EndInit();
@@ -476,9 +471,7 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton btnLuu;
         private System.Windows.Forms.GroupBox groupBox1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
@@ -498,5 +491,7 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtAuthor;
+        private System.Windows.Forms.TextBox txtName;
     }
 }

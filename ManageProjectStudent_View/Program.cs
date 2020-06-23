@@ -26,6 +26,12 @@ namespace ManageProjectStudent_View
             Container.RegisterType<IManageSubject, ManageSubjectViewModel>();
             Container.RegisterType<ISubmitProject, SubmitProjectViewModel>();
             // Thong
+
+            // Thong
+            Container.RegisterType<IManageProject, ManageProjectViewModel>();
+            Container.RegisterType<IAddGroupForSubject, AddGroupForSubjectViewModel>();
+            Container.RegisterType<IManageMultiLanguage, ManageMultiLanguageViewModel>();
+            // Thong
         }
     }
 
@@ -41,7 +47,7 @@ namespace ManageProjectStudent_View
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmHome());
+            Application.Run(new frmManageStudentInformation());
         }
     }
 }

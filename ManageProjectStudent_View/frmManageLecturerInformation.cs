@@ -31,7 +31,7 @@ namespace ManageProjectStudent_View
             // Thong
 
             // Thu
-            btnSaveLecturer.Click += delegate { IMLI.btnSaveLecturer_Click(txtID, txtFullName, txtIDCard, dtBirthday, txtAddress, txtPhoneNumber, txtEmail, lkeFaculty, radNam, radNu, radAvailable, radUnavailable); };
+            btnSave.Click += delegate { IMLI.btnSave_Click(txtID, txtFullName, txtIDCard, dtBirthday, txtAddress, txtPhoneNumber, txtEmail, lkeFaculty, radNam, radNu, radAvailable, radUnavailable); };
             // Thu
         }
     }

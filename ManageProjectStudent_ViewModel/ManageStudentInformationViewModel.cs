@@ -77,7 +77,7 @@ namespace ManageProjectStudent_ViewModel
         }
         // Thong
         // Thu
-        public void btnSaveStudent_Click(TextBox txtID, TextBox txtFullName, DateEdit dteBirthday, RadioButton radNam, RadioButton radNu, TextBox txtPhoneNumber, TextBox txtEmail, TextBox txtIDCard, TextBox txtAddress, RadioButton radAvailable, RadioButton radUnavailable, LookUpEdit lkeCourse, LookUpEdit lkeClass, LookUpEdit lkeFaculty)
+        public void btnSave_Click(TextBox txtID, TextBox txtFullName, DateEdit dteBirthday, RadioButton radNam, RadioButton radNu, TextBox txtPhoneNumber, TextBox txtEmail, TextBox txtIDCard, TextBox txtAddress, RadioButton radAvailable, RadioButton radUnavailable, LookUpEdit lkeCourse, LookUpEdit lkeClass, LookUpEdit lkeFaculty)
         {
             if (txtFullName.Text == "")
             {
@@ -143,16 +143,37 @@ namespace ManageProjectStudent_ViewModel
         #endregion
         #region Method
         // Thu
-        public void _setStatus(TextBox txtID, TextBox txtFullName, DateEdit dteBirthday, RadioButton radNam, RadioButton radNu, TextBox txtPhoneNumber, TextBox txtEmail, TextBox txtIDCard, TextBox txtAddress, RadioButton radAvailable, RadioButton radUnavailable, LookUpEdit lkeCourse, LookUpEdit lkeClass, LookUpEdit lkeFaculty)
+        int _itatusForm = 0; // 0: view, 1: add, 2: edit.
+        Student StudentPresent = null;
+        public void _setStatusForm(TextBox txtID, TextBox txtFullName, DateEdit dteBirthday, RadioButton radNam, RadioButton radNu, TextBox txtPhoneNumber, TextBox txtEmail, TextBox txtIDCard, TextBox txtAddress, RadioButton radAvailable, RadioButton radUnavailable, LookUpEdit lkeCourse, LookUpEdit lkeClass, LookUpEdit lkeFaculty, SimpleButton btnAdd, SimpleButton btnDelete, SimpleButton btnUpdate, SimpleButton btnSave)
         {
             txtID.ReadOnly = true;
+            switch(_itatusForm)
+            {
+                case 0:
+                    txtFullName.Enabled = false;
+                    dteBirthday.ReadOnly = true;
+                    radNam.Enabled = false;
+                    radNu.Enabled = false;
+                    txtPhoneNumber.Enabled = false;
+                    txtEmail.Enabled = false;
+                    txtIDCard.Enabled = false;
+                    txtAddress.Enabled = false;
+                    radAvailable.Enabled = false;
+                    radUnavailable.Enabled = false;
+                    lkeCourse.ReadOnly = true;
+                    lkeClass.ReadOnly = true;
+                    lkeFaculty.ReadOnly = true;
+                    break;
+            }    
         }
         // Thu
         #endregion
         #region Properties
-        // Thu
-        int _itatusForm = 0; // 0: view, 1: add, 2: edit.
-        // Thu
         #endregion
+    }
+
+    internal class Student
+    {
     }
 }

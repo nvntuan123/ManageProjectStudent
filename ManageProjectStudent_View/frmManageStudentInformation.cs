@@ -33,7 +33,8 @@ namespace ManageProjectStudent_View
             radNu.CheckedChanged += new EventHandler(IMSI.radNu_CheckedChanged);
             // Thong
             // Thu
-            btnSaveStudent.Click += delegate { IMSI.btnSaveStudent_Click(txtID, txtFullName, dteBirthday, radNam, radNu, txtPhoneNumber, txtEmail, txtIDCard, txtAddress, radAvailable, radUnavailable, lkeCourse, lkeClass, lkeFaculty); };
+            btnSave.Click += delegate { IMSI.btnSave_Click(txtID, txtFullName, dteBirthday, radNam, radNu, txtPhoneNumber, txtEmail, txtIDCard, txtAddress, radAvailable, radUnavailable, lkeCourse, lkeClass, lkeFaculty); };
+            IMSI._setStatusForm(txtID, txtFullName, dteBirthday, radNam, radNu, txtPhoneNumber, txtEmail, txtIDCard, txtAddress, radAvailable, radUnavailable, lkeCourse, lkeClass, lkeFaculty, btnAdd, btnDelete, btnUpdate, btnSave);
             // Thu
         }
 

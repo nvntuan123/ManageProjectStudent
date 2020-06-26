@@ -20,8 +20,8 @@ namespace ManageProjectStudent_Interface
         void radNu_CheckedChanged(object sender, EventArgs e);
         // Thong
         // Thu
-        void btnSaveStudent_Click(TextBox txtID, TextBox txtFullName, DateEdit dteBirthday, RadioButton radNam, RadioButton radNu, TextBox txtPhoneNumber, TextBox txtEmail, TextBox txtIDCard, TextBox txtAddress, RadioButton radAvailable, RadioButton radUnavailable, LookUpEdit lkeCourse , LookUpEdit lkeClass, LookUpEdit lkeFaculty);
-        void _setStatus(TextBox txtID, TextBox txtFullName, DateEdit dteBirthday, RadioButton radNam, RadioButton radNu, TextBox txtPhoneNumber, TextBox txtEmail, TextBox txtIDCard, TextBox txtAddress, RadioButton radAvailable, RadioButton radUnavailable, LookUpEdit lkeCourse, LookUpEdit lkeClass, LookUpEdit lkeFaculty);
+        void btnSave_Click(TextBox txtID, TextBox txtFullName, DateEdit dteBirthday, RadioButton radNam, RadioButton radNu, TextBox txtPhoneNumber, TextBox txtEmail, TextBox txtIDCard, TextBox txtAddress, RadioButton radAvailable, RadioButton radUnavailable, LookUpEdit lkeCourse , LookUpEdit lkeClass, LookUpEdit lkeFaculty);
+        void _setStatusForm(TextBox txtID, TextBox txtFullName, DateEdit dteBirthday, RadioButton radNam, RadioButton radNu, TextBox txtPhoneNumber, TextBox txtEmail, TextBox txtIDCard, TextBox txtAddress, RadioButton radAvailable, RadioButton radUnavailable, LookUpEdit lkeCourse, LookUpEdit lkeClass, LookUpEdit lkeFaculty, SimpleButton btnAdd, SimpleButton btnDelete, SimpleButton btnUpdate, SimpleButton btnSave);
         void txtAddress_KeyPress(object sender, KeyPressEventArgs e);
         // Thu
     }

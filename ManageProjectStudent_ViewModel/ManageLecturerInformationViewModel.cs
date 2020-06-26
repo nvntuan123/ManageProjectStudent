@@ -13,9 +13,8 @@ namespace ManageProjectStudent_ViewModel
     {
         #region
         // Thu
-        public void btnSaveLecturer_Click(TextBox txtID, TextBox txtFullName, TextBox txtIDCard, DateEdit dteBirthday, TextBox txtAddress, TextBox txtPhoneNumber, TextBox txtEmail, LookUpEdit lkeFaculty, RadioButton radNam, RadioButton radNu, RadioButton radAvailable, RadioButton radUnavailable)
+        public void btnSave_Click(TextBox txtID, TextBox txtFullName, TextBox txtIDCard, DateEdit dteBirthday, TextBox txtAddress, TextBox txtPhoneNumber, TextBox txtEmail, LookUpEdit lkeFaculty, RadioButton radNam, RadioButton radNu, RadioButton radAvailable, RadioButton radUnavailable)
         {
-
             if (txtFullName.Text == "")
             {
                 string _STRMesge = "Bạn chưa nhập tên Giảng viên";

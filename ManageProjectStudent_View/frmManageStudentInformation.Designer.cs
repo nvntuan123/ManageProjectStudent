@@ -61,10 +61,10 @@
             this.lkeFaculty = new DevExpress.XtraEditors.LookUpEdit();
             this.lkeCourse = new DevExpress.XtraEditors.LookUpEdit();
             this.lkeClass = new DevExpress.XtraEditors.LookUpEdit();
-            this.btnSaveStudent = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.radUnavailable = new System.Windows.Forms.RadioButton();
             this.radAvailable = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
@@ -405,10 +405,10 @@
             this.grpInformationStudent.Controls.Add(this.lkeFaculty);
             this.grpInformationStudent.Controls.Add(this.lkeCourse);
             this.grpInformationStudent.Controls.Add(this.lkeClass);
-            this.grpInformationStudent.Controls.Add(this.btnSaveStudent);
-            this.grpInformationStudent.Controls.Add(this.simpleButton6);
-            this.grpInformationStudent.Controls.Add(this.simpleButton7);
-            this.grpInformationStudent.Controls.Add(this.btnLuu);
+            this.grpInformationStudent.Controls.Add(this.btnSave);
+            this.grpInformationStudent.Controls.Add(this.btnUpdate);
+            this.grpInformationStudent.Controls.Add(this.btnDelete);
+            this.grpInformationStudent.Controls.Add(this.btnAdd);
             this.grpInformationStudent.Controls.Add(this.radUnavailable);
             this.grpInformationStudent.Controls.Add(this.radAvailable);
             this.grpInformationStudent.Controls.Add(this.label12);
@@ -472,89 +472,89 @@
             this.lkeClass.Size = new System.Drawing.Size(188, 24);
             this.lkeClass.TabIndex = 113;
             // 
-            // btnSaveStudent
+            // btnSave
             // 
-            this.btnSaveStudent.Appearance.BackColor = System.Drawing.Color.Silver;
-            this.btnSaveStudent.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSaveStudent.Appearance.ForeColor = System.Drawing.Color.White;
-            this.btnSaveStudent.Appearance.Options.UseBackColor = true;
-            this.btnSaveStudent.Appearance.Options.UseFont = true;
-            this.btnSaveStudent.Appearance.Options.UseForeColor = true;
-            this.btnSaveStudent.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
-            this.btnSaveStudent.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSaveStudent.AppearanceHovered.Options.UseBackColor = true;
-            this.btnSaveStudent.AppearanceHovered.Options.UseFont = true;
-            this.btnSaveStudent.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnSaveStudent.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnSaveStudent.Location = new System.Drawing.Point(793, 224);
-            this.btnSaveStudent.Name = "btnSaveStudent";
-            this.btnSaveStudent.Size = new System.Drawing.Size(127, 28);
-            this.btnSaveStudent.TabIndex = 112;
-            this.btnSaveStudent.TabStop = false;
-            this.btnSaveStudent.Text = "Lưu";
+            this.btnSave.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSave.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Appearance.Options.UseBackColor = true;
+            this.btnSave.Appearance.Options.UseFont = true;
+            this.btnSave.Appearance.Options.UseForeColor = true;
+            this.btnSave.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.btnSave.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSave.AppearanceHovered.Options.UseBackColor = true;
+            this.btnSave.AppearanceHovered.Options.UseFont = true;
+            this.btnSave.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnSave.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnSave.Location = new System.Drawing.Point(793, 224);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(127, 28);
+            this.btnSave.TabIndex = 112;
+            this.btnSave.TabStop = false;
+            this.btnSave.Text = "Lưu";
             // 
-            // simpleButton6
+            // btnUpdate
             // 
-            this.simpleButton6.Appearance.BackColor = System.Drawing.Color.Silver;
-            this.simpleButton6.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.simpleButton6.Appearance.ForeColor = System.Drawing.Color.White;
-            this.simpleButton6.Appearance.Options.UseBackColor = true;
-            this.simpleButton6.Appearance.Options.UseFont = true;
-            this.simpleButton6.Appearance.Options.UseForeColor = true;
-            this.simpleButton6.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
-            this.simpleButton6.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.simpleButton6.AppearanceHovered.Options.UseBackColor = true;
-            this.simpleButton6.AppearanceHovered.Options.UseFont = true;
-            this.simpleButton6.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.simpleButton6.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton6.Location = new System.Drawing.Point(586, 224);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(127, 28);
-            this.simpleButton6.TabIndex = 111;
-            this.simpleButton6.TabStop = false;
-            this.simpleButton6.Text = "Sửa ";
+            this.btnUpdate.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.btnUpdate.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnUpdate.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Appearance.Options.UseBackColor = true;
+            this.btnUpdate.Appearance.Options.UseFont = true;
+            this.btnUpdate.Appearance.Options.UseForeColor = true;
+            this.btnUpdate.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.btnUpdate.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnUpdate.AppearanceHovered.Options.UseBackColor = true;
+            this.btnUpdate.AppearanceHovered.Options.UseFont = true;
+            this.btnUpdate.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnUpdate.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnUpdate.Location = new System.Drawing.Point(586, 224);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(127, 28);
+            this.btnUpdate.TabIndex = 111;
+            this.btnUpdate.TabStop = false;
+            this.btnUpdate.Text = "Sửa ";
             // 
-            // simpleButton7
+            // btnDelete
             // 
-            this.simpleButton7.Appearance.BackColor = System.Drawing.Color.Silver;
-            this.simpleButton7.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.simpleButton7.Appearance.ForeColor = System.Drawing.Color.White;
-            this.simpleButton7.Appearance.Options.UseBackColor = true;
-            this.simpleButton7.Appearance.Options.UseFont = true;
-            this.simpleButton7.Appearance.Options.UseForeColor = true;
-            this.simpleButton7.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
-            this.simpleButton7.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.simpleButton7.AppearanceHovered.Options.UseBackColor = true;
-            this.simpleButton7.AppearanceHovered.Options.UseFont = true;
-            this.simpleButton7.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.simpleButton7.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton7.Location = new System.Drawing.Point(374, 224);
-            this.simpleButton7.Name = "simpleButton7";
-            this.simpleButton7.Size = new System.Drawing.Size(127, 28);
-            this.simpleButton7.TabIndex = 110;
-            this.simpleButton7.TabStop = false;
-            this.simpleButton7.Text = "Xóa";
+            this.btnDelete.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.btnDelete.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDelete.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Appearance.Options.UseBackColor = true;
+            this.btnDelete.Appearance.Options.UseFont = true;
+            this.btnDelete.Appearance.Options.UseForeColor = true;
+            this.btnDelete.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.btnDelete.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDelete.AppearanceHovered.Options.UseBackColor = true;
+            this.btnDelete.AppearanceHovered.Options.UseFont = true;
+            this.btnDelete.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnDelete.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnDelete.Location = new System.Drawing.Point(374, 224);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(127, 28);
+            this.btnDelete.TabIndex = 110;
+            this.btnDelete.TabStop = false;
+            this.btnDelete.Text = "Xóa";
             // 
-            // btnLuu
+            // btnAdd
             // 
-            this.btnLuu.Appearance.BackColor = System.Drawing.Color.Silver;
-            this.btnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnLuu.Appearance.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Appearance.Options.UseBackColor = true;
-            this.btnLuu.Appearance.Options.UseFont = true;
-            this.btnLuu.Appearance.Options.UseForeColor = true;
-            this.btnLuu.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
-            this.btnLuu.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnLuu.AppearanceHovered.Options.UseBackColor = true;
-            this.btnLuu.AppearanceHovered.Options.UseFont = true;
-            this.btnLuu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnLuu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnLuu.Location = new System.Drawing.Point(154, 224);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(127, 28);
-            this.btnLuu.TabIndex = 109;
-            this.btnLuu.TabStop = false;
-            this.btnLuu.Text = "Thêm";
+            this.btnAdd.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.btnAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnAdd.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Appearance.Options.UseBackColor = true;
+            this.btnAdd.Appearance.Options.UseFont = true;
+            this.btnAdd.Appearance.Options.UseForeColor = true;
+            this.btnAdd.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.btnAdd.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnAdd.AppearanceHovered.Options.UseBackColor = true;
+            this.btnAdd.AppearanceHovered.Options.UseFont = true;
+            this.btnAdd.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnAdd.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnAdd.Location = new System.Drawing.Point(154, 224);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(127, 28);
+            this.btnAdd.TabIndex = 109;
+            this.btnAdd.TabStop = false;
+            this.btnAdd.Text = "Thêm";
             // 
             // radUnavailable
             // 
@@ -701,10 +701,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.RadioButton radUnavailable;
         private System.Windows.Forms.RadioButton radAvailable;
-        private DevExpress.XtraEditors.SimpleButton btnSaveStudent;
-        private DevExpress.XtraEditors.SimpleButton simpleButton6;
-        private DevExpress.XtraEditors.SimpleButton simpleButton7;
-        private DevExpress.XtraEditors.SimpleButton btnLuu;
+        private DevExpress.XtraEditors.SimpleButton btnSave;
+        private DevExpress.XtraEditors.SimpleButton btnUpdate;
+        private DevExpress.XtraEditors.SimpleButton btnDelete;
+        private DevExpress.XtraEditors.SimpleButton btnAdd;
         private DevExpress.XtraEditors.LookUpEdit lkeFaculty;
         private DevExpress.XtraEditors.LookUpEdit lkeCourse;
         private DevExpress.XtraEditors.LookUpEdit lkeClass;

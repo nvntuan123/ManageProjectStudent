@@ -117,5 +117,10 @@ namespace ManageProjectStudent_View
                 activeForm.Close();
             Reset();
         }
+
+        private void frmManageStudentInformationMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

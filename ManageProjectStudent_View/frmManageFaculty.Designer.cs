@@ -28,12 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
-            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.txtIDFaculty = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gvFacultyList = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -42,36 +39,19 @@
             this.colYear = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gvFacultyList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Appearance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnDelete.Appearance.Options.UseFont = true;
-            this.btnDelete.Location = new System.Drawing.Point(676, 274);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(141, 23);
-            this.btnDelete.TabIndex = 56;
-            this.btnDelete.Text = "Xóa";
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Appearance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnEdit.Appearance.Options.UseFont = true;
-            this.btnEdit.Location = new System.Drawing.Point(501, 274);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(155, 23);
-            this.btnEdit.TabIndex = 55;
-            this.btnEdit.Text = "Sửa";
             // 
             // textBox7
             // 
@@ -100,16 +80,6 @@
             this.label4.TabIndex = 51;
             this.label4.Text = "Tên khoa";
             // 
-            // btnAdd
-            // 
-            this.btnAdd.Appearance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnAdd.Appearance.Options.UseFont = true;
-            this.btnAdd.Location = new System.Drawing.Point(165, 274);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(141, 23);
-            this.btnAdd.TabIndex = 48;
-            this.btnAdd.Text = "Thêm";
-            // 
             // txtIDFaculty
             // 
             this.txtIDFaculty.Location = new System.Drawing.Point(432, 52);
@@ -131,19 +101,17 @@
             // 
             this.gvFacultyList.Appearance.EvenRow.BackColor = System.Drawing.Color.Silver;
             this.gvFacultyList.Appearance.EvenRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gvFacultyList.Appearance.EvenRow.Options.UseBackColor = true;
             this.gvFacultyList.Appearance.EvenRow.Options.UseFont = true;
             this.gvFacultyList.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.gvFacultyList.Appearance.HeaderPanel.Options.UseFont = true;
             this.gvFacultyList.Appearance.OddRow.BackColor = System.Drawing.Color.White;
             this.gvFacultyList.Appearance.OddRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gvFacultyList.Appearance.OddRow.Options.UseBackColor = true;
             this.gvFacultyList.Appearance.OddRow.Options.UseFont = true;
             this.gvFacultyList.Appearance.Row.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.gvFacultyList.Appearance.Row.Options.UseFont = true;
             this.gvFacultyList.Appearance.SelectedRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.gvFacultyList.Appearance.SelectedRow.Options.UseFont = true;
-            this.gvFacultyList.Appearance.ViewCaption.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvFacultyList.Appearance.ViewCaption.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.gvFacultyList.Appearance.ViewCaption.Options.UseFont = true;
             this.gvFacultyList.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colID,
@@ -162,6 +130,10 @@
             // 
             // colID
             // 
+            this.colID.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colID.AppearanceCell.Options.UseFont = true;
+            this.colID.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colID.AppearanceHeader.Options.UseFont = true;
             this.colID.Caption = "ID";
             this.colID.Name = "colID";
             this.colID.Visible = true;
@@ -169,6 +141,8 @@
             // 
             // colNameFaculty
             // 
+            this.colNameFaculty.AppearanceHeader.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colNameFaculty.AppearanceHeader.Options.UseFont = true;
             this.colNameFaculty.Caption = "Tên khoa";
             this.colNameFaculty.Name = "colNameFaculty";
             this.colNameFaculty.Visible = true;
@@ -176,6 +150,10 @@
             // 
             // colYear
             // 
+            this.colYear.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colYear.AppearanceCell.Options.UseFont = true;
+            this.colYear.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colYear.AppearanceHeader.Options.UseFont = true;
             this.colYear.Caption = "Năm";
             this.colYear.Name = "colYear";
             this.colYear.Visible = true;
@@ -193,14 +171,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.simpleButton2);
+            this.groupBox1.Controls.Add(this.simpleButton6);
+            this.groupBox1.Controls.Add(this.simpleButton1);
+            this.groupBox1.Controls.Add(this.btnLuu);
             this.groupBox1.Controls.Add(this.lookUpEdit1);
-            this.groupBox1.Controls.Add(this.btnSave);
-            this.groupBox1.Controls.Add(this.btnDelete);
-            this.groupBox1.Controls.Add(this.btnEdit);
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Controls.Add(this.txtIDFaculty);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -209,6 +187,15 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quản lí thông tin";
+            // 
+            // lookUpEdit1
+            // 
+            this.lookUpEdit1.Location = new System.Drawing.Point(432, 185);
+            this.lookUpEdit1.Name = "lookUpEdit1";
+            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit1.Size = new System.Drawing.Size(248, 20);
+            this.lookUpEdit1.TabIndex = 58;
             // 
             // groupControl1
             // 
@@ -219,24 +206,97 @@
             this.groupControl1.TabIndex = 9;
             this.groupControl1.Text = "Danh sách ";
             // 
-            // btnSave
+            // simpleButton2
             // 
-            this.btnSave.Appearance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSave.Appearance.Options.UseFont = true;
-            this.btnSave.Location = new System.Drawing.Point(330, 274);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(141, 23);
-            this.btnSave.TabIndex = 57;
-            this.btnSave.Text = "Lưu";
+            this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton2.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.simpleButton2.Appearance.ForeColor = System.Drawing.Color.White;
+            this.simpleButton2.Appearance.Options.UseBackColor = true;
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.Appearance.Options.UseForeColor = true;
+            this.simpleButton2.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.simpleButton2.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.simpleButton2.AppearanceHovered.Options.UseBackColor = true;
+            this.simpleButton2.AppearanceHovered.Options.UseFont = true;
+            this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.simpleButton2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.simpleButton2.Location = new System.Drawing.Point(710, 267);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(127, 28);
+            this.simpleButton2.TabIndex = 125;
+            this.simpleButton2.TabStop = false;
+            this.simpleButton2.Text = "Lưu";
             // 
-            // lookUpEdit1
+            // simpleButton6
             // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(432, 185);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Size = new System.Drawing.Size(248, 20);
-            this.lookUpEdit1.TabIndex = 58;
+            this.simpleButton6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton6.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.simpleButton6.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.simpleButton6.Appearance.ForeColor = System.Drawing.Color.White;
+            this.simpleButton6.Appearance.Options.UseBackColor = true;
+            this.simpleButton6.Appearance.Options.UseFont = true;
+            this.simpleButton6.Appearance.Options.UseForeColor = true;
+            this.simpleButton6.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.simpleButton6.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.simpleButton6.AppearanceHovered.Options.UseBackColor = true;
+            this.simpleButton6.AppearanceHovered.Options.UseFont = true;
+            this.simpleButton6.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.simpleButton6.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.simpleButton6.Location = new System.Drawing.Point(521, 267);
+            this.simpleButton6.Name = "simpleButton6";
+            this.simpleButton6.Size = new System.Drawing.Size(127, 28);
+            this.simpleButton6.TabIndex = 124;
+            this.simpleButton6.TabStop = false;
+            this.simpleButton6.Text = "Sửa ";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.White;
+            this.simpleButton1.Appearance.Options.UseBackColor = true;
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Appearance.Options.UseForeColor = true;
+            this.simpleButton1.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.simpleButton1.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.simpleButton1.AppearanceHovered.Options.UseBackColor = true;
+            this.simpleButton1.AppearanceHovered.Options.UseFont = true;
+            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.simpleButton1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.simpleButton1.Location = new System.Drawing.Point(331, 267);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(127, 28);
+            this.simpleButton1.TabIndex = 123;
+            this.simpleButton1.TabStop = false;
+            this.simpleButton1.Text = "Xóa";
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLuu.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.btnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnLuu.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnLuu.Appearance.Options.UseBackColor = true;
+            this.btnLuu.Appearance.Options.UseFont = true;
+            this.btnLuu.Appearance.Options.UseForeColor = true;
+            this.btnLuu.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.btnLuu.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnLuu.AppearanceHovered.Options.UseBackColor = true;
+            this.btnLuu.AppearanceHovered.Options.UseFont = true;
+            this.btnLuu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnLuu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnLuu.Location = new System.Drawing.Point(129, 267);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(127, 28);
+            this.btnLuu.TabIndex = 122;
+            this.btnLuu.TabStop = false;
+            this.btnLuu.Text = "Thêm";
             // 
             // frmManageFaculty
             // 
@@ -252,21 +312,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.SimpleButton btnDelete;
-        private DevExpress.XtraEditors.SimpleButton btnEdit;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label4;
-        private DevExpress.XtraEditors.SimpleButton btnAdd;
         private System.Windows.Forms.TextBox txtIDFaculty;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraGrid.Columns.GridColumn colYear;
@@ -277,6 +333,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
-        private DevExpress.XtraEditors.SimpleButton btnSave;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton6;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnLuu;
     }
 }

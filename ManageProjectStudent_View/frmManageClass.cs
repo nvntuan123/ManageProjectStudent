@@ -22,6 +22,9 @@ namespace ManageProjectStudent_View
             txtIDClass.KeyPress += new KeyPressEventHandler(IMC.txtIDClass_KeyPress);
         }
 
-        
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

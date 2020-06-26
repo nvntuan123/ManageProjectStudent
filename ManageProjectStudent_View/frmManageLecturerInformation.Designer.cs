@@ -194,6 +194,8 @@
             // 
             // colLecturerID
             // 
+            this.colLecturerID.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colLecturerID.AppearanceCell.Options.UseFont = true;
             this.colLecturerID.Caption = "ID Giảng Viên";
             this.colLecturerID.Name = "colLecturerID";
             this.colLecturerID.Visible = true;
@@ -202,6 +204,8 @@
             // 
             // colFullName
             // 
+            this.colFullName.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colFullName.AppearanceCell.Options.UseFont = true;
             this.colFullName.Caption = "Họ Tên";
             this.colFullName.Name = "colFullName";
             this.colFullName.Visible = true;
@@ -210,6 +214,8 @@
             // 
             // colIDCard
             // 
+            this.colIDCard.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colIDCard.AppearanceCell.Options.UseFont = true;
             this.colIDCard.Caption = "CMND";
             this.colIDCard.Name = "colIDCard";
             this.colIDCard.Visible = true;

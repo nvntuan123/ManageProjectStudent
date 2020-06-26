@@ -32,12 +32,11 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnExitForm = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.btnManageClass = new System.Windows.Forms.Button();
-            this.btnManageFaculty = new System.Windows.Forms.Button();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
+            this.btnManageFaculty = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +46,6 @@
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(77)))));
             this.panelMenu.Controls.Add(this.btnExitForm);
             this.panelMenu.Controls.Add(this.panelLogo);
-            this.panelMenu.Controls.Add(this.btnManageClass);
             this.panelMenu.Controls.Add(this.btnManageFaculty);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -63,7 +61,7 @@
             this.btnExitForm.ForeColor = System.Drawing.Color.White;
             this.btnExitForm.Image = ((System.Drawing.Image)(resources.GetObject("btnExitForm.Image")));
             this.btnExitForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExitForm.Location = new System.Drawing.Point(3, 206);
+            this.btnExitForm.Location = new System.Drawing.Point(0, 160);
             this.btnExitForm.Name = "btnExitForm";
             this.btnExitForm.Size = new System.Drawing.Size(171, 50);
             this.btnExitForm.TabIndex = 6;
@@ -81,41 +79,6 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(174, 87);
             this.panelLogo.TabIndex = 5;
-            // 
-            // btnManageClass
-            // 
-            this.btnManageClass.FlatAppearance.BorderSize = 0;
-            this.btnManageClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageClass.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageClass.ForeColor = System.Drawing.Color.White;
-            this.btnManageClass.Image = ((System.Drawing.Image)(resources.GetObject("btnManageClass.Image")));
-            this.btnManageClass.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageClass.Location = new System.Drawing.Point(3, 149);
-            this.btnManageClass.Name = "btnManageClass";
-            this.btnManageClass.Size = new System.Drawing.Size(171, 50);
-            this.btnManageClass.TabIndex = 4;
-            this.btnManageClass.Text = "Quản lý lớp";
-            this.btnManageClass.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnManageClass.UseVisualStyleBackColor = true;
-            this.btnManageClass.Click += new System.EventHandler(this.btnManageClass_Click);
-            // 
-            // btnManageFaculty
-            // 
-            this.btnManageFaculty.FlatAppearance.BorderSize = 0;
-            this.btnManageFaculty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageFaculty.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageFaculty.ForeColor = System.Drawing.Color.White;
-            this.btnManageFaculty.Image = ((System.Drawing.Image)(resources.GetObject("btnManageFaculty.Image")));
-            this.btnManageFaculty.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageFaculty.Location = new System.Drawing.Point(0, 93);
-            this.btnManageFaculty.Name = "btnManageFaculty";
-            this.btnManageFaculty.Size = new System.Drawing.Size(174, 50);
-            this.btnManageFaculty.TabIndex = 2;
-            this.btnManageFaculty.Text = "Quản lý khoa";
-            this.btnManageFaculty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageFaculty.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnManageFaculty.UseVisualStyleBackColor = true;
-            this.btnManageFaculty.Click += new System.EventHandler(this.btnManageFaculty_Click);
             // 
             // panelTitleBar
             // 
@@ -163,6 +126,24 @@
             this.panelDesktopPane.Size = new System.Drawing.Size(1026, 553);
             this.panelDesktopPane.TabIndex = 4;
             // 
+            // btnManageFaculty
+            // 
+            this.btnManageFaculty.FlatAppearance.BorderSize = 0;
+            this.btnManageFaculty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageFaculty.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageFaculty.ForeColor = System.Drawing.Color.White;
+            this.btnManageFaculty.Image = ((System.Drawing.Image)(resources.GetObject("btnManageFaculty.Image")));
+            this.btnManageFaculty.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageFaculty.Location = new System.Drawing.Point(0, 93);
+            this.btnManageFaculty.Name = "btnManageFaculty";
+            this.btnManageFaculty.Size = new System.Drawing.Size(174, 50);
+            this.btnManageFaculty.TabIndex = 2;
+            this.btnManageFaculty.Text = "Quản lý khoa";
+            this.btnManageFaculty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageFaculty.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnManageFaculty.UseVisualStyleBackColor = true;
+            this.btnManageFaculty.Click += new System.EventHandler(this.btnManageFaculty_Click);
+            // 
             // frmManageFacultyMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,11 +167,10 @@
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button btnExitForm;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Button btnManageClass;
-        private System.Windows.Forms.Button btnManageFaculty;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Button btnCloseChildForm;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panelDesktopPane;
+        private System.Windows.Forms.Button btnManageFaculty;
     }
 }

@@ -30,12 +30,14 @@
         {
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIDProject = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colProjectName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNameSubject = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStartDay = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEndday = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtProjectName = new System.Windows.Forms.TextBox();
+            this.txtIDProject = new System.Windows.Forms.TextBox();
             this.btnSaveLecturer = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
@@ -48,8 +50,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtIDProject = new System.Windows.Forms.TextBox();
-            this.txtProjectName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -66,60 +66,102 @@
             this.gridControl1.Location = new System.Drawing.Point(32, 330);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(934, 181);
+            this.gridControl1.Size = new System.Drawing.Size(934, 196);
             this.gridControl1.TabIndex = 19;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.EvenRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gridView1.Appearance.EvenRow.Options.UseBackColor = true;
+            this.gridView1.Appearance.EvenRow.Options.UseFont = true;
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridView1.Appearance.OddRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gridView1.Appearance.OddRow.Options.UseBackColor = true;
+            this.gridView1.Appearance.OddRow.Options.UseFont = true;
+            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gridView1.Appearance.Row.Options.UseFont = true;
+            this.gridView1.Appearance.SelectedRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gridView1.Appearance.SelectedRow.Options.UseFont = true;
             this.gridView1.Appearance.ViewCaption.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.ViewCaption.Options.UseFont = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5});
+            this.colIDProject,
+            this.colProjectName,
+            this.colNameSubject,
+            this.colStartDay,
+            this.colEndday});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.EnableAppearanceEvenRow = true;
+            this.gridView1.OptionsView.EnableAppearanceOddRow = true;
+            this.gridView1.OptionsView.ShowAutoFilterRow = true;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.OptionsView.ShowViewCaption = true;
             this.gridView1.ViewCaption = "Danh sách đồ án";
             // 
-            // gridColumn1
+            // colIDProject
             // 
-            this.gridColumn1.Caption = "Mã đồ án";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.colIDProject.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colIDProject.AppearanceCell.Options.UseFont = true;
+            this.colIDProject.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colIDProject.AppearanceHeader.Options.UseFont = true;
+            this.colIDProject.Caption = "Mã đồ án";
+            this.colIDProject.MinWidth = 30;
+            this.colIDProject.Name = "colIDProject";
+            this.colIDProject.Visible = true;
+            this.colIDProject.VisibleIndex = 0;
+            this.colIDProject.Width = 120;
             // 
-            // gridColumn2
+            // colProjectName
             // 
-            this.gridColumn2.Caption = "Tên đồ án";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.colProjectName.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colProjectName.AppearanceCell.Options.UseFont = true;
+            this.colProjectName.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colProjectName.AppearanceHeader.Options.UseFont = true;
+            this.colProjectName.Caption = "Tên đồ án";
+            this.colProjectName.Name = "colProjectName";
+            this.colProjectName.Visible = true;
+            this.colProjectName.VisibleIndex = 1;
+            this.colProjectName.Width = 195;
             // 
-            // gridColumn3
+            // colNameSubject
             // 
-            this.gridColumn3.Caption = "Tên môn học";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
+            this.colNameSubject.AppearanceCell.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colNameSubject.AppearanceCell.Options.UseFont = true;
+            this.colNameSubject.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colNameSubject.AppearanceHeader.Options.UseFont = true;
+            this.colNameSubject.Caption = "Tên môn học";
+            this.colNameSubject.Name = "colNameSubject";
+            this.colNameSubject.Visible = true;
+            this.colNameSubject.VisibleIndex = 2;
+            this.colNameSubject.Width = 195;
             // 
-            // gridColumn4
+            // colStartDay
             // 
-            this.gridColumn4.Caption = "Ngày bắt đầu";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
+            this.colStartDay.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colStartDay.AppearanceCell.Options.UseFont = true;
+            this.colStartDay.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colStartDay.AppearanceHeader.Options.UseFont = true;
+            this.colStartDay.Caption = "Ngày bắt đầu";
+            this.colStartDay.Name = "colStartDay";
+            this.colStartDay.Visible = true;
+            this.colStartDay.VisibleIndex = 3;
+            this.colStartDay.Width = 195;
             // 
-            // gridColumn5
+            // colEndday
             // 
-            this.gridColumn5.Caption = "Ngày kết thúc";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
+            this.colEndday.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colEndday.AppearanceCell.Options.UseFont = true;
+            this.colEndday.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colEndday.AppearanceHeader.Options.UseFont = true;
+            this.colEndday.Caption = "Ngày kết thúc";
+            this.colEndday.Name = "colEndday";
+            this.colEndday.Visible = true;
+            this.colEndday.VisibleIndex = 4;
+            this.colEndday.Width = 204;
             // 
             // groupControl1
             // 
@@ -142,6 +184,20 @@
             this.groupControl1.Size = new System.Drawing.Size(934, 261);
             this.groupControl1.TabIndex = 18;
             this.groupControl1.Text = "Nhập thông tin đồ án";
+            // 
+            // txtProjectName
+            // 
+            this.txtProjectName.Location = new System.Drawing.Point(221, 110);
+            this.txtProjectName.Name = "txtProjectName";
+            this.txtProjectName.Size = new System.Drawing.Size(168, 21);
+            this.txtProjectName.TabIndex = 122;
+            // 
+            // txtIDProject
+            // 
+            this.txtIDProject.Location = new System.Drawing.Point(221, 43);
+            this.txtIDProject.Name = "txtIDProject";
+            this.txtIDProject.Size = new System.Drawing.Size(168, 21);
+            this.txtIDProject.TabIndex = 121;
             // 
             // btnSaveLecturer
             // 
@@ -318,20 +374,6 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Mã đồ án";
             // 
-            // txtIDProject
-            // 
-            this.txtIDProject.Location = new System.Drawing.Point(221, 43);
-            this.txtIDProject.Name = "txtIDProject";
-            this.txtIDProject.Size = new System.Drawing.Size(168, 21);
-            this.txtIDProject.TabIndex = 121;
-            // 
-            // txtProjectName
-            // 
-            this.txtProjectName.Location = new System.Drawing.Point(221, 110);
-            this.txtProjectName.Name = "txtProjectName";
-            this.txtProjectName.Size = new System.Drawing.Size(168, 21);
-            this.txtProjectName.TabIndex = 122;
-            // 
             // frmManageProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -360,11 +402,11 @@
 
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn colIDProject;
+        private DevExpress.XtraGrid.Columns.GridColumn colProjectName;
+        private DevExpress.XtraGrid.Columns.GridColumn colNameSubject;
+        private DevExpress.XtraGrid.Columns.GridColumn colStartDay;
+        private DevExpress.XtraGrid.Columns.GridColumn colEndday;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
         private System.Windows.Forms.Label label6;

@@ -41,6 +41,7 @@ namespace ManageProjectStudent_ViewModel
                 ((TextBox)sender).Focus();
                 string _STRMesge = "Không được nhập ký tự số, chỉ được nhập chữ.";
                 MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
             }
         }
         public void txtIDCard_KeyPress(object sender, KeyPressEventArgs e)

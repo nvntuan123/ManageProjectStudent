@@ -373,6 +373,10 @@
       <Project>{6ed2a8ae-c379-4b32-b1b3-dd96d53836b6}</Project>
       <Name>ManageProjectStudent_Interface</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ManageProjectStudent_Model\ManageProjectStudent_Model.csproj">
+      <Project>{d9716c79-ef4d-4524-9bd8-b0ed55de0662}</Project>
+      <Name>ManageProjectStudent_Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ManageProjectStudent_ViewModel\ManageProjectStudent_ViewModel.csproj">
       <Project>{290b75dd-fa5a-4926-8610-d4d7b1cea511}</Project>
       <Name>ManageProjectStudent_ViewModel</Name>

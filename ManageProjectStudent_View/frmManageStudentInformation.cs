@@ -12,6 +12,8 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.Drawing;
 using ManageProjectStudent_Interface;
 using Unity;
+using ManageProjectStudent_Model;
+using ManageProjectStudent_ViewModel;
 
 namespace ManageProjectStudent_View
 {
@@ -22,24 +24,37 @@ namespace ManageProjectStudent_View
         public frmManageStudentInformation()
         {
             InitializeComponent();
-            // Thong
-            txtPhoneNumber.KeyPress += new KeyPressEventHandler(IMSI.txtPhoneNumber_KeyPress);
-            txtID.KeyPress += new KeyPressEventHandler(IMSI.txtID_KeyPress);
-            txtFullName.KeyPress += new KeyPressEventHandler(IMSI.txtFullName_KeyPress);
-            txtEmail.KeyPress += new KeyPressEventHandler(IMSI.txtEmail_KeyPress);
-            txtIDCard.KeyPress += new KeyPressEventHandler(IMSI.txtIDCard_KeyPress);
-            txtAddress.KeyPress += new KeyPressEventHandler(IMSI.txtAddress_KeyPress);
-            radNam.CheckedChanged += new EventHandler(IMSI.radNam_CheckedChanged);
-            radNu.CheckedChanged += new EventHandler(IMSI.radNu_CheckedChanged);
-            // Thong
-            // Thu
-            btnSave.Click += delegate { IMSI.btnSave_Click(txtID, txtFullName, dteBirthday, radNam, radNu, txtPhoneNumber, txtEmail, txtIDCard, txtAddress, radAvailable, radUnavailable, lkeCourse, lkeClass, lkeFaculty); };
-            IMSI._setStatusForm(txtID, txtFullName, dteBirthday, radNam, radNu, txtPhoneNumber, txtEmail, txtIDCard, txtAddress, radAvailable, radUnavailable, lkeCourse, lkeClass, lkeFaculty, btnAdd, btnDelete, btnUpdate, btnSave);
-            // Thu
         }
 
-        // STT
-        private void gv_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
+        #region Properties
+        /*
+         * Set status form: 0. View, 1. Add, 2. Update.
+         */
+        private int _IStatusForm = 0;
+        
+        #endregion
+
+        #region Method
+        private void _setStatusForm()
+        {
+            txtID.ReadOnly = true;
+            switch (_IStatusForm)
+            {
+                case 0: // View
+ 
+                    break;
+                case 1: // Add.
+                    break;
+                case 2: // Update
+                    break;
+            }
+        }
+        #endregion
+
+        #region Event
+        //Thu
+        //stt
+        private void gvManageStudentInfomation_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
         {
             try
             {
@@ -85,7 +100,7 @@ namespace ManageProjectStudent_View
             }
         }
 
-        private void gv_RowCountChanged(object sender, EventArgs e)
+        private void gvManageStudentInfomation_RowCountChanged(object sender, EventArgs e)
         {
             GridView gridview = ((GridView)sender);
             if (!gridview.GridControl.IsHandleCreated) return;
@@ -93,6 +108,144 @@ namespace ManageProjectStudent_View
             SizeF size = gr.MeasureString(gridview.RowCount.ToString(), gridview.PaintAppearance.Row.GetFont());
             gridview.IndicatorWidth = Convert.ToInt32(size.Width + 0.999f) + GridPainter.Indicator.ImageSize.Width + 20;
         }
-        // STT
+        //stt
+
+        //btnSave_Click
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (txtFullName.Text == "")
+            {
+                string _STRMesge = "Bạn chưa nhập tên Sinh viên";
+                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (dteBirthday.EditValue == null)
+            {
+                string _STRMesge = "Bạn chưa chọn Ngày sinh";
+                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (!(radNam.Checked) && !(radNu.Checked))
+            {
+                string _STRMesge = "Bạn chưa chọn Giới tính";
+                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (txtPhoneNumber.Text == "")
+            {
+                string _STRMesge = "Bạn chưa nhập Số điện thoại";
+                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (txtEmail.Text == "")
+            {
+                string _STRMesge = "Bạn chưa nhập Email";
+                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (txtIDCard.Text == "")
+            {
+                string _STRMesge = "Bạn chưa nhập Chứng minh nhân dân";
+                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (txtAddress.Text == "")
+            {
+                string _STRMesge = "Bạn chưa nhập Địa chỉ";
+                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (!(radAvailable.Checked) && !(radUnavailable.Checked))
+            {
+                string _STRMesge = "Bạn chưa chọn Trạng thái";
+                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (lkeCourse.EditValue == null)
+            {
+                string _STRMesge = "Bạn chưa chọn Khóa học";
+                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (lkeClass.EditValue == null)
+            {
+                string _STRMesge = "Bạn chưa chọn Lớp học";
+                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (lkeFaculty.EditValue == null)
+            {
+                string _STRMesge = "Bạn chưa chọn Khoa";
+                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+
+            }
+        }
+
+        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        //keypress
+        private void txtFullName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!GarenaViewModel._checkCharacterChar(e.KeyChar))
+            {
+                e.Handled = true;
+                ((TextBox)sender).Focus();
+                string _STRMesge = "Không được nhập ký tự số, chỉ được nhập chữ.";
+                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void txtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (GarenaViewModel._checkCharacterNumber(e.KeyChar))
+            {
+                e.Handled = true;
+                ((TextBox)sender).Focus();
+                string _STRMesge = "Không được nhập ký tự chữ, chỉ được nhập số.";
+                MessageBox.Show(_STRMesge, "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void txtIDCard_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (GarenaViewModel._checkCharacterNumber(e.KeyChar))
+            {
+                e.Handled = true;
+                ((TextBox)sender).Focus();
+                string _STRMesge = "Không được nhập ký tự chữ, chỉ được nhập số.";
+                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        //checkedchange
+        private void radAvailable_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radAvailable.Checked)
+            {
+                radUnavailable.Checked = false;
+            }
+        }
+
+        private void radUnavailable_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radUnavailable.Checked)
+            {
+                radAvailable.Checked = false;
+            }
+        }
+
+        private void radNam_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radNam.Checked)
+            {
+                radNu.Checked = false;
+            }
+        }
+
+        private void radNu_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radNu.Checked)
+            {
+                radNam.Checked = false;
+            }
+        }
+        //Thu
+        #endregion
     }
 }

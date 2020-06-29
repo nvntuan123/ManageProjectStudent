@@ -34,19 +34,6 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.txtIDCard = new System.Windows.Forms.TextBox();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gvManageStudentInfomation = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colStudentID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colStudentName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colIndentifiCard = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colbirthday = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colAddress = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPhone = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colFaculty = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSex = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCourse = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dteBirthday = new DevExpress.XtraEditors.DateEdit();
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -72,8 +59,20 @@
             this.radNam = new System.Windows.Forms.RadioButton();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvManageStudentInfomation)).BeginInit();
+            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.gvManageStudentInfomation = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colStudentID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFullName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colBirthday = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSex = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPhoneNumber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIDCard = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAddress = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCourse = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colClass = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFaculty = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpInformationStudent)).BeginInit();
@@ -81,6 +80,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lkeFaculty.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkeCourse.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkeClass.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvManageStudentInfomation)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -128,6 +129,7 @@
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(187, 21);
             this.txtPhoneNumber.TabIndex = 25;
+            this.txtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNumber_KeyPress);
             // 
             // txtIDCard
             // 
@@ -136,163 +138,7 @@
             this.txtIDCard.Name = "txtIDCard";
             this.txtIDCard.Size = new System.Drawing.Size(187, 21);
             this.txtIDCard.TabIndex = 27;
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.gridControl1.Location = new System.Drawing.Point(8, 285);
-            this.gridControl1.MainView = this.gvManageStudentInfomation;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1127, 307);
-            this.gridControl1.TabIndex = 41;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvManageStudentInfomation});
-            // 
-            // gvManageStudentInfomation
-            // 
-            this.gvManageStudentInfomation.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.gvManageStudentInfomation.Appearance.EvenRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gvManageStudentInfomation.Appearance.EvenRow.Options.UseBackColor = true;
-            this.gvManageStudentInfomation.Appearance.EvenRow.Options.UseFont = true;
-            this.gvManageStudentInfomation.Appearance.GroupPanel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gvManageStudentInfomation.Appearance.GroupPanel.Options.UseFont = true;
-            this.gvManageStudentInfomation.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gvManageStudentInfomation.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gvManageStudentInfomation.Appearance.OddRow.BackColor = System.Drawing.Color.White;
-            this.gvManageStudentInfomation.Appearance.OddRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gvManageStudentInfomation.Appearance.OddRow.Options.UseBackColor = true;
-            this.gvManageStudentInfomation.Appearance.OddRow.Options.UseFont = true;
-            this.gvManageStudentInfomation.Appearance.Row.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gvManageStudentInfomation.Appearance.Row.Options.UseFont = true;
-            this.gvManageStudentInfomation.Appearance.SelectedRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gvManageStudentInfomation.Appearance.SelectedRow.Options.UseFont = true;
-            this.gvManageStudentInfomation.Appearance.ViewCaption.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gvManageStudentInfomation.Appearance.ViewCaption.Options.UseFont = true;
-            this.gvManageStudentInfomation.AppearancePrint.HeaderPanel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gvManageStudentInfomation.AppearancePrint.HeaderPanel.Options.UseFont = true;
-            this.gvManageStudentInfomation.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colStudentID,
-            this.colStudentName,
-            this.colIndentifiCard,
-            this.colbirthday,
-            this.colAddress,
-            this.colPhone,
-            this.colEmail,
-            this.colFaculty,
-            this.colSex,
-            this.colStatus,
-            this.colCourse});
-            this.gvManageStudentInfomation.DetailHeight = 458;
-            this.gvManageStudentInfomation.FixedLineWidth = 3;
-            this.gvManageStudentInfomation.GridControl = this.gridControl1;
-            this.gvManageStudentInfomation.Name = "gvManageStudentInfomation";
-            this.gvManageStudentInfomation.OptionsBehavior.Editable = false;
-            this.gvManageStudentInfomation.OptionsView.EnableAppearanceEvenRow = true;
-            this.gvManageStudentInfomation.OptionsView.EnableAppearanceOddRow = true;
-            this.gvManageStudentInfomation.OptionsView.ShowGroupPanel = false;
-            this.gvManageStudentInfomation.OptionsView.ShowViewCaption = true;
-            this.gvManageStudentInfomation.ViewCaption = "Danh sách sinh viên";
-            this.gvManageStudentInfomation.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gv_CustomDrawRowIndicator);
-            this.gvManageStudentInfomation.RowCountChanged += new System.EventHandler(this.gv_RowCountChanged);
-            // 
-            // colStudentID
-            // 
-            this.colStudentID.Caption = "MSSV";
-            this.colStudentID.MinWidth = 27;
-            this.colStudentID.Name = "colStudentID";
-            this.colStudentID.Visible = true;
-            this.colStudentID.VisibleIndex = 0;
-            this.colStudentID.Width = 100;
-            // 
-            // colStudentName
-            // 
-            this.colStudentName.Caption = "Tên";
-            this.colStudentName.MinWidth = 27;
-            this.colStudentName.Name = "colStudentName";
-            this.colStudentName.Visible = true;
-            this.colStudentName.VisibleIndex = 1;
-            this.colStudentName.Width = 100;
-            // 
-            // colIndentifiCard
-            // 
-            this.colIndentifiCard.Caption = "CMND";
-            this.colIndentifiCard.MinWidth = 27;
-            this.colIndentifiCard.Name = "colIndentifiCard";
-            this.colIndentifiCard.Visible = true;
-            this.colIndentifiCard.VisibleIndex = 2;
-            this.colIndentifiCard.Width = 100;
-            // 
-            // colbirthday
-            // 
-            this.colbirthday.Caption = "Ngày sinh";
-            this.colbirthday.MinWidth = 27;
-            this.colbirthday.Name = "colbirthday";
-            this.colbirthday.Visible = true;
-            this.colbirthday.VisibleIndex = 3;
-            this.colbirthday.Width = 100;
-            // 
-            // colAddress
-            // 
-            this.colAddress.Caption = "Địa chỉ";
-            this.colAddress.MinWidth = 27;
-            this.colAddress.Name = "colAddress";
-            this.colAddress.Visible = true;
-            this.colAddress.VisibleIndex = 4;
-            this.colAddress.Width = 100;
-            // 
-            // colPhone
-            // 
-            this.colPhone.Caption = "SĐT";
-            this.colPhone.MinWidth = 27;
-            this.colPhone.Name = "colPhone";
-            this.colPhone.Visible = true;
-            this.colPhone.VisibleIndex = 5;
-            this.colPhone.Width = 100;
-            // 
-            // colEmail
-            // 
-            this.colEmail.Caption = "Email";
-            this.colEmail.MinWidth = 27;
-            this.colEmail.Name = "colEmail";
-            this.colEmail.Visible = true;
-            this.colEmail.VisibleIndex = 6;
-            this.colEmail.Width = 100;
-            // 
-            // colFaculty
-            // 
-            this.colFaculty.Caption = "Khoa";
-            this.colFaculty.MinWidth = 27;
-            this.colFaculty.Name = "colFaculty";
-            this.colFaculty.Visible = true;
-            this.colFaculty.VisibleIndex = 7;
-            this.colFaculty.Width = 100;
-            // 
-            // colSex
-            // 
-            this.colSex.Caption = "Giới tính";
-            this.colSex.MinWidth = 27;
-            this.colSex.Name = "colSex";
-            this.colSex.Visible = true;
-            this.colSex.VisibleIndex = 8;
-            this.colSex.Width = 100;
-            // 
-            // colStatus
-            // 
-            this.colStatus.Caption = "Trạng thái";
-            this.colStatus.MinWidth = 27;
-            this.colStatus.Name = "colStatus";
-            this.colStatus.Visible = true;
-            this.colStatus.VisibleIndex = 10;
-            this.colStatus.Width = 100;
-            // 
-            // colCourse
-            // 
-            this.colCourse.Caption = "Khóa";
-            this.colCourse.Name = "colCourse";
-            this.colCourse.Visible = true;
-            this.colCourse.VisibleIndex = 9;
-            this.colCourse.Width = 100;
+            this.txtIDCard.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIDCard_KeyPress);
             // 
             // dteBirthday
             // 
@@ -314,6 +160,7 @@
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(187, 21);
             this.txtFullName.TabIndex = 21;
+            this.txtFullName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFullName_KeyPress);
             // 
             // label7
             // 
@@ -388,6 +235,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(187, 21);
             this.txtID.TabIndex = 14;
+            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
             // label1
             // 
@@ -492,6 +340,7 @@
             this.btnSave.TabIndex = 112;
             this.btnSave.TabStop = false;
             this.btnSave.Text = "Lưu";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnUpdate
             // 
@@ -567,6 +416,7 @@
             this.radUnavailable.TabStop = true;
             this.radUnavailable.Text = "Nghỉ";
             this.radUnavailable.UseVisualStyleBackColor = true;
+            this.radUnavailable.CheckedChanged += new System.EventHandler(this.radUnavailable_CheckedChanged);
             // 
             // radAvailable
             // 
@@ -579,6 +429,7 @@
             this.radAvailable.TabStop = true;
             this.radAvailable.Text = "Đang học";
             this.radAvailable.UseVisualStyleBackColor = true;
+            this.radAvailable.CheckedChanged += new System.EventHandler(this.radAvailable_CheckedChanged);
             // 
             // label12
             // 
@@ -602,6 +453,7 @@
             this.radNu.TabStop = true;
             this.radNu.Text = "Nữ";
             this.radNu.UseVisualStyleBackColor = true;
+            this.radNu.CheckedChanged += new System.EventHandler(this.radNu_CheckedChanged);
             // 
             // radNam
             // 
@@ -614,6 +466,7 @@
             this.radNam.TabStop = true;
             this.radNam.Text = "Nam";
             this.radNam.UseVisualStyleBackColor = true;
+            this.radNam.CheckedChanged += new System.EventHandler(this.radNam_CheckedChanged);
             // 
             // label11
             // 
@@ -637,20 +490,211 @@
             this.label10.TabIndex = 36;
             this.label10.Text = "Khóa";
             // 
+            // gridControl2
+            // 
+            this.gridControl2.Location = new System.Drawing.Point(8, 297);
+            this.gridControl2.MainView = this.gvManageStudentInfomation;
+            this.gridControl2.Name = "gridControl2";
+            this.gridControl2.Size = new System.Drawing.Size(1127, 296);
+            this.gridControl2.TabIndex = 45;
+            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvManageStudentInfomation});
+            // 
+            // gvManageStudentInfomation
+            // 
+            this.gvManageStudentInfomation.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.gvManageStudentInfomation.Appearance.EvenRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvManageStudentInfomation.Appearance.EvenRow.Options.UseBackColor = true;
+            this.gvManageStudentInfomation.Appearance.EvenRow.Options.UseFont = true;
+            this.gvManageStudentInfomation.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvManageStudentInfomation.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gvManageStudentInfomation.Appearance.OddRow.BackColor = System.Drawing.Color.White;
+            this.gvManageStudentInfomation.Appearance.OddRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvManageStudentInfomation.Appearance.OddRow.Options.UseBackColor = true;
+            this.gvManageStudentInfomation.Appearance.OddRow.Options.UseFont = true;
+            this.gvManageStudentInfomation.Appearance.Row.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvManageStudentInfomation.Appearance.Row.Options.UseFont = true;
+            this.gvManageStudentInfomation.Appearance.ViewCaption.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvManageStudentInfomation.Appearance.ViewCaption.Options.UseFont = true;
+            this.gvManageStudentInfomation.AppearancePrint.Row.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvManageStudentInfomation.AppearancePrint.Row.Options.UseFont = true;
+            this.gvManageStudentInfomation.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colStudentID,
+            this.colFullName,
+            this.colBirthday,
+            this.colSex,
+            this.colPhoneNumber,
+            this.colEmail,
+            this.colIDCard,
+            this.colAddress,
+            this.colStatus,
+            this.colCourse,
+            this.colClass,
+            this.colFaculty});
+            this.gvManageStudentInfomation.DetailHeight = 377;
+            this.gvManageStudentInfomation.GridControl = this.gridControl2;
+            this.gvManageStudentInfomation.Name = "gvManageStudentInfomation";
+            this.gvManageStudentInfomation.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvManageStudentInfomation.OptionsView.EnableAppearanceOddRow = true;
+            this.gvManageStudentInfomation.OptionsView.ShowAutoFilterRow = true;
+            this.gvManageStudentInfomation.OptionsView.ShowGroupPanel = false;
+            this.gvManageStudentInfomation.OptionsView.ShowViewCaption = true;
+            this.gvManageStudentInfomation.ViewCaption = "Danh sách sinh viên";
+            this.gvManageStudentInfomation.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvManageStudentInfomation_CustomDrawRowIndicator);
+            this.gvManageStudentInfomation.RowCountChanged += new System.EventHandler(this.gvManageStudentInfomation_RowCountChanged);
+            // 
+            // colStudentID
+            // 
+            this.colStudentID.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colStudentID.AppearanceCell.Options.UseFont = true;
+            this.colStudentID.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colStudentID.AppearanceHeader.Options.UseFont = true;
+            this.colStudentID.Caption = "MSSV";
+            this.colStudentID.Name = "colStudentID";
+            this.colStudentID.Visible = true;
+            this.colStudentID.VisibleIndex = 0;
+            this.colStudentID.Width = 68;
+            // 
+            // colFullName
+            // 
+            this.colFullName.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colFullName.AppearanceCell.Options.UseFont = true;
+            this.colFullName.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colFullName.AppearanceHeader.Options.UseFont = true;
+            this.colFullName.Caption = "Họ Tên";
+            this.colFullName.Name = "colFullName";
+            this.colFullName.Visible = true;
+            this.colFullName.VisibleIndex = 1;
+            this.colFullName.Width = 68;
+            // 
+            // colBirthday
+            // 
+            this.colBirthday.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colBirthday.AppearanceCell.Options.UseFont = true;
+            this.colBirthday.Caption = "Ngày Sinh";
+            this.colBirthday.Name = "colBirthday";
+            this.colBirthday.Visible = true;
+            this.colBirthday.VisibleIndex = 2;
+            this.colBirthday.Width = 68;
+            // 
+            // colSex
+            // 
+            this.colSex.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colSex.AppearanceCell.Options.UseFont = true;
+            this.colSex.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colSex.AppearanceHeader.Options.UseFont = true;
+            this.colSex.Caption = "Giới Tính";
+            this.colSex.Name = "colSex";
+            this.colSex.Visible = true;
+            this.colSex.VisibleIndex = 3;
+            this.colSex.Width = 63;
+            // 
+            // colPhoneNumber
+            // 
+            this.colPhoneNumber.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colPhoneNumber.AppearanceCell.Options.UseFont = true;
+            this.colPhoneNumber.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colPhoneNumber.AppearanceHeader.Options.UseFont = true;
+            this.colPhoneNumber.Caption = "SĐT";
+            this.colPhoneNumber.Name = "colPhoneNumber";
+            this.colPhoneNumber.Visible = true;
+            this.colPhoneNumber.VisibleIndex = 4;
+            this.colPhoneNumber.Width = 85;
+            // 
+            // colEmail
+            // 
+            this.colEmail.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colEmail.AppearanceCell.Options.UseFont = true;
+            this.colEmail.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colEmail.AppearanceHeader.Options.UseFont = true;
+            this.colEmail.Caption = "Email";
+            this.colEmail.Name = "colEmail";
+            this.colEmail.Visible = true;
+            this.colEmail.VisibleIndex = 5;
+            this.colEmail.Width = 63;
+            // 
+            // colIDCard
+            // 
+            this.colIDCard.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colIDCard.AppearanceCell.Options.UseFont = true;
+            this.colIDCard.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colIDCard.AppearanceHeader.Options.UseFont = true;
+            this.colIDCard.Caption = "CMND";
+            this.colIDCard.Name = "colIDCard";
+            this.colIDCard.Visible = true;
+            this.colIDCard.VisibleIndex = 6;
+            this.colIDCard.Width = 68;
+            // 
+            // colAddress
+            // 
+            this.colAddress.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colAddress.AppearanceCell.Options.UseFont = true;
+            this.colAddress.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colAddress.AppearanceHeader.Options.UseFont = true;
+            this.colAddress.Caption = "Địa Chỉ";
+            this.colAddress.Name = "colAddress";
+            this.colAddress.Visible = true;
+            this.colAddress.VisibleIndex = 7;
+            this.colAddress.Width = 68;
+            // 
+            // colStatus
+            // 
+            this.colStatus.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colStatus.AppearanceCell.Options.UseFont = true;
+            this.colStatus.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colStatus.AppearanceHeader.Options.UseFont = true;
+            this.colStatus.Caption = "Trạng Thái";
+            this.colStatus.Name = "colStatus";
+            this.colStatus.Visible = true;
+            this.colStatus.VisibleIndex = 8;
+            this.colStatus.Width = 71;
+            // 
+            // colCourse
+            // 
+            this.colCourse.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colCourse.AppearanceCell.Options.UseFont = true;
+            this.colCourse.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colCourse.AppearanceHeader.Options.UseFont = true;
+            this.colCourse.Caption = "Khóa";
+            this.colCourse.Name = "colCourse";
+            this.colCourse.Visible = true;
+            this.colCourse.VisibleIndex = 9;
+            this.colCourse.Width = 63;
+            // 
+            // colClass
+            // 
+            this.colClass.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colClass.AppearanceCell.Options.UseFont = true;
+            this.colClass.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colClass.AppearanceHeader.Options.UseFont = true;
+            this.colClass.Caption = "Lớp";
+            this.colClass.Name = "colClass";
+            this.colClass.Visible = true;
+            this.colClass.VisibleIndex = 10;
+            // 
+            // colFaculty
+            // 
+            this.colFaculty.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colFaculty.AppearanceCell.Options.UseFont = true;
+            this.colFaculty.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colFaculty.AppearanceHeader.Options.UseFont = true;
+            this.colFaculty.Caption = "Khoa";
+            this.colFaculty.Name = "colFaculty";
+            this.colFaculty.Visible = true;
+            this.colFaculty.VisibleIndex = 11;
+            // 
             // frmManageStudentInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1148, 605);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.gridControl2);
             this.Controls.Add(this.grpInformationStudent);
             this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmManageStudentInformation";
             this.Text = "frmManageStudentInformation";
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvManageStudentInfomation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpInformationStudent)).EndInit();
@@ -659,6 +703,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lkeFaculty.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkeCourse.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkeClass.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvManageStudentInfomation)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -669,19 +715,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtPhoneNumber;
-        private DevExpress.XtraGrid.Columns.GridColumn colSex;
         private System.Windows.Forms.TextBox txtIDCard;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvManageStudentInfomation;
-        private DevExpress.XtraGrid.Columns.GridColumn colStudentID;
-        private DevExpress.XtraGrid.Columns.GridColumn colStudentName;
-        private DevExpress.XtraGrid.Columns.GridColumn colIndentifiCard;
-        private DevExpress.XtraGrid.Columns.GridColumn colbirthday;
-        private DevExpress.XtraGrid.Columns.GridColumn colAddress;
-        private DevExpress.XtraGrid.Columns.GridColumn colPhone;
-        private DevExpress.XtraGrid.Columns.GridColumn colEmail;
-        private DevExpress.XtraGrid.Columns.GridColumn colFaculty;
-        private DevExpress.XtraGrid.Columns.GridColumn colStatus;
         private DevExpress.XtraEditors.DateEdit dteBirthday;
         private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.Label label7;
@@ -693,7 +727,6 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.GroupControl grpInformationStudent;
-        private DevExpress.XtraGrid.Columns.GridColumn colCourse;
         private System.Windows.Forms.RadioButton radNu;
         private System.Windows.Forms.RadioButton radNam;
         private System.Windows.Forms.Label label11;
@@ -708,5 +741,19 @@
         private DevExpress.XtraEditors.LookUpEdit lkeFaculty;
         private DevExpress.XtraEditors.LookUpEdit lkeCourse;
         private DevExpress.XtraEditors.LookUpEdit lkeClass;
+        private DevExpress.XtraGrid.GridControl gridControl2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvManageStudentInfomation;
+        private DevExpress.XtraGrid.Columns.GridColumn colStudentID;
+        private DevExpress.XtraGrid.Columns.GridColumn colFullName;
+        private DevExpress.XtraGrid.Columns.GridColumn colBirthday;
+        private DevExpress.XtraGrid.Columns.GridColumn colSex;
+        private DevExpress.XtraGrid.Columns.GridColumn colPhoneNumber;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmail;
+        private DevExpress.XtraGrid.Columns.GridColumn colIDCard;
+        private DevExpress.XtraGrid.Columns.GridColumn colAddress;
+        private DevExpress.XtraGrid.Columns.GridColumn colStatus;
+        private DevExpress.XtraGrid.Columns.GridColumn colCourse;
+        private DevExpress.XtraGrid.Columns.GridColumn colClass;
+        private DevExpress.XtraGrid.Columns.GridColumn colFaculty;
     }
 }

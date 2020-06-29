@@ -19,7 +19,7 @@ namespace ManageProjectStudent_Model
         [Column("FacultyID", TypeName = "char", Order = 0)]
         [StringLength(10)]
         public string StrFacultyID { get => _StrFacultyID; set => _StrFacultyID = value; }
-        
+
         [Column("FacultyName", TypeName = "nvarchar", Order = 1)]
         [StringLength(100)]
         public string StrFacultyName { get => _StrFacultyName; set => _StrFacultyName = value; }
@@ -32,15 +32,14 @@ namespace ManageProjectStudent_Model
         public ICollection<SubjectAssignmentModel> SubjectAssignmentModels { get; set; }
         public ICollection<ClassModel> ClassModels { get; set; }
         public ICollection<StudentModel> StudentModels { get; set; }
-  
+
         public FacultyModel()
         {
             this.StaffModels = new HashSet<StaffModel>();
             this.SubjectAssignmentModels = new HashSet<SubjectAssignmentModel>();
             this.ClassModels = new HashSet<ClassModel>();
             this.StudentModels = new HashSet<StudentModel>();
-
         }
-           
+
     }
 }

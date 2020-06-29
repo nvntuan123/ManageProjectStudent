@@ -24,14 +24,11 @@ namespace ManageProjectStudent_Model
         public string StrTrainingProgramName { get => _StrTrainingProgramName; set => _StrTrainingProgramName = value; }
 
         //Tao moi lien ket
-        public ICollection<SubjectAssignmentModel> SubjectAssignmentModels { get; set;}
-        public ICollection<ExamTimesModel> ExamTimesModels { get; set; }
-        public ICollection<ExamResultModel> ExamResultModels { get; set; }
+        public ICollection<SubjectAssignmentModel> SubjectAssignmentModels { get; set; }
+
         public TrainingProgramModel()
         {
             this.SubjectAssignmentModels = new HashSet<SubjectAssignmentModel>();
-            this.ExamTimesModels = new HashSet<ExamTimesModel>();
-            this.ExamResultModels = new HashSet<ExamResultModel>();
         }
     }
 }

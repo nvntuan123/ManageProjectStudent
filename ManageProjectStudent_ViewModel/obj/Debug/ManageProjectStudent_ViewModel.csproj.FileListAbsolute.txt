@@ -44,3 +44,30 @@ C:\Users\NhatTuan-PC\Desktop\ProjectMain\ManageProjectStudent\ManageProjectStude
 C:\Users\NhatTuan-PC\Desktop\ProjectMain\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.Migrations.v4.resources
 C:\Users\NhatTuan-PC\Desktop\ProjectMain\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.Migrations.v5.resources
 C:\Users\NhatTuan-PC\Desktop\ProjectMain\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.Migrations.v6.resources
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_ViewModel.dll.config
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_ViewModel.dll
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_ViewModel.pdb
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_Interface.dll
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_Model.dll
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_Interface.pdb
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_Model.pdb
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_Model.dll.config
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.Migrations.v1.resources
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.Migrations.v2.resources
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.Migrations.v3.resources
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.Migrations.v4.resources
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.Migrations.v5.resources
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.csproj.CopyComplete
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.dll
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.pdb
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.Migrations.v6.resources
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.Migrations.V7.resources
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\DBManageProjectStudent.mdf
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\DBManageProjectStudent_log.ldf

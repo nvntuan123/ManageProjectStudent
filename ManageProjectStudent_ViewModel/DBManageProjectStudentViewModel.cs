@@ -18,9 +18,20 @@ namespace ManageProjectStudent_ViewModel
 
         public DbSet<StudentModel> StudentModels { get; set; }
         public DbSet<ProjectModel> ProjectModels { get; set; }
-
-
-
+        public DbSet<ClassGroupOfSubject> ClassGroupOfSubjects { get; set; }
+        public DbSet<ClassModel> ClassModels { get; set; }
+        public DbSet<ExamResultModel> ExamResultModels { get; set; }
+        public DbSet<ExamTimesModel> ExamTimesModels { get; set; }
+        public DbSet<ProjectTaskModel> ProjectTaskModels { get; set; }
+        public DbSet<ResultProjectModel> ResultProjectModels { get; set; }
+        public DbSet<StaffModel> StaffModels { get; set; }
+        public DbSet<StaffTypeModel> StaffTypeModels { get; set; }
+        public DbSet<StudentClassGroup> StudentClassGroups { get; set; }
+        public DbSet<SubjectAssignmentModel> SubjectAssignmentModels { get; set; }
+        public DbSet<SubjectModel> SubjectModels { get; set; }
+        public DbSet<TeachAndStudy> TeachAndStudies { get; set; }
+        public DbSet<TrainingProgramModel> TrainingProgramModels { get; set; }
+        public DbSet<FacultyModel> FacultyModels { get; set; }
 
     }
 }

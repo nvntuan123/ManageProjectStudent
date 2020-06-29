@@ -32,7 +32,6 @@ namespace ManageProjectStudent_Model
 
         // Khai bao khoa ngoai.
         public virtual ProjectModel ProjectModel { get; set; }
-
         public virtual StudentModel StudentModel { get; set; }
     }
 }

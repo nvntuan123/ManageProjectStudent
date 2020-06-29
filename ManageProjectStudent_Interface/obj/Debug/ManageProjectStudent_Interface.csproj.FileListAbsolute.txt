@@ -16,3 +16,9 @@ C:\Users\NhatTuan-PC\Desktop\ProjectMain\ManageProjectStudent\ManageProjectStude
 C:\Users\NhatTuan-PC\Desktop\ProjectMain\ManageProjectStudent\ManageProjectStudent_Interface\obj\Debug\ManageProjectStudent_Interface.csproj.CoreCompileInputs.cache
 C:\Users\NhatTuan-PC\Desktop\ProjectMain\ManageProjectStudent\ManageProjectStudent_Interface\obj\Debug\ManageProjectStudent_Interface.dll
 C:\Users\NhatTuan-PC\Desktop\ProjectMain\ManageProjectStudent\ManageProjectStudent_Interface\obj\Debug\ManageProjectStudent_Interface.pdb
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_Interface\bin\Debug\ManageProjectStudent_Interface.dll
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_Interface\bin\Debug\ManageProjectStudent_Interface.pdb
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_Interface\obj\Debug\ManageProjectStudent_Interface.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_Interface\obj\Debug\ManageProjectStudent_Interface.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_Interface\obj\Debug\ManageProjectStudent_Interface.dll
+C:\Users\Admin\Desktop\New folder (3)\ManageProjectStudent\ManageProjectStudent_Interface\obj\Debug\ManageProjectStudent_Interface.pdb

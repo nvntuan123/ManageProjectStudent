@@ -13,6 +13,8 @@ namespace ManageProjectStudent_Model
     {
         private string _StrClassID;
         private string _StrClassName;
+        private string _StrFacultyID;
+
 
         [Key]
         [Column("ClassID", TypeName = "char", Order = 0)]
@@ -22,6 +24,11 @@ namespace ManageProjectStudent_Model
         [Column("ClassName", TypeName = "nvarchar", Order = 1)]
         [StringLength(10)]
         public string StrClassName { get => _StrClassName; set => _StrClassName = value; }
+
+        // Khai tao khoa ngoai 
+        [Column("FacultyID", TypeName = "char", Order = 3)]
+        [StringLength(10)]
+        public string StrFacultyID { get => _StrFacultyID; set => _StrFacultyID = value; }
 
         // Khai bao khoa ngoai 
         public virtual FacultyModel FacultyModel { get; set; }

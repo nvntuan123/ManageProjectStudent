@@ -19,35 +19,46 @@ namespace ManageProjectStudent_Model
         private string _StrAddress;
         private string _StrPhone;
         private bool _BStatus;
+        private string _StrStaffTypeID;
+        private string _strFacultyID;
 
         [Key]
         [Column("StaffID", TypeName = "char", Order = 0)]
         [StringLength(10)]
         public string StrStaffID { get => _StrStaffID; set => _StrStaffID = value; }
-       
+
         [Column("StaffName", TypeName = "nvarchar", Order = 1)]
         [StringLength(100)]
         public string StrStaffName { get => _StrStaffName; set => _StrStaffName = value; }
-       
+
         [Column("CardID", TypeName = "int", Order = 2)]
         public int ICardID { get => _ICardID; set => _ICardID = value; }
-       
+
         [Column("BirthDay", TypeName = "Date", Order = 3)]
         public DateTime DtBirthDay { get => _DtBirthDay; set => _DtBirthDay = value; }
-       
+
         [Column("Email", TypeName = "varchar", Order = 4)]
         [StringLength(200)]
         public string StrEmail { get => _StrEmail; set => _StrEmail = value; }
-       
+
         [Column("Address", TypeName = "nvarchar", Order = 5)]
         public string StrAddress { get => _StrAddress; set => _StrAddress = value; }
-       
+
         [Column("Phone", TypeName = "varchar", Order = 6)]
         [StringLength(30)]
         public string StrPhone { get => _StrPhone; set => _StrPhone = value; }
-        
-        [Column("Status", TypeName = "bit", Order =7)]
+
+        [Column("Status", TypeName = "bit", Order = 7)]
         public bool BStatus { get => _BStatus; set => _BStatus = value; }
+
+        //Khoi tao khoa ngoai
+        [Column("StaffTypeID", TypeName = "char", Order = 8)]
+        [StringLength(10)]
+        public string StrStaffTypeID { get => _StrStaffTypeID; set => _StrStaffTypeID = value; }
+
+        [Column("FacultyID", TypeName = "char", Order = 9)]
+        [StringLength(10)]
+        public string StrFacultyID { get => _strFacultyID; set => _strFacultyID = value; }
 
         // khai bao khoa ngoai
         public virtual StaffTypeModel StaffTypeModel { get; set; }

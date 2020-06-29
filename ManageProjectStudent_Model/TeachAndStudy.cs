@@ -35,7 +35,7 @@ namespace ManageProjectStudent_Model
         [StringLength(100)]
         public string StrSemester { get => _StrSemester; set => _StrSemester = value; }
 
-        [Column("SchoolYear", TypeName = "Date",Order =5)]
+        [Column("SchoolYear", TypeName = "Date", Order = 5)]
         public DateTime DtSchoolYear { get => _DtSchoolYear; set => _DtSchoolYear = value; }
 
         //Khai bao khoa ngoai

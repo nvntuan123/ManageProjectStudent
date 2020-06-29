@@ -19,6 +19,8 @@ namespace ManageProjectStudent_Model
         private string _StrAddress;
         private DateTime _DtStartYear;
         private bool _BStatus;
+        private string _StrFacultyID;
+        private string _StrClassID;
 
         [Key]
         [Column("StudentID", TypeName = "char", Order = 0)]
@@ -48,11 +50,17 @@ namespace ManageProjectStudent_Model
         [Column("Status", TypeName = "bit", Order = 7)]
         public bool BStatus { get => _BStatus; set => _BStatus = value; }
 
+        [Column("FacultyID", TypeName = "char", Order = 8)]
+        [StringLength(10)]
+        public string StrFacultyID { get => _StrFacultyID; set => _StrFacultyID = value; }
+
+        [Column("ClassID", TypeName = "char", Order = 9)]
+        [StringLength(10)]
+        public string StrClassID { get => _StrClassID; set => _StrClassID = value; }
 
         //Khai bao khoa ngoai
         public virtual FacultyModel FacultyModel { get; set; }
         public virtual ClassModel ClassModel { get; set; }
-
 
         //Tao moi lien ket
         public ICollection<ResultProjectModel> ResultProjectModels { get; set; }
@@ -60,14 +68,12 @@ namespace ManageProjectStudent_Model
         public ICollection<TeachAndStudy> TeachAndStudies { get; set; }
         public ICollection<StudentClassGroup> StudentClassGroups { get; set; }
 
-        public StudentModel()
+              public StudentModel()
         {
             this.ResultProjectModels = new HashSet<ResultProjectModel>();
             this.ExamResultModels = new HashSet<ExamResultModel>();
             this.TeachAndStudies = new HashSet<TeachAndStudy>();
             this.StudentClassGroups = new HashSet<StudentClassGroup>();
-
-
         }
     }
 }

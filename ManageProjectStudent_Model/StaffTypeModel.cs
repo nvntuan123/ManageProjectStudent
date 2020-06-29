@@ -18,11 +18,12 @@ namespace ManageProjectStudent_Model
         [Column("StaffTypeID", TypeName = "char", Order = 0)]
         [StringLength(10)]
         public string StrStaffTypeID { get => _StrStaffTypeID; set => _StrStaffTypeID = value; }
-       
+
         [Column("StaffTypeName", TypeName = "char", Order = 1)]
         [StringLength(100)]
         public string StrStaffTypeName { get => _StrStaffTypeName; set => _StrStaffTypeName = value; }
 
+        //tao moi lien ket 
         public ICollection<StaffModel> StaffModels { get; set; }
 
         public StaffTypeModel()
@@ -31,3 +32,4 @@ namespace ManageProjectStudent_Model
         }
     }
 }
+    

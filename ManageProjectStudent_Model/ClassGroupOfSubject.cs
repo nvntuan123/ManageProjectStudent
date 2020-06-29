@@ -13,9 +13,11 @@ namespace ManageProjectStudent_Model
     {
         private string _StrGroupID;
         private string _StrGroupName;
+        private string _StrStaffID;
+        private string _StrSubjectID;
 
         [Key]
-        [Column("GroupID", TypeName ="char", Order =0 )]
+        [Column("GroupID", TypeName = "char", Order = 0)]
         [StringLength(10)]
         public string StrGroupID { get => _StrGroupID; set => _StrGroupID = value; }
 
@@ -23,7 +25,16 @@ namespace ManageProjectStudent_Model
         [StringLength(100)]
         public string StrGroupName { get => _StrGroupName; set => _StrGroupName = value; }
 
-        //Khai bao Khoa ngoai
+        //Khai tao Khoa ngoai
+        [Column("StaffID", TypeName = "char", Order = 2)]
+        [StringLength(10)]
+        public string StrStaffID { get => _StrStaffID; set => _StrStaffID = value; }
+
+        [Column("SubjectID", TypeName = "char", Order = 3)]
+        [StringLength(10)]
+        public string StrSubjectID { get => _StrSubjectID; set => _StrSubjectID = value; }
+
+        //khai bao khoa ngoai
         public virtual StaffModel StaffModel { get; set; }
         public virtual SubjectModel SubjectModel { get; set; }
 

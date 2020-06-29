@@ -67,7 +67,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassOfGroupSubjectViewModel.cs" />
+    <Compile Include="ClassViewModel.cs" />
     <Compile Include="DBManageProjectStudentViewModel.cs" />
+    <Compile Include="FacultyViewModel.cs" />
     <Compile Include="GarenaViewModel.cs" />
     <Compile Include="Migrations\202006250417343_v1.cs" />
     <Compile Include="Migrations\202006250417343_v1.designer.cs">
@@ -103,6 +106,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StaffViewModel.cs" />
     <Compile Include="StudentViewModel.cs" />
+    <Compile Include="SubjectViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageProjectStudent_Interface\ManageProjectStudent_Interface.csproj">

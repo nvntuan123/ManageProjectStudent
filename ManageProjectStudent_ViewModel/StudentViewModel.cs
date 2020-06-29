@@ -3,10 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows;
+using System.Data.Entity;
 
 namespace ManageProjectStudent_ViewModel
 {
@@ -14,6 +15,42 @@ namespace ManageProjectStudent_ViewModel
     {
         private readonly DBManageProjectStudentViewModel _context = new DBManageProjectStudentViewModel();
         private ICollection<FacultyModel> _Faculty;
+        public static List<StudentModel> LoadStudent()
+        {
+            using (var _context = new DBManageProjectStudentViewModel())
+            {
+                var student = (from u in _context.StudentModels.AsEnumerable()
+                             select new
+                             {
+                                 ID = u.StrStudentID,
+                                 Name = u.StrStudentName,
+                                 Address = u.StrAddress,
+                                 Birthday = u.DtBirthDay,
+                                 CardID = u.ICardID,
+                                 Phone = u.StrPhone,
+                                 Email = u.StrEmail,
+                                 Status = u.BStatus,
+                                 StartYear = u.DtStartYear,
+                                 FacultyID = u.StrFacultyID,
+                                 ClassID = u.StrClassID
+                              })
+                            .Select(x => new StudentModel
+                            {
+                                StrStudentID = x.ID,
+                                StrStudentName = x.Name,
+                                StrEmail = x.Email,
+                                DtBirthDay = x.Birthday,
+                                ICardID = x.CardID,
+                                StrPhone = x.Phone,
+                                StrAddress = x.Address,
+                                DtStartYear = x.StartYear,
+                                StrFacultyID = x.FacultyID,
+                                StrClassID =x.ClassID
+                            });
+                return student.ToList();
+            }
+        }
+      
         public ICollection<FacultyModel> FacultyModels
         {
             get
@@ -42,20 +79,20 @@ namespace ManageProjectStudent_ViewModel
                 OnPropertyChanged("Class");
             }
         }
-        private ICollection<StudentModel> _Student;
-        //public ICollection<StudentModel> StudentModels
-        //{
-        //    get
-        //    {
-        //        //return
-        //        //    new ObservableCollection<StudentModel>(_context.StudentModels.Include(e => e.));
-        //    }
-        //    set
-        //    {
-        //        _Student = value;
-        //        OnPropertyChanged("Student");
-        //    }
-        //}
+        private ICollection<StudentModel> _StudentModels;
+        public ICollection<StudentModel> StudentModels
+        {
+            get
+            {
+                return
+                    new ObservableCollection<StudentModel>(_context.StudentModels.Include(e =>e.FacultyModel));
+            }
+            set
+            {
+                _StudentModels = value;
+                OnPropertyChanged("Student");
+            }
+        }
         private StudentModel _currentSelectedStudent;
         public StudentModel CurrentSelecteStudent
         {
@@ -69,6 +106,7 @@ namespace ManageProjectStudent_ViewModel
                 OnPropertyChanged("CurrentSelectedStudent");
             }
         }
+
 
         private void AddNewStudent(StudentModel student)
         {

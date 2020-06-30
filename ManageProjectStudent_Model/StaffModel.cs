@@ -13,7 +13,7 @@ namespace ManageProjectStudent_Model
     {
         private string _StrStaffID;
         private string _StrStaffName;
-        private int _ICardID;
+        private string _StrCardID;
         private DateTime _DtBirthDay;
         private string _StrEmail;
         private string _StrAddress;
@@ -32,8 +32,8 @@ namespace ManageProjectStudent_Model
         [StringLength(100)]
         public string StrStaffName { get => _StrStaffName; set => _StrStaffName = value; }
 
-        [Column("CardID", TypeName = "int", Order = 2)]
-        public int ICardID { get => _ICardID; set => _ICardID = value; }
+        [Column("CardID", TypeName = "varchar", Order = 2)]
+        public string StrCardID { get => _StrCardID; set => _StrCardID = value; }
 
         [Column("BirthDay", TypeName = "Date", Order = 3)]
         public DateTime DtBirthDay { get => _DtBirthDay; set => _DtBirthDay = value; }
@@ -46,15 +46,15 @@ namespace ManageProjectStudent_Model
         public string StrAddress { get => _StrAddress; set => _StrAddress = value; }
 
         //[Column("Phone", TypeName = "varchar", Order = 6)]
-        //[StringLength(30)]
-        //public string StrPhone { get => _StrPhone; set => _StrPhone = value; }
+        [StringLength(30)]
+        public string StrPhone { get => _StrPhone; set => _StrPhone = value; }
 
         [Column("Status", TypeName = "bit", Order = 7)]
         public bool BStatus { get => _BStatus; set => _BStatus = value; }
 
-        //[Column("Sex", TypeName = "nvarchar", Order = 8)]
-        //[StringLength(10)]
-        //public string StrSex { get => _StrSex; set => _StrSex = value; }
+        [Column("Sex", TypeName = "nvarchar", Order = 8)]
+        [StringLength(10)]
+        public string StrSex { get => _StrSex; set => _StrSex = value; }
 
         //Khoi tao khoa ngoai
         [Column("StaffTypeID", TypeName = "char", Order = 9)]

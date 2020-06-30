@@ -24,11 +24,11 @@ namespace ManageProjectStudent_ViewModel
                                   StrStudentName = x.StrStudentName,
                                   StrAddress = x.StrAddress,
                                   StrEmail = x.StrEmail,
-                                  //StrPhone = x.StrPhone,
-                                  //StrSex = x.StrSex,
+                                  StrPhone = x.StrPhone,
+                                  StrSex = x.StrSex,
                                   DtBirthDay = x.DtBirthDay,
                                   BStatus = x.BStatus,
-                                  ICardID = x.ICardID,
+                                  StrCardID = x.StrCardID,
                                   DtStartYear = x.DtStartYear,
                                   StrFacultyID = x.StrFacultyID,
                                   StrClassID = x.StrClassID
@@ -36,6 +36,13 @@ namespace ManageProjectStudent_ViewModel
                 return new BindingList<StudentModel>(result);
             }
         }
+        //public static string layMaNVCaoNhat_BUS()
+        //{
+        //    string _STR_MAX = GarenaViewModel.returnMaxCode(StaffViewModel.());
+        //    if (_STR_MAX == "1")
+        //        return "NV" + _STR_MAX;
+        //    return _STR_MAX;
+        //}
         private ICollection<FacultyModel> _Faculty;
         public ICollection<FacultyModel> FacultyModels
         {
@@ -110,11 +117,11 @@ namespace ManageProjectStudent_ViewModel
                 StudentToUpdate.StrEmail = student.StrEmail;
                 StudentToUpdate.DtBirthDay = student.DtBirthDay;
                 StudentToUpdate.DtStartYear = student.DtStartYear;
-                StudentToUpdate.ICardID = student.ICardID;
+                StudentToUpdate.StrCardID = student.StrCardID;
                 StudentToUpdate.StrFacultyID = student.StrFacultyID;
                 StudentToUpdate.StrClassID = student.StrClassID;
                 StudentToUpdate.BStatus = student.BStatus;
-               // StudentToUpdate.StrSex = student.StrSex;
+                StudentToUpdate.StrSex = student.StrSex;
             }
             _context.SaveChanges();
         }

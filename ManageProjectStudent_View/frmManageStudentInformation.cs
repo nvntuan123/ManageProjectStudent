@@ -43,13 +43,104 @@ namespace ManageProjectStudent_View
             switch (_IStatusForm)
             {
                 case 0: // View
- 
+                    grpInformationStudent.Enabled = true;
+                    btnSave.Enabled = false;
+                    if(_StudentModelNow==null)
+                    {
+                        btnUpdate.Enabled = false;
+                        btnDelete.Enabled = false;
+                    }
                     break;
                 case 1: // Add.
                     break;
                 case 2: // Update
                     break;
             }
+        }
+        private void _loadData()
+        {
+            if(_StudentModelNow == null)
+            {
+                txtID.Text = string.Empty;
+                txtFullName.Text = string.Empty;
+                dteBirthday.EditValue = null;
+                radNu.Checked = false;
+                radNam.Checked = false;
+                txtPhoneNumber.Text = string.Empty;
+                txtEmail.Text = string.Empty;
+                txtIDCard.Text = string.Empty;
+                txtAddress.Text = string.Empty;
+                radAvailable.Checked = false;
+                radUnavailable.Checked = false;
+                lkeClass.EditValue = null;
+                lkeFaculty.EditValue = null;
+            }
+            else
+            {
+                txtID.Text = _StudentModelNow.StrStudentID;
+                txtFullName.Text = _StudentModelNow.StrStudentName;
+                dteBirthday.EditValue = _StudentModelNow.DtBirthDay.Date;
+                if(_StudentModelNow.StrSex== "Nam")
+                {
+                    radNam.Checked = true;
+                    radNu.Checked = false;
+                }
+                else
+                {
+                    radNam.Checked = false;
+                    radNu.Checked = true;
+                }
+                txtPhoneNumber.Text = _StudentModelNow.StrPhone;
+                txtEmail.Text = _StudentModelNow.StrEmail;
+                txtIDCard.Text = _StudentModelNow.StrCardID;
+                txtAddress.Text = _StudentModelNow.StrAddress;
+                if(_StudentModelNow.BStatus== true)
+                {
+                    radAvailable.Checked = true;
+                    radUnavailable.Checked = false;
+                }
+                else
+                {
+
+                    radAvailable.Checked = false;
+                    radUnavailable.Checked = true;
+                }
+                lkeClass.EditValue = _StudentModelNow.StrClassID;
+                lkeFaculty.EditValue = _StudentModelNow.StrFacultyID;
+            }
+        }
+
+        private void _getData()
+        {
+            if(_StudentModelNow == null)
+            {
+                _StudentModelNow = new StudentModel();
+            }
+            _StudentModelNow.StrStudentID = txtID.Text;
+            _StudentModelNow.StrStudentName = txtFullName.Text;
+            _StudentModelNow.DtBirthDay = (DateTime)dteBirthday.EditValue;
+            if(radNam.Checked)
+            {
+                _StudentModelNow.StrSex = radNam.Text;
+            }
+            else if (radNu.Checked)
+            {
+                _StudentModelNow.StrSex = radNu.Text;
+            }
+            _StudentModelNow.StrPhone = txtPhoneNumber.Text;
+            _StudentModelNow.StrEmail = txtEmail.Text;
+            _StudentModelNow.StrCardID = txtIDCard.Text;
+            _StudentModelNow.StrAddress = txtAddress.Text;
+            if(radAvailable.Checked)
+            {
+                _StudentModelNow.BStatus = true;
+            }
+            else if (radUnavailable.Checked)
+            {
+                _StudentModelNow.BStatus = false;
+            }
+            _StudentModelNow.StrClassID = lkeClass.Text;
+            _StudentModelNow.StrFacultyID = lkeFaculty.Text;
         }
         #endregion
 
@@ -156,11 +247,6 @@ namespace ManageProjectStudent_View
                 string _STRMesge = "Bạn chưa chọn Trạng thái";
                 MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (lkeCourse.EditValue == null)
-            {
-                string _STRMesge = "Bạn chưa chọn Khóa học";
-                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
             else if (lkeClass.EditValue == null)
             {
                 string _STRMesge = "Bạn chưa chọn Lớp học";
@@ -251,8 +337,35 @@ namespace ManageProjectStudent_View
                 radNam.Checked = false;
             }
         }
+
+        //selectchange
+        private void gvStudentList_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
+        {
+            if (gvStudentList.SelectedRowsCount > 0)
+            {
+                _StudentModelNow = (StudentModel)gvStudentList.GetRow(gvStudentList.FocusedRowHandle);
+            }
+            else
+            {
+                _StudentModelNow = null;
+            }
+            _loadData();
+            _IStatusForm = 0;
+            _setStatusForm();
+        }
         //Thu
         #endregion
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            _StudentModelNow = null;
+            _IStatusForm = 1;
+            _setStatusForm();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

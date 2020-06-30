@@ -28,13 +28,13 @@ namespace ManageProjectStudent_ViewModel
                                   StrStaffName = x.StrStaffName,
                                   StrEmail = x.StrEmail,
                                   StrAddress = x.StrAddress,
-                                  //StrPhone = x.StrPhone,
-                                  //StrSex = x.StrSex,
+                                  StrPhone = x.StrPhone,
+                                  StrSex = x.StrSex,
                                   BStatus = x.BStatus,
                                   DtBirthDay = x.DtBirthDay,
                                   StrFacultyID = x.StrFacultyID,
                                   StrStaffTypeID = x.StrStaffTypeID,
-                                  ICardID = x.ICardID
+                                  StrCardID = x.StrCardID
                               }).ToList();
                 return new BindingList<StaffModel>(result);
             }
@@ -110,13 +110,13 @@ namespace ManageProjectStudent_ViewModel
                 StaffToUpdate.StrStaffName = staff.StrStaffName;
                 StaffToUpdate.StrAddress = staff.StrAddress;
                 StaffToUpdate.StrEmail = staff.StrEmail;
-                //StaffToUpdate.StrPhone = staff.StrPhone;
+                StaffToUpdate.StrPhone = staff.StrPhone;
                 StaffToUpdate.DtBirthDay = staff.DtBirthDay;
-                StaffToUpdate.ICardID = staff.ICardID;
+                StaffToUpdate.StrCardID = staff.StrCardID;
                 StaffToUpdate.StrFacultyID = staff.StrFacultyID;
                 StaffToUpdate.StrStaffTypeID = staff.StrStaffTypeID;
                 StaffToUpdate.BStatus = staff.BStatus;
-                //StaffToUpdate.StrSex = staff.StrSex;
+                StaffToUpdate.StrSex = staff.StrSex;
             }
             _context.SaveChanges();
         }

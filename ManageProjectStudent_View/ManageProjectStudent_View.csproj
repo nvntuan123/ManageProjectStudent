@@ -214,12 +214,6 @@
     <Compile Include="frmManageStudentInformation.Designer.cs">
       <DependentUpon>frmManageStudentInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManageStudentInformationMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmManageStudentInformationMain.Designer.cs">
-      <DependentUpon>frmManageStudentInformationMain.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmManageSubject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -312,9 +306,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmManageStudentInformation.resx">
       <DependentUpon>frmManageStudentInformation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmManageStudentInformationMain.resx">
-      <DependentUpon>frmManageStudentInformationMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmManageLanguageMain.resx">
       <DependentUpon>frmManageLanguageMain.cs</DependentUpon>

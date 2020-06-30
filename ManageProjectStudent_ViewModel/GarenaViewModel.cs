@@ -51,6 +51,78 @@ namespace ManageProjectStudent_ViewModel
                 return false;
             return true;
         }
-        #endregion
+        //seperate number
+        public static int _seperateNumber(string _str)
+        {
+            string _strNumber = string.Empty;
+            int _in = _str.Count();
+            for(int i= 0; i< _in; i++)
+            {
+                if(_str[i]>='0' && _str[i]<='9')
+                {
+                    _strNumber += _str[i];
+                }    
+            }
+            return Convert.ToInt32(_strNumber);
+        }
+        //seperate word
+        public static string _seperateWord(string _str)
+        {
+            string _strWord = string.Empty;
+            int _in = _str.Count();
+            for(int i=0; i<_in; i++)
+            {
+                if((_str[i]>='A' && _str[i]<='Z') || (_str[i] >= 'a' && _str[i] <= 'z'))
+                {
+                    _strWord += _str[i];
+                }    
+            }
+            return _strWord;
+        }
+        //max number
+        public static int _findMax( int[] _arr)
+        {
+            int _in =_arr.Count();
+            int _iMax =_arr[0];
+            for (int i = 0; i < _in; i++)
+            {
+                if (_arr[i] > _iMax)
+                {
+                    _iMax = _arr[i];
+                }
+            }
+            return _iMax;
+        }
+        //Increase the code by 1
+        public static string returnMaxCode(List<string> _lst_String)
+        {
+            if (_lst_String.Count > 0)
+            {
+                string _STR_MaxCode = _seperateWord(_lst_String[0]);
+                // Step 1: Separate numbers and put them into lists.
+                int _in = _lst_String.Count;
+
+                List<int> _lst_Number = new List<int>();
+
+                for (int i = 0; i < _in; ++i)
+                {
+                    _lst_Number.Add(_seperateNumber(_lst_String[i]));
+                }
+
+                // Step 2 : Find max.
+                int _iMax = _findMax(_lst_Number.ToArray());
+
+                // Step 3 : Increase the variable found to 1.
+                _iMax++;
+
+                // Step 4 :Combine letters and numbers into a string .
+                _STR_MaxCode += _iMax.ToString();
+
+                return _STR_MaxCode;
+            }
+            return "1";
+        }
     }
+    #endregion
 }
+

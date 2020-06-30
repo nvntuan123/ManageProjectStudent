@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManageStudentInformation));
             this.label9 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -59,12 +60,12 @@
             this.radNam = new System.Windows.Forms.RadioButton();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.gvManageStudentInfomation = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gvStudentList = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colStudentID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFullName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colBirthday = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSex = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColSex = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPhoneNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIDCard = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -73,6 +74,11 @@
             this.colCourse = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colClass = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFaculty = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btnExitFormManageStudent = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpInformationStudent)).BeginInit();
@@ -80,8 +86,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.lkeFaculty.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkeCourse.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkeClass.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvManageStudentInfomation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvStudentList)).BeginInit();
+            this.panelMenu.SuspendLayout();
+            this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // label9
@@ -235,7 +243,6 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(187, 21);
             this.txtID.TabIndex = 14;
-            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
             // label1
             // 
@@ -280,7 +287,7 @@
             this.grpInformationStudent.Controls.Add(this.label2);
             this.grpInformationStudent.Controls.Add(this.txtID);
             this.grpInformationStudent.Controls.Add(this.label1);
-            this.grpInformationStudent.Location = new System.Drawing.Point(8, 4);
+            this.grpInformationStudent.Location = new System.Drawing.Point(182, 94);
             this.grpInformationStudent.Margin = new System.Windows.Forms.Padding(4);
             this.grpInformationStudent.Name = "grpInformationStudent";
             this.grpInformationStudent.Size = new System.Drawing.Size(1127, 273);
@@ -490,39 +497,39 @@
             this.label10.TabIndex = 36;
             this.label10.Text = "Khóa";
             // 
-            // gridControl2
+            // gridControl1
             // 
-            this.gridControl2.Location = new System.Drawing.Point(8, 297);
-            this.gridControl2.MainView = this.gvManageStudentInfomation;
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(1127, 296);
-            this.gridControl2.TabIndex = 45;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvManageStudentInfomation});
+            this.gridControl1.Location = new System.Drawing.Point(182, 384);
+            this.gridControl1.MainView = this.gvStudentList;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(1127, 289);
+            this.gridControl1.TabIndex = 44;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvStudentList});
             // 
-            // gvManageStudentInfomation
+            // gvStudentList
             // 
-            this.gvManageStudentInfomation.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.gvManageStudentInfomation.Appearance.EvenRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gvManageStudentInfomation.Appearance.EvenRow.Options.UseBackColor = true;
-            this.gvManageStudentInfomation.Appearance.EvenRow.Options.UseFont = true;
-            this.gvManageStudentInfomation.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gvManageStudentInfomation.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gvManageStudentInfomation.Appearance.OddRow.BackColor = System.Drawing.Color.White;
-            this.gvManageStudentInfomation.Appearance.OddRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gvManageStudentInfomation.Appearance.OddRow.Options.UseBackColor = true;
-            this.gvManageStudentInfomation.Appearance.OddRow.Options.UseFont = true;
-            this.gvManageStudentInfomation.Appearance.Row.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gvManageStudentInfomation.Appearance.Row.Options.UseFont = true;
-            this.gvManageStudentInfomation.Appearance.ViewCaption.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gvManageStudentInfomation.Appearance.ViewCaption.Options.UseFont = true;
-            this.gvManageStudentInfomation.AppearancePrint.Row.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gvManageStudentInfomation.AppearancePrint.Row.Options.UseFont = true;
-            this.gvManageStudentInfomation.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvStudentList.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.gvStudentList.Appearance.EvenRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvStudentList.Appearance.EvenRow.Options.UseBackColor = true;
+            this.gvStudentList.Appearance.EvenRow.Options.UseFont = true;
+            this.gvStudentList.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvStudentList.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gvStudentList.Appearance.OddRow.BackColor = System.Drawing.Color.White;
+            this.gvStudentList.Appearance.OddRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvStudentList.Appearance.OddRow.Options.UseBackColor = true;
+            this.gvStudentList.Appearance.OddRow.Options.UseFont = true;
+            this.gvStudentList.Appearance.Row.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvStudentList.Appearance.Row.Options.UseFont = true;
+            this.gvStudentList.Appearance.ViewCaption.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvStudentList.Appearance.ViewCaption.Options.UseFont = true;
+            this.gvStudentList.AppearancePrint.Row.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvStudentList.AppearancePrint.Row.Options.UseFont = true;
+            this.gvStudentList.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colStudentID,
             this.colFullName,
             this.colBirthday,
-            this.colSex,
+            this.ColSex,
             this.colPhoneNumber,
             this.colEmail,
             this.colIDCard,
@@ -531,17 +538,17 @@
             this.colCourse,
             this.colClass,
             this.colFaculty});
-            this.gvManageStudentInfomation.DetailHeight = 377;
-            this.gvManageStudentInfomation.GridControl = this.gridControl2;
-            this.gvManageStudentInfomation.Name = "gvManageStudentInfomation";
-            this.gvManageStudentInfomation.OptionsView.EnableAppearanceEvenRow = true;
-            this.gvManageStudentInfomation.OptionsView.EnableAppearanceOddRow = true;
-            this.gvManageStudentInfomation.OptionsView.ShowAutoFilterRow = true;
-            this.gvManageStudentInfomation.OptionsView.ShowGroupPanel = false;
-            this.gvManageStudentInfomation.OptionsView.ShowViewCaption = true;
-            this.gvManageStudentInfomation.ViewCaption = "Danh sách sinh viên";
-            this.gvManageStudentInfomation.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvManageStudentInfomation_CustomDrawRowIndicator);
-            this.gvManageStudentInfomation.RowCountChanged += new System.EventHandler(this.gvManageStudentInfomation_RowCountChanged);
+            this.gvStudentList.DetailHeight = 377;
+            this.gvStudentList.GridControl = this.gridControl1;
+            this.gvStudentList.Name = "gvStudentList";
+            this.gvStudentList.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvStudentList.OptionsView.EnableAppearanceOddRow = true;
+            this.gvStudentList.OptionsView.ShowAutoFilterRow = true;
+            this.gvStudentList.OptionsView.ShowGroupPanel = false;
+            this.gvStudentList.OptionsView.ShowViewCaption = true;
+            this.gvStudentList.ViewCaption = "Danh sách sinh viên";
+            this.gvStudentList.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvStudentList_CustomDrawRowIndicator);
+            this.gvStudentList.RowCountChanged += new System.EventHandler(this.gvStudentList_RowCountChanged);
             // 
             // colStudentID
             // 
@@ -549,7 +556,7 @@
             this.colStudentID.AppearanceCell.Options.UseFont = true;
             this.colStudentID.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colStudentID.AppearanceHeader.Options.UseFont = true;
-            this.colStudentID.Caption = "MSSV";
+            this.colStudentID.Caption = "Mã số giảng viên";
             this.colStudentID.Name = "colStudentID";
             this.colStudentID.Visible = true;
             this.colStudentID.VisibleIndex = 0;
@@ -577,17 +584,17 @@
             this.colBirthday.VisibleIndex = 2;
             this.colBirthday.Width = 68;
             // 
-            // colSex
+            // ColSex
             // 
-            this.colSex.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colSex.AppearanceCell.Options.UseFont = true;
-            this.colSex.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colSex.AppearanceHeader.Options.UseFont = true;
-            this.colSex.Caption = "Giới Tính";
-            this.colSex.Name = "colSex";
-            this.colSex.Visible = true;
-            this.colSex.VisibleIndex = 3;
-            this.colSex.Width = 63;
+            this.ColSex.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ColSex.AppearanceCell.Options.UseFont = true;
+            this.ColSex.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ColSex.AppearanceHeader.Options.UseFont = true;
+            this.ColSex.Caption = "Giới Tính";
+            this.ColSex.Name = "ColSex";
+            this.ColSex.Visible = true;
+            this.ColSex.VisibleIndex = 3;
+            this.ColSex.Width = 63;
             // 
             // colPhoneNumber
             // 
@@ -595,7 +602,7 @@
             this.colPhoneNumber.AppearanceCell.Options.UseFont = true;
             this.colPhoneNumber.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colPhoneNumber.AppearanceHeader.Options.UseFont = true;
-            this.colPhoneNumber.Caption = "SĐT";
+            this.colPhoneNumber.Caption = "Số Điện Thoại";
             this.colPhoneNumber.Name = "colPhoneNumber";
             this.colPhoneNumber.Visible = true;
             this.colPhoneNumber.VisibleIndex = 4;
@@ -655,11 +662,10 @@
             this.colCourse.AppearanceCell.Options.UseFont = true;
             this.colCourse.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colCourse.AppearanceHeader.Options.UseFont = true;
-            this.colCourse.Caption = "Khóa";
+            this.colCourse.Caption = "Khóa học";
             this.colCourse.Name = "colCourse";
             this.colCourse.Visible = true;
             this.colCourse.VisibleIndex = 9;
-            this.colCourse.Width = 63;
             // 
             // colClass
             // 
@@ -682,13 +688,74 @@
             this.colFaculty.Name = "colFaculty";
             this.colFaculty.Visible = true;
             this.colFaculty.VisibleIndex = 11;
+            this.colFaculty.Width = 63;
+            // 
+            // panelMenu
+            // 
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(77)))));
+            this.panelMenu.Controls.Add(this.panelLogo);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(174, 692);
+            this.panelMenu.TabIndex = 45;
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(37)))), ((int)(((byte)(60)))));
+            this.panelLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelLogo.BackgroundImage")));
+            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(174, 87);
+            this.panelLogo.TabIndex = 7;
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(137)))));
+            this.panelTitleBar.Controls.Add(this.btnExitFormManageStudent);
+            this.panelTitleBar.Controls.Add(this.lblTitle);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelTitleBar.Location = new System.Drawing.Point(174, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(1148, 87);
+            this.panelTitleBar.TabIndex = 46;
+            // 
+            // btnExitFormManageStudent
+            // 
+            this.btnExitFormManageStudent.FlatAppearance.BorderSize = 0;
+            this.btnExitFormManageStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExitFormManageStudent.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitFormManageStudent.Image = ((System.Drawing.Image)(resources.GetObject("btnExitFormManageStudent.Image")));
+            this.btnExitFormManageStudent.Location = new System.Drawing.Point(1073, 0);
+            this.btnExitFormManageStudent.Name = "btnExitFormManageStudent";
+            this.btnExitFormManageStudent.Size = new System.Drawing.Size(75, 87);
+            this.btnExitFormManageStudent.TabIndex = 1;
+            this.btnExitFormManageStudent.UseVisualStyleBackColor = true;
+            this.btnExitFormManageStudent.Click += new System.EventHandler(this.btnExitFormManageStudent_Click);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(446, 31);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(288, 22);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Quản Lí Thông Tinh Sinh Viên";
             // 
             // frmManageStudentInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1148, 605);
-            this.Controls.Add(this.gridControl2);
+            this.ClientSize = new System.Drawing.Size(1322, 692);
+            this.Controls.Add(this.panelTitleBar);
+            this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.grpInformationStudent);
             this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -703,8 +770,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.lkeFaculty.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkeCourse.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkeClass.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvManageStudentInfomation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvStudentList)).EndInit();
+            this.panelMenu.ResumeLayout(false);
+            this.panelTitleBar.ResumeLayout(false);
+            this.panelTitleBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -741,12 +811,12 @@
         private DevExpress.XtraEditors.LookUpEdit lkeFaculty;
         private DevExpress.XtraEditors.LookUpEdit lkeCourse;
         private DevExpress.XtraEditors.LookUpEdit lkeClass;
-        private DevExpress.XtraGrid.GridControl gridControl2;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvManageStudentInfomation;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvStudentList;
         private DevExpress.XtraGrid.Columns.GridColumn colStudentID;
         private DevExpress.XtraGrid.Columns.GridColumn colFullName;
         private DevExpress.XtraGrid.Columns.GridColumn colBirthday;
-        private DevExpress.XtraGrid.Columns.GridColumn colSex;
+        private DevExpress.XtraGrid.Columns.GridColumn ColSex;
         private DevExpress.XtraGrid.Columns.GridColumn colPhoneNumber;
         private DevExpress.XtraGrid.Columns.GridColumn colEmail;
         private DevExpress.XtraGrid.Columns.GridColumn colIDCard;
@@ -755,5 +825,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn colCourse;
         private DevExpress.XtraGrid.Columns.GridColumn colClass;
         private DevExpress.XtraGrid.Columns.GridColumn colFaculty;
+        private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Panel panelTitleBar;
+        private System.Windows.Forms.Button btnExitFormManageStudent;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

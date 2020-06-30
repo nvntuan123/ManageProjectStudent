@@ -31,7 +31,9 @@ namespace ManageProjectStudent_View
          * Set status form: 0. View, 1. Add, 2. Update.
          */
         private int _IStatusForm = 0;
-        
+        private StudentModel _StudentModelNow = null;
+        private BindingList<StudentModel> _LstStudent = null;
+
         #endregion
 
         #region Method
@@ -54,7 +56,8 @@ namespace ManageProjectStudent_View
         #region Event
         //Thu
         //stt
-        private void gvManageStudentInfomation_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
+
+        private void gvStudentList_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
         {
             try
             {
@@ -100,7 +103,7 @@ namespace ManageProjectStudent_View
             }
         }
 
-        private void gvManageStudentInfomation_RowCountChanged(object sender, EventArgs e)
+        private void gvStudentList_RowCountChanged(object sender, EventArgs e)
         {
             GridView gridview = ((GridView)sender);
             if (!gridview.GridControl.IsHandleCreated) return;
@@ -110,7 +113,7 @@ namespace ManageProjectStudent_View
         }
         //stt
 
-        //btnSave_Click
+        //click
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (txtFullName.Text == "")
@@ -174,9 +177,12 @@ namespace ManageProjectStudent_View
             }
         }
 
-        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        private void btnExitFormManageStudent_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmHome frmHome = new frmHome();
+            frmHome.ShowDialog();
+            this.Close();
         }
 
         //keypress
@@ -247,5 +253,6 @@ namespace ManageProjectStudent_View
         }
         //Thu
         #endregion
+
     }
 }

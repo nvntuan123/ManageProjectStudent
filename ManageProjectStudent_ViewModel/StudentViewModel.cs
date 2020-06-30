@@ -13,6 +13,29 @@ namespace ManageProjectStudent_ViewModel
     public class StudentViewModel : INotifyPropertyChanged
     {
         private readonly DBManageProjectStudentViewModel _context = new DBManageProjectStudentViewModel();
+        public static BindingList<StudentModel> LoadStudent()
+        {
+            using (var _context = new DBManageProjectStudentViewModel())
+            {
+                var result = (from x in _context.StudentModels.AsEnumerable()
+                              select new StudentModel
+                              {
+                                  StrStudentID = x.StrStudentID,
+                                  StrStudentName = x.StrStudentName,
+                                  StrAddress = x.StrAddress,
+                                  StrEmail = x.StrEmail,
+                                  //StrPhone = x.StrPhone,
+                                  //StrSex = x.StrSex,
+                                  DtBirthDay = x.DtBirthDay,
+                                  BStatus = x.BStatus,
+                                  ICardID = x.ICardID,
+                                  DtStartYear = x.DtStartYear,
+                                  StrFacultyID = x.StrFacultyID,
+                                  StrClassID = x.StrClassID
+                              }).ToList();
+                return new BindingList<StudentModel>(result);
+            }
+        }
         private ICollection<FacultyModel> _Faculty;
         public ICollection<FacultyModel> FacultyModels
         {
@@ -87,11 +110,11 @@ namespace ManageProjectStudent_ViewModel
                 StudentToUpdate.StrEmail = student.StrEmail;
                 StudentToUpdate.DtBirthDay = student.DtBirthDay;
                 StudentToUpdate.DtStartYear = student.DtStartYear;
-                StudentToUpdate.DtStartYear = student.DtStartYear;
                 StudentToUpdate.ICardID = student.ICardID;
                 StudentToUpdate.StrFacultyID = student.StrFacultyID;
                 StudentToUpdate.StrClassID = student.StrClassID;
                 StudentToUpdate.BStatus = student.BStatus;
+               // StudentToUpdate.StrSex = student.StrSex;
             }
             _context.SaveChanges();
         }

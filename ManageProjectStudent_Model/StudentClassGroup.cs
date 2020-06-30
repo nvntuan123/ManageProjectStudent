@@ -25,7 +25,7 @@ namespace ManageProjectStudent_Model
         public string StrGroupID { get => _StrGroupID; set => _StrGroupID = value; }
 
         //khai bao khoa ngoai
-        public virtual ClassGroupOfSubject ClassGroupOfSubject { get; set; }
+       // public virtual ClassGroupOfSubject ClassGroupOfSubject { get; set; }
         public virtual StudentModel StudentModel { get; set; }
 
     }

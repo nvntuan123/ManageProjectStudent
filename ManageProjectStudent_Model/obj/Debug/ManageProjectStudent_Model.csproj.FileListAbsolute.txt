@@ -9,3 +9,15 @@ C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_
 C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.csproj.CopyComplete
 C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.dll
 C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.pdb
+C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_Model\bin\Debug\ManageProjectStudent_Model.dll.config
+C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_Model\bin\Debug\ManageProjectStudent_Model.dll
+C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_Model\bin\Debug\ManageProjectStudent_Model.pdb
+C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_Model\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_Model\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.csproj.CopyComplete
+C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.dll
+C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.pdb

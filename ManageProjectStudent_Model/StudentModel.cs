@@ -19,8 +19,11 @@ namespace ManageProjectStudent_Model
         private string _StrAddress;
         private DateTime _DtStartYear;
         private bool _BStatus;
+        private string _StrSex;
+        private string _StrPhone;
         private string _StrFacultyID;
         private string _StrClassID;
+
 
         [Key]
         [Column("StudentID", TypeName = "char", Order = 0)]
@@ -50,11 +53,20 @@ namespace ManageProjectStudent_Model
         [Column("Status", TypeName = "bit", Order = 7)]
         public bool BStatus { get => _BStatus; set => _BStatus = value; }
 
-        [Column("FacultyID", TypeName = "char", Order = 8)]
+        //[Column("Sex", TypeName = "nvarchar", Order = 8)]
+        //[StringLength(10)]
+        //public string StrSex { get => _StrSex; set => _StrSex = value; }
+
+        //[Column("Phone", TypeName = "char", Order = 9)]
+        //[StringLength(30)]
+        //public string StrPhone { get => _StrPhone; set => _StrPhone = value; }
+
+        [Column("FacultyID", TypeName = "char", Order = 10)]
         [StringLength(10)]
+
         public string StrFacultyID { get => _StrFacultyID; set => _StrFacultyID = value; }
 
-        [Column("ClassID", TypeName = "char", Order = 9)]
+        [Column("ClassID", TypeName = "char", Order = 11)]
         [StringLength(10)]
         public string StrClassID { get => _StrClassID; set => _StrClassID = value; }
 
@@ -68,7 +80,7 @@ namespace ManageProjectStudent_Model
         public ICollection<TeachAndStudy> TeachAndStudies { get; set; }
         public ICollection<StudentClassGroup> StudentClassGroups { get; set; }
 
-              public StudentModel()
+        public StudentModel()
         {
             this.ResultProjectModels = new HashSet<ResultProjectModel>();
             this.ExamResultModels = new HashSet<ExamResultModel>();

@@ -113,8 +113,6 @@ namespace ManageProjectStudent_View
         private void itemManageStudent_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
             //this.Hide();
-            frmManageStudentInformationMain frmMaStudentInfoMain = new frmManageStudentInformationMain();
-            frmMaStudentInfoMain.ShowDialog();
             this.Close();
         }
 

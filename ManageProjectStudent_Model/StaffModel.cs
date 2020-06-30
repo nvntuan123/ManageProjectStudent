@@ -19,6 +19,7 @@ namespace ManageProjectStudent_Model
         private string _StrAddress;
         private string _StrPhone;
         private bool _BStatus;
+        private string _StrSex;
         private string _StrStaffTypeID;
         private string _strFacultyID;
 
@@ -44,19 +45,23 @@ namespace ManageProjectStudent_Model
         [Column("Address", TypeName = "nvarchar", Order = 5)]
         public string StrAddress { get => _StrAddress; set => _StrAddress = value; }
 
-        [Column("Phone", TypeName = "varchar", Order = 6)]
-        [StringLength(30)]
-        public string StrPhone { get => _StrPhone; set => _StrPhone = value; }
+        //[Column("Phone", TypeName = "varchar", Order = 6)]
+        //[StringLength(30)]
+        //public string StrPhone { get => _StrPhone; set => _StrPhone = value; }
 
         [Column("Status", TypeName = "bit", Order = 7)]
         public bool BStatus { get => _BStatus; set => _BStatus = value; }
 
+        //[Column("Sex", TypeName = "nvarchar", Order = 8)]
+        //[StringLength(10)]
+        //public string StrSex { get => _StrSex; set => _StrSex = value; }
+
         //Khoi tao khoa ngoai
-        [Column("StaffTypeID", TypeName = "char", Order = 8)]
+        [Column("StaffTypeID", TypeName = "char", Order = 9)]
         [StringLength(10)]
         public string StrStaffTypeID { get => _StrStaffTypeID; set => _StrStaffTypeID = value; }
 
-        [Column("FacultyID", TypeName = "char", Order = 9)]
+        [Column("FacultyID", TypeName = "char", Order = 10)]
         [StringLength(10)]
         public string StrFacultyID { get => _strFacultyID; set => _strFacultyID = value; }
 
@@ -77,3 +82,4 @@ namespace ManageProjectStudent_Model
         }
     }
 }
+ 

@@ -45,7 +45,7 @@ namespace ManageProjectStudent_Model
         [Column("Address", TypeName = "nvarchar", Order = 5)]
         public string StrAddress { get => _StrAddress; set => _StrAddress = value; }
 
-        //[Column("Phone", TypeName = "varchar", Order = 6)]
+        [Column("Phone", TypeName = "varchar", Order = 6)]
         [StringLength(30)]
         public string StrPhone { get => _StrPhone; set => _StrPhone = value; }
 

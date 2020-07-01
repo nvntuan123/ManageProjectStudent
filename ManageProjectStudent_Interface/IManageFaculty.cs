@@ -10,5 +10,6 @@ namespace ManageProjectStudent_Interface
     public interface IManageFaculty
     {
         void txtIDFaculty_KeyPress(object sender, KeyPressEventArgs e);
+        
     }
 }

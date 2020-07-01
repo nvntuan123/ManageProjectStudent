@@ -12,12 +12,12 @@ namespace ManageProjectStudent_ViewModel
 {
     public class StudentViewModel : INotifyPropertyChanged
     {
-        private readonly DBManageProjectStudentViewModel _context = new DBManageProjectStudentViewModel();
+        private readonly DBManageProjectStudentViewModel _Context = new DBManageProjectStudentViewModel();
         public static BindingList<StudentModel> LoadStudent()
         {
-            using (var _context = new DBManageProjectStudentViewModel())
+            using (var _Context = new DBManageProjectStudentViewModel())
             {
-                var result = (from x in _context.StudentModels.AsEnumerable()
+                var Result = (from x in _Context.StudentModels.AsEnumerable()
                               select new StudentModel
                               {
                                   StrStudentID = x.StrStudentID,
@@ -33,23 +33,25 @@ namespace ManageProjectStudent_ViewModel
                                   StrFacultyID = x.StrFacultyID,
                                   StrClassID = x.StrClassID
                               }).ToList();
-                return new BindingList<StudentModel>(result);
+                return new BindingList<StudentModel>(Result);
             }
         }
-        //public static string layMaNVCaoNhat_BUS()
-        //{
-        //    string _STR_MAX = GarenaViewModel.returnMaxCode(StaffViewModel.());
-        //    if (_STR_MAX == "1")
-        //        return "NV" + _STR_MAX;
-        //    return _STR_MAX;
-        //}
+        public string GetByIDMax()
+        {
+            using (var _Context = new DBManageProjectStudentViewModel())
+            {
+                var query = _Context.StudentModels.OrderByDescending(c => c.StrStudentID).Select(c=>c.StrStudentID);
+                var Result = query.First();
+                return Result;
+            }
+        }
         private ICollection<FacultyModel> _Faculty;
         public ICollection<FacultyModel> FacultyModels
         {
             get
             {
                 return
-                    new ObservableCollection<FacultyModel>(_context.FacultyModels);
+                    new ObservableCollection<FacultyModel>(_Context.FacultyModels);
             }
             set
             {
@@ -64,7 +66,7 @@ namespace ManageProjectStudent_ViewModel
             get
             {
                 return
-                    new ObservableCollection<ClassModel>(_context.ClassModels);
+                    new ObservableCollection<ClassModel>(_Context.ClassModels);
             }
             set
             {
@@ -78,7 +80,7 @@ namespace ManageProjectStudent_ViewModel
         //    get
         //    {
         //        //return
-        //        //    new ObservableCollection<StudentModel>(_context.StudentModels.Include(e => e.));
+        //        //    new ObservableCollection<StudentModel>(_Context.StudentModels.Include(e => e.));
         //    }
         //    set
         //    {
@@ -102,13 +104,13 @@ namespace ManageProjectStudent_ViewModel
 
         private void AddNewStudent(StudentModel student)
         {
-            _context.StudentModels.Add(student);
-            _context.SaveChanges();
+            _Context.StudentModels.Add(student);
+            _Context.SaveChanges();
         }
 
         private void UpdateCurrentStudent(StudentModel student)
         {
-            var StudentToUpdate = _context.StudentModels.SingleOrDefault
+            var StudentToUpdate = _Context.StudentModels.SingleOrDefault
                     (x => x.StrStudentID == student.StrStudentID);
             if (StudentToUpdate != null)
             {
@@ -121,17 +123,18 @@ namespace ManageProjectStudent_ViewModel
                 StudentToUpdate.StrFacultyID = student.StrFacultyID;
                 StudentToUpdate.StrClassID = student.StrClassID;
                 StudentToUpdate.BStatus = student.BStatus;
+                StudentToUpdate.StrPhone = student.StrPhone;
                 StudentToUpdate.StrSex = student.StrSex;
             }
-            _context.SaveChanges();
+            _Context.SaveChanges();
         }
 
         private void DeleteCurrentStudent(StudentModel student)
         {
-            var StudentToDelete = _context.StudentModels.SingleOrDefault
+            var StudentToDelete = _Context.StudentModels.SingleOrDefault
                     (x => x.StrStudentID == student.StrStudentID);
-            _context.StudentModels.Remove(StudentToDelete);
-            _context.SaveChanges();
+            _Context.StudentModels.Remove(StudentToDelete);
+            _Context.SaveChanges();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

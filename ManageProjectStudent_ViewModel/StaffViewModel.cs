@@ -15,13 +15,13 @@ namespace ManageProjectStudent_ViewModel
     #region by Phuoc
     public class StaffViewModel : INotifyPropertyChanged
     {
-        private readonly DBManageProjectStudentViewModel _context = new DBManageProjectStudentViewModel();
+        private readonly DBManageProjectStudentViewModel _Context = new DBManageProjectStudentViewModel();
 
         public static BindingList<StaffModel> LoadStaff()
         {
-            using (var _context = new DBManageProjectStudentViewModel())
+            using (var _Context = new DBManageProjectStudentViewModel())
             {
-                var result = (from x in _context.StaffModels.AsEnumerable()
+                var Result = (from x in _Context.StaffModels.AsEnumerable()
                               select new StaffModel
                               {
                                   StrStaffID = x.StrStaffID,
@@ -36,7 +36,7 @@ namespace ManageProjectStudent_ViewModel
                                   StrStaffTypeID = x.StrStaffTypeID,
                                   StrCardID = x.StrCardID
                               }).ToList();
-                return new BindingList<StaffModel>(result);
+                return new BindingList<StaffModel>(Result);
             }
         }
         private ICollection<FacultyModel> _FacultyModels;
@@ -45,7 +45,7 @@ namespace ManageProjectStudent_ViewModel
             get
             {
                 return
-                    new ObservableCollection<FacultyModel>(_context.FacultyModels);
+                    new ObservableCollection<FacultyModel>(_Context.FacultyModels);
             }
             set
             {
@@ -59,7 +59,7 @@ namespace ManageProjectStudent_ViewModel
             get
             {
                 return
-                    new ObservableCollection<StaffModel>(_context.StaffModels.Include(e => e.FacultyModel));
+                    new ObservableCollection<StaffModel>(_Context.StaffModels.Include(e => e.FacultyModel));
             }
             set
             {
@@ -73,7 +73,7 @@ namespace ManageProjectStudent_ViewModel
             get
             {
                 return
-                    new ObservableCollection<StaffTypeModel>(_context.StaffTypeModels);
+                    new ObservableCollection<StaffTypeModel>(_Context.StaffTypeModels);
             }
             set
             {
@@ -97,13 +97,13 @@ namespace ManageProjectStudent_ViewModel
 
         private void AddNewStaff(StaffModel staff)
         {
-            _context.StaffModels.Add(staff);
-            _context.SaveChanges();
+            _Context.StaffModels.Add(staff);
+            _Context.SaveChanges();
         }
 
         private void UpdateCurrentStafff(StaffModel staff)
         {
-            var StaffToUpdate = _context.StaffModels.SingleOrDefault
+            var StaffToUpdate = _Context.StaffModels.SingleOrDefault
                     (x => x.StrStaffID == staff.StrStaffID);
             if (StaffToUpdate != null)
             {
@@ -118,15 +118,15 @@ namespace ManageProjectStudent_ViewModel
                 StaffToUpdate.BStatus = staff.BStatus;
                 StaffToUpdate.StrSex = staff.StrSex;
             }
-            _context.SaveChanges();
+            _Context.SaveChanges();
         }
 
         private void DeleteCurrentStaff(StaffModel staff)
         {
-            var staffToDelete = _context.StaffModels.SingleOrDefault
+            var staffToDelete = _Context.StaffModels.SingleOrDefault
                     (x => x.StrStaffID == staff.StrStaffID);
-            _context.StaffModels.Remove(staffToDelete);
-            _context.SaveChanges();
+            _Context.StaffModels.Remove(staffToDelete);
+            _Context.SaveChanges();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

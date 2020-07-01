@@ -21,3 +21,4 @@ C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_
 C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.csproj.CopyComplete
 C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.dll
 C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.pdb
+C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.csprojAssemblyReference.cache

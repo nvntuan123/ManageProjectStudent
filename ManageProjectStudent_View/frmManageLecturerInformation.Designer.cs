@@ -224,6 +224,7 @@
             this.btnUpdate.TabIndex = 119;
             this.btnUpdate.TabStop = false;
             this.btnUpdate.Text = "Sửa ";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -245,6 +246,7 @@
             this.btnDelete.TabIndex = 118;
             this.btnDelete.TabStop = false;
             this.btnDelete.Text = "Xóa";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -266,6 +268,7 @@
             this.btnAdd.TabIndex = 117;
             this.btnAdd.TabStop = false;
             this.btnAdd.Text = "Thêm";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // radUnavailable
             // 
@@ -493,7 +496,7 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(180, 398);
+            this.gridControl1.Location = new System.Drawing.Point(180, 397);
             this.gridControl1.MainView = this.gvLecturerList;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(1059, 249);

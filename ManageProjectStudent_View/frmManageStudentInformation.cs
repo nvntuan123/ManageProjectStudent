@@ -32,7 +32,9 @@ namespace ManageProjectStudent_View
          */
         private int _IStatusForm = 0;
         private StudentModel _StudentModelNow = null;
-        private BindingList<StudentModel> _LstStudent = null;
+        //private BindingList<StudentModel> _LstStudent = null;
+        private BindingList<StudentModel> _lstStudent = new BindingList<StudentModel>();
+        private BindingList<FacultyModel> _lstFaculty = new BindingList<FacultyModel>();
 
         #endregion
 
@@ -57,7 +59,7 @@ namespace ManageProjectStudent_View
                     break;
             }
         }
-        private void _loadData()
+        private void _loadInfor()
         {
             if(_StudentModelNow == null)
             {
@@ -109,8 +111,7 @@ namespace ManageProjectStudent_View
                 lkeFaculty.EditValue = _StudentModelNow.StrFacultyID;
             }
         }
-
-        private void _getData()
+        private void _getInfor()
         {
             if(_StudentModelNow == null)
             {
@@ -142,10 +143,44 @@ namespace ManageProjectStudent_View
             _StudentModelNow.StrClassID = lkeClass.Text;
             _StudentModelNow.StrFacultyID = lkeFaculty.Text;
         }
+        private void _lst_loadListStudent()
+        {
+            _lstStudent = StudentViewModel.LoadStudent();
+            if(_lstStudent.Count > 0)
+            {
+                foreach (StudentModel st in _lstStudent)
+                {
+                    if(st.StrStudentID == "10000000")
+                    {
+                        _lstStudent.Remove(st);
+                        break;
+                    }
+                }
+            }
+            gcListStudent.DataSource = _lstStudent;
+        }
         #endregion
 
         #region Event
         //Thu
+        //load
+        private void frmManageStudentInformation_Load(object sender, EventArgs e)
+        {
+            dteBirthday.EditValue = DateTime.Now.Date;
+
+            _lstFaculty = FacultyViewModel.LoadFaculty();
+            lkeFaculty.Properties.ValueMember = "StrFacultyID";
+            lkeFaculty.Properties.DisplayMember = "StrFacultyName";
+            lkeFaculty.Properties.DataSource = _lstFaculty;
+            lkeFaculty.Properties.Columns["colCourseID"].FieldName = "StrFacultyID";
+            lkeFaculty.Properties.Columns["colCourseName"].FieldName = "StrFacultyName";
+            /*GridView*/
+            _lstStudent = StudentViewModel.LoadStudent();
+            LookUpEdit_Faculty.DataSource = _lstStudent;
+            LookUpEdit_Faculty.Columns["colCourseID"].FieldName= "StrFacultyID";
+            LookUpEdit_Faculty.Columns["colCourseName"].FieldName = "StrFacultyID";
+            _lst_loadListStudent();
+        }
         //stt
 
         private void gvStudentList_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
@@ -271,6 +306,17 @@ namespace ManageProjectStudent_View
             this.Close();
         }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            _StudentModelNow = null;
+            _IStatusForm = 1;
+            _setStatusForm();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
         //keypress
         private void txtFullName_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -349,23 +395,11 @@ namespace ManageProjectStudent_View
             {
                 _StudentModelNow = null;
             }
-            _loadData();
+            _loadInfor();
             _IStatusForm = 0;
             _setStatusForm();
         }
         //Thu
         #endregion
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            _StudentModelNow = null;
-            _IStatusForm = 1;
-            _setStatusForm();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

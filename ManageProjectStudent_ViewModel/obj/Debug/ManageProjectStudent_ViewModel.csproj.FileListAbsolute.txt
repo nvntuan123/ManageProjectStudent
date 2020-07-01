@@ -126,6 +126,7 @@ C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_
 C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.pdb
 C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.Migrations.v8.resources
 C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.Migrations.v10.resources
+<<<<<<< HEAD
 C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\DBManageProjectStudent.mdf
 C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\DBManageProjectStudent_log.ldf
 C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent\ManageProjectStudent_ViewModel\bin\Debug\ManageProjectStudent_ViewModel.dll.config
@@ -193,3 +194,7 @@ C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent\
 C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.Migrations.v9.resources
 C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.Migrations.v10.resources
 C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.Migrations.v11.resources
+=======
+C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.Migrations.v8.resources
+C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_ViewModel\obj\Debug\ManageProjectStudent_ViewModel.Migrations.v10.resources
+>>>>>>> f39e260e5db76d26f4cb7cbefacfba8dea30c2aa

@@ -21,6 +21,7 @@ C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_
 C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.csproj.CopyComplete
 C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.dll
 C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.pdb
+<<<<<<< HEAD
 C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent\ManageProjectStudent_Model\bin\Debug\ManageProjectStudent_Model.dll.config
 C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent\ManageProjectStudent_Model\bin\Debug\ManageProjectStudent_Model.dll
 C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent\ManageProjectStudent_Model\bin\Debug\ManageProjectStudent_Model.pdb
@@ -33,3 +34,6 @@ C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent\
 C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.csproj.CopyComplete
 C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.dll
 C:\Users\Admin\Desktop\New folder (2)\ManageProjectStudent\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.pdb
+=======
+C:\Users\thu26\Desktop\ProjectWinform\ManageProjectStudent\ManageProjectStudent_Model\obj\Debug\ManageProjectStudent_Model.csprojAssemblyReference.cache
+>>>>>>> f39e260e5db76d26f4cb7cbefacfba8dea30c2aa

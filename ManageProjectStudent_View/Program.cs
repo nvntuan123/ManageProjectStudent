@@ -47,7 +47,7 @@ namespace ManageProjectStudent_View
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmManageStudentInformation());
+            Application.Run(new frmManageLecturerInformation());
         }
     }
 }

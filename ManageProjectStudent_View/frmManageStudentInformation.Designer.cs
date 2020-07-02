@@ -72,13 +72,13 @@
             this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colClass = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFaculty = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LookUpEdit_Faculty = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.btnExitFormManageStudent = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.LookUpEdit_Faculty = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpInformationStudent)).BeginInit();
@@ -87,10 +87,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.lkeClass.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcListStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvStudentList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Faculty)).BeginInit();
             this.panelMenu.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Faculty)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -302,8 +302,8 @@
             this.lkeFaculty.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkeFaculty.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colCourseName", "Tên khoa"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colCourseID", "Mã khoa", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colFacultyName", "Tên khoa"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colFacultyID", "Mã khoa", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.lkeFaculty.Properties.NullText = "Khoa";
             this.lkeFaculty.Size = new System.Drawing.Size(188, 24);
             this.lkeFaculty.TabIndex = 115;
@@ -316,6 +316,9 @@
             this.lkeClass.Properties.Appearance.Options.UseFont = true;
             this.lkeClass.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkeClass.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colClassName", "Tên lớp"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colClassID", "Mã lớp")});
             this.lkeClass.Properties.NullText = "Lớp";
             this.lkeClass.Size = new System.Drawing.Size(188, 24);
             this.lkeClass.TabIndex = 113;
@@ -542,7 +545,8 @@
             this.colStudentID.AppearanceCell.Options.UseFont = true;
             this.colStudentID.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colStudentID.AppearanceHeader.Options.UseFont = true;
-            this.colStudentID.Caption = "Mã số giảng viên";
+            this.colStudentID.Caption = "Mã số ";
+            this.colStudentID.FieldName = "StrStudentID";
             this.colStudentID.Name = "colStudentID";
             this.colStudentID.Visible = true;
             this.colStudentID.VisibleIndex = 0;
@@ -555,6 +559,7 @@
             this.colFullName.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colFullName.AppearanceHeader.Options.UseFont = true;
             this.colFullName.Caption = "Họ Tên";
+            this.colFullName.FieldName = "StrStudentName";
             this.colFullName.Name = "colFullName";
             this.colFullName.Visible = true;
             this.colFullName.VisibleIndex = 1;
@@ -565,6 +570,7 @@
             this.colBirthday.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colBirthday.AppearanceCell.Options.UseFont = true;
             this.colBirthday.Caption = "Ngày Sinh";
+            this.colBirthday.FieldName = "DtBirthDay";
             this.colBirthday.Name = "colBirthday";
             this.colBirthday.Visible = true;
             this.colBirthday.VisibleIndex = 2;
@@ -577,6 +583,7 @@
             this.ColSex.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ColSex.AppearanceHeader.Options.UseFont = true;
             this.ColSex.Caption = "Giới Tính";
+            this.ColSex.FieldName = "StrSex";
             this.ColSex.Name = "ColSex";
             this.ColSex.Visible = true;
             this.ColSex.VisibleIndex = 3;
@@ -589,6 +596,7 @@
             this.colPhoneNumber.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colPhoneNumber.AppearanceHeader.Options.UseFont = true;
             this.colPhoneNumber.Caption = "Số Điện Thoại";
+            this.colPhoneNumber.FieldName = "StrPhone";
             this.colPhoneNumber.Name = "colPhoneNumber";
             this.colPhoneNumber.Visible = true;
             this.colPhoneNumber.VisibleIndex = 4;
@@ -601,6 +609,7 @@
             this.colEmail.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colEmail.AppearanceHeader.Options.UseFont = true;
             this.colEmail.Caption = "Email";
+            this.colEmail.FieldName = "StrEmail";
             this.colEmail.Name = "colEmail";
             this.colEmail.Visible = true;
             this.colEmail.VisibleIndex = 5;
@@ -613,6 +622,7 @@
             this.colIDCard.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colIDCard.AppearanceHeader.Options.UseFont = true;
             this.colIDCard.Caption = "CMND";
+            this.colIDCard.FieldName = "StrCardID";
             this.colIDCard.Name = "colIDCard";
             this.colIDCard.Visible = true;
             this.colIDCard.VisibleIndex = 6;
@@ -625,6 +635,7 @@
             this.colAddress.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colAddress.AppearanceHeader.Options.UseFont = true;
             this.colAddress.Caption = "Địa Chỉ";
+            this.colAddress.FieldName = "StrAddress";
             this.colAddress.Name = "colAddress";
             this.colAddress.Visible = true;
             this.colAddress.VisibleIndex = 7;
@@ -637,6 +648,7 @@
             this.colStatus.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colStatus.AppearanceHeader.Options.UseFont = true;
             this.colStatus.Caption = "Trạng Thái";
+            this.colStatus.FieldName = "BStatus";
             this.colStatus.Name = "colStatus";
             this.colStatus.Visible = true;
             this.colStatus.VisibleIndex = 8;
@@ -649,6 +661,7 @@
             this.colClass.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colClass.AppearanceHeader.Options.UseFont = true;
             this.colClass.Caption = "Lớp";
+            this.colClass.FieldName = "StrClassId";
             this.colClass.Name = "colClass";
             this.colClass.Visible = true;
             this.colClass.VisibleIndex = 9;
@@ -666,6 +679,19 @@
             this.colFaculty.Visible = true;
             this.colFaculty.VisibleIndex = 10;
             this.colFaculty.Width = 63;
+            // 
+            // LookUpEdit_Faculty
+            // 
+            this.LookUpEdit_Faculty.AutoHeight = false;
+            this.LookUpEdit_Faculty.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.LookUpEdit_Faculty.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LookUpEdit_Faculty.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colFacultyName", "Tên khoa"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colFacultyID", "Mã khoa", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.LookUpEdit_Faculty.DisplayMember = "StrFacultyName";
+            this.LookUpEdit_Faculty.Name = "LookUpEdit_Faculty";
+            this.LookUpEdit_Faculty.ValueMember = "StrFacultyID";
             // 
             // panelMenu
             // 
@@ -725,16 +751,6 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Quản Lí Thông Tinh Sinh Viên";
             // 
-            // LookUpEdit_Faculty
-            // 
-            this.LookUpEdit_Faculty.AutoHeight = false;
-            this.LookUpEdit_Faculty.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.LookUpEdit_Faculty.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.LookUpEdit_Faculty.DisplayMember = "StrFacultyName";
-            this.LookUpEdit_Faculty.Name = "LookUpEdit_Faculty";
-            this.LookUpEdit_Faculty.ValueMember = "StrFacultyID";
-            // 
             // frmManageStudentInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -759,11 +775,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.lkeClass.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcListStudent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvStudentList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Faculty)).EndInit();
             this.panelMenu.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Faculty)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -39,6 +39,15 @@ namespace ManageProjectStudent_ViewModel
                 return new BindingList<StaffModel>(Result);
             }
         }
+        public static string GetByIDMaxLecturer()
+        {
+            using (var _Context = new DBManageProjectStudentViewModel())
+            {
+                var query = _Context.StaffModels.OrderByDescending(c => c.StrStaffID).Select(c => c.StrStaffID);
+                var Result = query.First();
+                return Result;
+            }
+        }
         private ICollection<FacultyModel> _FacultyModels;
         public ICollection<FacultyModel> FacultyModels
         {
@@ -95,7 +104,7 @@ namespace ManageProjectStudent_ViewModel
             }
         }
 
-        private void AddNewStaff(StaffModel staff)
+        public void AddNewStaff(StaffModel staff)
         {
             _Context.StaffModels.Add(staff);
             _Context.SaveChanges();

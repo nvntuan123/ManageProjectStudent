@@ -145,19 +145,7 @@ namespace ManageProjectStudent_View
         }
         private void _lst_loadListStudent()
         {
-            _lstStudent = StudentViewModel.LoadStudent();
-            if(_lstStudent.Count > 0)
-            {
-                foreach (StudentModel st in _lstStudent)
-                {
-                    if(st.StrStudentID == "10000000")
-                    {
-                        _lstStudent.Remove(st);
-                        break;
-                    }
-                }
-            }
-            gcListStudent.DataSource = _lstStudent;
+            
         }
         #endregion
 
@@ -172,14 +160,18 @@ namespace ManageProjectStudent_View
             lkeFaculty.Properties.ValueMember = "StrFacultyID";
             lkeFaculty.Properties.DisplayMember = "StrFacultyName";
             lkeFaculty.Properties.DataSource = _lstFaculty;
-            lkeFaculty.Properties.Columns["colCourseID"].FieldName = "StrFacultyID";
-            lkeFaculty.Properties.Columns["colCourseName"].FieldName = "StrFacultyName";
-            /*GridView*/
+            lkeFaculty.Properties.Columns["colFacultyID"].FieldName = "StrFacultyID";
+            lkeFaculty.Properties.Columns["colFacultyName"].FieldName = "StrFacultyName";
+
+            ///*GridView*/
             _lstStudent = StudentViewModel.LoadStudent();
+
             LookUpEdit_Faculty.DataSource = _lstStudent;
-            LookUpEdit_Faculty.Columns["colCourseID"].FieldName= "StrFacultyID";
-            LookUpEdit_Faculty.Columns["colCourseName"].FieldName = "StrFacultyID";
-            _lst_loadListStudent();
+            LookUpEdit_Faculty.Columns["colFacultyID"].FieldName = "StrFacultyID";
+            LookUpEdit_Faculty.Columns["colFacultyName"].FieldName = "StrFacultyID";
+            gcListStudent.DataSource = _lstStudent;
+            
+            //_lst_loadListStudent();
         }
         //stt
 

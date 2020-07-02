@@ -28,6 +28,8 @@ namespace ManageProjectStudent_View
         #region Properties
         private int _IStatusForm = 0;
         private StaffModel _LecturerModelNow = null;
+        private BindingList<StaffModel> _lstLecturer = new BindingList<StaffModel>();
+        private BindingList<FacultyModel> _lstFaculty = new BindingList<FacultyModel>();
         #endregion
         #region Method
         private void _setStatusForm()
@@ -36,10 +38,44 @@ namespace ManageProjectStudent_View
             switch (_IStatusForm)
             {
                 case 0: // View
+                    grpInformationLecturer.Enabled = false;
+                    btnSave.Enabled = false;
+
+                    dteBirthday.Enabled = true;
+                    if(_LecturerModelNow ==null)
+                    {
+                        btnUpdate.Enabled = false;
+                        btnDelete.Enabled = false;
+                    }
+                    else
+                    {
+                        btnUpdate.Enabled = true;
+                        btnDelete.Enabled = true;
+                    }
                     break;
                 case 1: // Add.
+                    txtID.Text = string.Empty;
+                    txtFullName.Text = string.Empty;
+                    txtIDCard.Text = string.Empty;
+                    dteBirthday.EditValue = null;
+                    txtAddress.Text = string.Empty;
+                    txtPhoneNumber.Text = string.Empty;
+                    txtEmail.Text = string.Empty;
+                    lkeFaculty.EditValue = null;
+                    radNam.Checked = false;
+                    radNu.Checked = false;
+                    radAvailable.Checked = false;
+                    radUnavailable.Checked = false;
+
+                    grpInformationLecturer.Enabled = true;
+
+                    btnDelete.Enabled = false;
+                    btnUpdate.Enabled = false;
+                    btnSave.Enabled = true;
                     break;
                 case 2: // Update
+                    grpInformationLecturer.Enabled = true;
+                    btnSave.Enabled = true;
                     break;
             }
         }
@@ -105,6 +141,40 @@ namespace ManageProjectStudent_View
         }
         #endregion
         #region Event
+        //load
+        private void frmManageLecturerInformation_Load(object sender, EventArgs e)
+        {
+            dteBirthday.EditValue = DateTime.Now.Date;
+
+            _lstFaculty = FacultyViewModel.LoadFaculty();
+            lkeFaculty.Properties.ValueMember = "StrFacultyID";
+            lkeFaculty.Properties.DisplayMember = "StrFacultyName";
+            lkeFaculty.Properties.DataSource = _lstFaculty;
+            lkeFaculty.Properties.Columns["colFacultyID"].FieldName = "StrFacultyID";
+            lkeFaculty.Properties.Columns["colFacultyName"].FieldName = "StrFacultyName";
+
+            ///*GridView*/
+            _lstLecturer = StaffViewModel.LoadStaff();
+
+            LookUpEdit_Faculty.DataSource = _lstFaculty;
+            LookUpEdit_Faculty.Columns["colFacultyID"].FieldName = "StrFacultyID";
+            LookUpEdit_Faculty.Columns["colFacultyName"].FieldName = "StrFacultyName";
+            gcListLecturer.DataSource = _lstLecturer;
+            _setStatusForm();
+        }
+
+        //selection changed
+        private void gvLecturerList_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
+        {
+            if(gvLecturerList.SelectedRowsCount>0)
+                _LecturerModelNow = (StaffModel)gvLecturerList.GetRow(gvLecturerList.FocusedRowHandle);
+            else
+                _LecturerModelNow = null;
+
+            _loadData();
+            _IStatusForm = 0;
+            _setStatusForm();
+        }
         //stt
         private void gvLecturerList_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
         {
@@ -162,21 +232,7 @@ namespace ManageProjectStudent_View
         }
 
         //click
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (txtFullName.Text == "")
@@ -224,6 +280,14 @@ namespace ManageProjectStudent_View
                 string _STRMesge = "Bạn chưa chọn Trạng thái";
                 MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                bool bresult = false;
+                if(_IStatusForm==1)
+                {
+                    //bresult = StaffViewModel.AddNewStaff();
+                }    
+            }    
         }
 
         private void btnExitFormManageLecturer_Click(object sender, EventArgs e)
@@ -311,6 +375,21 @@ namespace ManageProjectStudent_View
             {
                 radAvailable.Checked = false;
             }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            _LecturerModelNow = null;
+            _IStatusForm = 1;
+            _setStatusForm();
+            txtID.Text = StaffViewModel.GetByIDMaxLecturer();
+            txtFullName.Focus();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            _IStatusForm = 1;
+            _setStatusForm();
         }
         #endregion
         //Thu

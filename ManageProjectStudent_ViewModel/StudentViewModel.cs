@@ -36,7 +36,7 @@ namespace ManageProjectStudent_ViewModel
                 return new BindingList<StudentModel>(Result);
             }
         }
-        public string GetByIDMax()
+        public string GetByIDMaxStudent()
         {
             using (var _Context = new DBManageProjectStudentViewModel())
             {

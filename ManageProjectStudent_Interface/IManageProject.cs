@@ -10,9 +10,6 @@ namespace ManageProjectStudent_Interface
 {
     public interface IManageProject
     {
-        // Thong
-        void txtIDProject_KeyPress(object sender, KeyPressEventArgs e);
-        void txtProjectName_KeyPress(object sender, KeyPressEventArgs e);
-        //Thong
+
     }
 }

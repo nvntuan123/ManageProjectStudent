@@ -39,19 +39,18 @@ namespace ManageProjectStudent_View
             {
                 case 0: // View
                     grpInformationLecturer.Enabled = false;
-                    btnSave.Enabled = false;
-
+                    //btnSave.Enabled = false;
                     dteBirthday.Enabled = true;
-                    if(_LecturerModelNow ==null)
-                    {
-                        btnUpdate.Enabled = false;
-                        btnDelete.Enabled = false;
-                    }
-                    else
-                    {
-                        btnUpdate.Enabled = true;
-                        btnDelete.Enabled = true;
-                    }
+                    //if (_LecturerModelNow == null)
+                    //{
+                    //    btnUpdate.Enabled = false;
+                    //    btnDelete.Enabled = false;
+                    //}
+                    //else
+                    //{
+                    //    btnUpdate.Enabled = true;
+                    //    btnDelete.Enabled = true;
+                    //}
                     break;
                 case 1: // Add.
                     txtID.Text = string.Empty;
@@ -79,6 +78,7 @@ namespace ManageProjectStudent_View
                     break;
             }
         }
+
         private void _loadData()
         {
             if (_LecturerModelNow==null)
@@ -129,6 +129,7 @@ namespace ManageProjectStudent_View
                 }
             }    
         }
+
         private void _getData()
         {
             if (_LecturerModelNow == null)

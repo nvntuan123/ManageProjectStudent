@@ -88,17 +88,18 @@ namespace ManageProjectStudent_View
             childForm.Show();
             //lblTitle.Text = childForm.Text;
         }
-
         private void btnManageProjectLecturer_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ManageProjectStudent_View.frmManageProject(), sender);
-            lblTitle.Text = "Quản Lý Đồ Án";
+            this.Hide();
+            frmManageProject frmManageProject = new frmManageProject();
+            frmManageProject.ShowDialog();
+            this.Close();
         }
 
         private void btnViewDeadlineLecturer_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ManageProjectStudent_View.frmViewDeadlineProject(), sender);
-            lblTitle.Text = "Xem Hạn";
+            lblTitle.Text = "   Xem Hạn Nộp  ";
         }
 
         private void btnExitForm_Click(object sender, EventArgs e)

@@ -28,79 +28,94 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManageProject));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gvListProject = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colIDProject = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colProjectName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNameSubject = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStartDay = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEndday = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.grpInformationProject = new DevExpress.XtraEditors.GroupControl();
+            this.lkeSubject = new DevExpress.XtraEditors.LookUpEdit();
             this.txtProjectName = new System.Windows.Forms.TextBox();
-            this.txtIDProject = new System.Windows.Forms.TextBox();
-            this.btnSaveLecturer = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.dteStartDay = new DevExpress.XtraEditors.DateEdit();
+            this.dteEndDay = new DevExpress.XtraEditors.DateEdit();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.pnButton = new System.Windows.Forms.Panel();
+            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btnCloseChildForm = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvListProject)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpInformationProject)).BeginInit();
+            this.grpInformationProject.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lkeSubject.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteStartDay.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteStartDay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteEndDay.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteEndDay.Properties)).BeginInit();
+            this.panelMenu.SuspendLayout();
+            this.pnButton.SuspendLayout();
+            this.panelLogo.SuspendLayout();
+            this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(32, 330);
-            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Location = new System.Drawing.Point(186, 382);
+            this.gridControl1.MainView = this.gvListProject;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(934, 196);
+            this.gridControl1.Size = new System.Drawing.Size(964, 245);
             this.gridControl1.TabIndex = 19;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gvListProject});
             // 
-            // gridView1
+            // gvListProject
             // 
-            this.gridView1.Appearance.EvenRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gridView1.Appearance.EvenRow.Options.UseBackColor = true;
-            this.gridView1.Appearance.EvenRow.Options.UseFont = true;
-            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView1.Appearance.OddRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gridView1.Appearance.OddRow.Options.UseBackColor = true;
-            this.gridView1.Appearance.OddRow.Options.UseFont = true;
-            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gridView1.Appearance.Row.Options.UseFont = true;
-            this.gridView1.Appearance.SelectedRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gridView1.Appearance.SelectedRow.Options.UseFont = true;
-            this.gridView1.Appearance.ViewCaption.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView1.Appearance.ViewCaption.Options.UseFont = true;
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvListProject.Appearance.EvenRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvListProject.Appearance.EvenRow.Options.UseBackColor = true;
+            this.gvListProject.Appearance.EvenRow.Options.UseFont = true;
+            this.gvListProject.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvListProject.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gvListProject.Appearance.OddRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvListProject.Appearance.OddRow.Options.UseBackColor = true;
+            this.gvListProject.Appearance.OddRow.Options.UseFont = true;
+            this.gvListProject.Appearance.Row.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvListProject.Appearance.Row.Options.UseFont = true;
+            this.gvListProject.Appearance.SelectedRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvListProject.Appearance.SelectedRow.Options.UseFont = true;
+            this.gvListProject.Appearance.ViewCaption.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvListProject.Appearance.ViewCaption.Options.UseFont = true;
+            this.gvListProject.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colIDProject,
             this.colProjectName,
             this.colNameSubject,
             this.colStartDay,
             this.colEndday});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.EnableAppearanceEvenRow = true;
-            this.gridView1.OptionsView.EnableAppearanceOddRow = true;
-            this.gridView1.OptionsView.ShowAutoFilterRow = true;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.OptionsView.ShowViewCaption = true;
-            this.gridView1.ViewCaption = "Danh sách đồ án";
+            this.gvListProject.GridControl = this.gridControl1;
+            this.gvListProject.Name = "gvListProject";
+            this.gvListProject.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvListProject.OptionsView.EnableAppearanceOddRow = true;
+            this.gvListProject.OptionsView.ShowAutoFilterRow = true;
+            this.gvListProject.OptionsView.ShowGroupPanel = false;
+            this.gvListProject.OptionsView.ShowViewCaption = true;
+            this.gvListProject.ViewCaption = "Danh sách đồ án";
+            this.gvListProject.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvListProject_CustomDrawRowIndicator);
+            this.gvListProject.SelectionChanged += new DevExpress.Data.SelectionChangedEventHandler(this.gvListProject_SelectionChanged);
+            this.gvListProject.RowCountChanged += new System.EventHandler(this.gvListProject_RowCountChanged);
             // 
             // colIDProject
             // 
@@ -129,7 +144,7 @@
             // 
             // colNameSubject
             // 
-            this.colNameSubject.AppearanceCell.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colNameSubject.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colNameSubject.AppearanceCell.Options.UseFont = true;
             this.colNameSubject.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.colNameSubject.AppearanceHeader.Options.UseFont = true;
@@ -163,237 +178,336 @@
             this.colEndday.VisibleIndex = 4;
             this.colEndday.Width = 204;
             // 
-            // groupControl1
+            // grpInformationProject
             // 
-            this.groupControl1.Controls.Add(this.txtProjectName);
-            this.groupControl1.Controls.Add(this.txtIDProject);
-            this.groupControl1.Controls.Add(this.btnSaveLecturer);
-            this.groupControl1.Controls.Add(this.simpleButton6);
-            this.groupControl1.Controls.Add(this.simpleButton7);
-            this.groupControl1.Controls.Add(this.btnLuu);
-            this.groupControl1.Controls.Add(this.comboBoxEdit1);
-            this.groupControl1.Controls.Add(this.label6);
-            this.groupControl1.Controls.Add(this.dateEdit2);
-            this.groupControl1.Controls.Add(this.dateEdit1);
-            this.groupControl1.Controls.Add(this.label5);
-            this.groupControl1.Controls.Add(this.label4);
-            this.groupControl1.Controls.Add(this.label3);
-            this.groupControl1.Controls.Add(this.label11);
-            this.groupControl1.Location = new System.Drawing.Point(32, 45);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(934, 261);
-            this.groupControl1.TabIndex = 18;
-            this.groupControl1.Text = "Nhập thông tin đồ án";
+            this.grpInformationProject.Controls.Add(this.lkeSubject);
+            this.grpInformationProject.Controls.Add(this.txtProjectName);
+            this.grpInformationProject.Controls.Add(this.txtID);
+            this.grpInformationProject.Controls.Add(this.btnSave);
+            this.grpInformationProject.Controls.Add(this.label6);
+            this.grpInformationProject.Controls.Add(this.dteStartDay);
+            this.grpInformationProject.Controls.Add(this.dteEndDay);
+            this.grpInformationProject.Controls.Add(this.label5);
+            this.grpInformationProject.Controls.Add(this.label4);
+            this.grpInformationProject.Controls.Add(this.label3);
+            this.grpInformationProject.Controls.Add(this.label11);
+            this.grpInformationProject.Location = new System.Drawing.Point(186, 93);
+            this.grpInformationProject.Name = "grpInformationProject";
+            this.grpInformationProject.Size = new System.Drawing.Size(964, 283);
+            this.grpInformationProject.TabIndex = 18;
+            this.grpInformationProject.Text = "Nhập thông tin đồ án";
+            // 
+            // lkeSubject
+            // 
+            this.lkeSubject.Location = new System.Drawing.Point(240, 175);
+            this.lkeSubject.Name = "lkeSubject";
+            this.lkeSubject.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkeSubject.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colSubjectName", "Tên môn học"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colSubjectID", "Mã môn học")});
+            this.lkeSubject.Size = new System.Drawing.Size(168, 20);
+            this.lkeSubject.TabIndex = 123;
             // 
             // txtProjectName
             // 
-            this.txtProjectName.Location = new System.Drawing.Point(221, 110);
+            this.txtProjectName.Location = new System.Drawing.Point(240, 110);
             this.txtProjectName.Name = "txtProjectName";
             this.txtProjectName.Size = new System.Drawing.Size(168, 21);
             this.txtProjectName.TabIndex = 122;
+            this.txtProjectName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProjectName_KeyPress);
             // 
-            // txtIDProject
+            // txtID
             // 
-            this.txtIDProject.Location = new System.Drawing.Point(221, 43);
-            this.txtIDProject.Name = "txtIDProject";
-            this.txtIDProject.Size = new System.Drawing.Size(168, 21);
-            this.txtIDProject.TabIndex = 121;
+            this.txtID.Location = new System.Drawing.Point(240, 43);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(168, 21);
+            this.txtID.TabIndex = 121;
             // 
-            // btnSaveLecturer
+            // btnSave
             // 
-            this.btnSaveLecturer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSaveLecturer.Appearance.BackColor = System.Drawing.Color.Silver;
-            this.btnSaveLecturer.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSaveLecturer.Appearance.ForeColor = System.Drawing.Color.White;
-            this.btnSaveLecturer.Appearance.Options.UseBackColor = true;
-            this.btnSaveLecturer.Appearance.Options.UseFont = true;
-            this.btnSaveLecturer.Appearance.Options.UseForeColor = true;
-            this.btnSaveLecturer.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
-            this.btnSaveLecturer.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSaveLecturer.AppearanceHovered.Options.UseBackColor = true;
-            this.btnSaveLecturer.AppearanceHovered.Options.UseFont = true;
-            this.btnSaveLecturer.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnSaveLecturer.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnSaveLecturer.Location = new System.Drawing.Point(638, 219);
-            this.btnSaveLecturer.Name = "btnSaveLecturer";
-            this.btnSaveLecturer.Size = new System.Drawing.Size(127, 28);
-            this.btnSaveLecturer.TabIndex = 120;
-            this.btnSaveLecturer.TabStop = false;
-            this.btnSaveLecturer.Text = "Lưu";
-            // 
-            // simpleButton6
-            // 
-            this.simpleButton6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton6.Appearance.BackColor = System.Drawing.Color.Silver;
-            this.simpleButton6.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.simpleButton6.Appearance.ForeColor = System.Drawing.Color.White;
-            this.simpleButton6.Appearance.Options.UseBackColor = true;
-            this.simpleButton6.Appearance.Options.UseFont = true;
-            this.simpleButton6.Appearance.Options.UseForeColor = true;
-            this.simpleButton6.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
-            this.simpleButton6.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.simpleButton6.AppearanceHovered.Options.UseBackColor = true;
-            this.simpleButton6.AppearanceHovered.Options.UseFont = true;
-            this.simpleButton6.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.simpleButton6.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton6.Location = new System.Drawing.Point(475, 219);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(127, 28);
-            this.simpleButton6.TabIndex = 119;
-            this.simpleButton6.TabStop = false;
-            this.simpleButton6.Text = "Sửa ";
-            // 
-            // simpleButton7
-            // 
-            this.simpleButton7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton7.Appearance.BackColor = System.Drawing.Color.Silver;
-            this.simpleButton7.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.simpleButton7.Appearance.ForeColor = System.Drawing.Color.White;
-            this.simpleButton7.Appearance.Options.UseBackColor = true;
-            this.simpleButton7.Appearance.Options.UseFont = true;
-            this.simpleButton7.Appearance.Options.UseForeColor = true;
-            this.simpleButton7.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
-            this.simpleButton7.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.simpleButton7.AppearanceHovered.Options.UseBackColor = true;
-            this.simpleButton7.AppearanceHovered.Options.UseFont = true;
-            this.simpleButton7.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.simpleButton7.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton7.Location = new System.Drawing.Point(303, 219);
-            this.simpleButton7.Name = "simpleButton7";
-            this.simpleButton7.Size = new System.Drawing.Size(127, 28);
-            this.simpleButton7.TabIndex = 118;
-            this.simpleButton7.TabStop = false;
-            this.simpleButton7.Text = "Xóa";
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLuu.Appearance.BackColor = System.Drawing.Color.Silver;
-            this.btnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnLuu.Appearance.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Appearance.Options.UseBackColor = true;
-            this.btnLuu.Appearance.Options.UseFont = true;
-            this.btnLuu.Appearance.Options.UseForeColor = true;
-            this.btnLuu.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
-            this.btnLuu.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnLuu.AppearanceHovered.Options.UseBackColor = true;
-            this.btnLuu.AppearanceHovered.Options.UseFont = true;
-            this.btnLuu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnLuu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnLuu.Location = new System.Drawing.Point(113, 219);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(127, 28);
-            this.btnLuu.TabIndex = 117;
-            this.btnLuu.TabStop = false;
-            this.btnLuu.Text = "Thêm";
-            // 
-            // comboBoxEdit1
-            // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(221, 175);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(168, 20);
-            this.comboBoxEdit1.TabIndex = 26;
+            this.btnSave.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSave.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Appearance.Options.UseBackColor = true;
+            this.btnSave.Appearance.Options.UseFont = true;
+            this.btnSave.Appearance.Options.UseForeColor = true;
+            this.btnSave.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.btnSave.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSave.AppearanceHovered.Options.UseBackColor = true;
+            this.btnSave.AppearanceHovered.Options.UseFont = true;
+            this.btnSave.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
+            this.btnSave.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnSave.Location = new System.Drawing.Point(404, 227);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(169, 41);
+            this.btnSave.TabIndex = 120;
+            this.btnSave.TabStop = false;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(110, 176);
+            this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(105, 176);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 16);
+            this.label6.Size = new System.Drawing.Size(94, 17);
             this.label6.TabIndex = 25;
             this.label6.Text = "Tên môn học";
             // 
-            // dateEdit2
+            // dteStartDay
             // 
-            this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(597, 43);
-            this.dateEdit2.Name = "dateEdit2";
-            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dteStartDay.EditValue = null;
+            this.dteStartDay.Location = new System.Drawing.Point(651, 44);
+            this.dteStartDay.Name = "dteStartDay";
+            this.dteStartDay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dteStartDay.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Size = new System.Drawing.Size(168, 20);
-            this.dateEdit2.TabIndex = 24;
+            this.dteStartDay.Size = new System.Drawing.Size(168, 20);
+            this.dteStartDay.TabIndex = 24;
             // 
-            // dateEdit1
+            // dteEndDay
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(597, 115);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dteEndDay.EditValue = null;
+            this.dteEndDay.Location = new System.Drawing.Point(651, 116);
+            this.dteEndDay.Name = "dteEndDay";
+            this.dteEndDay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dteEndDay.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(168, 20);
-            this.dateEdit1.TabIndex = 23;
+            this.dteEndDay.Size = new System.Drawing.Size(168, 20);
+            this.dteEndDay.TabIndex = 23;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(497, 116);
+            this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(527, 117);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 16);
+            this.label5.Size = new System.Drawing.Size(96, 17);
             this.label5.TabIndex = 22;
             this.label5.Text = "Ngày kết thúc";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(499, 47);
+            this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(529, 45);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 16);
+            this.label4.Size = new System.Drawing.Size(93, 17);
             this.label4.TabIndex = 4;
             this.label4.Text = "Ngày bắt đầu";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(110, 111);
+            this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(124, 111);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 16);
+            this.label3.Size = new System.Drawing.Size(73, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tên đồ án";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(110, 47);
+            this.label11.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(129, 47);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 16);
+            this.label11.Size = new System.Drawing.Size(67, 17);
             this.label11.TabIndex = 0;
             this.label11.Text = "Mã đồ án";
+            // 
+            // panelMenu
+            // 
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(77)))));
+            this.panelMenu.Controls.Add(this.pnButton);
+            this.panelMenu.Controls.Add(this.panelLogo);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(168, 639);
+            this.panelMenu.TabIndex = 20;
+            // 
+            // pnButton
+            // 
+            this.pnButton.Controls.Add(this.btnUpdate);
+            this.pnButton.Controls.Add(this.btnDelete);
+            this.pnButton.Controls.Add(this.btnAdd);
+            this.pnButton.Location = new System.Drawing.Point(3, 87);
+            this.pnButton.Name = "pnButton";
+            this.pnButton.Size = new System.Drawing.Size(165, 549);
+            this.pnButton.TabIndex = 13;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdate.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.btnUpdate.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnUpdate.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Appearance.Options.UseBackColor = true;
+            this.btnUpdate.Appearance.Options.UseFont = true;
+            this.btnUpdate.Appearance.Options.UseForeColor = true;
+            this.btnUpdate.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
+            this.btnUpdate.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnUpdate.AppearanceHovered.Options.UseBackColor = true;
+            this.btnUpdate.AppearanceHovered.Options.UseFont = true;
+            this.btnUpdate.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.Image")));
+            this.btnUpdate.Location = new System.Drawing.Point(0, 358);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(165, 64);
+            this.btnUpdate.TabIndex = 12;
+            this.btnUpdate.TabStop = false;
+            this.btnUpdate.Text = "Sửa Đồ Án";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDelete.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Appearance.Options.UseBackColor = true;
+            this.btnDelete.Appearance.Options.UseFont = true;
+            this.btnDelete.Appearance.Options.UseForeColor = true;
+            this.btnDelete.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
+            this.btnDelete.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDelete.AppearanceHovered.Options.UseBackColor = true;
+            this.btnDelete.AppearanceHovered.Options.UseFont = true;
+            this.btnDelete.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(0, 444);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(164, 64);
+            this.btnDelete.TabIndex = 11;
+            this.btnDelete.TabStop = false;
+            this.btnDelete.Text = "Xóa Đồ Án";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdd.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnAdd.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Appearance.Options.UseBackColor = true;
+            this.btnAdd.Appearance.Options.UseFont = true;
+            this.btnAdd.Appearance.Options.UseForeColor = true;
+            this.btnAdd.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
+            this.btnAdd.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnAdd.AppearanceHovered.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.AppearanceHovered.Options.UseBackColor = true;
+            this.btnAdd.AppearanceHovered.Options.UseFont = true;
+            this.btnAdd.AppearanceHovered.Options.UseForeColor = true;
+            this.btnAdd.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.Image")));
+            this.btnAdd.Location = new System.Drawing.Point(0, 272);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(165, 64);
+            this.btnAdd.TabIndex = 10;
+            this.btnAdd.TabStop = false;
+            this.btnAdd.Text = "Thêm Đồ Án";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(37)))), ((int)(((byte)(60)))));
+            this.panelLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelLogo.BackgroundImage")));
+            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panelLogo.Controls.Add(this.panel1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(168, 87);
+            this.panelLogo.TabIndex = 5;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(203, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(970, 639);
+            this.panel1.TabIndex = 0;
+            this.panel1.Visible = false;
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(137)))));
+            this.panelTitleBar.Controls.Add(this.btnCloseChildForm);
+            this.panelTitleBar.Controls.Add(this.lblTitle);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelTitleBar.Location = new System.Drawing.Point(168, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(1005, 87);
+            this.panelTitleBar.TabIndex = 21;
+            // 
+            // btnCloseChildForm
+            // 
+            this.btnCloseChildForm.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
+            this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseChildForm.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseChildForm.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseChildForm.Image")));
+            this.btnCloseChildForm.Location = new System.Drawing.Point(0, 0);
+            this.btnCloseChildForm.Name = "btnCloseChildForm";
+            this.btnCloseChildForm.Size = new System.Drawing.Size(75, 87);
+            this.btnCloseChildForm.TabIndex = 1;
+            this.btnCloseChildForm.UseVisualStyleBackColor = true;
+            this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(374, 31);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(154, 22);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Quản Lý Đồ Án ";
             // 
             // frmManageProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(999, 552);
+            this.ClientSize = new System.Drawing.Size(1173, 639);
+            this.Controls.Add(this.panelTitleBar);
+            this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.gridControl1);
-            this.Controls.Add(this.groupControl1);
+            this.Controls.Add(this.grpInformationProject);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmManageProject";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmManageProject";
+            this.Load += new System.EventHandler(this.frmManageProject_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvListProject)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpInformationProject)).EndInit();
+            this.grpInformationProject.ResumeLayout(false);
+            this.grpInformationProject.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lkeSubject.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteStartDay.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteStartDay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteEndDay.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteEndDay.Properties)).EndInit();
+            this.panelMenu.ResumeLayout(false);
+            this.pnButton.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            this.panelTitleBar.ResumeLayout(false);
+            this.panelTitleBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -401,26 +515,33 @@
         #endregion
 
         private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvListProject;
         private DevExpress.XtraGrid.Columns.GridColumn colIDProject;
         private DevExpress.XtraGrid.Columns.GridColumn colProjectName;
         private DevExpress.XtraGrid.Columns.GridColumn colNameSubject;
         private DevExpress.XtraGrid.Columns.GridColumn colStartDay;
         private DevExpress.XtraGrid.Columns.GridColumn colEndday;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.GroupControl grpInformationProject;
         private System.Windows.Forms.Label label6;
-        private DevExpress.XtraEditors.DateEdit dateEdit2;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.DateEdit dteStartDay;
+        private DevExpress.XtraEditors.DateEdit dteEndDay;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label11;
-        private DevExpress.XtraEditors.SimpleButton btnSaveLecturer;
-        private DevExpress.XtraEditors.SimpleButton simpleButton6;
-        private DevExpress.XtraEditors.SimpleButton simpleButton7;
-        private DevExpress.XtraEditors.SimpleButton btnLuu;
+        private DevExpress.XtraEditors.SimpleButton btnSave;
         private System.Windows.Forms.TextBox txtProjectName;
-        private System.Windows.Forms.TextBox txtIDProject;
+        private System.Windows.Forms.TextBox txtID;
+        private DevExpress.XtraEditors.LookUpEdit lkeSubject;
+        private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Panel pnButton;
+        private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelTitleBar;
+        private System.Windows.Forms.Button btnCloseChildForm;
+        private System.Windows.Forms.Label lblTitle;
+        private DevExpress.XtraEditors.SimpleButton btnUpdate;
+        private DevExpress.XtraEditors.SimpleButton btnDelete;
+        private DevExpress.XtraEditors.SimpleButton btnAdd;
     }
 }

@@ -22,7 +22,7 @@ namespace ManageProjectStudent_Model
         public string StrClassID { get => _StrClassID; set => _StrClassID = value; }
 
         [Column("ClassName", TypeName = "nvarchar", Order = 1)]
-        [StringLength(10)]
+        [StringLength(100)]
         public string StrClassName { get => _StrClassName; set => _StrClassName = value; }
 
         // Khai tao khoa ngoai 

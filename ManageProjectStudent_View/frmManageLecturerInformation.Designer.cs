@@ -151,6 +151,7 @@
             this.btnDelete.TabIndex = 8;
             this.btnDelete.TabStop = false;
             this.btnDelete.Text = "Xóa Giảng Viên";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -348,7 +349,7 @@
             this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
             this.btnSave.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnSave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSave.Location = new System.Drawing.Point(397, 247);
+            this.btnSave.Location = new System.Drawing.Point(418, 247);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(140, 36);
             this.btnSave.TabIndex = 120;
@@ -576,6 +577,8 @@
             this.gvLecturerList.DetailHeight = 377;
             this.gvLecturerList.GridControl = this.gcListLecturer;
             this.gvLecturerList.Name = "gvLecturerList";
+            this.gvLecturerList.OptionsBehavior.Editable = false;
+            this.gvLecturerList.OptionsSelection.MultiSelect = true;
             this.gvLecturerList.OptionsView.EnableAppearanceEvenRow = true;
             this.gvLecturerList.OptionsView.EnableAppearanceOddRow = true;
             this.gvLecturerList.OptionsView.ShowAutoFilterRow = true;
@@ -738,6 +741,7 @@
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmManageLecturerInformation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmManageLecturerInformation";
             this.Load += new System.EventHandler(this.frmManageLecturerInformation_Load);
             this.panelMenu.ResumeLayout(false);

@@ -13,7 +13,7 @@ namespace ManageProjectStudent_ViewModel
 {
     public class FacultyViewModel : INotifyPropertyChanged
     {
-        private readonly DBManageProjectStudentViewModel _context = new DBManageProjectStudentViewModel();
+        private static readonly DBManageProjectStudentViewModel _context = new DBManageProjectStudentViewModel();
 
         public static BindingList<FacultyModel> LoadFaculty()
         {
@@ -29,43 +29,22 @@ namespace ManageProjectStudent_ViewModel
                 return new BindingList<FacultyModel>(result);
             }
         }
-        private ICollection<FacultyModel> _Faculty;
-        public ICollection<FacultyModel> FacultyModels
+      
+        public static bool AddNewFaculty(FacultyModel faculty)
         {
-            get
+            try
             {
-                return
-                    new ObservableCollection<FacultyModel>(_context.FacultyModels);
+                _context.FacultyModels.Add(faculty);
+                _context.SaveChanges();
+                return true;
             }
-            set
+            catch
             {
-                _Faculty = value;
-                OnPropertyChanged("Faculty");
+                return false;
             }
         }
 
-
-        private StudentModel _currentSelectedFaculty;
-        public StudentModel CurrentSelecteFaculty
-        {
-            get
-            {
-                return _currentSelectedFaculty;
-            }
-            set
-            {
-                _currentSelectedFaculty = value;
-                OnPropertyChanged("CurrentSelectedFaculty");
-            }
-        }
-
-        private void AddNewFaculty(FacultyModel faculty)
-        {
-            _context.FacultyModels.Add(faculty);
-            _context.SaveChanges();
-        }
-
-        private void UpdateCurrentFaculty(FacultyModel faculty)
+        public static bool UpdateCurrentFaculty(FacultyModel faculty)
         {
             var FacultyToUpdate = _context.FacultyModels.SingleOrDefault
                     (x => x.StrFacultyID == faculty.StrFacultyID);
@@ -74,15 +53,31 @@ namespace ManageProjectStudent_ViewModel
                 FacultyToUpdate.StrFacultyName = faculty.StrFacultyName;
                 FacultyToUpdate.DtFoundedYear = faculty.DtFoundedYear;
             }
-            _context.SaveChanges();
+            try
+            {
+                _context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false; 
+            }
         }
 
-        private void DeleteCurrentStudent(StudentModel student)
+        public static bool DeleteCurrentStudent(StudentModel student)
         {
             var StudentToDelete = _context.StudentModels.SingleOrDefault
                     (x => x.StrStudentID == student.StrStudentID);
-            _context.StudentModels.Remove(StudentToDelete);
-            _context.SaveChanges();
+            try
+            {
+                _context.StudentModels.Remove(StudentToDelete);
+                _context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

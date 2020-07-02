@@ -14,7 +14,7 @@ namespace ManageProjectStudent_ViewModel
     public class ProjectViewModel : INotifyPropertyChanged
     {
         #region by Phuoc
-        private readonly DBManageProjectStudentViewModel _context = new DBManageProjectStudentViewModel();
+        public static readonly DBManageProjectStudentViewModel _context = new DBManageProjectStudentViewModel();
         public static BindingList<ProjectModel> LoadProject()
         {
             using (var _context = new DBManageProjectStudentViewModel())
@@ -32,70 +32,22 @@ namespace ManageProjectStudent_ViewModel
                 return new BindingList<ProjectModel>(result);
             }
         }
-        private ICollection<ResultProjectModel> _ResultProjectModels;
-        public ICollection<ResultProjectModel> ResultProjectModels
+ 
+        public static bool AddNewProject(ProjectModel project)
         {
-            get
+            try
             {
-                return
-                    new ObservableCollection<ResultProjectModel>(_context.ResultProjectModels);
+                _context.ProjectModels.Add(project);
+                _context.SaveChanges();
+                return true;
             }
-            set
+            catch
             {
-                _ResultProjectModels = value;
-                OnPropertyChanged("Result");
-            }
-        }
-        private ICollection<ProjectModel> _ProjectModels;
-        public ICollection<ProjectModel> ProjectModes
-
-        {
-            get
-            {
-                return
-                    new ObservableCollection<ProjectModel>(_context.ProjectModels.Include(e => e.ResultProjectModels));
-            }
-            set
-            {
-                _ProjectModels = value;
-                OnPropertyChanged("Project");
-            }
-        }
-        private ICollection<ProjectTaskModel> _ProjectTaskModels;
-        public ICollection<ProjectTaskModel> ProjectTaskModels
-        {
-            get
-            {
-                return
-                    new ObservableCollection<ProjectTaskModel>(_context.ProjectTaskModels);
-            }
-            set
-            {
-                _ProjectTaskModels = value;
-                OnPropertyChanged("ProjectTask");
-            }
-        }
-        private ProjectModel _currentSelectedProject;
-        public ProjectModel CurrentSelecteProject
-        {
-            get
-            {
-                return _currentSelectedProject;
-            }
-            set
-            {
-                _currentSelectedProject = value;
-                OnPropertyChanged("CurrentSelectedProject");
+                return false;
             }
         }
 
-        private void AddNewProject(ProjectModel project)
-        {
-            _context.ProjectModels.Add(project);
-            _context.SaveChanges();
-        }
-
-        private void UpdateCurrentProject(ProjectModel project)
+        public static bool UpdateCurrentProject(ProjectModel project)
         {
             var ProjectToUpdate = _context.ProjectModels.SingleOrDefault
                     (x => x.StrProjectID == project.StrProjectID);
@@ -106,15 +58,31 @@ namespace ManageProjectStudent_ViewModel
                 ProjectToUpdate.DtStartDay = project.DtStartDay;
                 ProjectToUpdate.DtEndDay = project.DtEndDay;
             }
-            _context.SaveChanges();
+            try
+            {
+                _context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-        private void DeleteCurrentProject(ProjectModel project)
+        public static bool DeleteCurrentProject(ProjectModel project)
         {
             var ProjectToDelete = _context.ProjectModels.SingleOrDefault
                     (x => x.StrProjectID == project.StrProjectID);
-            _context.ProjectModels.Remove(ProjectToDelete);
-            _context.SaveChanges();
+            try
+            {
+                _context.ProjectModels.Remove(ProjectToDelete);
+                _context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

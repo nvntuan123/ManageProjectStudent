@@ -46,13 +46,21 @@ namespace ManageProjectStudent_ViewModel
             }
         }
     
-        public static void AddNewStudent(StudentModel student)
+        public static bool AddNewStudent(StudentModel student)
         {
-            _Context.StudentModels.Add(student);
-            _Context.SaveChanges();
+            try
+            {
+                _Context.StudentModels.Add(student);
+                _Context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-        public static void UpdateCurrentStudent(StudentModel student)
+        public static bool UpdateCurrentStudent(StudentModel student)
         {
             var StudentToUpdate = _Context.StudentModels.SingleOrDefault
                     (x => x.StrStudentID == student.StrStudentID);
@@ -70,15 +78,31 @@ namespace ManageProjectStudent_ViewModel
                 StudentToUpdate.StrPhone = student.StrPhone;
                 StudentToUpdate.StrSex = student.StrSex;
             }
-            _Context.SaveChanges();
+            try
+            {
+                _Context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-        public static void DeleteCurrentStudent(StudentModel student)
+        public static bool DeleteCurrentStudent(StudentModel student)
         {
             var StudentToDelete = _Context.StudentModels.SingleOrDefault
                     (x => x.StrStudentID == student.StrStudentID);
-            _Context.StudentModels.Remove(StudentToDelete);
-            _Context.SaveChanges();
+            try
+            {
+                _Context.StudentModels.Remove(StudentToDelete);
+                _Context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

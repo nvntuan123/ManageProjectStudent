@@ -43,13 +43,21 @@ namespace ManageProjectStudent_ViewModel
             }
         }
 
-        public static void AddNewSubject(SubjectModel Subject)
+        public static bool AddNewSubject(SubjectModel Subject)
         {
-            _Context.SubjectModels.Add(Subject);
-            _Context.SaveChanges();
+            try
+            {
+                _Context.SubjectModels.Add(Subject);
+                _Context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-        public static void UpdateCurrentSubjectf(SubjectModel Subject)
+        public static bool UpdateCurrentSubjectf(SubjectModel Subject)
         {
             var SubjectToUpdate = _Context.SubjectModels.SingleOrDefault
                     (x => x.StrSubjectID == Subject.StrSubjectID);
@@ -60,15 +68,31 @@ namespace ManageProjectStudent_ViewModel
                 SubjectToUpdate.DtStartDay = Subject.DtStartDay;
                 SubjectToUpdate.DtEndDay = Subject.DtEndDay;
             }
-            _Context.SaveChanges();
+            try
+            {
+                _Context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-        public static void DeleteCurrentSubject(SubjectModel Subject)
+        public static bool DeleteCurrentSubject(SubjectModel Subject)
         {
             var SubjectToDelete = _Context.SubjectModels.SingleOrDefault
                     (x => x.StrSubjectID == Subject.StrSubjectID);
-            _Context.SubjectModels.Remove(SubjectToDelete);
-            _Context.SaveChanges();
+            try
+            {
+                _Context.SubjectModels.Remove(SubjectToDelete);
+                _Context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Data.Entity;
-
+using System.Net.Sockets;
 
 namespace ManageProjectStudent_ViewModel
 {
@@ -42,13 +42,21 @@ namespace ManageProjectStudent_ViewModel
             }
         }
 
-        public static void AddNewClass(ClassModel classModel)
+        public static bool AddNewClass(ClassModel classModel)
         {
-            _Context.ClassModels.Add(classModel);
-            _Context.SaveChanges();
+            try
+            {
+                _Context.ClassModels.Add(classModel);
+                _Context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-        public static void UpdateCurrentClassf(ClassModel classModel)
+        public static bool UpdateCurrentClassf(ClassModel classModel)
         {
             var ClassToUpdate = _Context.ClassModels.SingleOrDefault
                     (x => x.StrClassID == classModel.StrClassID);
@@ -57,15 +65,31 @@ namespace ManageProjectStudent_ViewModel
                 ClassToUpdate.StrClassName = classModel.StrClassName;
                 ClassToUpdate.StrFacultyID = classModel.StrFacultyID;
             }
-            _Context.SaveChanges();
+            try
+            {
+                _Context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-        public static void DeleteCurrentClass(ClassModel classModel)
+        public static bool DeleteCurrentClass(ClassModel classModel)
         {
             var ClassToDelete = _Context.ClassModels.SingleOrDefault
                     (x => x.StrClassID == classModel.StrClassID);
-            _Context.ClassModels.Remove(ClassToDelete);
-            _Context.SaveChanges();
+            try
+            {
+                _Context.ClassModels.Remove(ClassToDelete);
+                _Context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

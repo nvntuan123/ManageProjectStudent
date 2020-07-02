@@ -28,13 +28,14 @@ namespace ManageProjectStudent_View
         #region Properties
         private int _IStatusForm = 0;
         private StaffModel _LecturerModelNow = null;
+        private StaffModel _LecturerLogin = null;
         private BindingList<StaffModel> _lstLecturer = new BindingList<StaffModel>();
         private BindingList<FacultyModel> _lstFaculty = new BindingList<FacultyModel>();
         #endregion
         #region Method
         private void _setStatusForm()
         {
-            txtID.ReadOnly = true;
+            //txtID.ReadOnly = true;
             switch (_IStatusForm)
             {
                 case 0: // View
@@ -138,8 +139,47 @@ namespace ManageProjectStudent_View
             }
             _LecturerModelNow.StrStaffID = txtID.Text;
             _LecturerModelNow.StrStaffName = txtFullName.Text;
+            _LecturerModelNow.StrCardID = txtIDCard.Text;
+            _LecturerModelNow.DtBirthDay = (DateTime)dteBirthday.EditValue;
+            _LecturerModelNow.StrAddress = txtAddress.Text;
+            _LecturerModelNow.StrPhone = txtPhoneNumber.Text;
+            _LecturerModelNow.StrEmail = txtEmail.Text;
+            _LecturerModelNow.StrFacultyID = lkeFaculty.GetColumnValue("StrFacultyID").ToString();
+            if (radNam.Checked)
+            {
+                _LecturerModelNow.StrSex = radNam.Text;
+            }
+            else if (radNu.Checked)
+            {
+                _LecturerModelNow.StrSex = radNu.Text;
+            }
 
+            if (radAvailable.Checked)
+            {
+                _LecturerModelNow.BStatus = true;
+            }
+            else
+            {
+                _LecturerModelNow.BStatus = false;
+            }
         }
+        private void _lstLoadListLecturer()
+        {
+            _lstLecturer = StaffViewModel.LoadStaff();
+            if(_lstLecturer.Count>0)
+            {
+                foreach(StaffModel lt in _lstLecturer)
+                {
+                    if (lt.StrStaffID == "LT1")
+                    {
+                        _lstLecturer.Remove(lt);
+                        break;
+                    }
+                }
+            }
+            gcListLecturer.DataSource = _lstLecturer;
+        }
+
         #endregion
         #region Event
         //load
@@ -283,11 +323,29 @@ namespace ManageProjectStudent_View
             }
             else
             {
+                _getData();
                 bool bresult = false;
-                if(_IStatusForm==1)
+                if(_IStatusForm == 1)
                 {
-                    //bresult = StaffViewModel.AddNewStaff();
-                }    
+                    bresult = StaffViewModel.AddNewStaff(_LecturerModelNow);
+
+                }
+                else
+                {
+                    bresult = StaffViewModel.UpdateCurrentStafff(_LecturerModelNow);
+                }
+
+                if(!bresult)
+                {
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Lưu Thất Bại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    _lstLoadListLecturer();
+                    _IStatusForm = 0;
+                    _setStatusForm();
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Lưu Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }    
         }
 
@@ -383,14 +441,37 @@ namespace ManageProjectStudent_View
             _LecturerModelNow = null;
             _IStatusForm = 1;
             _setStatusForm();
-            txtID.Text = StaffViewModel.GetByIDMaxLecturer();
+            //txtID.Text = StaffViewModel.GetByIDMaxLecturer();
             txtFullName.Focus();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            _IStatusForm = 1;
+            _IStatusForm = 2;
             _setStatusForm();
+            txtFullName.Focus();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if(_LecturerModelNow != null)
+            {
+                if (StaffViewModel.DeleteCurrentStaff(_LecturerModelNow))
+                {
+                    _lstLoadListLecturer();
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Xóa Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (_lstLecturer.Count == 0)
+                    {
+                        _LecturerModelNow = null;
+                        _IStatusForm = 0;
+                        _setStatusForm();
+                    }
+                }
+                else
+                {
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Xóa Thất Bại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
         #endregion
         //Thu

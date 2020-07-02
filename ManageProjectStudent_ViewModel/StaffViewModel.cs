@@ -49,13 +49,22 @@ namespace ManageProjectStudent_ViewModel
             }
         }
 
-        public static void AddNewStaff(StaffModel staff)
+        public static bool AddNewStaff(StaffModel staff)
         {
-            _Context.StaffModels.Add(staff);
-            _Context.SaveChanges();
+            try
+            {
+                _Context.StaffModels.Add(staff);
+                _Context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+         
         }
 
-        public static void UpdateCurrentStafff(StaffModel staff)
+        public static bool UpdateCurrentStafff(StaffModel staff)
         {
             var StaffToUpdate = _Context.StaffModels.SingleOrDefault
                     (x => x.StrStaffID == staff.StrStaffID);
@@ -72,15 +81,31 @@ namespace ManageProjectStudent_ViewModel
                 StaffToUpdate.BStatus = staff.BStatus;
                 StaffToUpdate.StrSex = staff.StrSex;
             }
-            _Context.SaveChanges();
+            try
+            {
+                _Context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-        public static void DeleteCurrentStaff(StaffModel staff)
+        public static bool DeleteCurrentStaff(StaffModel staff)
         {
             var staffToDelete = _Context.StaffModels.SingleOrDefault
                     (x => x.StrStaffID == staff.StrStaffID);
-            _Context.StaffModels.Remove(staffToDelete);
-            _Context.SaveChanges();
+            try
+            {
+                _Context.StaffModels.Remove(staffToDelete);
+                _Context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

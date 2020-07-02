@@ -34,9 +34,11 @@ namespace ManageProjectStudent_Model
 
         //khoi tao khoa ngoai
         [Column("StaffID", TypeName = "char", Order = 4)]
+        [StringLength(10)]
         public string StrStaffID { get => _StrStaffID; set => _StrStaffID = value; }
 
         [Column("SubjectID", TypeName = "char", Order = 5)]
+        [StringLength(10)]
         public string StrSubjectID { get => _StrSubjectID; set => _StrSubjectID = value; }
 
         //Khai bao khoa ngoai 

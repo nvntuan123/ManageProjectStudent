@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddGroupForSubjectViewModel.cs" />
+    <Compile Include="ClassViewModel.cs" />
     <Compile Include="FacultyViewModel.cs" />
     <Compile Include="GarenaViewModel.cs" />
     <Compile Include="ManageClassViewModel.cs" />
@@ -91,11 +92,8 @@
     <Compile Include="Migrations\202007010218438_v10.designer.cs">
       <DependentUpon>202007010218438_v10.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202007010257137_v11.cs" />
-    <Compile Include="Migrations\202007010257137_v11.designer.cs">
-      <DependentUpon>202007010257137_v11.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubjectViewModel.cs" />
     <Compile Include="SubmitProjectViewModel.cs" />
     <Compile Include="DBManageProjectStudentViewModel.cs" />
     <Compile Include="GarenaViewModel.cs" />
@@ -178,9 +176,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007010218438_v10.resx">
       <DependentUpon>202007010218438_v10.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007010257137_v11.resx">
-      <DependentUpon>202007010257137_v11.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

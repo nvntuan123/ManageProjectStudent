@@ -15,7 +15,7 @@ namespace ManageProjectStudent_ViewModel
     #region by Phuoc
     public class StaffViewModel : INotifyPropertyChanged
     {
-        private readonly DBManageProjectStudentViewModel _Context = new DBManageProjectStudentViewModel();
+        private static readonly DBManageProjectStudentViewModel _Context = new DBManageProjectStudentViewModel();
 
         public static BindingList<StaffModel> LoadStaff()
         {
@@ -48,69 +48,14 @@ namespace ManageProjectStudent_ViewModel
                 return Result;
             }
         }
-        private ICollection<FacultyModel> _FacultyModels;
-        public ICollection<FacultyModel> FacultyModels
-        {
-            get
-            {
-                return
-                    new ObservableCollection<FacultyModel>(_Context.FacultyModels);
-            }
-            set
-            {
-                _FacultyModels = value;
-                OnPropertyChanged("Faculty");
-            }
-        }
-        private ICollection<StaffModel> _staff;
-        public ICollection<StaffModel> staff
-        {
-            get
-            {
-                return
-                    new ObservableCollection<StaffModel>(_Context.StaffModels.Include(e => e.FacultyModel));
-            }
-            set
-            {
-                _staff = value;
-                OnPropertyChanged("Staff");
-            }
-        }
-        private ICollection<StaffTypeModel> _StaffTypeModels;
-        public ICollection<StaffTypeModel> StaffTypeModels
-        {
-            get
-            {
-                return
-                    new ObservableCollection<StaffTypeModel>(_Context.StaffTypeModels);
-            }
-            set
-            {
-                _StaffTypeModels = value;
-                OnPropertyChanged("StaffTypeModel");
-            }
-        }
-        private StaffModel _currentSelectedStaff;
-        public StaffModel CurrentSelecteStaff
-        {
-            get
-            {
-                return _currentSelectedStaff;
-            }
-            set
-            {
-                _currentSelectedStaff = value;
-                OnPropertyChanged("CurrentSelectedStaff");
-            }
-        }
 
-        public void AddNewStaff(StaffModel staff)
+        public static void AddNewStaff(StaffModel staff)
         {
             _Context.StaffModels.Add(staff);
             _Context.SaveChanges();
         }
 
-        private void UpdateCurrentStafff(StaffModel staff)
+        public static void UpdateCurrentStafff(StaffModel staff)
         {
             var StaffToUpdate = _Context.StaffModels.SingleOrDefault
                     (x => x.StrStaffID == staff.StrStaffID);
@@ -130,7 +75,7 @@ namespace ManageProjectStudent_ViewModel
             _Context.SaveChanges();
         }
 
-        private void DeleteCurrentStaff(StaffModel staff)
+        public static void DeleteCurrentStaff(StaffModel staff)
         {
             var staffToDelete = _Context.StaffModels.SingleOrDefault
                     (x => x.StrStaffID == staff.StrStaffID);

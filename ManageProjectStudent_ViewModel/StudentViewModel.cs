@@ -12,7 +12,7 @@ namespace ManageProjectStudent_ViewModel
 {
     public class StudentViewModel : INotifyPropertyChanged
     {
-        private readonly DBManageProjectStudentViewModel _Context = new DBManageProjectStudentViewModel();
+        private static readonly DBManageProjectStudentViewModel _Context = new DBManageProjectStudentViewModel();
         public static BindingList<StudentModel> LoadStudent()
         {
             using (var _Context = new DBManageProjectStudentViewModel())
@@ -36,7 +36,7 @@ namespace ManageProjectStudent_ViewModel
                 return new BindingList<StudentModel>(Result);
             }
         }
-        public string GetByIDMaxStudent()
+        public static string GetByIDMaxStudent()
         {
             using (var _Context = new DBManageProjectStudentViewModel())
             {
@@ -45,70 +45,14 @@ namespace ManageProjectStudent_ViewModel
                 return Result;
             }
         }
-        private ICollection<FacultyModel> _Faculty;
-        public ICollection<FacultyModel> FacultyModels
-        {
-            get
-            {
-                return
-                    new ObservableCollection<FacultyModel>(_Context.FacultyModels);
-            }
-            set
-            {
-                _Faculty = value;
-                OnPropertyChanged("Faculty");
-            }
-        }
-
-        private ICollection<ClassModel> _ClassModels;
-        public ICollection<ClassModel> ClassModels
-        {
-            get
-            {
-                return
-                    new ObservableCollection<ClassModel>(_Context.ClassModels);
-            }
-            set
-            {
-                _ClassModels = value;
-                OnPropertyChanged("Class");
-            }
-        }
-        private ICollection<StudentModel> _Student;
-        //public ICollection<StudentModel> StudentModels
-        //{
-        //    get
-        //    {
-        //        //return
-        //        //    new ObservableCollection<StudentModel>(_Context.StudentModels.Include(e => e.));
-        //    }
-        //    set
-        //    {
-        //        _Student = value;
-        //        OnPropertyChanged("Student");
-        //    }
-        //}
-        private StudentModel _currentSelectedStudent;
-        public StudentModel CurrentSelecteStudent
-        {
-            get
-            {
-                return _currentSelectedStudent;
-            }
-            set
-            {
-                _currentSelectedStudent = value;
-                OnPropertyChanged("CurrentSelectedStudent");
-            }
-        }
-
-        private void AddNewStudent(StudentModel student)
+    
+        public static void AddNewStudent(StudentModel student)
         {
             _Context.StudentModels.Add(student);
             _Context.SaveChanges();
         }
 
-        private void UpdateCurrentStudent(StudentModel student)
+        public static void UpdateCurrentStudent(StudentModel student)
         {
             var StudentToUpdate = _Context.StudentModels.SingleOrDefault
                     (x => x.StrStudentID == student.StrStudentID);
@@ -129,7 +73,7 @@ namespace ManageProjectStudent_ViewModel
             _Context.SaveChanges();
         }
 
-        private void DeleteCurrentStudent(StudentModel student)
+        public static void DeleteCurrentStudent(StudentModel student)
         {
             var StudentToDelete = _Context.StudentModels.SingleOrDefault
                     (x => x.StrStudentID == student.StrStudentID);

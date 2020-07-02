@@ -17,7 +17,7 @@
             RenameColumn(table: "dbo.Subject", name: "FacultyID", newName: "__mig_tmp__0");
             RenameColumn(table: "dbo.Project", name: "StaffModel_StrStaffID", newName: "StaffID");
             RenameColumn(table: "dbo.Project", name: "SubjectModel_StrSubjectID", newName: "SubjectID");
-            RenameColumn(table: "dbo.Student", name: "ClassModel_StrClassID", newName: "Class");
+            RenameColumn(table: "dbo.Student", name: "ClassModel_StrClassID", newName: "ClassID");
             RenameColumn(table: "dbo.Student", name: "FacultyModel_StrFacultyID", newName: "FacultyID");
             RenameColumn(table: "dbo.Class", name: "FacultyModel_StrFacultyID", newName: "FacultyID");
             RenameColumn(table: "dbo.Staff", name: "FacultyModel_StrFacultyID", newName: "FacultyID");
@@ -85,7 +85,7 @@
             RenameColumn(table: "dbo.Staff", name: "FacultyID", newName: "FacultyModel_StrFacultyID");
             RenameColumn(table: "dbo.Class", name: "FacultyID", newName: "FacultyModel_StrFacultyID");
             RenameColumn(table: "dbo.Student", name: "FacultyID", newName: "FacultyModel_StrFacultyID");
-            RenameColumn(table: "dbo.Student", name: "Class", newName: "ClassModel_StrClassID");
+            RenameColumn(table: "dbo.Student", name: "ClassID", newName: "ClassModel_StrClassID");
             RenameColumn(table: "dbo.Project", name: "SubjectID", newName: "SubjectModel_StrSubjectID");
             RenameColumn(table: "dbo.Project", name: "StaffID", newName: "StaffModel_StrStaffID");
             RenameColumn(table: "dbo.Subject", name: "__mig_tmp__0", newName: "FacultyID");

@@ -56,6 +56,14 @@ namespace ManageProjectStudent_ViewModel
 
             return _StrIDMax;
         }
+        public List<string> lstStaffID()
+        {
+            using (var _Context = new DBManageProjectStudentViewModel())
+            {
+                var Result = _Context.StaffModels.Select(c => c.StrStaffID).ToList();
+                return Result;
+            }
+        }
 
         public bool addNewStaff(StaffModel staff)
         {
@@ -103,13 +111,13 @@ namespace ManageProjectStudent_ViewModel
 
         public bool deleteCurrentStaff(StaffModel staff)
         {
-            var staffToDelete = _Context.StaffModels.SingleOrDefault
-                    (x => x.StrStaffID == staff.StrStaffID);
             try
             {
+                var staffToDelete = _Context.StaffModels.SingleOrDefault
+                      (x => x.StrStaffID == staff.StrStaffID);
                 _Context.StaffModels.Remove(staffToDelete);
-                _Context.SaveChanges();
-                return true;
+
+                return (_Context.SaveChanges() != 0);
             }
             catch
             {

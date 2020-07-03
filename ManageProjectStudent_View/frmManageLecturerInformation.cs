@@ -29,6 +29,7 @@ namespace ManageProjectStudent_View
         private bool indicatorIcon = true;
         private IManageLecturerInformation IMLI = Config.Container.Resolve<IManageLecturerInformation>();
         private IStaff _Staff = Config.Container.Resolve<IStaff>();
+        private IFaculty _Faculty = Config.Container.Resolve<IFaculty>();
 
         private int _IStatusForm = 0;
         private StaffModel _LecturerModelNow = null;
@@ -195,7 +196,7 @@ namespace ManageProjectStudent_View
         {
             dteBirthday.EditValue = DateTime.Now.Date;
 
-            _lstFaculty = FacultyViewModel.LoadFaculty();
+            _lstFaculty = _Faculty.loadFaculty();
             lkeFaculty.Properties.ValueMember = "StrFacultyID";
             lkeFaculty.Properties.DisplayMember = "StrFacultyName";
             lkeFaculty.Properties.DataSource = _lstFaculty;

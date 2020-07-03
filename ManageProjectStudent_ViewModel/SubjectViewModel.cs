@@ -8,16 +8,18 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Data.Entity;
+using ManageProjectStudent_Interface;
+
 
 
 namespace ManageProjectStudent_ViewModel
 {
     #region by Phuoc
-    public class SubjectViewModel : INotifyPropertyChanged
+    public class SubjectViewModel : INotifyPropertyChanged, ISubject
     {
         private static readonly DBManageProjectStudentViewModel _Context = new DBManageProjectStudentViewModel();
 
-        public static BindingList<SubjectModel> LoadSubject()
+        public BindingList<SubjectModel> loadSubject()
         {
             using (var _Context = new DBManageProjectStudentViewModel())
             {
@@ -33,7 +35,7 @@ namespace ManageProjectStudent_ViewModel
                 return new BindingList<SubjectModel>(Result);
             }
         }
-        public static string GetByIDMaxSubject()
+        public string getByIDMaxSubject()
         {
             using (var _Context = new DBManageProjectStudentViewModel())
             {
@@ -43,13 +45,20 @@ namespace ManageProjectStudent_ViewModel
             }
         }
 
-        public static bool AddNewSubject(SubjectModel Subject)
+        public List<string> lstSubjectID()
+        {
+            using (var _Context = new DBManageProjectStudentViewModel())
+            {
+                var Result = _Context.SubjectModels.Select(c => c.StrSubjectID).ToList();
+                return Result;
+            }
+        }
+        public bool addNewSubject(SubjectModel Subject)
         {
             try
             {
                 _Context.SubjectModels.Add(Subject);
-                _Context.SaveChanges();
-                return true;
+                return (_Context.SaveChanges() != 0);
             }
             catch
             {
@@ -57,21 +66,22 @@ namespace ManageProjectStudent_ViewModel
             }
         }
 
-        public static bool UpdateCurrentSubjectf(SubjectModel Subject)
+        public bool updateCurrentSubjectf(SubjectModel Subject)
         {
-            var SubjectToUpdate = _Context.SubjectModels.SingleOrDefault
-                    (x => x.StrSubjectID == Subject.StrSubjectID);
-            if (SubjectToUpdate != null)
-            {
-                SubjectToUpdate.StrSubjectName = Subject.StrSubjectName;
-                SubjectToUpdate.StrFacultyID = Subject.StrFacultyID;
-                SubjectToUpdate.DtStartDay = Subject.DtStartDay;
-                SubjectToUpdate.DtEndDay = Subject.DtEndDay;
-            }
             try
             {
-                _Context.SaveChanges();
-                return true;
+                var SubjectToUpdate = _Context.SubjectModels.SingleOrDefault
+                 (x => x.StrSubjectID == Subject.StrSubjectID);
+                if (SubjectToUpdate != null)
+                {
+                    SubjectToUpdate.StrSubjectName = Subject.StrSubjectName;
+                    SubjectToUpdate.StrFacultyID = Subject.StrFacultyID;
+                    SubjectToUpdate.DtStartDay = Subject.DtStartDay;
+                    SubjectToUpdate.DtEndDay = Subject.DtEndDay;
+
+                    return (_Context.SaveChanges() != 0);
+                }
+                return false;
             }
             catch
             {
@@ -79,15 +89,14 @@ namespace ManageProjectStudent_ViewModel
             }
         }
 
-        public static bool DeleteCurrentSubject(SubjectModel Subject)
+        public bool deleteCurrentSubject(SubjectModel Subject)
         {
-            var SubjectToDelete = _Context.SubjectModels.SingleOrDefault
-                    (x => x.StrSubjectID == Subject.StrSubjectID);
             try
             {
+                var SubjectToDelete = _Context.SubjectModels.SingleOrDefault
+                                      (x => x.StrSubjectID == Subject.StrSubjectID);
                 _Context.SubjectModels.Remove(SubjectToDelete);
-                _Context.SaveChanges();
-                return true;
+                return (_Context.SaveChanges() != 0);
             }
             catch
             {

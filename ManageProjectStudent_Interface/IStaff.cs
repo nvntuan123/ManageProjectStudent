@@ -15,7 +15,7 @@ namespace ManageProjectStudent_Interface
         bool addNewStaff(StaffModel staff);
         bool updateCurrentStafff(StaffModel staff);
         bool deleteCurrentStaff(StaffModel staff);
-
+        List<string> lstStaffID();
         // Front-end
         bool _checkCharacterNumberStaff(char _C);
         bool _checkCharacterCharStaff(char _C);

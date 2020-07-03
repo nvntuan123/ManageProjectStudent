@@ -15,7 +15,7 @@ namespace ManageProjectStudent_View
     
     public partial class frmManageSubject : Form
     {
-        private IManageSubject IMSub = Config.Container.Resolve<IManageSubject>();
+        private ISubject IMSub = Config.Container.Resolve<ISubject>();
         public frmManageSubject()
         {
             InitializeComponent();

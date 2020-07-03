@@ -21,7 +21,7 @@ namespace ManageProjectStudent_View
     {
         private bool indicatorIcon = true;
         // Thong
-        private IManageProject IMP = Config.Container.Resolve<IManageProject>();
+        private IProject IMP = Config.Container.Resolve<IProject>();
         // Thong
         public frmManageProject()
         {

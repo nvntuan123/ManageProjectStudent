@@ -9,15 +9,16 @@ using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Data.Entity;
 using System.Net.Sockets;
+using ManageProjectStudent_Interface;
 
 namespace ManageProjectStudent_ViewModel
 {
     #region by Phuoc
-    public class ClassViewModel : INotifyPropertyChanged
+    public class ClassViewModel : INotifyPropertyChanged, IClass
     {
         private static readonly DBManageProjectStudentViewModel _Context = new DBManageProjectStudentViewModel();
 
-        public static BindingList<ClassModel> LoadClass()
+        public BindingList<ClassModel> loadClass()
         {
             using (var _Context = new DBManageProjectStudentViewModel())
             {
@@ -32,7 +33,7 @@ namespace ManageProjectStudent_ViewModel
                 return new BindingList<ClassModel>(Result);
             }
         }
-        public static string GetByIDMaxClass()
+        public string getByIDMaxClass()
         {
             using (var _Context = new DBManageProjectStudentViewModel())
             {
@@ -42,13 +43,20 @@ namespace ManageProjectStudent_ViewModel
             }
         }
 
-        public static bool AddNewClass(ClassModel classModel)
+        public List<string> lstClassID()
+        {
+            using (var _Context = new DBManageProjectStudentViewModel())
+            {
+                var Result = _Context.ClassModels.Select(c => c.StrClassID).ToList();
+                return Result;
+            }
+        }
+        public bool addNewClass(ClassModel classModel)
         {
             try
             {
                 _Context.ClassModels.Add(classModel);
-                _Context.SaveChanges();
-                return true;
+                return (_Context.SaveChanges() != 0);
             }
             catch
             {
@@ -56,19 +64,20 @@ namespace ManageProjectStudent_ViewModel
             }
         }
 
-        public static bool UpdateCurrentClassf(ClassModel classModel)
+        public bool updateCurrentClassf(ClassModel classModel)
         {
-            var ClassToUpdate = _Context.ClassModels.SingleOrDefault
-                    (x => x.StrClassID == classModel.StrClassID);
-            if (ClassToUpdate != null)
-            {
-                ClassToUpdate.StrClassName = classModel.StrClassName;
-                ClassToUpdate.StrFacultyID = classModel.StrFacultyID;
-            }
             try
             {
-                _Context.SaveChanges();
-                return true;
+                var ClassToUpdate = _Context.ClassModels.SingleOrDefault
+                   (x => x.StrClassID == classModel.StrClassID);
+                if (ClassToUpdate != null)
+                {
+                    ClassToUpdate.StrClassName = classModel.StrClassName;
+                    ClassToUpdate.StrFacultyID = classModel.StrFacultyID;
+
+                    return (_Context.SaveChanges() != 0);
+                }
+                return false;
             }
             catch
             {
@@ -76,15 +85,14 @@ namespace ManageProjectStudent_ViewModel
             }
         }
 
-        public static bool DeleteCurrentClass(ClassModel classModel)
+        public bool deleteCurrentClass(ClassModel classModel)
         {
             var ClassToDelete = _Context.ClassModels.SingleOrDefault
                     (x => x.StrClassID == classModel.StrClassID);
             try
             {
                 _Context.ClassModels.Remove(ClassToDelete);
-                _Context.SaveChanges();
-                return true;
+                return (_Context.SaveChanges() != 0);
             }
             catch
             {

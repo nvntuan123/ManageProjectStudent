@@ -8,18 +8,19 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Data.Entity;
+using ManageProjectStudent_Interface;
 
 namespace ManageProjectStudent_ViewModel
 {
-    public class FacultyViewModel : INotifyPropertyChanged
+    public class FacultyViewModel : INotifyPropertyChanged, IFaculty
     {
-        private static readonly DBManageProjectStudentViewModel _context = new DBManageProjectStudentViewModel();
+        private static readonly DBManageProjectStudentViewModel _Context = new DBManageProjectStudentViewModel();
 
-        public static BindingList<FacultyModel> LoadFaculty()
+        public BindingList<FacultyModel> loadFaculty()
         {
-            using (var _context = new DBManageProjectStudentViewModel())
+            using (var _Context = new DBManageProjectStudentViewModel())
             {
-                var result = (from x in _context.FacultyModels.AsEnumerable()
+                var result = (from x in _Context.FacultyModels.AsEnumerable()
                               select new FacultyModel
                               {
                                   StrFacultyID = x.StrFacultyID,
@@ -29,14 +30,31 @@ namespace ManageProjectStudent_ViewModel
                 return new BindingList<FacultyModel>(result);
             }
         }
-      
-        public static bool AddNewFaculty(FacultyModel faculty)
+
+        public string getByIDMaxFaculty()
+        {
+            using (var _Context = new DBManageProjectStudentViewModel())
+            {
+                var query = _Context.FacultyModels.OrderByDescending(c => c.StrFacultyID).Select(c => c.StrFacultyID);
+                var Result = query.First();
+                return Result;
+            }
+        }
+        public List<string> lstFacultyID()
+        {
+            using (var _Context = new DBManageProjectStudentViewModel())
+            {
+                var Result = _Context.FacultyModels.Select(c => c.StrFacultyID).ToList();
+                return Result;
+            }
+        }
+
+        public bool addNewFaculty(FacultyModel faculty)
         {
             try
             {
-                _context.FacultyModels.Add(faculty);
-                _context.SaveChanges();
-                return true;
+                _Context.FacultyModels.Add(faculty);
+                return (_Context.SaveChanges() != 0);
             }
             catch
             {
@@ -44,19 +62,19 @@ namespace ManageProjectStudent_ViewModel
             }
         }
 
-        public static bool UpdateCurrentFaculty(FacultyModel faculty)
+        public bool updateCurrentFaculty(FacultyModel faculty)
         {
-            var FacultyToUpdate = _context.FacultyModels.SingleOrDefault
-                    (x => x.StrFacultyID == faculty.StrFacultyID);
-            if (FacultyToUpdate != null)
-            {
-                FacultyToUpdate.StrFacultyName = faculty.StrFacultyName;
-                FacultyToUpdate.DtFoundedYear = faculty.DtFoundedYear;
-            }
             try
             {
-                _context.SaveChanges();
-                return true;
+                var FacultyToUpdate = _Context.FacultyModels.SingleOrDefault
+                 (x => x.StrFacultyID == faculty.StrFacultyID);
+                if (FacultyToUpdate != null)
+                {
+                    FacultyToUpdate.StrFacultyName = faculty.StrFacultyName;
+                    FacultyToUpdate.DtFoundedYear = faculty.DtFoundedYear;
+                    return (_Context.SaveChanges() != 0);
+                }
+                return false;
             }
             catch
             {
@@ -64,15 +82,14 @@ namespace ManageProjectStudent_ViewModel
             }
         }
 
-        public static bool DeleteCurrentStudent(StudentModel student)
+        public bool deleteCurrentFaculty(FacultyModel faculty)
         {
-            var StudentToDelete = _context.StudentModels.SingleOrDefault
-                    (x => x.StrStudentID == student.StrStudentID);
             try
             {
-                _context.StudentModels.Remove(StudentToDelete);
-                _context.SaveChanges();
-                return true;
+                var FacultyToDelete = _Context.FacultyModels.SingleOrDefault
+                    (x => x.StrFacultyID == faculty.StrFacultyID);
+                _Context.FacultyModels.Remove(FacultyToDelete);
+                return (_Context.SaveChanges() != 0);
             }
             catch
             {

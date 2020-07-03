@@ -8,18 +8,19 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Data.Entity;
+using ManageProjectStudent_Interface;
 
 namespace ManageProjectStudent_ViewModel
 {
-    public class ProjectViewModel : INotifyPropertyChanged
+    public class ProjectViewModel : INotifyPropertyChanged , IProject
     {
         #region by Phuoc
-        public static readonly DBManageProjectStudentViewModel _context = new DBManageProjectStudentViewModel();
-        public static BindingList<ProjectModel> LoadProject()
+        public readonly DBManageProjectStudentViewModel _Context = new DBManageProjectStudentViewModel();
+        public BindingList<ProjectModel> loadProject()
         {
-            using (var _context = new DBManageProjectStudentViewModel())
+            using (var _Context = new DBManageProjectStudentViewModel())
             {
-                var result = (from x in _context.ProjectModels.AsEnumerable()
+                var result = (from x in _Context.ProjectModels.AsEnumerable()
                               select new ProjectModel
                               {
                                   StrProjectID = x.StrProjectID,
@@ -32,14 +33,30 @@ namespace ManageProjectStudent_ViewModel
                 return new BindingList<ProjectModel>(result);
             }
         }
- 
-        public static bool AddNewProject(ProjectModel project)
+
+        public string getByIDMaxProject()
+        {
+            using (var _Context = new DBManageProjectStudentViewModel())
+            {
+                var query = _Context.ProjectModels.OrderByDescending(c => c.StrProjectID).Select(c => c.StrProjectID);
+                var Result = query.First();
+                return Result;
+            }
+        }
+        public List<string> lstProjectID()
+        {
+            using (var _Context = new DBManageProjectStudentViewModel())
+            {
+                var Result = _Context.ProjectModels.Select(c => c.StrProjectID).ToList();
+                return Result;
+            }
+        }
+        public bool addNewProject(ProjectModel project)
         {
             try
             {
-                _context.ProjectModels.Add(project);
-                _context.SaveChanges();
-                return true;
+                _Context.ProjectModels.Add(project);
+                return (_Context.SaveChanges() != 0);
             }
             catch
             {
@@ -47,21 +64,21 @@ namespace ManageProjectStudent_ViewModel
             }
         }
 
-        public static bool UpdateCurrentProject(ProjectModel project)
+        public bool updateCurrentProject(ProjectModel project)
         {
-            var ProjectToUpdate = _context.ProjectModels.SingleOrDefault
-                    (x => x.StrProjectID == project.StrProjectID);
-            if (ProjectToUpdate != null)
-            {
-                ProjectToUpdate.StrProjectID = project.StrProjectID;
-                ProjectToUpdate.StrProjectName = project.StrProjectName;
-                ProjectToUpdate.DtStartDay = project.DtStartDay;
-                ProjectToUpdate.DtEndDay = project.DtEndDay;
-            }
             try
             {
-                _context.SaveChanges();
-                return true;
+                var ProjectToUpdate = _Context.ProjectModels.SingleOrDefault
+                    (x => x.StrProjectID == project.StrProjectID);
+                if (ProjectToUpdate != null)
+                {
+                    ProjectToUpdate.StrProjectID = project.StrProjectID;
+                    ProjectToUpdate.StrProjectName = project.StrProjectName;
+                    ProjectToUpdate.DtStartDay = project.DtStartDay;
+                    ProjectToUpdate.DtEndDay = project.DtEndDay;
+                    return (_Context.SaveChanges() != 0);
+                }
+                return false;
             }
             catch
             {
@@ -69,15 +86,14 @@ namespace ManageProjectStudent_ViewModel
             }
         }
 
-        public static bool DeleteCurrentProject(ProjectModel project)
+        public bool deleteCurrentProject(ProjectModel project)
         {
-            var ProjectToDelete = _context.ProjectModels.SingleOrDefault
-                    (x => x.StrProjectID == project.StrProjectID);
             try
             {
-                _context.ProjectModels.Remove(ProjectToDelete);
-                _context.SaveChanges();
-                return true;
+                var ProjectToDelete = _Context.ProjectModels.SingleOrDefault
+                   (x => x.StrProjectID == project.StrProjectID);
+                _Context.ProjectModels.Remove(ProjectToDelete);
+                return (_Context.SaveChanges() != 0);
             }
             catch
             {

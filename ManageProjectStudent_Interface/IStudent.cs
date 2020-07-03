@@ -10,11 +10,12 @@ namespace ManageProjectStudent_Interface
 {
     public interface IStudent
     {
-        BindingList<StudentModel> LoadStudent();
-        string GetByIDMaxStudent();
-        bool AddNewStudent(StudentModel student);
-        bool UpdateCurrentStudent(StudentModel student);
-        bool DeleteCurrentStudent(StudentModel student);
+        BindingList<StudentModel> loadStudent();
+        string getByIDMaxStudent();
+        bool addNewStudent(StudentModel student);
+        bool updateCurrentStudent(StudentModel student);
+        bool deleteCurrentStudent(StudentModel student);
+        List<string> lstStudentID();
 
         //front-end
         bool _checkCharacterNumberStudent(char _C);

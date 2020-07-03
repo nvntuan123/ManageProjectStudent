@@ -14,7 +14,7 @@ namespace ManageProjectStudent_ViewModel
     public class StudentViewModel : INotifyPropertyChanged, IStudent
     {
         private static readonly DBManageProjectStudentViewModel _Context = new DBManageProjectStudentViewModel();
-        public  BindingList<StudentModel> LoadStudent()
+        public  BindingList<StudentModel> loadStudent()
         {
             using (var _Context = new DBManageProjectStudentViewModel())
             {
@@ -37,7 +37,7 @@ namespace ManageProjectStudent_ViewModel
                 return new BindingList<StudentModel>(Result);
             }
         }
-        public string GetByIDMaxStudent()
+        public string getByIDMaxStudent()
         {
             using (var _Context = new DBManageProjectStudentViewModel())
             {
@@ -47,13 +47,50 @@ namespace ManageProjectStudent_ViewModel
             }
         }
     
-        public bool AddNewStudent(StudentModel student)
+        public bool addNewStudent(StudentModel student)
         {
             try
             {
                 _Context.StudentModels.Add(student);
-                _Context.SaveChanges();
-                return true;
+                return (_Context.SaveChanges() != 0);
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public List<string> lstStudentID()
+        {
+            using (var _Context = new DBManageProjectStudentViewModel())
+            {
+                var Result = _Context.StudentModels.Select(c => c.StrStudentID).ToList();
+                return Result;
+            }
+        }
+
+        public bool updateCurrentStudent(StudentModel student)
+        {
+            try
+            {
+                var StudentToUpdate = _Context.StudentModels.SingleOrDefault
+                 (x => x.StrStudentID == student.StrStudentID);
+                if (StudentToUpdate != null)
+                {
+                    StudentToUpdate.StrStudentName = student.StrStudentName;
+                    StudentToUpdate.StrAddress = student.StrAddress;
+                    StudentToUpdate.StrEmail = student.StrEmail;
+                    StudentToUpdate.DtBirthDay = student.DtBirthDay;
+                    StudentToUpdate.DtStartYear = student.DtStartYear;
+                    StudentToUpdate.StrCardID = student.StrCardID;
+                    StudentToUpdate.StrFacultyID = student.StrFacultyID;
+                    StudentToUpdate.StrClassID = student.StrClassID;
+                    StudentToUpdate.BStatus = student.BStatus;
+                    StudentToUpdate.StrPhone = student.StrPhone;
+                    StudentToUpdate.StrSex = student.StrSex;
+
+                    return (_Context.SaveChanges() != 0);
+                }
+                return false;
             }
             catch
             {
@@ -61,44 +98,15 @@ namespace ManageProjectStudent_ViewModel
             }
         }
 
-        public bool UpdateCurrentStudent(StudentModel student)
+        public bool deleteCurrentStudent(StudentModel student)
         {
-            var StudentToUpdate = _Context.StudentModels.SingleOrDefault
-                    (x => x.StrStudentID == student.StrStudentID);
-            if (StudentToUpdate != null)
-            {
-                StudentToUpdate.StrStudentName = student.StrStudentName;
-                StudentToUpdate.StrAddress = student.StrAddress;
-                StudentToUpdate.StrEmail = student.StrEmail;
-                StudentToUpdate.DtBirthDay = student.DtBirthDay;
-                StudentToUpdate.DtStartYear = student.DtStartYear;
-                StudentToUpdate.StrCardID = student.StrCardID;
-                StudentToUpdate.StrFacultyID = student.StrFacultyID;
-                StudentToUpdate.StrClassID = student.StrClassID;
-                StudentToUpdate.BStatus = student.BStatus;
-                StudentToUpdate.StrPhone = student.StrPhone;
-                StudentToUpdate.StrSex = student.StrSex;
-            }
             try
             {
-                _Context.SaveChanges();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-
-        public bool DeleteCurrentStudent(StudentModel student)
-        {
-            var StudentToDelete = _Context.StudentModels.SingleOrDefault
+                var StudentToDelete = _Context.StudentModels.SingleOrDefault
                     (x => x.StrStudentID == student.StrStudentID);
-            try
-            {
                 _Context.StudentModels.Remove(StudentToDelete);
-                _Context.SaveChanges();
-                return true;
+
+                return (_Context.SaveChanges() != 0);
             }
             catch
             {

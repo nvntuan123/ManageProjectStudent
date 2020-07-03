@@ -16,6 +16,8 @@ namespace ManageProjectStudent_View
         public static void Register()
         {
             // Thu
+            Container.RegisterType<IStaff, StaffViewModel>();
+            Container.RegisterType<IStudent, StudentViewModel>();
             Container.RegisterType<IManageStudentInformation, ManageStudentInformationViewModel>();
             Container.RegisterType<IManageLecturerInformation, ManageLecturerInformationViewModel>();
             // Thu
@@ -47,7 +49,7 @@ namespace ManageProjectStudent_View
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmManageLecturerInformation());
+            Application.Run(new frmManageStudentInformation());
         }
     }
 }

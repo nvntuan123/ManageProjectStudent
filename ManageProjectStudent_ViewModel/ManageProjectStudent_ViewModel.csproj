@@ -96,7 +96,6 @@
     <Compile Include="SubjectViewModel.cs" />
     <Compile Include="SubmitProjectViewModel.cs" />
     <Compile Include="DBManageProjectStudentViewModel.cs" />
-    <Compile Include="GarenaViewModel.cs" />
     <Compile Include="Migrations\202006250417343_v1.cs" />
     <Compile Include="Migrations\202006250417343_v1.designer.cs">
       <DependentUpon>202006250417343_v1.cs</DependentUpon>

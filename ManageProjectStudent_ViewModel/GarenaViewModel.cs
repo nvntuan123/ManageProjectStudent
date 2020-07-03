@@ -15,25 +15,19 @@ namespace ManageProjectStudent_ViewModel
         #region Method
         public static bool _checkCharacterNumber(char _C)
         {
-            //if ((_C >= '0' && _C <= '9') && ((Keys)_C != Keys.Back) && ((Keys)_C != Keys.Enter))
-            //{
-            //    return true;
-            //}
-            //return false;
-            return ((_C < '0' || _C > '9')
-                && ((Keys)_C != Keys.Back)
-                && ((Keys)_C != Keys.Enter)
-                );
+            if (_C >= '0' && _C <= '9' && ((Keys)_C != Keys.Back) && ((Keys)_C != Keys.Enter))
+            {
+                return false;
+            }
+            return true;
         }
         public static bool _checkCharacterChar(char _C)
         {
-            if (((_C >= 65 && _C <= 90) || (_C >= 97 && _C <= 122))
-                || ((Keys)_C != Keys.Back) || ((Keys)_C != Keys.Enter))
+            if((_C < '0' || _C > '9') && ((Keys)_C != Keys.Back) && ((Keys)_C != Keys.Enter))
             {
-                return true;
+                return false;
             }
-            return false;
-            
+            return true;
         }
         public static bool checkEmail(string _STR_Email)
         {

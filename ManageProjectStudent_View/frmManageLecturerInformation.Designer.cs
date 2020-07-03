@@ -35,6 +35,7 @@
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btnReLoad = new System.Windows.Forms.Button();
             this.btnExitFormManageLecturer = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.grpInformationLecturer = new DevExpress.XtraEditors.GroupControl();
@@ -194,6 +195,7 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(137)))));
+            this.panelTitleBar.Controls.Add(this.btnReLoad);
             this.panelTitleBar.Controls.Add(this.btnExitFormManageLecturer);
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -202,6 +204,22 @@
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(1077, 87);
             this.panelTitleBar.TabIndex = 7;
+            // 
+            // btnReLoad
+            // 
+            this.btnReLoad.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnReLoad.FlatAppearance.BorderSize = 0;
+            this.btnReLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReLoad.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReLoad.ForeColor = System.Drawing.Color.White;
+            this.btnReLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnReLoad.Image")));
+            this.btnReLoad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReLoad.Location = new System.Drawing.Point(0, 0);
+            this.btnReLoad.Name = "btnReLoad";
+            this.btnReLoad.Size = new System.Drawing.Size(70, 87);
+            this.btnReLoad.TabIndex = 7;
+            this.btnReLoad.UseVisualStyleBackColor = true;
+            this.btnReLoad.Click += new System.EventHandler(this.btnReLoad_Click);
             // 
             // btnExitFormManageLecturer
             // 
@@ -441,7 +459,6 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(193, 25);
             this.txtID.TabIndex = 97;
-            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
             // label10
             // 
@@ -813,5 +830,6 @@
         private DevExpress.XtraEditors.SimpleButton btnAdd;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnReLoad;
     }
 }

@@ -7,13 +7,14 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using ManageProjectStudent_Interface;
 
 namespace ManageProjectStudent_ViewModel
 {
-    public class StudentViewModel : INotifyPropertyChanged
+    public class StudentViewModel : INotifyPropertyChanged, IStudent
     {
         private static readonly DBManageProjectStudentViewModel _Context = new DBManageProjectStudentViewModel();
-        public static BindingList<StudentModel> LoadStudent()
+        public  BindingList<StudentModel> LoadStudent()
         {
             using (var _Context = new DBManageProjectStudentViewModel())
             {
@@ -36,7 +37,7 @@ namespace ManageProjectStudent_ViewModel
                 return new BindingList<StudentModel>(Result);
             }
         }
-        public static string GetByIDMaxStudent()
+        public string GetByIDMaxStudent()
         {
             using (var _Context = new DBManageProjectStudentViewModel())
             {
@@ -46,7 +47,7 @@ namespace ManageProjectStudent_ViewModel
             }
         }
     
-        public static bool AddNewStudent(StudentModel student)
+        public bool AddNewStudent(StudentModel student)
         {
             try
             {
@@ -60,7 +61,7 @@ namespace ManageProjectStudent_ViewModel
             }
         }
 
-        public static bool UpdateCurrentStudent(StudentModel student)
+        public bool UpdateCurrentStudent(StudentModel student)
         {
             var StudentToUpdate = _Context.StudentModels.SingleOrDefault
                     (x => x.StrStudentID == student.StrStudentID);
@@ -89,7 +90,7 @@ namespace ManageProjectStudent_ViewModel
             }
         }
 
-        public static bool DeleteCurrentStudent(StudentModel student)
+        public bool DeleteCurrentStudent(StudentModel student)
         {
             var StudentToDelete = _Context.StudentModels.SingleOrDefault
                     (x => x.StrStudentID == student.StrStudentID);
@@ -114,5 +115,14 @@ namespace ManageProjectStudent_ViewModel
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        public bool _checkCharacterNumberStudent(char _C)
+        {
+            return GarenaViewModel._checkCharacterNumber(_C);
+        }
+
+        public bool _checkCharacterCharStudent(char _C)
+        {
+            return GarenaViewModel._checkCharacterChar(_C);
+        }
     }
 }

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
@@ -19,16 +20,18 @@ namespace ManageProjectStudent_View
 {
     public partial class frmManageLecturerInformation : Form
     {
-        private bool indicatorIcon = true;
-        private IManageLecturerInformation IMLI = Config.Container.Resolve<IManageLecturerInformation>();
         public frmManageLecturerInformation()
         {
             InitializeComponent();
         }
+
         #region Properties
+        private bool indicatorIcon = true;
+        private IManageLecturerInformation IMLI = Config.Container.Resolve<IManageLecturerInformation>();
+        private IStaff _Staff = Config.Container.Resolve<IStaff>();
+
         private int _IStatusForm = 0;
         private StaffModel _LecturerModelNow = null;
-        private StaffModel _LecturerLogin = null;
         private BindingList<StaffModel> _lstLecturer = new BindingList<StaffModel>();
         private BindingList<FacultyModel> _lstFaculty = new BindingList<FacultyModel>();
         #endregion
@@ -42,11 +45,16 @@ namespace ManageProjectStudent_View
                     grpInformationLecturer.Enabled = false;
                     //btnSave.Enabled = false;
                     dteBirthday.Enabled = true;
-                    //if (_LecturerModelNow == null)
-                    //{
-                    //    btnUpdate.Enabled = false;
-                    //    btnDelete.Enabled = false;
-                    //}
+                    if (_LecturerModelNow != null)
+                    {
+                        btnUpdate.Enabled =true;
+                        btnDelete.Enabled = true;
+                    }
+                    else
+                    {
+                        btnUpdate.Enabled = false;
+                        btnDelete.Enabled = false;
+                    }    
                     //else
                     //{
                     //    btnUpdate.Enabled = true;
@@ -165,18 +173,18 @@ namespace ManageProjectStudent_View
         }
         private void _lstLoadListLecturer()
         {
-            _lstLecturer = StaffViewModel.LoadStaff();
-            if(_lstLecturer.Count>0)
-            {
-                foreach(StaffModel lt in _lstLecturer)
-                {
-                    if (lt.StrStaffID == "LT1")
-                    {
-                        _lstLecturer.Remove(lt);
-                        break;
-                    }
-                }
-            }
+            _lstLecturer = _Staff.loadStaff();
+            //if(_lstLecturer.Count>0)
+            //{
+            //    foreach(StaffModel lt in _lstLecturer)
+            //    {
+            //        if (lt.StrStaffID == "LT1")
+            //        {
+            //            _lstLecturer.Remove(lt);
+            //            break;
+            //        }
+            //    }
+            //}
             gcListLecturer.DataSource = _lstLecturer;
         }
 
@@ -195,11 +203,12 @@ namespace ManageProjectStudent_View
             lkeFaculty.Properties.Columns["colFacultyName"].FieldName = "StrFacultyName";
 
             ///*GridView*/
-            _lstLecturer = StaffViewModel.LoadStaff();
+            _lstLecturer = _Staff.loadStaff();
 
             LookUpEdit_Faculty.DataSource = _lstFaculty;
             LookUpEdit_Faculty.Columns["colFacultyID"].FieldName = "StrFacultyID";
             LookUpEdit_Faculty.Columns["colFacultyName"].FieldName = "StrFacultyName";
+
             gcListLecturer.DataSource = _lstLecturer;
             _setStatusForm();
         }
@@ -273,33 +282,65 @@ namespace ManageProjectStudent_View
         }
 
         //click
-        
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            _LecturerModelNow = null;
+            _IStatusForm = 1;
+            _setStatusForm();
+            //txtID.Text = StaffViewModel.GetByIDMaxLecturer();
+            txtFullName.Focus();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            _IStatusForm = 2;
+            _setStatusForm();
+            txtFullName.Focus();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (_LecturerModelNow != null)
+            {
+                if (_Staff.deleteCurrentStaff(_LecturerModelNow))
+                {
+                    _lstLoadListLecturer();
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Xóa Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (_lstLecturer.Count == 0)
+                    {
+                        _LecturerModelNow = null;
+                        _IStatusForm = 0;
+                        _setStatusForm();
+                    }
+                }
+                else
+                {
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Xóa Thất Bại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (txtFullName.Text == "")
             {
-                string _STRMesge = "Bạn chưa nhập tên Giảng viên";
-                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa nhập tên Sinh viên", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (txtIDCard.Text == "")
             {
-                string _STRMesge = "Bạn chưa nhập Chứng minh nhân dân";
-                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa nhập Chứng minh nhân dân", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (dteBirthday.EditValue == null)
             {
-                string _STRMesge = "Bạn chưa chọn Ngày sinh";
-                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa chọn Ngày sinh", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (txtAddress.Text == "")
             {
-                string _STRMesge = "Bạn chưa nhập ĐịaS chỉ";
-                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa nhập Địa chỉ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (txtPhoneNumber.Text == "")
             {
-                string _STRMesge = "Bạn chưa nhập Số điện thoại";
-                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa nhập Số điện thoại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (txtEmail.Text == "")
             {
@@ -308,18 +349,15 @@ namespace ManageProjectStudent_View
             }
             else if (lkeFaculty.EditValue == null)
             {
-                string _STRMesge = "Bạn chưa chọn Khoa";
-                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa chọn Khoa", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (!(radNam.Checked) && !(radNu.Checked))
             {
-                string _STRMesge = "Bạn chưa chọn Giới tính";
-                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa chọn Giới tính", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (!(radAvailable.Checked) && !(radUnavailable.Checked))
             {
-                string _STRMesge = "Bạn chưa chọn Trạng thái";
-                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa chọn Trạng thái", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -327,12 +365,11 @@ namespace ManageProjectStudent_View
                 bool bresult = false;
                 if(_IStatusForm == 1)
                 {
-                    bresult = StaffViewModel.AddNewStaff(_LecturerModelNow);
-
+                    bresult = _Staff.addNewStaff(_LecturerModelNow);
                 }
                 else
                 {
-                    bresult = StaffViewModel.UpdateCurrentStafff(_LecturerModelNow);
+                    bresult = _Staff.updateCurrentStafff(_LecturerModelNow);
                 }
 
                 if(!bresult)
@@ -357,49 +394,54 @@ namespace ManageProjectStudent_View
             this.Close();
         }
 
+        private void btnReLoad_Click(object sender, EventArgs e)
+        {
+            _IStatusForm = 0;
+            _setStatusForm();
+            _lstLecturer = _Staff.loadStaff();
+            gcListLecturer.DataSource = _lstLecturer;
+
+        }
         //key press
 
-        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (GarenaViewModel._checkCharacterNumber(e.KeyChar))
-            {
-                e.Handled = true;
-                ((TextBox)sender).Focus();
-                string _STRMesge = "Không được nhập ký tự chữ, chỉ được nhập số.";
-                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
+        //private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        //{
+        //    if (GarenaViewModel._checkCharacterNumber(e.KeyChar))
+        //    {
+        //        e.Handled = true;
+        //        ((TextBox)sender).Focus();
+        //        string _STRMesge = "Không được nhập ký tự chữ, chỉ được nhập số.";
+        //        MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //}
 
         private void txtFullName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!GarenaViewModel._checkCharacterChar(e.KeyChar))
+            if (!_Staff._checkCharacterNumberStaff(e.KeyChar))
             {
                 e.Handled = true;
                 ((TextBox)sender).Focus();
-                string _STRMesge = "Không được nhập ký tự số, chỉ được nhập chữ.";
-                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DevExpress.XtraEditors.XtraMessageBox.Show("Không được nhập ký tự số, chỉ được nhập chữ.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void txtIDCard_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (GarenaViewModel._checkCharacterNumber(e.KeyChar))
+            if (!_Staff._checkCharacterCharStaff(e.KeyChar))
             {
                 e.Handled = true;
                 ((TextBox)sender).Focus();
-                string _STRMesge = "Không được nhập ký tự chữ, chỉ được nhập số.";
-                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DevExpress.XtraEditors.XtraMessageBox.Show("Không được nhập ký tự chữ, chỉ được nhập số.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void txtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (GarenaViewModel._checkCharacterNumber(e.KeyChar))
+            if (!_Staff._checkCharacterCharStaff(e.KeyChar))
             {
                 e.Handled = true;
                 ((TextBox)sender).Focus();
-                string _STRMesge = "Không được nhập ký tự chữ, chỉ được nhập số.";
-                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DevExpress.XtraEditors.XtraMessageBox.Show("Không được nhập ký tự chữ, chỉ được nhập số.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -433,44 +475,6 @@ namespace ManageProjectStudent_View
             if (radUnavailable.Checked)
             {
                 radAvailable.Checked = false;
-            }
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            _LecturerModelNow = null;
-            _IStatusForm = 1;
-            _setStatusForm();
-            //txtID.Text = StaffViewModel.GetByIDMaxLecturer();
-            txtFullName.Focus();
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            _IStatusForm = 2;
-            _setStatusForm();
-            txtFullName.Focus();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if(_LecturerModelNow != null)
-            {
-                if (StaffViewModel.DeleteCurrentStaff(_LecturerModelNow))
-                {
-                    _lstLoadListLecturer();
-                    DevExpress.XtraEditors.XtraMessageBox.Show("Xóa Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (_lstLecturer.Count == 0)
-                    {
-                        _LecturerModelNow = null;
-                        _IStatusForm = 0;
-                        _setStatusForm();
-                    }
-                }
-                else
-                {
-                    DevExpress.XtraEditors.XtraMessageBox.Show("Xóa Thất Bại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
             }
         }
         #endregion

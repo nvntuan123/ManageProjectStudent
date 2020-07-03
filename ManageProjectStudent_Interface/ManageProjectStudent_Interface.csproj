@@ -52,11 +52,19 @@
     <Compile Include="IManageProject.cs" />
     <Compile Include="IManageStudentInformation.cs" />
     <Compile Include="IManageSubject.cs" />
+    <Compile Include="IStaff.cs" />
+    <Compile Include="IStudent.cs" />
     <Compile Include="ISubmitProject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ManageProjectStudent_Model\ManageProjectStudent_Model.csproj">
+      <Project>{d9716c79-ef4d-4524-9bd8-b0ed55de0662}</Project>
+      <Name>ManageProjectStudent_Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

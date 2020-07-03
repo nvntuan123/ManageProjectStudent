@@ -8,16 +8,16 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Data.Entity;
-
+using ManageProjectStudent_Interface;
 
 namespace ManageProjectStudent_ViewModel
 {
     #region by Phuoc
-    public class StaffViewModel : INotifyPropertyChanged
+    public class StaffViewModel : INotifyPropertyChanged, IStaff
     {
         private static readonly DBManageProjectStudentViewModel _Context = new DBManageProjectStudentViewModel();
 
-        public static BindingList<StaffModel> LoadStaff()
+        public BindingList<StaffModel> loadStaff()
         {
             using (var _Context = new DBManageProjectStudentViewModel())
             {
@@ -39,7 +39,8 @@ namespace ManageProjectStudent_ViewModel
                 return new BindingList<StaffModel>(Result);
             }
         }
-        public static string GetByIDMaxLecturer()
+
+        private string _getByIDMaxLecturer()
         {
             using (var _Context = new DBManageProjectStudentViewModel())
             {
@@ -49,13 +50,19 @@ namespace ManageProjectStudent_ViewModel
             }
         }
 
-        public static bool AddNewStaff(StaffModel staff)
+        public string getByIDAutoLecturer()
+        {
+            string _StrIDMax = _getByIDMaxLecturer();
+
+            return _StrIDMax;
+        }
+
+        public bool addNewStaff(StaffModel staff)
         {
             try
             {
                 _Context.StaffModels.Add(staff);
-                _Context.SaveChanges();
-                return true;
+                return (_Context.SaveChanges() != 0);
             }
             catch
             {
@@ -64,27 +71,29 @@ namespace ManageProjectStudent_ViewModel
          
         }
 
-        public static bool UpdateCurrentStafff(StaffModel staff)
+        public bool updateCurrentStafff(StaffModel staff)
         {
-            var StaffToUpdate = _Context.StaffModels.SingleOrDefault
-                    (x => x.StrStaffID == staff.StrStaffID);
-            if (StaffToUpdate != null)
-            {
-                StaffToUpdate.StrStaffName = staff.StrStaffName;
-                StaffToUpdate.StrAddress = staff.StrAddress;
-                StaffToUpdate.StrEmail = staff.StrEmail;
-                StaffToUpdate.StrPhone = staff.StrPhone;
-                StaffToUpdate.DtBirthDay = staff.DtBirthDay;
-                StaffToUpdate.StrCardID = staff.StrCardID;
-                StaffToUpdate.StrFacultyID = staff.StrFacultyID;
-                StaffToUpdate.StrStaffTypeID = staff.StrStaffTypeID;
-                StaffToUpdate.BStatus = staff.BStatus;
-                StaffToUpdate.StrSex = staff.StrSex;
-            }
             try
             {
-                _Context.SaveChanges();
-                return true;
+                var StaffToUpdate = _Context.StaffModels.SingleOrDefault
+                    (x => x.StrStaffID == staff.StrStaffID);
+                if (StaffToUpdate != null)
+                {
+                    StaffToUpdate.StrStaffName = staff.StrStaffName;
+                    StaffToUpdate.StrAddress = staff.StrAddress;
+                    StaffToUpdate.StrEmail = staff.StrEmail;
+                    StaffToUpdate.StrPhone = staff.StrPhone;
+                    StaffToUpdate.DtBirthDay = staff.DtBirthDay;
+                    StaffToUpdate.StrCardID = staff.StrCardID;
+                    StaffToUpdate.StrFacultyID = staff.StrFacultyID;
+                    StaffToUpdate.StrStaffTypeID = staff.StrStaffTypeID;
+                    StaffToUpdate.BStatus = staff.BStatus;
+                    StaffToUpdate.StrSex = staff.StrSex;
+
+                    return (_Context.SaveChanges() != 0);
+                }
+
+                return false;
             }
             catch
             {
@@ -92,7 +101,7 @@ namespace ManageProjectStudent_ViewModel
             }
         }
 
-        public static bool DeleteCurrentStaff(StaffModel staff)
+        public bool deleteCurrentStaff(StaffModel staff)
         {
             var staffToDelete = _Context.StaffModels.SingleOrDefault
                     (x => x.StrStaffID == staff.StrStaffID);
@@ -117,6 +126,15 @@ namespace ManageProjectStudent_ViewModel
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        public bool _checkCharacterNumberStaff(char _C)
+        {
+            return GarenaViewModel._checkCharacterNumber(_C);
+        }
+
+        public bool _checkCharacterCharStaff(char _C)
+        {
+            return GarenaViewModel._checkCharacterChar(_C);
+        }
     }
     #endregion
 }

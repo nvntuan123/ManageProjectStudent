@@ -2,7 +2,7 @@
 {
     using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class v6 : DbMigration
     {
         public override void Up()
@@ -45,21 +45,21 @@
             DropColumn("dbo.ExamResult", "ExamTimesModel_StrSubjectID");
             DropTable("dbo.ExamTimes");
         }
-        
+
         public override void Down()
         {
             CreateTable(
                 "dbo.ExamTimes",
                 c => new
-                    {
-                        ExamTimesID = c.String(nullable: false, maxLength: 10, fixedLength: true, unicode: false),
-                        TrainingProgramID = c.String(nullable: false, maxLength: 10, fixedLength: true, unicode: false),
-                        SubjectID = c.String(nullable: false, maxLength: 10, fixedLength: true, unicode: false),
-                        Times = c.Int(nullable: false),
-                        ExamTime = c.DateTime(nullable: false, storeType: "date"),
-                    })
+                {
+                    ExamTimesID = c.String(nullable: false, maxLength: 10, fixedLength: true, unicode: false),
+                    TrainingProgramID = c.String(nullable: false, maxLength: 10, fixedLength: true, unicode: false),
+                    SubjectID = c.String(nullable: false, maxLength: 10, fixedLength: true, unicode: false),
+                    Times = c.Int(nullable: false),
+                    ExamTime = c.DateTime(nullable: false, storeType: "date"),
+                })
                 .PrimaryKey(t => new { t.ExamTimesID, t.TrainingProgramID, t.SubjectID });
-            
+
             AddColumn("dbo.ExamResult", "ExamTimesModel_StrSubjectID", c => c.String(maxLength: 10, fixedLength: true, unicode: false));
             AddColumn("dbo.ExamResult", "ExamTimesModel_StrTrainingProgramID", c => c.String(maxLength: 10, fixedLength: true, unicode: false));
             AddColumn("dbo.ExamResult", "ExamTimesModel_StrExamTimesID", c => c.String(maxLength: 10, fixedLength: true, unicode: false));

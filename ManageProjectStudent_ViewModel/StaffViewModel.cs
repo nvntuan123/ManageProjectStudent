@@ -65,6 +65,30 @@ namespace ManageProjectStudent_ViewModel
             }
         }
 
+        public bool checkStaffID(string StaffID)
+        {
+            using (var _Context = new DBManageProjectStudentViewModel())
+            {
+                var Result = _Context.StaffModels.SingleOrDefault(c => c.StrStaffID == StaffID);
+                if (Result != null)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+        public bool checkCardID(string CardID)
+        {
+            using (var _Context = new DBManageProjectStudentViewModel())
+            {
+                var Result = _Context.StaffModels.SingleOrDefault(c => c.StrCardID == CardID);
+                if (Result != null)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
         public bool addNewStaff(StaffModel staff)
         {
             try

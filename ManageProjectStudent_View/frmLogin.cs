@@ -20,10 +20,39 @@ namespace ManageProjectStudent_View
 
 
         }
+        #region Properties
+        private IStaff _Staff = Config.Container.Resolve<IStaff>();
+        private IStudent _Student = Config.Container.Resolve<IStudent>();
 
+        #endregion
         private void gunaGradientButton2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+            if (_Staff.checkStaffID(this.txtUsers.Text) == true || _Student.checkStudentID(this.txtUsers.Text) == true)
+            {
+                if (_Staff.checkCardID(txtPassword.Text) == true || _Student.checkCardID(txtPassword.Text) == true)
+                {
+                    this.Close();
+                    frmHome frmHome = new frmHome();
+                    frmHome.ShowDialog();
+                }
+                else
+                {
+                    txtPassword.Clear();
+                    MessageBox.Show("Sai Mat Khau");
+                }
+            }
+            else
+            {
+                txtUsers.Clear();
+                MessageBox.Show("Tên Đăng Nhập Sai");
+            }
+            // if(this.txtUsers.Text == "Admin" && txtPassword.Text ==)
         }
     }
 }

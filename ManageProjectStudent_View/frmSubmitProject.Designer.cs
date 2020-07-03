@@ -36,11 +36,13 @@
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtAuthor = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnChooseFile = new DevExpress.XtraEditors.SimpleButton();
             this.gcPhanQuyen = new DevExpress.XtraGrid.GridControl();
             this.gvChooseTask = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colChucNang = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -56,8 +58,6 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtAuthor = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -193,6 +193,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enter Information";
             // 
+            // txtAuthor
+            // 
+            this.txtAuthor.Location = new System.Drawing.Point(173, 105);
+            this.txtAuthor.Name = "txtAuthor";
+            this.txtAuthor.Size = new System.Drawing.Size(265, 21);
+            this.txtAuthor.TabIndex = 4;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(173, 49);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(265, 21);
+            this.txtName.TabIndex = 3;
+            // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -218,7 +232,7 @@
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.simpleButton5);
+            this.panel4.Controls.Add(this.btnChooseFile);
             this.panel4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.panel4.Location = new System.Drawing.Point(24, 36);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
@@ -235,14 +249,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Chọn biểu tượng để thêm file";
             // 
-            // simpleButton5
+            // btnChooseFile
             // 
-            this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(99, 10);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.simpleButton5.Size = new System.Drawing.Size(86, 104);
-            this.simpleButton5.TabIndex = 0;
+            this.btnChooseFile.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnChooseFile.ImageOptions.Image")));
+            this.btnChooseFile.Location = new System.Drawing.Point(91, 10);
+            this.btnChooseFile.Name = "btnChooseFile";
+            this.btnChooseFile.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnChooseFile.Size = new System.Drawing.Size(86, 104);
+            this.btnChooseFile.TabIndex = 0;
             // 
             // gcPhanQuyen
             // 
@@ -417,20 +431,6 @@
             this.comboBox1.Size = new System.Drawing.Size(188, 21);
             this.comboBox1.TabIndex = 0;
             // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(173, 49);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(265, 21);
-            this.txtName.TabIndex = 3;
-            // 
-            // txtAuthor
-            // 
-            this.txtAuthor.Location = new System.Drawing.Point(173, 105);
-            this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(265, 21);
-            this.txtAuthor.TabIndex = 4;
-            // 
             // frmSubmitProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -475,7 +475,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private DevExpress.XtraEditors.SimpleButton btnChooseFile;
         private DevExpress.XtraGrid.GridControl gcPhanQuyen;
         private DevExpress.XtraGrid.Views.Grid.GridView gvChooseTask;
         private DevExpress.XtraGrid.Columns.GridColumn colChucNang;

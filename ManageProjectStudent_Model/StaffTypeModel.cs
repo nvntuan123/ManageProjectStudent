@@ -19,7 +19,7 @@ namespace ManageProjectStudent_Model
         [StringLength(10)]
         public string StrStaffTypeID { get => _StrStaffTypeID; set => _StrStaffTypeID = value; }
 
-        [Column("StaffTypeName", TypeName = "char", Order = 1)]
+        [Column("StaffTypeName", TypeName = "nvarchar", Order = 1)]
         [StringLength(100)]
         public string StrStaffTypeName { get => _StrStaffTypeName; set => _StrStaffTypeName = value; }
 

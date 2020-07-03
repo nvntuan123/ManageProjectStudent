@@ -67,7 +67,30 @@ namespace ManageProjectStudent_ViewModel
                 return Result;
             }
         }
-
+        public bool checkCardID(string CardID)
+        {
+            using (var _Context = new DBManageProjectStudentViewModel())
+            {
+                var Result = _Context.StudentModels.SingleOrDefault(c => c.StrCardID == CardID );
+                if (Result != null)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+        public bool checkStudentID(string StudentID)
+        {
+            using (var _Context = new DBManageProjectStudentViewModel())
+            {
+                var Result = _Context.StudentModels.SingleOrDefault(c => c.StrStudentID == StudentID);
+                if (Result != null)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
         public bool updateCurrentStudent(StudentModel student)
         {
             try

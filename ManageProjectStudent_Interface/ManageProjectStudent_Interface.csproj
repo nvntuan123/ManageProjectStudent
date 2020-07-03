@@ -45,6 +45,9 @@
   <ItemGroup>
     <Compile Include="IAddGroupForSubject.cs" />
     <Compile Include="IClass.cs" />
+    <Compile Include="IClassGroupOfSubject.cs" />
+    <Compile Include="IExamResult.cs" />
+    <Compile Include="IExamTimes.cs" />
     <Compile Include="IFaculty.cs" />
     <Compile Include="IManageClass.cs" />
     <Compile Include="IManageCourse.cs" />
@@ -55,7 +58,10 @@
     <Compile Include="IProject.cs" />
     <Compile Include="IManageStudentInformation.cs" />
     <Compile Include="IManageSubject.cs" />
+    <Compile Include="IProjectTask.cs" />
+    <Compile Include="IResultProject.cs" />
     <Compile Include="IStaff.cs" />
+    <Compile Include="IStaffType.cs" />
     <Compile Include="IStudent.cs" />
     <Compile Include="ISubject.cs" />
     <Compile Include="ISubmitProject.cs" />

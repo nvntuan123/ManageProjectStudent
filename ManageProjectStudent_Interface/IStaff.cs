@@ -13,7 +13,7 @@ namespace ManageProjectStudent_Interface
         BindingList<StaffModel> loadStaff();
         string getByIDAutoLecturer();
         bool addNewStaff(StaffModel staff);
-        bool updateCurrentStafff(StaffModel staff);
+        bool updateCurrentStaff(StaffModel staff);
         bool deleteCurrentStaff(StaffModel staff);
         List<string> lstStaffID();
         // Front-end

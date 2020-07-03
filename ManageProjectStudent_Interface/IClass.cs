@@ -13,7 +13,7 @@ namespace ManageProjectStudent_Interface
         BindingList<ClassModel> loadClass();
        // string getByIDAutoClass();
         bool addNewClass(ClassModel classModel);
-        bool updateCurrentClassf(ClassModel classModel);
+        bool updateCurrentClass(ClassModel classModel);
         bool deleteCurrentClass(ClassModel classModel);
         List<string> lstClassID();
     }

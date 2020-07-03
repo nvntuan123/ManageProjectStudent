@@ -27,8 +27,7 @@ namespace ManageProjectStudent_ViewModel
                               {
                                   StrClassID = x.StrClassID,
                                   StrClassName = x.StrClassName,
-                                  StrFacultyID = x.StrFacultyID,
-                                  
+                                  StrFacultyID = x.StrFacultyID
                               }).ToList();
                 return new BindingList<ClassModel>(Result);
             }
@@ -42,7 +41,6 @@ namespace ManageProjectStudent_ViewModel
                 return Result;
             }
         }
-
         public List<string> lstClassID()
         {
             using (var _Context = new DBManageProjectStudentViewModel())
@@ -63,8 +61,7 @@ namespace ManageProjectStudent_ViewModel
                 return false;
             }
         }
-
-        public bool updateCurrentClassf(ClassModel classModel)
+        public bool updateCurrentClass(ClassModel classModel)
         {
             try
             {
@@ -84,7 +81,6 @@ namespace ManageProjectStudent_ViewModel
                 return false;
             }
         }
-
         public bool deleteCurrentClass(ClassModel classModel)
         {
             var ClassToDelete = _Context.ClassModels.SingleOrDefault

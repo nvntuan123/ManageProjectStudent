@@ -79,7 +79,7 @@ namespace ManageProjectStudent_ViewModel
          
         }
 
-        public bool updateCurrentStafff(StaffModel staff)
+        public bool updateCurrentStaff(StaffModel staff)
         {
             try
             {

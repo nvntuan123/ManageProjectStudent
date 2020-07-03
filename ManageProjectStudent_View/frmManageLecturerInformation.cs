@@ -370,7 +370,7 @@ namespace ManageProjectStudent_View
                 }
                 else
                 {
-                    bresult = _Staff.updateCurrentStafff(_LecturerModelNow);
+                    bresult = _Staff.updateCurrentStaff(_LecturerModelNow);
                 }
 
                 if(!bresult)

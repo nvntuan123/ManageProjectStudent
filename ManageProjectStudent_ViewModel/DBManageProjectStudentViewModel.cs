@@ -33,5 +33,6 @@ namespace ManageProjectStudent_ViewModel
         public DbSet<TrainingProgramModel> TrainingProgramModels { get; set; }
         public DbSet<FacultyModel> FacultyModels { get; set; }
 
+
     }
 }

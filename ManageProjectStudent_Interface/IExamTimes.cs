@@ -16,6 +16,5 @@ namespace ManageProjectStudent_Interface
         bool addNewExamTimes(ExamTimesModel examTimes);
         bool updateCurrentExamTimes(ExamTimesModel examTimes);
         bool deleteCurrentExamTimes(ExamTimesModel examTimes);
-
     }
 }

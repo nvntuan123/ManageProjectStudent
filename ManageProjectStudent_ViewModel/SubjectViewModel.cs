@@ -14,9 +14,9 @@ using ManageProjectStudent_Interface;
 
 namespace ManageProjectStudent_ViewModel
 {
-    #region by Phuoc
     public class SubjectViewModel : INotifyPropertyChanged, ISubject
     {
+        #region by Phuoc
         private static readonly DBManageProjectStudentViewModel _Context = new DBManageProjectStudentViewModel();
 
         public BindingList<SubjectModel> loadSubject()
@@ -112,7 +112,6 @@ namespace ManageProjectStudent_ViewModel
             PropertyChangedEventHandler handler = PropertyChanged;
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
         }
-
+        #endregion
     }
-    #endregion
 }

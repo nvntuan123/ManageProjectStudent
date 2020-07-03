@@ -18,8 +18,6 @@ namespace ManageProjectStudent_View
             // Thu
             Container.RegisterType<IStaff, StaffViewModel>();
             Container.RegisterType<IStudent, StudentViewModel>();
-            Container.RegisterType<IManageStudentInformation, ManageStudentInformationViewModel>();
-            Container.RegisterType<IManageLecturerInformation, ManageLecturerInformationViewModel>();
             Container.RegisterType<IClass, ClassViewModel>();
             Container.RegisterType<IFaculty, FacultyViewModel>();
             // Thu
@@ -32,7 +30,6 @@ namespace ManageProjectStudent_View
             // Thong
 
             // Thong
-            Container.RegisterType<IManageProject, ManageProjectViewModel>();
             Container.RegisterType<IAddGroupForSubject, AddGroupForSubjectViewModel>();
             Container.RegisterType<IManageMultiLanguage, ManageMultiLanguageViewModel>();
             // Thong

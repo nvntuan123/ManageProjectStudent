@@ -27,7 +27,6 @@ namespace ManageProjectStudent_View
 
         #region Properties
         private bool indicatorIcon = true;
-        private IManageLecturerInformation IMLI = Config.Container.Resolve<IManageLecturerInformation>();
         private IStaff _Staff = Config.Container.Resolve<IStaff>();
         private IFaculty _Faculty = Config.Container.Resolve<IFaculty>();
 

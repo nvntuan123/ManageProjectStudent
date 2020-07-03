@@ -16,6 +16,5 @@ namespace ManageProjectStudent_Interface
         bool addNewExamResult(ExamResultModel examResult);
         bool updateCurrentExamResult(ExamResultModel examResult);
         bool deleteCurrentExamResult(ExamResultModel examResult);
-
     }
 }

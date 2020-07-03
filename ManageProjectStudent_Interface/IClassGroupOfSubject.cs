@@ -16,7 +16,5 @@ namespace ManageProjectStudent_Interface
         bool addNewClassGroupOfSubject(ClassGroupOfSubject classGroupOfSubject);
         bool updateCurrentClassGroupOfSubject(ClassGroupOfSubject classGroupOfSubject);
         bool deleteCurrentClassGroupOfSubject(ClassGroupOfSubject classGroupOfSubject);
-
-
     }
 }

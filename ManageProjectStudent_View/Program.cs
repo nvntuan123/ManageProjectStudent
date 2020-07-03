@@ -20,6 +20,8 @@ namespace ManageProjectStudent_View
             Container.RegisterType<IStudent, StudentViewModel>();
             Container.RegisterType<IManageStudentInformation, ManageStudentInformationViewModel>();
             Container.RegisterType<IManageLecturerInformation, ManageLecturerInformationViewModel>();
+            Container.RegisterType<IClass, ClassViewModel>();
+            Container.RegisterType<IFaculty, FacultyViewModel>();
             // Thu
             // Thong
             Container.RegisterType<IManageClass, ManageClassViewModel>();

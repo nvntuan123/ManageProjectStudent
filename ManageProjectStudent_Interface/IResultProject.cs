@@ -14,6 +14,5 @@ namespace ManageProjectStudent_Interface
         bool addNewResultProject(ResultProjectModel ResultProject);
         bool updateCurrentResultProject(ResultProjectModel ResultProject);
         bool deleteCurrentResultProject(ResultProjectModel ResultProject);
-
     }
 }

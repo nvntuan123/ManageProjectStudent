@@ -16,6 +16,7 @@ namespace ManageProjectStudent_ViewModel
     {
         #region by Phuoc
         public readonly DBManageProjectStudentViewModel _Context = new DBManageProjectStudentViewModel();
+
         public BindingList<ProjectTaskModel> loadProjectTask()
         {
             using (var _Context = new DBManageProjectStudentViewModel())
@@ -108,8 +109,6 @@ namespace ManageProjectStudent_ViewModel
             PropertyChangedEventHandler handler = PropertyChanged;
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
         }
-
+        #endregion
     }
-    #endregion
-
 }

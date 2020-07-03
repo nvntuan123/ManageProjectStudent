@@ -163,6 +163,7 @@
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(187, 21);
             this.txtPhoneNumber.TabIndex = 25;
+            this.txtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNumber_KeyPress);
             // 
             // txtIDCard
             // 
@@ -171,6 +172,7 @@
             this.txtIDCard.Name = "txtIDCard";
             this.txtIDCard.Size = new System.Drawing.Size(187, 21);
             this.txtIDCard.TabIndex = 27;
+            this.txtIDCard.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIDCard_KeyPress);
             // 
             // dteBirthday
             // 
@@ -192,6 +194,7 @@
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(187, 21);
             this.txtFullName.TabIndex = 21;
+            this.txtFullName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFullName_KeyPress);
             // 
             // label7
             // 
@@ -332,6 +335,7 @@
             this.radAvailable.TabStop = true;
             this.radAvailable.Text = "Đang học";
             this.radAvailable.UseVisualStyleBackColor = true;
+            this.radAvailable.CheckedChanged += new System.EventHandler(this.radAvailable_CheckedChanged);
             // 
             // radUnavailable
             // 
@@ -344,6 +348,7 @@
             this.radUnavailable.TabStop = true;
             this.radUnavailable.Text = "Nghỉ";
             this.radUnavailable.UseVisualStyleBackColor = true;
+            this.radUnavailable.CheckedChanged += new System.EventHandler(this.radUnavailable_CheckedChanged);
             // 
             // panel1
             // 
@@ -365,6 +370,7 @@
             this.radNam.TabStop = true;
             this.radNam.Text = "Nam";
             this.radNam.UseVisualStyleBackColor = true;
+            this.radNam.CheckedChanged += new System.EventHandler(this.radNam_CheckedChanged);
             // 
             // radNu
             // 
@@ -377,6 +383,7 @@
             this.radNu.TabStop = true;
             this.radNu.Text = "Nữ";
             this.radNu.UseVisualStyleBackColor = true;
+            this.radNu.CheckedChanged += new System.EventHandler(this.radNu_CheckedChanged);
             // 
             // dteStartYear
             // 
@@ -424,6 +431,7 @@
             this.btnSave.TabIndex = 121;
             this.btnSave.TabStop = false;
             this.btnSave.Text = "Lưu";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // lkeFaculty
             // 
@@ -531,6 +539,9 @@
             this.gvStudentList.OptionsView.ShowGroupPanel = false;
             this.gvStudentList.OptionsView.ShowViewCaption = true;
             this.gvStudentList.ViewCaption = "Danh sách sinh viên";
+            this.gvStudentList.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvStudentList_CustomDrawRowIndicator);
+            this.gvStudentList.SelectionChanged += new DevExpress.Data.SelectionChangedEventHandler(this.gvStudentList_SelectionChanged);
+            this.gvStudentList.RowCountChanged += new System.EventHandler(this.gvStudentList_RowCountChanged);
             // 
             // colStudentID
             // 
@@ -730,6 +741,7 @@
             this.btnUpdate.TabIndex = 18;
             this.btnUpdate.TabStop = false;
             this.btnUpdate.Text = "Sửa Sinh Viên";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -754,6 +766,7 @@
             this.btnDelete.TabIndex = 17;
             this.btnDelete.TabStop = false;
             this.btnDelete.Text = "Xóa Sinh Viên";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -780,6 +793,7 @@
             this.btnAdd.TabIndex = 16;
             this.btnAdd.TabStop = false;
             this.btnAdd.Text = "Thêm Sinh Viên";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // panelLogo
             // 
@@ -819,6 +833,7 @@
             this.btnReLoad.Size = new System.Drawing.Size(70, 87);
             this.btnReLoad.TabIndex = 8;
             this.btnReLoad.UseVisualStyleBackColor = true;
+            this.btnReLoad.Click += new System.EventHandler(this.btnReLoad_Click);
             // 
             // btnExitFormManageStudent
             // 
@@ -831,6 +846,7 @@
             this.btnExitFormManageStudent.Size = new System.Drawing.Size(75, 87);
             this.btnExitFormManageStudent.TabIndex = 1;
             this.btnExitFormManageStudent.UseVisualStyleBackColor = true;
+            this.btnExitFormManageStudent.Click += new System.EventHandler(this.btnExitFormManageStudent_Click);
             // 
             // lblTitle
             // 
@@ -858,6 +874,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmManageStudentInformation";
             this.Text = "frmManageStudentInformation";
+            this.Load += new System.EventHandler(this.frmManageStudentInformation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Faculty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties)).EndInit();

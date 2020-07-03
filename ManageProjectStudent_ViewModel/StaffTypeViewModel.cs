@@ -12,9 +12,9 @@ using ManageProjectStudent_Interface;
 
 namespace ManageProjectStudent_ViewModel
 {
-    #region by Phuoc
     public class StaffTypeViewModel : INotifyPropertyChanged , IStaffType
     {
+        #region by Phuoc
         private static readonly DBManageProjectStudentViewModel _Context = new DBManageProjectStudentViewModel();
 
         public BindingList<StaffTypeModel> loadStaffType()
@@ -114,7 +114,6 @@ namespace ManageProjectStudent_ViewModel
             PropertyChangedEventHandler handler = PropertyChanged;
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
         }
-
+        #endregion
     }
-    #endregion
 }

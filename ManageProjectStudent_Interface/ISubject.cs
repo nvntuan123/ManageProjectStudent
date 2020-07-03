@@ -11,11 +11,10 @@ namespace ManageProjectStudent_Interface
     public interface ISubject
     {
         BindingList<SubjectModel> loadSubject();
-     //   string getByIDAutoSubject();
+        //string getByIDAutoSubject();
         bool addNewSubject(SubjectModel subject);
         bool updateCurrentSubjectf(SubjectModel subject);
         bool deleteCurrentSubject(SubjectModel subject);
         List<string> lstSubjectID();
-
     }
 }

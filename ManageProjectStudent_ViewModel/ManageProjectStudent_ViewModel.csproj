@@ -78,10 +78,7 @@
     <Compile Include="ManageClassViewModel.cs" />
     <Compile Include="ManageCourseViewModel.cs" />
     <Compile Include="ManageFacultyViewModel.cs" />
-    <Compile Include="ManageLecturerInformationViewModel.cs" />
     <Compile Include="ManageMultiLanguageViewModel.cs" />
-    <Compile Include="ManageProjectViewModel.cs" />
-    <Compile Include="ManageStudentInformationViewModel.cs" />
     <Compile Include="ManageSubjectViewModel.cs" />
     <Compile Include="Migrations\202006300720417_v8.cs" />
     <Compile Include="Migrations\202006300720417_v8.designer.cs">

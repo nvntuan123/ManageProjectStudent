@@ -16,6 +16,5 @@ namespace ManageProjectStudent_Interface
         bool addNewProjectTask(ProjectTaskModel ProjectTask);
         bool updateCurrentProjectTask(ProjectTaskModel ProjectTask);
         bool deleteCurrentProjectTask(ProjectTaskModel ProjectTask);
-
     }
 }

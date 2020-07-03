@@ -18,8 +18,6 @@ namespace ManageProjectStudent_Interface
         List<string> lstStudentID();
         bool checkCardID(string CardID);
         bool checkStudentID(string StudentID);
-
-        //front-end
         bool _checkCharacterNumberStudent(char _C);
         bool _checkCharacterCharStudent(char _C);
     }

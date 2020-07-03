@@ -11,7 +11,7 @@ namespace ManageProjectStudent_Interface
     public interface IClass
     {
         BindingList<ClassModel> loadClass();
-       // string getByIDAutoClass();
+        // string getByIDAutoClass();
         bool addNewClass(ClassModel classModel);
         bool updateCurrentClass(ClassModel classModel);
         bool deleteCurrentClass(ClassModel classModel);

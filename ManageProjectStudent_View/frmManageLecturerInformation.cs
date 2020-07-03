@@ -27,7 +27,6 @@ namespace ManageProjectStudent_View
 
         #region Properties
         private bool indicatorIcon = true;
-        private IManageLecturerInformation IMLI = Config.Container.Resolve<IManageLecturerInformation>();
         private IStaff _Staff = Config.Container.Resolve<IStaff>();
         private IFaculty _Faculty = Config.Container.Resolve<IFaculty>();
 
@@ -172,6 +171,7 @@ namespace ManageProjectStudent_View
                 _LecturerModelNow.BStatus = false;
             }
         }
+
         private void _lstLoadListLecturer()
         {
             _lstLecturer = _Staff.loadStaff();
@@ -325,7 +325,7 @@ namespace ManageProjectStudent_View
         {
             if (txtFullName.Text == "")
             {
-                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa nhập tên Sinh viên", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa nhập tên Giảng viên", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (txtIDCard.Text == "")
             {

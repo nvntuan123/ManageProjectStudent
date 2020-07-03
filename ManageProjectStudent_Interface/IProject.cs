@@ -16,7 +16,5 @@ namespace ManageProjectStudent_Interface
         bool updateCurrentProject(ProjectModel project);
         bool deleteCurrentProject(ProjectModel project);
         List<string> lstProjectID();
-
-
     }
 }

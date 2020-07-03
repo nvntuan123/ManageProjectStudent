@@ -12,9 +12,9 @@ using ManageProjectStudent_Interface;
 
 namespace ManageProjectStudent_ViewModel
 {
-    #region by Phuoc
     public class StaffViewModel : INotifyPropertyChanged, IStaff
     {
+        #region by Phuoc
         private static readonly DBManageProjectStudentViewModel _Context = new DBManageProjectStudentViewModel();
 
         public BindingList<StaffModel> loadStaff()
@@ -167,6 +167,6 @@ namespace ManageProjectStudent_ViewModel
         {
             return GarenaViewModel._checkCharacterChar(_C);
         }
+        #endregion
     }
-    #endregion
 }

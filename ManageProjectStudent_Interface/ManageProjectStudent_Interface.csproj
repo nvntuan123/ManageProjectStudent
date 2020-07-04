@@ -46,6 +46,7 @@
     <Compile Include="IAddGroupForSubject.cs" />
     <Compile Include="IClass.cs" />
     <Compile Include="IClassGroupOfSubject.cs" />
+    <Compile Include="ICourse.cs" />
     <Compile Include="IExamResult.cs" />
     <Compile Include="IExamTimes.cs" />
     <Compile Include="IFaculty.cs" />

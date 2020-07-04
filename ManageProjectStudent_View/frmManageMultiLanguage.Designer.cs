@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.txtKeyword = new System.Windows.Forms.TextBox();
+            this.txtLanguageName = new System.Windows.Forms.TextBox();
+            this.txtIDLanguage = new System.Windows.Forms.TextBox();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -41,9 +44,6 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.txtIDLanguage = new System.Windows.Forms.TextBox();
-            this.txtLanguageName = new System.Windows.Forms.TextBox();
-            this.txtKeyword = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -67,6 +67,27 @@
             this.groupControl2.Size = new System.Drawing.Size(676, 178);
             this.groupControl2.TabIndex = 5;
             this.groupControl2.Text = "Thông Tin";
+            // 
+            // txtKeyword
+            // 
+            this.txtKeyword.Location = new System.Drawing.Point(473, 35);
+            this.txtKeyword.Name = "txtKeyword";
+            this.txtKeyword.Size = new System.Drawing.Size(174, 21);
+            this.txtKeyword.TabIndex = 99;
+            // 
+            // txtLanguageName
+            // 
+            this.txtLanguageName.Location = new System.Drawing.Point(174, 71);
+            this.txtLanguageName.Name = "txtLanguageName";
+            this.txtLanguageName.Size = new System.Drawing.Size(174, 21);
+            this.txtLanguageName.TabIndex = 98;
+            // 
+            // txtIDLanguage
+            // 
+            this.txtIDLanguage.Location = new System.Drawing.Point(174, 39);
+            this.txtIDLanguage.Name = "txtIDLanguage";
+            this.txtIDLanguage.Size = new System.Drawing.Size(174, 21);
+            this.txtIDLanguage.TabIndex = 97;
             // 
             // simpleButton3
             // 
@@ -233,27 +254,6 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            // 
-            // txtIDLanguage
-            // 
-            this.txtIDLanguage.Location = new System.Drawing.Point(174, 39);
-            this.txtIDLanguage.Name = "txtIDLanguage";
-            this.txtIDLanguage.Size = new System.Drawing.Size(174, 21);
-            this.txtIDLanguage.TabIndex = 97;
-            // 
-            // txtLanguageName
-            // 
-            this.txtLanguageName.Location = new System.Drawing.Point(174, 71);
-            this.txtLanguageName.Name = "txtLanguageName";
-            this.txtLanguageName.Size = new System.Drawing.Size(174, 21);
-            this.txtLanguageName.TabIndex = 98;
-            // 
-            // txtKeyword
-            // 
-            this.txtKeyword.Location = new System.Drawing.Point(473, 35);
-            this.txtKeyword.Name = "txtKeyword";
-            this.txtKeyword.Size = new System.Drawing.Size(174, 21);
-            this.txtKeyword.TabIndex = 99;
             // 
             // frmManageMultiLanguage
             // 

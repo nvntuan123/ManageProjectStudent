@@ -41,7 +41,6 @@ namespace ManageProjectStudent_View
             {
                 case 0:
                     grpInformationProject.Enabled = false;
-                    grpInformationProject.Enabled = true;
                     break;
                 case 1:
                     txtID.Text = string.Empty;

@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="ClassModel.cs" />
     <Compile Include="ClassGroupOfSubject.cs" />
+    <Compile Include="CourseModel.cs" />
     <Compile Include="ExamResultModel.cs" />
     <Compile Include="ExamTimesModel.cs" />
     <Compile Include="FacultyModel.cs" />

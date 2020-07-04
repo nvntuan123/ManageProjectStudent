@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.txtGroupName = new System.Windows.Forms.TextBox();
+            this.txtIDGroup = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,8 +44,6 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.txtIDGroup = new System.Windows.Forms.TextBox();
-            this.txtGroupName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -65,6 +65,20 @@
             this.groupControl2.Size = new System.Drawing.Size(495, 144);
             this.groupControl2.TabIndex = 3;
             this.groupControl2.Text = "Thêm nhóm môn học";
+            // 
+            // txtGroupName
+            // 
+            this.txtGroupName.Location = new System.Drawing.Point(221, 71);
+            this.txtGroupName.Name = "txtGroupName";
+            this.txtGroupName.Size = new System.Drawing.Size(191, 21);
+            this.txtGroupName.TabIndex = 11;
+            // 
+            // txtIDGroup
+            // 
+            this.txtIDGroup.Location = new System.Drawing.Point(221, 39);
+            this.txtIDGroup.Name = "txtIDGroup";
+            this.txtIDGroup.Size = new System.Drawing.Size(191, 21);
+            this.txtIDGroup.TabIndex = 10;
             // 
             // comboBox2
             // 
@@ -196,21 +210,6 @@
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
-            // 
-            // txtIDGroup
-            // 
-            this.txtIDGroup.Location = new System.Drawing.Point(221, 39);
-            this.txtIDGroup.Name = "txtIDGroup";
-            this.txtIDGroup.Size = new System.Drawing.Size(191, 21);
-            this.txtIDGroup.TabIndex = 10;
-
-            // 
-            // txtGroupName
-            // 
-            this.txtGroupName.Location = new System.Drawing.Point(221, 71);
-            this.txtGroupName.Name = "txtGroupName";
-            this.txtGroupName.Size = new System.Drawing.Size(191, 21);
-            this.txtGroupName.TabIndex = 11;
             // 
             // frmAddGroupForSubject
             // 

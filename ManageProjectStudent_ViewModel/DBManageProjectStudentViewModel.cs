@@ -32,7 +32,7 @@ namespace ManageProjectStudent_ViewModel
         public DbSet<TeachAndStudy> TeachAndStudies { get; set; }
         public DbSet<TrainingProgramModel> TrainingProgramModels { get; set; }
         public DbSet<FacultyModel> FacultyModels { get; set; }
-
+        public DbSet<CourseModel> CourseModels { get; set; }
 
     }
 }

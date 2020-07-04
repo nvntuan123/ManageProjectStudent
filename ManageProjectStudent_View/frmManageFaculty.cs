@@ -7,7 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid.Views.Grid.Drawing;
 using ManageProjectStudent_Interface;
+using ManageProjectStudent_Model;
+using ManageProjectStudent_ViewModel;
 using Unity;
 
 namespace ManageProjectStudent_View
@@ -20,5 +25,6 @@ namespace ManageProjectStudent_View
             InitializeComponent();
             txtIDFaculty.KeyPress += new KeyPressEventHandler(IMF.txtIDFaculty_KeyPress);
         }
+       
     }
 }

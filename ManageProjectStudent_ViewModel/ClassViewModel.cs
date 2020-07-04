@@ -27,7 +27,8 @@ namespace ManageProjectStudent_ViewModel
                               {
                                   StrClassID = x.StrClassID,
                                   StrClassName = x.StrClassName,
-                                  StrFacultyID = x.StrFacultyID
+                                  StrFacultyID = x.StrFacultyID,
+                                  StrCourseID = x.StrCourseID
                               }).ToList();
                 return new BindingList<ClassModel>(Result);
             }
@@ -71,6 +72,7 @@ namespace ManageProjectStudent_ViewModel
                 {
                     ClassToUpdate.StrClassName = classModel.StrClassName;
                     ClassToUpdate.StrFacultyID = classModel.StrFacultyID;
+                    ClassToUpdate.StrCourseID = classModel.StrCourseID;
 
                     return (_Context.SaveChanges() != 0);
                 }

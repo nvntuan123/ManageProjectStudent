@@ -14,7 +14,7 @@ namespace ManageProjectStudent_Model
         private string _StrClassID;
         private string _StrClassName;
         private string _StrFacultyID;
-
+        private string _StrCourseID;
 
         [Key]
         [Column("ClassID", TypeName = "char", Order = 0)]
@@ -30,8 +30,13 @@ namespace ManageProjectStudent_Model
         [StringLength(10)]
         public string StrFacultyID { get => _StrFacultyID; set => _StrFacultyID = value; }
 
+        [Column("Course", TypeName = "char", Order = 4)]
+        [StringLength(10)]
+        public string StrCourseID { get => _StrCourseID; set => _StrCourseID = value; }
+
         // Khai bao khoa ngoai 
         public virtual FacultyModel FacultyModel { get; set; }
+        public virtual CourseModel CourseModel { get; set; }
 
         //Tao moi lien ket
         public ICollection<StudentModel> StudentModels { get; set; }

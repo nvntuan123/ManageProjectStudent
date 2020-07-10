@@ -339,6 +339,14 @@ namespace ManageProjectStudent_View
             {
                 DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa nhập Chứng minh nhân dân", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else if (_Staff.checkStaffID(txtID.Text) == true)
+            {
+                DevExpress.XtraEditors.XtraMessageBox.Show("Mã số nhân viên bị trùng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (_Staff.checkCardID(txtID.Text) == true)
+            {
+                DevExpress.XtraEditors.XtraMessageBox.Show("CMND bị trùng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             else if (dteBirthday.EditValue == null)
             {
                 DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa chọn Ngày sinh", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

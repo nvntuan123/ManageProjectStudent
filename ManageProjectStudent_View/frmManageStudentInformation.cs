@@ -284,6 +284,14 @@ namespace ManageProjectStudent_View
             {
                 DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa nhập tên Sinh viên", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else if (_Student.checkStudentID(txtID.Text)== true) 
+            {
+                DevExpress.XtraEditors.XtraMessageBox.Show("Mã Sinh viên bị trùng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (_Student.checkCardID(txtIDCard.Text) == true)
+            {
+                DevExpress.XtraEditors.XtraMessageBox.Show("CMND bị trùng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             else if (dteBirthday.EditValue == null)
             {
                 DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa chọn Ngày sinh", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

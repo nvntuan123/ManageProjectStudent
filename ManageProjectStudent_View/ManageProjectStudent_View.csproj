@@ -114,6 +114,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="EPPlus, Version=5.2.0.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.5.2.0\lib\net45\EPPlus.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI">
       <HintPath>D:\IT\PhanMem\Winform\Khoa CShap Winform\kem 1-3 project winform DHSP\Project - Copy\Project\Project\ManageProjectStudent_GUI\ManageProjectStudent_GUI\bin\Debug\Guna.UI.dll</HintPath>
     </Reference>
@@ -129,12 +132,16 @@
     <Reference Include="JTextBox2">
       <HintPath>D:\IT\PhanMem\Winform\Khoa CShap Winform\kem 1-3 project winform DHSP\Project - Copy\Project\Project\ManageProjectStudent_GUI\ManageProjectStudent_GUI\bin\Debug\JTextBox2.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -200,23 +207,17 @@
     <Compile Include="frmManageCourse.Designer.cs">
       <DependentUpon>frmManageCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManageFaculty.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmManageFaculty.Designer.cs">
-      <DependentUpon>frmManageFaculty.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmManageFacultyMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmManageFacultyMain.Designer.cs">
-      <DependentUpon>frmManageFacultyMain.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmManageLecturerInformation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmManageLecturerInformation.Designer.cs">
       <DependentUpon>frmManageLecturerInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageProject.Designer.cs">
+      <DependentUpon>frmManageProject.cs</DependentUpon>
     </Compile>
     <Compile Include="frmManageStudentInformation.cs">
       <SubType>Form</SubType>
@@ -237,6 +238,7 @@
       <DependentUpon>frmManageSubjectMain.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemeColor.cs" />
+    <Compile Include="Util.cs" />
     <EmbeddedResource Include="frmAddGroupForSubject.resx">
       <DependentUpon>frmAddGroupForSubject.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,12 +259,6 @@
     </Compile>
     <Compile Include="frmManageMultiLanguage.Designer.cs">
       <DependentUpon>frmManageMultiLanguage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmManageProject.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmManageProject.Designer.cs">
-      <DependentUpon>frmManageProject.cs</DependentUpon>
     </Compile>
     <Compile Include="frmManageProjectMain.cs">
       <SubType>Form</SubType>
@@ -305,14 +301,11 @@
     <EmbeddedResource Include="frmManageCourse.resx">
       <DependentUpon>frmManageCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManageFaculty.resx">
-      <DependentUpon>frmManageFaculty.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmManageFacultyMain.resx">
-      <DependentUpon>frmManageFacultyMain.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmManageLecturerInformation.resx">
       <DependentUpon>frmManageLecturerInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageProject.resx">
+      <DependentUpon>frmManageProject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmManageStudentInformation.resx">
       <DependentUpon>frmManageStudentInformation.cs</DependentUpon>
@@ -322,9 +315,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmManageMultiLanguage.resx">
       <DependentUpon>frmManageMultiLanguage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmManageProject.resx">
-      <DependentUpon>frmManageProject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmManageProjectMain.resx">
       <DependentUpon>frmManageProjectMain.cs</DependentUpon>
@@ -501,6 +491,9 @@
     <Content Include="Resource\Image\user_30px.png" />
     <Content Include="Resource\Image\user_50px.png" />
     <Content Include="Resource\Image\user_manual_35px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="File\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

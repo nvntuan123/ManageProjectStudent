@@ -28,7 +28,9 @@ namespace ManageProjectStudent_ViewModel
                                   StrTaskID = x.StrTaskID,
                                   StrTaskName = x.StrTaskName,
                                   DtStartDay = x.DtStartDay,
-                                  DtEndDay = x.DtEndDay
+                                  DtEndDay = x.DtEndDay,
+                                  StrFileName = x.StrFileName,
+                                  StrLinkFile = x.StrLinkFile
                               }).ToList();
                 return new BindingList<ProjectTaskModel>(Result);
             }
@@ -49,6 +51,25 @@ namespace ManageProjectStudent_ViewModel
             {
                 var Result = _Context.ProjectTaskModels.Select(c => c.StrTaskID).ToList();
                 return Result;
+            }
+        }
+        public bool addLinkFile(ProjectTaskModel projectTask)
+        {
+             try
+            {
+                var ProjectTaskToUpdate = _Context.ProjectTaskModels.SingleOrDefault
+                    (x => x.StrTaskID == projectTask.StrTaskID);
+                if (ProjectTaskToUpdate != null)
+                {
+                    ProjectTaskToUpdate.StrFileName = projectTask.StrFileName;
+                    ProjectTaskToUpdate.StrLinkFile = projectTask.StrLinkFile;               
+                    return (_Context.SaveChanges() != 0);
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
             }
         }
         public bool addNewProjectTask(ProjectTaskModel projectTask)

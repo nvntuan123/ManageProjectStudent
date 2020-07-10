@@ -116,6 +116,9 @@ namespace ManageProjectStudent_ViewModel
             }
             return "1";
         }
+
+        public static bool _bCheckLoginStudent =false;
+        public static bool _bCheckLoginLecturer =false;
     }
     #endregion
 }

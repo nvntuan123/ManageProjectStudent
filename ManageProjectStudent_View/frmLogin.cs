@@ -1,14 +1,11 @@
 ﻿using ManageProjectStudent_Interface;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Unity;
+using ManageProjectStudent_Model;
+using ManageProjectStudent_ViewModel;
+using System.Drawing;
 
 namespace ManageProjectStudent_View
 {
@@ -21,38 +18,35 @@ namespace ManageProjectStudent_View
 
         }
         #region Properties
-        private IStaff _Staff = Config.Container.Resolve<IStaff>();
-        private IStudent _Student = Config.Container.Resolve<IStudent>();
+        public static IStudent Student = Config.Container.Resolve<IStudent>();
+        public static IStaff Lecturer = Config.Container.Resolve<IStaff>();
+        #endregion
+
+        #region Event
 
         #endregion
-        private void gunaGradientButton2_Click(object sender, EventArgs e)
+
+        private void frmLogin_Load(object sender, EventArgs e)
         {
-            this.Close();
+            this.Visible = false;
+            Util.EndAnimate(this, Util.Effect.Center, 150, 180);
+
+            txtUsers.TabIndex = 0;
+            txtPassword.TabIndex = 1;
+            btnLogin.TabIndex = 2;
+            btnExit.TabIndex = 3;
+
+            lblError.Visible = false;
+            txtUsers.Focus();
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            if(Student.checkStudentID(txtUsers.Text)==true && Student.checkCardID(txtPassword.Text)==true)
+            {
 
-            if (_Staff.checkStaffID(this.txtUsers.Text) == true || _Student.checkStudentID(this.txtUsers.Text) == true)
-            {
-                if (_Staff.checkCardID(txtPassword.Text) == true || _Student.checkCardID(txtPassword.Text) == true)
-                {
-                    this.Close();
-                    frmHome frmHome = new frmHome();
-                    frmHome.ShowDialog();
-                }
-                else
-                {
-                    txtPassword.Clear();
-                    MessageBox.Show("Sai Mat Khau");
-                }
-            }
-            else
-            {
-                txtUsers.Clear();
-                MessageBox.Show("Tên Đăng Nhập Sai");
-            }
-            // if(this.txtUsers.Text == "Admin" && txtPassword.Text ==)
+            }    
         }
     }
 }

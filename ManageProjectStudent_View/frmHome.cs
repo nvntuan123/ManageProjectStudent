@@ -96,7 +96,7 @@ namespace ManageProjectStudent_View
 
         private void itemManageMultiLanguage_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            //this.Hide();
+            this.Hide();
             frmManageLanguageMain frmManageLanguageMain = new frmManageLanguageMain();
             frmManageLanguageMain.ShowDialog();
             this.Close();

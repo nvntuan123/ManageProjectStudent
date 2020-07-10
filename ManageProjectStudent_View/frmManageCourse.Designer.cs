@@ -35,6 +35,7 @@
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btnReLoad = new System.Windows.Forms.Button();
             this.btnExitFormManageCourse = new System.Windows.Forms.Button();
             this.btnExitFormDecentralization = new System.Windows.Forms.Button();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -50,20 +51,19 @@
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.gcInformation = new DevExpress.XtraEditors.GroupControl();
+            this.grpCourse = new DevExpress.XtraEditors.GroupControl();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.txtIDCourse = new System.Windows.Forms.TextBox();
-            this.dtEndYear = new DevExpress.XtraEditors.DateEdit();
-            this.dtStartYear = new DevExpress.XtraEditors.DateEdit();
+            this.dteEndYear = new DevExpress.XtraEditors.DateEdit();
+            this.dteStartYear = new DevExpress.XtraEditors.DateEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcListCourse = new DevExpress.XtraGrid.GridControl();
+            this.gvListCourse = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colCourseID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colYearStart = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colYearEnd = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelMenu.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -71,14 +71,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcInformation)).BeginInit();
-            this.gcInformation.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtEndYear.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtEndYear.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtStartYear.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtStartYear.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpCourse)).BeginInit();
+            this.grpCourse.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dteEndYear.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteEndYear.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteStartYear.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteStartYear.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcListCourse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvListCourse)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -117,6 +117,7 @@
             this.btnUpdate.TabIndex = 123;
             this.btnUpdate.TabStop = false;
             this.btnUpdate.Text = "Sửa Khóa Học";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // panelLogo
             // 
@@ -152,6 +153,7 @@
             this.btnDelete.TabIndex = 122;
             this.btnDelete.TabStop = false;
             this.btnDelete.Text = "Xóa Khóa Học";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -178,10 +180,12 @@
             this.btnAdd.TabIndex = 121;
             this.btnAdd.TabStop = false;
             this.btnAdd.Text = "Thêm Khóa Học";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(137)))));
+            this.panelTitleBar.Controls.Add(this.btnReLoad);
             this.panelTitleBar.Controls.Add(this.btnExitFormManageCourse);
             this.panelTitleBar.Controls.Add(this.btnExitFormDecentralization);
             this.panelTitleBar.Controls.Add(this.groupControl1);
@@ -192,6 +196,22 @@
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(927, 87);
             this.panelTitleBar.TabIndex = 7;
+            // 
+            // btnReLoad
+            // 
+            this.btnReLoad.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnReLoad.FlatAppearance.BorderSize = 0;
+            this.btnReLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReLoad.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReLoad.ForeColor = System.Drawing.Color.White;
+            this.btnReLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnReLoad.Image")));
+            this.btnReLoad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReLoad.Location = new System.Drawing.Point(0, 0);
+            this.btnReLoad.Name = "btnReLoad";
+            this.btnReLoad.Size = new System.Drawing.Size(70, 87);
+            this.btnReLoad.TabIndex = 12;
+            this.btnReLoad.UseVisualStyleBackColor = true;
+            this.btnReLoad.Click += new System.EventHandler(this.btnReLoad_Click);
             // 
             // btnExitFormManageCourse
             // 
@@ -206,6 +226,7 @@
             this.btnExitFormManageCourse.Size = new System.Drawing.Size(70, 87);
             this.btnExitFormManageCourse.TabIndex = 11;
             this.btnExitFormManageCourse.UseVisualStyleBackColor = true;
+            this.btnExitFormManageCourse.Click += new System.EventHandler(this.btnExitFormManageCourse_Click);
             // 
             // btnExitFormDecentralization
             // 
@@ -345,19 +366,26 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Quản lý khóa học";
             // 
-            // gcInformation
+            // grpCourse
             // 
-            this.gcInformation.Controls.Add(this.btnSave);
-            this.gcInformation.Controls.Add(this.txtIDCourse);
-            this.gcInformation.Controls.Add(this.dtEndYear);
-            this.gcInformation.Controls.Add(this.dtStartYear);
-            this.gcInformation.Controls.Add(this.label6);
-            this.gcInformation.Controls.Add(this.label7);
-            this.gcInformation.Controls.Add(this.label8);
-            this.gcInformation.Location = new System.Drawing.Point(180, 93);
-            this.gcInformation.Name = "gcInformation";
-            this.gcInformation.Size = new System.Drawing.Size(909, 266);
-            this.gcInformation.TabIndex = 25;
+            this.grpCourse.Controls.Add(this.txtID);
+            this.grpCourse.Controls.Add(this.btnSave);
+            this.grpCourse.Controls.Add(this.dteEndYear);
+            this.grpCourse.Controls.Add(this.dteStartYear);
+            this.grpCourse.Controls.Add(this.label6);
+            this.grpCourse.Controls.Add(this.label7);
+            this.grpCourse.Controls.Add(this.label8);
+            this.grpCourse.Location = new System.Drawing.Point(180, 93);
+            this.grpCourse.Name = "grpCourse";
+            this.grpCourse.Size = new System.Drawing.Size(909, 266);
+            this.grpCourse.TabIndex = 25;
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(357, 44);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(314, 21);
+            this.txtID.TabIndex = 125;
             // 
             // btnSave
             // 
@@ -382,155 +410,145 @@
             this.btnSave.TabIndex = 124;
             this.btnSave.TabStop = false;
             this.btnSave.Text = "Lưu";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // txtIDCourse
+            // dteEndYear
             // 
-            this.txtIDCourse.Location = new System.Drawing.Point(360, 43);
-            this.txtIDCourse.Name = "txtIDCourse";
-            this.txtIDCourse.Size = new System.Drawing.Size(311, 21);
-            this.txtIDCourse.TabIndex = 99;
-            // 
-            // dtEndYear
-            // 
-            this.dtEndYear.EditValue = null;
-            this.dtEndYear.Location = new System.Drawing.Point(357, 127);
-            this.dtEndYear.Name = "dtEndYear";
-            this.dtEndYear.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dteEndYear.EditValue = null;
+            this.dteEndYear.Location = new System.Drawing.Point(357, 127);
+            this.dteEndYear.Name = "dteEndYear";
+            this.dteEndYear.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtEndYear.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dteEndYear.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtEndYear.Size = new System.Drawing.Size(314, 20);
-            this.dtEndYear.TabIndex = 98;
+            this.dteEndYear.Size = new System.Drawing.Size(314, 20);
+            this.dteEndYear.TabIndex = 98;
             // 
-            // dtStartYear
+            // dteStartYear
             // 
-            this.dtStartYear.EditValue = null;
-            this.dtStartYear.Location = new System.Drawing.Point(357, 86);
-            this.dtStartYear.Name = "dtStartYear";
-            this.dtStartYear.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dteStartYear.EditValue = null;
+            this.dteStartYear.Location = new System.Drawing.Point(357, 86);
+            this.dteStartYear.Name = "dteStartYear";
+            this.dteStartYear.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtStartYear.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dteStartYear.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtStartYear.Size = new System.Drawing.Size(314, 20);
-            this.dtStartYear.TabIndex = 97;
+            this.dteStartYear.Size = new System.Drawing.Size(314, 20);
+            this.dteStartYear.TabIndex = 97;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(234, 128);
+            this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(238, 127);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 16);
+            this.label6.Size = new System.Drawing.Size(94, 17);
             this.label6.TabIndex = 4;
-            this.label6.Text = "Year End";
+            this.label6.Text = "Năm kết thúc";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(234, 87);
+            this.label7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(238, 89);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 16);
+            this.label7.Size = new System.Drawing.Size(91, 17);
             this.label7.TabIndex = 2;
-            this.label7.Text = "Year Start";
+            this.label7.Text = "Năm bắt đầu";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(234, 44);
+            this.label8.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(236, 46);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 16);
+            this.label8.Size = new System.Drawing.Size(90, 17);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Course ID";
+            this.label8.Text = "Mã khóa học";
             // 
-            // gridControl1
+            // gcListCourse
             // 
-            this.gridControl1.Location = new System.Drawing.Point(177, 365);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(909, 271);
-            this.gridControl1.TabIndex = 125;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gcListCourse.Location = new System.Drawing.Point(177, 365);
+            this.gcListCourse.MainView = this.gvListCourse;
+            this.gcListCourse.Name = "gcListCourse";
+            this.gcListCourse.Size = new System.Drawing.Size(909, 271);
+            this.gcListCourse.TabIndex = 125;
+            this.gcListCourse.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvListCourse});
             // 
-            // gridView1
+            // gvListCourse
             // 
-            this.gridView1.Appearance.EvenRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gridView1.Appearance.EvenRow.Options.UseFont = true;
-            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView1.Appearance.OddRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gridView1.Appearance.OddRow.Options.UseFont = true;
-            this.gridView1.Appearance.ViewCaption.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView1.Appearance.ViewCaption.Options.UseFont = true;
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.OptionsView.ShowViewCaption = true;
-            this.gridView1.ViewCaption = "Danh sách khóa học";
+            this.gvListCourse.Appearance.EvenRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvListCourse.Appearance.EvenRow.Options.UseFont = true;
+            this.gvListCourse.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvListCourse.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gvListCourse.Appearance.OddRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvListCourse.Appearance.OddRow.Options.UseFont = true;
+            this.gvListCourse.Appearance.ViewCaption.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvListCourse.Appearance.ViewCaption.Options.UseFont = true;
+            this.gvListCourse.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colCourseID,
+            this.colYearStart,
+            this.colYearEnd});
+            this.gvListCourse.GridControl = this.gcListCourse;
+            this.gvListCourse.Name = "gvListCourse";
+            this.gvListCourse.OptionsBehavior.Editable = false;
+            this.gvListCourse.OptionsSelection.MultiSelect = true;
+            this.gvListCourse.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvListCourse.OptionsView.EnableAppearanceOddRow = true;
+            this.gvListCourse.OptionsView.ShowAutoFilterRow = true;
+            this.gvListCourse.OptionsView.ShowGroupPanel = false;
+            this.gvListCourse.OptionsView.ShowViewCaption = true;
+            this.gvListCourse.ViewCaption = "Danh sách khóa học";
+            this.gvListCourse.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvListCourse_CustomDrawRowIndicator);
+            this.gvListCourse.SelectionChanged += new DevExpress.Data.SelectionChangedEventHandler(this.gvListCourse_SelectionChanged);
+            this.gvListCourse.RowCountChanged += new System.EventHandler(this.gvListCourse_RowCountChanged);
             // 
-            // gridColumn1
+            // colCourseID
             // 
-            this.gridColumn1.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gridColumn1.AppearanceCell.Options.UseFont = true;
-            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gridColumn1.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn1.Caption = "ID";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.colCourseID.Caption = "Mã khóa học";
+            this.colCourseID.FieldName = "StrCourseID";
+            this.colCourseID.Name = "colCourseID";
+            this.colCourseID.Visible = true;
+            this.colCourseID.VisibleIndex = 0;
             // 
-            // gridColumn2
+            // colYearStart
             // 
-            this.gridColumn2.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gridColumn2.AppearanceCell.Options.UseFont = true;
-            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gridColumn2.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn2.Caption = "Year Start";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.colYearStart.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colYearStart.AppearanceCell.Options.UseFont = true;
+            this.colYearStart.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colYearStart.AppearanceHeader.Options.UseFont = true;
+            this.colYearStart.Caption = "Năm bắt đầu";
+            this.colYearStart.FieldName = "DtStartYear";
+            this.colYearStart.Name = "colYearStart";
+            this.colYearStart.Visible = true;
+            this.colYearStart.VisibleIndex = 1;
             // 
-            // gridColumn3
+            // colYearEnd
             // 
-            this.gridColumn3.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gridColumn3.AppearanceCell.Options.UseFont = true;
-            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gridColumn3.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn3.Caption = "Year End";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gridColumn4.AppearanceCell.Options.UseFont = true;
-            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gridColumn4.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn4.Caption = "Status";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
+            this.colYearEnd.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colYearEnd.AppearanceCell.Options.UseFont = true;
+            this.colYearEnd.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colYearEnd.AppearanceHeader.Options.UseFont = true;
+            this.colYearEnd.Caption = "Năm kết thúc";
+            this.colYearEnd.FieldName = "DtEndYear";
+            this.colYearEnd.Name = "colYearEnd";
+            this.colYearEnd.Visible = true;
+            this.colYearEnd.VisibleIndex = 2;
             // 
             // frmManageCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 648);
-            this.Controls.Add(this.gridControl1);
-            this.Controls.Add(this.gcInformation);
+            this.Controls.Add(this.gcListCourse);
+            this.Controls.Add(this.grpCourse);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmManageCourse";
             this.Text = "frmManageCourse";
+            this.Load += new System.EventHandler(this.frmManageCourse_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
@@ -540,15 +558,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcInformation)).EndInit();
-            this.gcInformation.ResumeLayout(false);
-            this.gcInformation.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtEndYear.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtEndYear.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtStartYear.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtStartYear.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpCourse)).EndInit();
+            this.grpCourse.ResumeLayout(false);
+            this.grpCourse.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dteEndYear.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteEndYear.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteStartYear.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteStartYear.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcListCourse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvListCourse)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -558,7 +576,6 @@
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelTitleBar;
-        private System.Windows.Forms.Button btnExitFormManageCourse;
         private System.Windows.Forms.Button btnExitFormDecentralization;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.SimpleButton simpleButton7;
@@ -573,22 +590,23 @@
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTitle;
-        private DevExpress.XtraEditors.GroupControl gcInformation;
+        private DevExpress.XtraEditors.GroupControl grpCourse;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private DevExpress.XtraEditors.DateEdit dtEndYear;
-        private DevExpress.XtraEditors.DateEdit dtStartYear;
-        private System.Windows.Forms.TextBox txtIDCourse;
+        private DevExpress.XtraEditors.DateEdit dteEndYear;
+        private DevExpress.XtraEditors.DateEdit dteStartYear;
         private DevExpress.XtraEditors.SimpleButton btnUpdate;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.SimpleButton btnAdd;
         private DevExpress.XtraEditors.SimpleButton btnSave;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.GridControl gcListCourse;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvListCourse;
+        private DevExpress.XtraGrid.Columns.GridColumn colYearStart;
+        private DevExpress.XtraGrid.Columns.GridColumn colYearEnd;
+        private System.Windows.Forms.Button btnReLoad;
+        private System.Windows.Forms.Button btnExitFormManageCourse;
+        private System.Windows.Forms.TextBox txtID;
+        private DevExpress.XtraGrid.Columns.GridColumn colCourseID;
     }
 }

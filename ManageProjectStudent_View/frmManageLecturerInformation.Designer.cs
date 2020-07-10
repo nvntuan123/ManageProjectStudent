@@ -736,16 +736,11 @@
             // 
             // colStatus
             // 
-            this.colStatus.AppearanceCell.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colStatus.AppearanceCell.Options.UseFont = true;
-            this.colStatus.AppearanceHeader.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colStatus.AppearanceHeader.Options.UseFont = true;
-            this.colStatus.Caption = "Trạng Thái";
+            this.colStatus.Caption = "Trạng thái";
             this.colStatus.FieldName = "BStatus";
             this.colStatus.Name = "colStatus";
             this.colStatus.Visible = true;
             this.colStatus.VisibleIndex = 9;
-            this.colStatus.Width = 71;
             // 
             // frmManageLecturerInformation
             // 
@@ -823,7 +818,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colEmail;
         private DevExpress.XtraGrid.Columns.GridColumn colFaculty;
         private DevExpress.XtraGrid.Columns.GridColumn ColSex;
-        private DevExpress.XtraGrid.Columns.GridColumn colStatus;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit LookUpEdit_Faculty;
         private DevExpress.XtraEditors.SimpleButton btnUpdate;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
@@ -831,5 +825,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnReLoad;
+        private DevExpress.XtraGrid.Columns.GridColumn colStatus;
     }
 }

@@ -29,210 +29,391 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSubmitProject));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtAuthor = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btnCloseChildForm = new System.Windows.Forms.Button();
+            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.LookUpEdit_Subject = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.LookUpEdit_Lecturer = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.colLinkFile = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gvListLink = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colTaskName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LookUpEdit_Task = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.colProjectName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LookUpEdit_Project = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.colFileName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcListTask = new DevExpress.XtraGrid.GridControl();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtFilePath = new System.Windows.Forms.TextBox();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.txtFileName = new System.Windows.Forms.TextBox();
+            this.txtFolderPath = new System.Windows.Forms.TextBox();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.btnChooseFolder = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnChooseFile = new DevExpress.XtraEditors.SimpleButton();
-            this.gcPhanQuyen = new DevExpress.XtraGrid.GridControl();
-            this.gvChooseTask = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colChucNang = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEdit_Frm = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.colThem = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemCheckEdit_Them = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.repositoryItemCheckEdit_Sua = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.repositoryItemCheckEdit_Xoa = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.repositoryItemCheckEdit_Xem = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.repositoryItemCheckEdit_Full = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.btnChoosFile = new DevExpress.XtraEditors.SimpleButton();
+            this.grpSubmit = new DevExpress.XtraEditors.GroupControl();
+            this.lkeProject = new DevExpress.XtraEditors.LookUpEdit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lkeTask = new DevExpress.XtraEditors.LookUpEdit();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
-            this.groupControl2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.panelTitleBar.SuspendLayout();
+            this.panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Subject)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Lecturer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvListLink)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Task)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Project)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcListTask)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gcPhanQuyen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvChooseTask)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit_Frm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit_Them)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit_Sua)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit_Xoa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit_Xem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit_Full)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpSubmit)).BeginInit();
+            this.grpSubmit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lkeProject.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkeTask.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupControl2
+            // lblTitle
             // 
-            this.groupControl2.Controls.Add(this.simpleButton3);
-            this.groupControl2.Controls.Add(this.simpleButton2);
-            this.groupControl2.Controls.Add(this.simpleButton1);
-            this.groupControl2.Controls.Add(this.btnLuu);
-            this.groupControl2.Controls.Add(this.groupBox1);
-            this.groupControl2.Controls.Add(this.panel4);
-            this.groupControl2.Location = new System.Drawing.Point(45, 176);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(909, 345);
-            this.groupControl2.TabIndex = 22;
-            this.groupControl2.Text = "Nộp file";
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(423, 31);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(194, 22);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Nộp nhiệm vụ đồ án";
             // 
-            // simpleButton3
+            // panelTitleBar
             // 
-            this.simpleButton3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(137)))));
+            this.panelTitleBar.Controls.Add(this.btnCloseChildForm);
+            this.panelTitleBar.Controls.Add(this.lblTitle);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelTitleBar.Location = new System.Drawing.Point(174, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(999, 87);
+            this.panelTitleBar.TabIndex = 32;
+            // 
+            // btnCloseChildForm
+            // 
+            this.btnCloseChildForm.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
+            this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseChildForm.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseChildForm.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseChildForm.Image")));
+            this.btnCloseChildForm.Location = new System.Drawing.Point(0, 0);
+            this.btnCloseChildForm.Name = "btnCloseChildForm";
+            this.btnCloseChildForm.Size = new System.Drawing.Size(75, 87);
+            this.btnCloseChildForm.TabIndex = 1;
+            this.btnCloseChildForm.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton3.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(137)))));
-            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.simpleButton3.Appearance.ForeColor = System.Drawing.Color.White;
-            this.simpleButton3.Appearance.Options.UseBackColor = true;
-            this.simpleButton3.Appearance.Options.UseFont = true;
-            this.simpleButton3.Appearance.Options.UseForeColor = true;
-            this.simpleButton3.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
-            this.simpleButton3.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.simpleButton3.AppearanceHovered.Options.UseBackColor = true;
-            this.simpleButton3.AppearanceHovered.Options.UseFont = true;
-            this.simpleButton3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.simpleButton3.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton3.Location = new System.Drawing.Point(601, 275);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(117, 28);
-            this.simpleButton3.TabIndex = 104;
-            this.simpleButton3.TabStop = false;
-            this.simpleButton3.Text = "Lưu";
+            this.btnUpdate.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.btnUpdate.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnUpdate.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Appearance.Options.UseBackColor = true;
+            this.btnUpdate.Appearance.Options.UseFont = true;
+            this.btnUpdate.Appearance.Options.UseForeColor = true;
+            this.btnUpdate.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
+            this.btnUpdate.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnUpdate.AppearanceHovered.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.AppearanceHovered.Options.UseBackColor = true;
+            this.btnUpdate.AppearanceHovered.Options.UseFont = true;
+            this.btnUpdate.AppearanceHovered.Options.UseForeColor = true;
+            this.btnUpdate.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.Image")));
+            this.btnUpdate.Location = new System.Drawing.Point(0, 481);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(171, 64);
+            this.btnUpdate.TabIndex = 19;
+            this.btnUpdate.TabStop = false;
+            this.btnUpdate.Text = "Nộp và Sửa";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // simpleButton2
+            // panelLogo
             // 
-            this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(137)))));
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.simpleButton2.Appearance.ForeColor = System.Drawing.Color.White;
-            this.simpleButton2.Appearance.Options.UseBackColor = true;
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Appearance.Options.UseForeColor = true;
-            this.simpleButton2.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
-            this.simpleButton2.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.simpleButton2.AppearanceHovered.Options.UseBackColor = true;
-            this.simpleButton2.AppearanceHovered.Options.UseFont = true;
-            this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.simpleButton2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton2.Location = new System.Drawing.Point(316, 275);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(117, 28);
-            this.simpleButton2.TabIndex = 103;
-            this.simpleButton2.TabStop = false;
-            this.simpleButton2.Text = "Sửa ";
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(37)))), ((int)(((byte)(60)))));
+            this.panelLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelLogo.BackgroundImage")));
+            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(174, 87);
+            this.panelLogo.TabIndex = 5;
             // 
-            // simpleButton1
+            // panelMenu
             // 
-            this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(137)))));
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.White;
-            this.simpleButton1.Appearance.Options.UseBackColor = true;
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Appearance.Options.UseForeColor = true;
-            this.simpleButton1.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
-            this.simpleButton1.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.simpleButton1.AppearanceHovered.Options.UseBackColor = true;
-            this.simpleButton1.AppearanceHovered.Options.UseFont = true;
-            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.simpleButton1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(461, 275);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(117, 28);
-            this.simpleButton1.TabIndex = 102;
-            this.simpleButton1.TabStop = false;
-            this.simpleButton1.Text = "Xóa";
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(77)))));
+            this.panelMenu.Controls.Add(this.btnUpdate);
+            this.panelMenu.Controls.Add(this.panelLogo);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(174, 639);
+            this.panelMenu.TabIndex = 31;
             // 
-            // btnLuu
+            // LookUpEdit_Subject
             // 
-            this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLuu.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(137)))));
-            this.btnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnLuu.Appearance.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Appearance.Options.UseBackColor = true;
-            this.btnLuu.Appearance.Options.UseFont = true;
-            this.btnLuu.Appearance.Options.UseForeColor = true;
-            this.btnLuu.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
-            this.btnLuu.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnLuu.AppearanceHovered.Options.UseBackColor = true;
-            this.btnLuu.AppearanceHovered.Options.UseFont = true;
-            this.btnLuu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnLuu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnLuu.Location = new System.Drawing.Point(163, 275);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(117, 28);
-            this.btnLuu.TabIndex = 101;
-            this.btnLuu.TabStop = false;
-            this.btnLuu.Text = "Nộp";
+            this.LookUpEdit_Subject.AutoHeight = false;
+            this.LookUpEdit_Subject.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LookUpEdit_Subject.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colSubjectName", "Tên môn học"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colSubjectID", "Mã môn học", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.LookUpEdit_Subject.DisplayMember = "StrSubjectName";
+            this.LookUpEdit_Subject.Name = "LookUpEdit_Subject";
+            this.LookUpEdit_Subject.ValueMember = "StrSubjectID";
             // 
-            // groupBox1
+            // LookUpEdit_Lecturer
             // 
-            this.groupBox1.Controls.Add(this.txtAuthor);
-            this.groupBox1.Controls.Add(this.txtName);
-            this.groupBox1.Controls.Add(this.labelControl2);
-            this.groupBox1.Controls.Add(this.labelControl1);
-            this.groupBox1.Location = new System.Drawing.Point(428, 36);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(460, 175);
-            this.groupBox1.TabIndex = 28;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Enter Information";
+            this.LookUpEdit_Lecturer.AutoHeight = false;
+            this.LookUpEdit_Lecturer.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LookUpEdit_Lecturer.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colLecturerName", "Tên giảng viên"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colLecturerID", "Mã Giảng viên", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.LookUpEdit_Lecturer.DisplayMember = "StrStaffName";
+            this.LookUpEdit_Lecturer.Name = "LookUpEdit_Lecturer";
+            this.LookUpEdit_Lecturer.ValueMember = "StrStaffID";
             // 
-            // txtAuthor
+            // colLinkFile
             // 
-            this.txtAuthor.Location = new System.Drawing.Point(173, 105);
-            this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(265, 21);
-            this.txtAuthor.TabIndex = 4;
+            this.colLinkFile.Caption = "Link File";
+            this.colLinkFile.FieldName = "StrLinkFile";
+            this.colLinkFile.Name = "colLinkFile";
+            this.colLinkFile.Visible = true;
+            this.colLinkFile.VisibleIndex = 3;
+            this.colLinkFile.Width = 250;
             // 
-            // txtName
+            // gvListLink
             // 
-            this.txtName.Location = new System.Drawing.Point(173, 49);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(265, 21);
-            this.txtName.TabIndex = 3;
+            this.gvListLink.Appearance.EvenRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvListLink.Appearance.EvenRow.Options.UseBackColor = true;
+            this.gvListLink.Appearance.EvenRow.Options.UseFont = true;
+            this.gvListLink.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvListLink.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gvListLink.Appearance.OddRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvListLink.Appearance.OddRow.Options.UseBackColor = true;
+            this.gvListLink.Appearance.OddRow.Options.UseFont = true;
+            this.gvListLink.Appearance.Row.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvListLink.Appearance.Row.Options.UseFont = true;
+            this.gvListLink.Appearance.SelectedRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvListLink.Appearance.SelectedRow.Options.UseFont = true;
+            this.gvListLink.Appearance.ViewCaption.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvListLink.Appearance.ViewCaption.Options.UseFont = true;
+            this.gvListLink.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colTaskName,
+            this.colProjectName,
+            this.colFileName,
+            this.colLinkFile});
+            this.gvListLink.GridControl = this.gcListTask;
+            this.gvListLink.Name = "gvListLink";
+            this.gvListLink.OptionsBehavior.Editable = false;
+            this.gvListLink.OptionsSelection.MultiSelect = true;
+            this.gvListLink.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvListLink.OptionsView.EnableAppearanceOddRow = true;
+            this.gvListLink.OptionsView.ShowAutoFilterRow = true;
+            this.gvListLink.OptionsView.ShowGroupPanel = false;
+            this.gvListLink.OptionsView.ShowViewCaption = true;
+            this.gvListLink.ViewCaption = "Danh sách link file";
+            this.gvListLink.SelectionChanged += new DevExpress.Data.SelectionChangedEventHandler(this.gvListLink_SelectionChanged);
+            // 
+            // colTaskName
+            // 
+            this.colTaskName.Caption = "Tên task";
+            this.colTaskName.ColumnEdit = this.LookUpEdit_Task;
+            this.colTaskName.FieldName = "StrTaskID";
+            this.colTaskName.Name = "colTaskName";
+            this.colTaskName.Visible = true;
+            this.colTaskName.VisibleIndex = 0;
+            // 
+            // LookUpEdit_Task
+            // 
+            this.LookUpEdit_Task.AutoHeight = false;
+            this.LookUpEdit_Task.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LookUpEdit_Task.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colTaskName", "Tên task"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colTaskID", "Mã task")});
+            this.LookUpEdit_Task.DisplayMember = "StrTaskName";
+            this.LookUpEdit_Task.Name = "LookUpEdit_Task";
+            this.LookUpEdit_Task.ValueMember = "StrTaskID";
+            // 
+            // colProjectName
+            // 
+            this.colProjectName.Caption = "Tên đồ án";
+            this.colProjectName.ColumnEdit = this.LookUpEdit_Project;
+            this.colProjectName.FieldName = "StrProjectID";
+            this.colProjectName.Name = "colProjectName";
+            this.colProjectName.Visible = true;
+            this.colProjectName.VisibleIndex = 1;
+            // 
+            // LookUpEdit_Project
+            // 
+            this.LookUpEdit_Project.AutoHeight = false;
+            this.LookUpEdit_Project.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LookUpEdit_Project.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colProjectName", "Tên đồ án"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colProjectID", "Mã đồ án")});
+            this.LookUpEdit_Project.DisplayMember = "StrProjectName";
+            this.LookUpEdit_Project.Name = "LookUpEdit_Project";
+            this.LookUpEdit_Project.ValueMember = "StrProjectID";
+            // 
+            // colFileName
+            // 
+            this.colFileName.Caption = "Tên File";
+            this.colFileName.FieldName = "StrFileName";
+            this.colFileName.Name = "colFileName";
+            this.colFileName.Visible = true;
+            this.colFileName.VisibleIndex = 2;
+            // 
+            // gcListTask
+            // 
+            this.gcListTask.Location = new System.Drawing.Point(228, 427);
+            this.gcListTask.MainView = this.gvListLink;
+            this.gcListTask.Name = "gcListTask";
+            this.gcListTask.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.LookUpEdit_Lecturer,
+            this.LookUpEdit_Subject,
+            this.LookUpEdit_Project,
+            this.LookUpEdit_Task});
+            this.gcListTask.Size = new System.Drawing.Size(909, 183);
+            this.gcListTask.TabIndex = 30;
+            this.gcListTask.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvListLink});
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(55, 127);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(197, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Chọn biểu tượng để thêm file";
+            // 
+            // txtFilePath
+            // 
+            this.txtFilePath.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFilePath.Location = new System.Drawing.Point(628, 61);
+            this.txtFilePath.Name = "txtFilePath";
+            this.txtFilePath.ReadOnly = true;
+            this.txtFilePath.Size = new System.Drawing.Size(265, 25);
+            this.txtFilePath.TabIndex = 112;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(531, 61);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(83, 17);
+            this.labelControl3.TabIndex = 111;
+            this.labelControl3.Text = "Nơi chứa file";
+            // 
+            // txtFileName
+            // 
+            this.txtFileName.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFileName.Location = new System.Drawing.Point(628, 118);
+            this.txtFileName.Name = "txtFileName";
+            this.txtFileName.Size = new System.Drawing.Size(265, 25);
+            this.txtFileName.TabIndex = 110;
+            // 
+            // txtFolderPath
+            // 
+            this.txtFolderPath.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFolderPath.Location = new System.Drawing.Point(628, 174);
+            this.txtFolderPath.Name = "txtFolderPath";
+            this.txtFolderPath.Size = new System.Drawing.Size(265, 25);
+            this.txtFolderPath.TabIndex = 109;
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(33, 104);
+            this.labelControl2.Location = new System.Drawing.Point(567, 121);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(49, 19);
-            this.labelControl2.TabIndex = 2;
-            this.labelControl2.Text = "Tác giả";
+            this.labelControl2.Size = new System.Drawing.Size(47, 17);
+            this.labelControl2.TabIndex = 108;
+            this.labelControl2.Text = "Tên file";
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(33, 51);
+            this.labelControl1.Location = new System.Drawing.Point(544, 176);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(26, 19);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Tên";
+            this.labelControl1.Size = new System.Drawing.Size(70, 17);
+            this.labelControl1.TabIndex = 107;
+            this.labelControl1.Text = "Nơi lưu file";
+            // 
+            // btnChooseFolder
+            // 
+            this.btnChooseFolder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnChooseFolder.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.btnChooseFolder.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnChooseFolder.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnChooseFolder.Appearance.Options.UseBackColor = true;
+            this.btnChooseFolder.Appearance.Options.UseFont = true;
+            this.btnChooseFolder.Appearance.Options.UseForeColor = true;
+            this.btnChooseFolder.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
+            this.btnChooseFolder.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnChooseFolder.AppearanceHovered.Options.UseBackColor = true;
+            this.btnChooseFolder.AppearanceHovered.Options.UseFont = true;
+            this.btnChooseFolder.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnChooseFolder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnChooseFolder.ImageOptions.Image")));
+            this.btnChooseFolder.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnChooseFolder.Location = new System.Drawing.Point(265, 244);
+            this.btnChooseFolder.Name = "btnChooseFolder";
+            this.btnChooseFolder.Size = new System.Drawing.Size(131, 36);
+            this.btnChooseFolder.TabIndex = 106;
+            this.btnChooseFolder.TabStop = false;
+            this.btnChooseFolder.Text = "Chọn Folder";
+            this.btnChooseFolder.Click += new System.EventHandler(this.btnChooseFolder_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSave.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Appearance.Options.UseBackColor = true;
+            this.btnSave.Appearance.Options.UseFont = true;
+            this.btnSave.Appearance.Options.UseForeColor = true;
+            this.btnSave.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
+            this.btnSave.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSave.AppearanceHovered.Options.UseBackColor = true;
+            this.btnSave.AppearanceHovered.Options.UseFont = true;
+            this.btnSave.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
+            this.btnSave.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnSave.Location = new System.Drawing.Point(459, 244);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(133, 36);
+            this.btnSave.TabIndex = 104;
+            this.btnSave.TabStop = false;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.btnChooseFile);
+            this.panel4.Controls.Add(this.btnChoosFile);
             this.panel4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.panel4.Location = new System.Drawing.Point(24, 36);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
@@ -240,258 +421,155 @@
             this.panel4.Size = new System.Drawing.Size(288, 175);
             this.panel4.TabIndex = 27;
             // 
-            // label1
+            // btnChoosFile
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 126);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 14);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Chọn biểu tượng để thêm file";
+            this.btnChoosFile.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnChoosFile.ImageOptions.Image")));
+            this.btnChoosFile.Location = new System.Drawing.Point(102, 3);
+            this.btnChoosFile.Name = "btnChoosFile";
+            this.btnChoosFile.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnChoosFile.Size = new System.Drawing.Size(86, 104);
+            this.btnChoosFile.TabIndex = 0;
+            this.btnChoosFile.Click += new System.EventHandler(this.btnChoosFile_Click);
             // 
-            // btnChooseFile
+            // grpSubmit
             // 
-            this.btnChooseFile.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnChooseFile.ImageOptions.Image")));
-            this.btnChooseFile.Location = new System.Drawing.Point(91, 10);
-            this.btnChooseFile.Name = "btnChooseFile";
-            this.btnChooseFile.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnChooseFile.Size = new System.Drawing.Size(86, 104);
-            this.btnChooseFile.TabIndex = 0;
+            this.grpSubmit.Controls.Add(this.lkeProject);
+            this.grpSubmit.Controls.Add(this.label2);
+            this.grpSubmit.Controls.Add(this.lkeTask);
+            this.grpSubmit.Controls.Add(this.label4);
+            this.grpSubmit.Controls.Add(this.txtFilePath);
+            this.grpSubmit.Controls.Add(this.labelControl3);
+            this.grpSubmit.Controls.Add(this.txtFileName);
+            this.grpSubmit.Controls.Add(this.txtFolderPath);
+            this.grpSubmit.Controls.Add(this.labelControl2);
+            this.grpSubmit.Controls.Add(this.labelControl1);
+            this.grpSubmit.Controls.Add(this.btnChooseFolder);
+            this.grpSubmit.Controls.Add(this.btnSave);
+            this.grpSubmit.Controls.Add(this.panel4);
+            this.grpSubmit.Location = new System.Drawing.Point(228, 105);
+            this.grpSubmit.Name = "grpSubmit";
+            this.grpSubmit.Size = new System.Drawing.Size(909, 301);
+            this.grpSubmit.TabIndex = 29;
+            this.grpSubmit.Text = "Nộp file";
             // 
-            // gcPhanQuyen
+            // lkeProject
             // 
-            this.gcPhanQuyen.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
-            gridLevelNode1.RelationName = "Level1";
-            this.gcPhanQuyen.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
-            this.gcPhanQuyen.Location = new System.Drawing.Point(397, 32);
-            this.gcPhanQuyen.MainView = this.gvChooseTask;
-            this.gcPhanQuyen.Margin = new System.Windows.Forms.Padding(4);
-            this.gcPhanQuyen.Name = "gcPhanQuyen";
-            this.gcPhanQuyen.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemCheckEdit_Them,
-            this.repositoryItemCheckEdit_Sua,
-            this.repositoryItemCheckEdit_Xoa,
-            this.repositoryItemCheckEdit_Xem,
-            this.repositoryItemLookUpEdit_Frm,
-            this.repositoryItemCheckEdit_Full});
-            this.gcPhanQuyen.Size = new System.Drawing.Size(557, 126);
-            this.gcPhanQuyen.TabIndex = 21;
-            this.gcPhanQuyen.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvChooseTask});
-            // 
-            // gvChooseTask
-            // 
-            this.gvChooseTask.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.gvChooseTask.Appearance.EvenRow.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gvChooseTask.Appearance.EvenRow.Options.UseBackColor = true;
-            this.gvChooseTask.Appearance.EvenRow.Options.UseFont = true;
-            this.gvChooseTask.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gvChooseTask.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gvChooseTask.Appearance.OddRow.BackColor = System.Drawing.Color.White;
-            this.gvChooseTask.Appearance.OddRow.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gvChooseTask.Appearance.OddRow.Options.UseBackColor = true;
-            this.gvChooseTask.Appearance.OddRow.Options.UseFont = true;
-            this.gvChooseTask.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gvChooseTask.Appearance.Row.Options.UseFont = true;
-            this.gvChooseTask.Appearance.TopNewRow.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gvChooseTask.Appearance.TopNewRow.Options.UseFont = true;
-            this.gvChooseTask.Appearance.ViewCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.gvChooseTask.Appearance.ViewCaption.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gvChooseTask.Appearance.ViewCaption.Options.UseBackColor = true;
-            this.gvChooseTask.Appearance.ViewCaption.Options.UseFont = true;
-            this.gvChooseTask.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colChucNang,
-            this.colThem});
-            this.gvChooseTask.GridControl = this.gcPhanQuyen;
-            this.gvChooseTask.Name = "gvChooseTask";
-            this.gvChooseTask.NewItemRowText = "Thêm Mới";
-            this.gvChooseTask.OptionsSelection.MultiSelect = true;
-            this.gvChooseTask.OptionsView.EnableAppearanceEvenRow = true;
-            this.gvChooseTask.OptionsView.EnableAppearanceOddRow = true;
-            this.gvChooseTask.OptionsView.ShowGroupPanel = false;
-            this.gvChooseTask.OptionsView.ShowViewCaption = true;
-            this.gvChooseTask.ViewCaption = "Chọn nhiệm vụ";
-            // 
-            // colChucNang
-            // 
-            this.colChucNang.AppearanceCell.Options.UseTextOptions = true;
-            this.colChucNang.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colChucNang.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.colChucNang.Caption = "Tên nhiệm vụ";
-            this.colChucNang.ColumnEdit = this.repositoryItemLookUpEdit_Frm;
-            this.colChucNang.FieldName = "strMaFrm";
-            this.colChucNang.Name = "colChucNang";
-            this.colChucNang.OptionsColumn.AllowEdit = false;
-            this.colChucNang.Visible = true;
-            this.colChucNang.VisibleIndex = 0;
-            this.colChucNang.Width = 227;
-            // 
-            // repositoryItemLookUpEdit_Frm
-            // 
-            this.repositoryItemLookUpEdit_Frm.AutoHeight = false;
-            this.repositoryItemLookUpEdit_Frm.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lkeProject.Enabled = false;
+            this.lkeProject.Location = new System.Drawing.Point(383, 118);
+            this.lkeProject.Name = "lkeProject";
+            this.lkeProject.Properties.Appearance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lkeProject.Properties.Appearance.Options.UseFont = true;
+            this.lkeProject.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEdit_Frm.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colMaFrm", "Mã Form"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colTenFrm", "Chức Năng")});
-            this.repositoryItemLookUpEdit_Frm.DisplayMember = "strTenFrm";
-            this.repositoryItemLookUpEdit_Frm.Name = "repositoryItemLookUpEdit_Frm";
-            this.repositoryItemLookUpEdit_Frm.NullText = "Chức Năng";
-            this.repositoryItemLookUpEdit_Frm.ValueMember = "strMaFrm";
+            this.lkeProject.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colProjectName", "Tên đồ án"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colProjectID", "Mã đồ án", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.lkeProject.Properties.NullText = "Đồ án";
+            this.lkeProject.Size = new System.Drawing.Size(132, 24);
+            this.lkeProject.TabIndex = 114;
             // 
-            // colThem
+            // label2
             // 
-            this.colThem.AppearanceCell.BackColor = System.Drawing.Color.Transparent;
-            this.colThem.AppearanceCell.Options.UseBackColor = true;
-            this.colThem.AppearanceHeader.BackColor = System.Drawing.Color.Transparent;
-            this.colThem.AppearanceHeader.Options.UseBackColor = true;
-            this.colThem.Caption = "Chọn";
-            this.colThem.ColumnEdit = this.repositoryItemCheckEdit_Them;
-            this.colThem.FieldName = "bThem";
-            this.colThem.Name = "colThem";
-            this.colThem.Visible = true;
-            this.colThem.VisibleIndex = 1;
-            this.colThem.Width = 131;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(314, 121);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 17);
+            this.label2.TabIndex = 113;
+            this.label2.Text = "Đồ án";
             // 
-            // repositoryItemCheckEdit_Them
+            // lkeTask
             // 
-            this.repositoryItemCheckEdit_Them.AutoHeight = false;
-            this.repositoryItemCheckEdit_Them.Name = "repositoryItemCheckEdit_Them";
-            this.repositoryItemCheckEdit_Them.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
-            // 
-            // repositoryItemCheckEdit_Sua
-            // 
-            this.repositoryItemCheckEdit_Sua.AutoHeight = false;
-            this.repositoryItemCheckEdit_Sua.Name = "repositoryItemCheckEdit_Sua";
-            this.repositoryItemCheckEdit_Sua.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
-            // 
-            // repositoryItemCheckEdit_Xoa
-            // 
-            this.repositoryItemCheckEdit_Xoa.AutoHeight = false;
-            this.repositoryItemCheckEdit_Xoa.Name = "repositoryItemCheckEdit_Xoa";
-            this.repositoryItemCheckEdit_Xoa.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
-            // 
-            // repositoryItemCheckEdit_Xem
-            // 
-            this.repositoryItemCheckEdit_Xem.AutoHeight = false;
-            this.repositoryItemCheckEdit_Xem.Name = "repositoryItemCheckEdit_Xem";
-            this.repositoryItemCheckEdit_Xem.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
-            // 
-            // repositoryItemCheckEdit_Full
-            // 
-            this.repositoryItemCheckEdit_Full.AutoHeight = false;
-            this.repositoryItemCheckEdit_Full.Name = "repositoryItemCheckEdit_Full";
-            // 
-            // groupControl1
-            // 
-            this.groupControl1.Controls.Add(this.label5);
-            this.groupControl1.Controls.Add(this.comboBox3);
-            this.groupControl1.Controls.Add(this.label4);
-            this.groupControl1.Controls.Add(this.comboBox1);
-            this.groupControl1.Location = new System.Drawing.Point(45, 32);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(324, 126);
-            this.groupControl1.TabIndex = 20;
-            this.groupControl1.Text = "Điều kiện";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(5, 84);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 17);
-            this.label5.TabIndex = 97;
-            this.label5.Text = "Chọn Đồ Án";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(115, 84);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(188, 21);
-            this.comboBox3.TabIndex = 96;
+            this.lkeTask.Enabled = false;
+            this.lkeTask.Location = new System.Drawing.Point(383, 58);
+            this.lkeTask.Name = "lkeTask";
+            this.lkeTask.Properties.Appearance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lkeTask.Properties.Appearance.Options.UseFont = true;
+            this.lkeTask.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkeTask.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colTaskName", "Tên task"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colTaskID", "Mã task", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.lkeTask.Properties.NullText = "Task";
+            this.lkeTask.Size = new System.Drawing.Size(132, 24);
+            this.lkeTask.TabIndex = 98;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(5, 38);
+            this.label4.Location = new System.Drawing.Point(319, 61);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 17);
+            this.label4.Size = new System.Drawing.Size(42, 17);
             this.label4.TabIndex = 95;
-            this.label4.Text = "Chọn Môn Học";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(115, 38);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(188, 21);
-            this.comboBox1.TabIndex = 0;
+            this.label4.Text = " Task";
             // 
             // frmSubmitProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(999, 552);
-            this.Controls.Add(this.groupControl2);
-            this.Controls.Add(this.gcPhanQuyen);
-            this.Controls.Add(this.groupControl1);
+            this.ClientSize = new System.Drawing.Size(1173, 639);
+            this.Controls.Add(this.panelTitleBar);
+            this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.gcListTask);
+            this.Controls.Add(this.grpSubmit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSubmitProject";
             this.Text = "frmSubmitProject";
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
-            this.groupControl2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Load += new System.EventHandler(this.frmSubmitProject_Load);
+            this.panelTitleBar.ResumeLayout(false);
+            this.panelTitleBar.PerformLayout();
+            this.panelMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Subject)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Lecturer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvListLink)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Task)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Project)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcListTask)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gcPhanQuyen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvChooseTask)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit_Frm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit_Them)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit_Sua)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit_Xoa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit_Xem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit_Full)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpSubmit)).EndInit();
+            this.grpSubmit.ResumeLayout(false);
+            this.grpSubmit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lkeProject.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkeTask.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton btnLuu;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Panel panelTitleBar;
+        private System.Windows.Forms.Button btnCloseChildForm;
+        private DevExpress.XtraEditors.SimpleButton btnUpdate;
+        private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Panel panelMenu;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit LookUpEdit_Subject;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit LookUpEdit_Lecturer;
+        private DevExpress.XtraGrid.Columns.GridColumn colLinkFile;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvListLink;
+        private DevExpress.XtraGrid.Columns.GridColumn colFileName;
+        private DevExpress.XtraGrid.GridControl gcListTask;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtFilePath;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private System.Windows.Forms.TextBox txtFileName;
+        private System.Windows.Forms.TextBox txtFolderPath;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.SimpleButton btnChooseFolder;
+        private DevExpress.XtraEditors.SimpleButton btnSave;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.SimpleButton btnChooseFile;
-        private DevExpress.XtraGrid.GridControl gcPhanQuyen;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvChooseTask;
-        private DevExpress.XtraGrid.Columns.GridColumn colChucNang;
-        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit_Frm;
-        private DevExpress.XtraGrid.Columns.GridColumn colThem;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit_Them;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit_Sua;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit_Xoa;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit_Xem;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit_Full;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private DevExpress.XtraEditors.SimpleButton btnChoosFile;
+        private DevExpress.XtraEditors.GroupControl grpSubmit;
+        private DevExpress.XtraEditors.LookUpEdit lkeTask;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox txtAuthor;
-        private System.Windows.Forms.TextBox txtName;
+        private DevExpress.XtraEditors.LookUpEdit lkeProject;
+        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraGrid.Columns.GridColumn colTaskName;
+        private DevExpress.XtraGrid.Columns.GridColumn colProjectName;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit LookUpEdit_Project;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit LookUpEdit_Task;
     }
 }

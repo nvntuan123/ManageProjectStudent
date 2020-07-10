@@ -16,5 +16,7 @@ namespace ManageProjectStudent_Interface
         bool updateCurrentSubjectf(SubjectModel subject);
         bool deleteCurrentSubject(SubjectModel subject);
         List<string> lstSubjectID();
+
+        bool _checkCharacterNumberSubject(char _C);
     }
 }

@@ -26,9 +26,21 @@ namespace ManageProjectStudent_View
 {
     public partial class frmManageClass : Form
     {
+        private IManageClass IMC = Config.Container.Resolve<IManageClass>();
+        private int IStatus;
+        private StaffModel StaffModel;
         public frmManageClass()
         {
             InitializeComponent();
+        }
+
+        public frmManageClass(int IStatusLogin,StaffModel staff)
+        {
+            InitializeComponent();
+            IStatus = IStatusLogin;
+            StaffModel = staff;
+            txtClassName.KeyPress += new KeyPressEventHandler(IMC.txtClassName_KeyPress);
+          //  txtIDClass.KeyPress += new KeyPressEventHandler(IMC.txtIDClass_KeyPress);
         }
         #region Properties
         private bool indicatorIcon = true;

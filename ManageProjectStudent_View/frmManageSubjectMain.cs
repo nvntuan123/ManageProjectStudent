@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ManageProjectStudent_Model;
 
 namespace ManageProjectStudent_View
 {
@@ -16,10 +17,20 @@ namespace ManageProjectStudent_View
         private Random random;
         private int tempIndex;
         private Form activeForm;
+        private int IStatus;
+        private StaffModel StaffModel;
         public frmManageSubjectMain()
         {
             InitializeComponent();
             random = new Random();
+            btnCloseChildForm.Visible = false;
+        }
+        public frmManageSubjectMain(int IStatusLogin, StaffModel staff)
+        {
+            InitializeComponent();
+            random = new Random();
+            IStatus = IStatusLogin;
+            StaffModel = staff;
             btnCloseChildForm.Visible = false;
         }
         private Color SelectThemeColor()
@@ -121,7 +132,7 @@ namespace ManageProjectStudent_View
         {
             ActivateButton(sender);
             this.Hide();
-            frmHome frmHome = new frmHome();
+            frmHome frmHome = new frmHome(IStatus, StaffModel) ;
             frmHome.ShowDialog();
             this.Close();
         }

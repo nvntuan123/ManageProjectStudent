@@ -1,4 +1,5 @@
 ﻿using System;
+using Guna.UI.WinForms;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,30 +12,28 @@ using ManageProjectStudent_Model;
 
 namespace ManageProjectStudent_View
 {
-    public partial class frmManageProjectStudentMain : Form
+    public partial class frmManageFacultyMain : Form
     {
         private Button currentButton;
         private Random random;
         private int tempIndex;
         private Form activeForm;
         private int IStatus;
-        private StudentModel StudentModel;
-
-        public frmManageProjectStudentMain()
+        private StaffModel StaffModel; 
+        public frmManageFacultyMain()
         {
             InitializeComponent();
             random = new Random();
             btnCloseChildForm.Visible = false;
         }
-        public frmManageProjectStudentMain(int IStatusLogin, StudentModel student)
+        public frmManageFacultyMain(int IStatusLogin, StaffModel staff)
         {
             InitializeComponent();
             random = new Random();
             IStatus = IStatusLogin;
-            StudentModel = student;
+            StaffModel = staff;
             btnCloseChildForm.Visible = false;
         }
-
         private Color SelectThemeColor()
         {
             int index = random.Next(ThemeColor.ColorList.Count);
@@ -45,6 +44,7 @@ namespace ManageProjectStudent_View
             tempIndex = index;
             string color = ThemeColor.ColorList[index];
             return ColorTranslator.FromHtml(color);
+
         }
 
         private void ActivateButton(object btnSender)
@@ -99,25 +99,33 @@ namespace ManageProjectStudent_View
             //lblTitle.Text = childForm.Text;
         }
 
-        private void btnSubmitProject_Click(object sender, EventArgs e)
+        private void Reset()
         {
-            this.Hide();
-            frmSubmitProject frmSubmitProject = new frmSubmitProject();
-            frmSubmitProject.ShowDialog();
-            this.Close();
+            DisableButton();
+            lblTitle.Text = "Quản lý khoa";
+            panelTitleBar.BackColor = Color.FromArgb(0, 135, 137);
+            panelLogo.BackColor = Color.FromArgb(24, 37, 60);
+            currentButton = null;
+            btnCloseChildForm.Visible = false;
         }
 
-        private void btnViewDeadlineStudent_Click(object sender, EventArgs e)
+        private void btnManageFaculty_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ManageProjectStudent_View.frmViewDeadlineProject(), sender);
+            OpenChildForm(new ManageProjectStudent_View.frmManageFaculty(), sender);
+            lblTitle.Text = "Quản lý khoa";
         }
 
-        private void btnExitFormProjectStudent_Click(object sender, EventArgs e)
+        private void btnManageClass_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ManageProjectStudent_View.frmManageClass(), sender);
+            lblTitle.Text = "Quản lý lớp";
+        }
+
+       
+
+        private void btnExitForm_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            this.Hide();
-            frmHome frmHome = new frmHome(IStatus,StudentModel);
-            frmHome.ShowDialog();
             this.Close();
         }
 
@@ -127,15 +135,6 @@ namespace ManageProjectStudent_View
                 activeForm.Close();
             Reset();
         }
-
-        private void Reset()
-        {
-            DisableButton();
-            lblTitle.Text = "Quản Lý Đồ Án Cho Sinh Viên";
-            panelTitleBar.BackColor = Color.FromArgb(0, 135, 137);
-            panelLogo.BackColor = Color.FromArgb(24, 37, 60);
-            currentButton = null;
-            btnCloseChildForm.Visible = false;
-        }
     }
+
 }

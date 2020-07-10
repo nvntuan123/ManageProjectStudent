@@ -86,6 +86,8 @@
             this.btnExitFormManageStudent = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.btnImport = new DevExpress.XtraEditors.SimpleButton();
+
             this.btnExport = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Faculty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties.CalendarTimeProperties)).BeginInit();
@@ -861,6 +863,29 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Quản Lí Thông Tinh Sinh Viên";
             // 
+            // btnImport
+            // 
+            this.btnImport.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.btnImport.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnImport.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnImport.Appearance.Options.UseBackColor = true;
+            this.btnImport.Appearance.Options.UseFont = true;
+            this.btnImport.Appearance.Options.UseForeColor = true;
+            this.btnImport.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.btnImport.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnImport.AppearanceHovered.Options.UseBackColor = true;
+            this.btnImport.AppearanceHovered.Options.UseFont = true;
+            this.btnImport.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnImport.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnImport.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnImport.Location = new System.Drawing.Point(1120, 384);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(189, 59);
+            this.btnImport.TabIndex = 122;
+            this.btnImport.TabStop = false;
+            this.btnImport.Text = "Import";
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
             // btnExport
             // 
             this.btnExport.Appearance.BackColor = System.Drawing.Color.Silver;
@@ -982,6 +1007,7 @@
         private DevExpress.XtraEditors.SimpleButton btnUpdate;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.SimpleButton btnAdd;
+        private DevExpress.XtraEditors.SimpleButton btnImport;
         private DevExpress.XtraEditors.SimpleButton btnExport;
     }
 }

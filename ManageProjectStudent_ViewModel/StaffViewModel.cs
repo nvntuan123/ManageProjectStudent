@@ -49,7 +49,12 @@ namespace ManageProjectStudent_ViewModel
                 return Result;
             }
         }
-
+        public StaffModel getStaffSelected(string StrStaffID)
+        {
+            var Staff = _Context.StaffModels.SingleOrDefault
+                   (x => x.StrStaffID == StrStaffID);
+            return Staff;
+        }
         public string getByIDAutoLecturer()
         {
             string _StrIDMax = _getByIDMaxLecturer();

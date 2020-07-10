@@ -19,8 +19,8 @@ namespace ManageProjectStudent_ViewModel
             using (var _Context = new DBManageProjectStudentViewModel())
             {
                 var Result = (from x in _Context.StudentModels.AsEnumerable()
-                              select new StudentModel
-                              {
+                              select  new StudentModel
+                              { 
                                   StrStudentID = x.StrStudentID,
                                   StrStudentName = x.StrStudentName,
                                   StrAddress = x.StrAddress,
@@ -36,6 +36,22 @@ namespace ManageProjectStudent_ViewModel
                               }).ToList();
                 return new BindingList<StudentModel>(Result);
             }
+        }
+        public List<string> loadTask(StudentModel student)
+        {
+            var projectResult = _Context.ResultProjectModels.SingleOrDefault
+                   (x => x.StrStudentID == student.StrStudentID);
+            var project = _Context.ProjectModels.SingleOrDefault(x => x.StrProjectID == projectResult.StrProjectID);
+            var projectTask = _Context.ProjectTaskModels.SingleOrDefault(x => x.StrProjectID == project.StrProjectID);
+            var Result = _Context.ProjectTaskModels.Select(x => projectTask.StrProjectID).ToList();
+            return Result;
+        }
+    
+        public StudentModel getStudentSelected(string StrStudentID)
+        {
+            var Student = _Context.StudentModels.SingleOrDefault
+                   (x => x.StrStudentID == StrStudentID);
+            return Student;
         }
         public string getByIDMaxStudent()
         {
@@ -69,15 +85,12 @@ namespace ManageProjectStudent_ViewModel
         }
         public bool checkCardID(string CardID)
         {
-            using (var _Context = new DBManageProjectStudentViewModel())
+            var Result = _Context.StudentModels.SingleOrDefault(c => c.StrCardID == CardID);
+            if (Result != null)
             {
-                var Result = _Context.StudentModels.SingleOrDefault(c => c.StrCardID == CardID );
-                if (Result != null)
-                {
-                    return true;
-                }
-                return false;
+                return true;
             }
+            return false;
         }
         public bool checkStudentID(string StudentID)
         {

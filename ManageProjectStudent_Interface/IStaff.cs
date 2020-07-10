@@ -18,6 +18,7 @@ namespace ManageProjectStudent_Interface
         List<string> lstStaffID();
         bool checkCardID(string CardID);
         bool checkStaffID(string StaffID);
+        StaffModel getStaffSelected(string StrStaffID);
 
         // Front-end
         bool _checkCharacterNumberStaff(char _C);

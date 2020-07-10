@@ -26,10 +26,6 @@ namespace ManageProjectStudent_View
 {
     public partial class frmManageStudentInformation : Form
     {
-        public frmManageStudentInformation()
-        {
-            InitializeComponent();
-        }
         #region Properties
         private bool indicatorIcon = true;
         private IStudent _Student = Config.Container.Resolve<IStudent>();
@@ -40,7 +36,20 @@ namespace ManageProjectStudent_View
         private BindingList<ClassModel> _lstClass = new BindingList<ClassModel>();
         private IClass _Class = Config.Container.Resolve<IClass>();
         private IFaculty _Faculty = Config.Container.Resolve<IFaculty>();
+        private int IStatus;
+        private StaffModel StaffModel;
         #endregion
+        public frmManageStudentInformation()
+        {
+            InitializeComponent();
+        }
+        public frmManageStudentInformation(int IStatusLogin, StaffModel staff)
+        {
+            InitializeComponent();
+            IStatus = IStatusLogin;
+            StaffModel = staff;
+        }
+     
         #region Method
         private void _setStatusForm()
         {
@@ -275,6 +284,14 @@ namespace ManageProjectStudent_View
             {
                 DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa nhập tên Sinh viên", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else if (_Student.checkStudentID(txtID.Text)== true) 
+            {
+                DevExpress.XtraEditors.XtraMessageBox.Show("Mã Sinh viên bị trùng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (_Student.checkCardID(txtIDCard.Text) == true)
+            {
+                DevExpress.XtraEditors.XtraMessageBox.Show("CMND bị trùng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             else if (dteBirthday.EditValue == null)
             {
                 DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa chọn Ngày sinh", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -396,6 +413,50 @@ namespace ManageProjectStudent_View
             }
         }
 
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var _DLG_OpenExcel = new OpenFileDialog();
+                _DLG_OpenExcel.Title = @"Import File Excel";
+                if (_DLG_OpenExcel.ShowDialog() == DialogResult.OK)
+                {
+                    string _STR_FileName = Path.GetFileName(_DLG_OpenExcel.FileName);
+                    // Open file excel
+                    var package = new ExcelPackage(new FileInfo(_DLG_OpenExcel.FileName));
+                    //Take out the first sheet
+                    ExcelWorksheet workSheet = package.Workbook.Worksheets[1];
+                    BindingList<StudentModel> _lstStudent_Import = new BindingList<StudentModel>();
+                    //Browse sequentially from the second to the last row of the Excel file, because Excel starts from 1 and not 0
+                    for (int i = workSheet.Dimension.Start.Row + 1; i < workSheet.Dimension.End.Row; ++i)
+                    {
+                        try
+                        {
+
+                            int j = 1; //  j as row.
+                            string StrStudentID = "";
+                            string StrStudentName = "";
+                            DateTime DtBirthDay = new DateTime();
+                            string StrCardID = "";
+                            string StrEmail = "";
+                            string _StrAddress = "";
+                            DateTime _DtStartYear = new DateTime();
+                            bool _BStatus;
+
+                        }
+                        catch
+                        {
+
+                        }
+                    }
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
         private void btnReLoad_Click(object sender, EventArgs e)
         {
             _IStatusForm = 0;
@@ -407,7 +468,7 @@ namespace ManageProjectStudent_View
         private void btnExitFormManageStudent_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmHome frmHome = new frmHome();
+            frmHome frmHome = new frmHome(IStatus, StaffModel);
             frmHome.ShowDialog();
             this.Close();
         }

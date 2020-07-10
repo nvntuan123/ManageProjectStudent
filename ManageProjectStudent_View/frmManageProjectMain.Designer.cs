@@ -32,25 +32,25 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnExitForm = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.btnViewDeadlineLecturer = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnManageTask = new System.Windows.Forms.Button();
             this.btnManageProjectLecturer = new System.Windows.Forms.Button();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
-            this.pnButton = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
-            this.pnButton.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(77)))));
-            this.panelMenu.Controls.Add(this.pnButton);
+            this.panelMenu.Controls.Add(this.btnExitForm);
             this.panelMenu.Controls.Add(this.panelLogo);
+            this.panelMenu.Controls.Add(this.btnManageTask);
+            this.panelMenu.Controls.Add(this.btnManageProjectLecturer);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
@@ -65,13 +65,12 @@
             this.btnExitForm.ForeColor = System.Drawing.Color.White;
             this.btnExitForm.Image = global::ManageProjectStudent_View.Properties.Resources.return_30px;
             this.btnExitForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExitForm.Location = new System.Drawing.Point(3, 122);
+            this.btnExitForm.Location = new System.Drawing.Point(0, 199);
             this.btnExitForm.Name = "btnExitForm";
             this.btnExitForm.Size = new System.Drawing.Size(174, 50);
-            this.btnExitForm.TabIndex = 6;
+            this.btnExitForm.TabIndex = 9;
             this.btnExitForm.Text = "Trở về";
             this.btnExitForm.UseVisualStyleBackColor = true;
-            this.btnExitForm.Click += new System.EventHandler(this.btnExitForm_Click);
             // 
             // panelLogo
             // 
@@ -85,22 +84,30 @@
             this.panelLogo.Size = new System.Drawing.Size(168, 87);
             this.panelLogo.TabIndex = 5;
             // 
-            // btnViewDeadlineLecturer
+            // panel1
             // 
-            this.btnViewDeadlineLecturer.FlatAppearance.BorderSize = 0;
-            this.btnViewDeadlineLecturer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewDeadlineLecturer.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewDeadlineLecturer.ForeColor = System.Drawing.Color.White;
-            this.btnViewDeadlineLecturer.Image = ((System.Drawing.Image)(resources.GetObject("btnViewDeadlineLecturer.Image")));
-            this.btnViewDeadlineLecturer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnViewDeadlineLecturer.Location = new System.Drawing.Point(3, 66);
-            this.btnViewDeadlineLecturer.Name = "btnViewDeadlineLecturer";
-            this.btnViewDeadlineLecturer.Size = new System.Drawing.Size(177, 50);
-            this.btnViewDeadlineLecturer.TabIndex = 4;
-            this.btnViewDeadlineLecturer.Text = "Xem hạn nộp";
-            this.btnViewDeadlineLecturer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnViewDeadlineLecturer.UseVisualStyleBackColor = true;
-            this.btnViewDeadlineLecturer.Click += new System.EventHandler(this.btnViewDeadlineLecturer_Click);
+            this.panel1.Location = new System.Drawing.Point(203, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(970, 639);
+            this.panel1.TabIndex = 0;
+            this.panel1.Visible = false;
+            // 
+            // btnManageTask
+            // 
+            this.btnManageTask.FlatAppearance.BorderSize = 0;
+            this.btnManageTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageTask.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageTask.ForeColor = System.Drawing.Color.White;
+            this.btnManageTask.Image = ((System.Drawing.Image)(resources.GetObject("btnManageTask.Image")));
+            this.btnManageTask.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageTask.Location = new System.Drawing.Point(0, 143);
+            this.btnManageTask.Name = "btnManageTask";
+            this.btnManageTask.Size = new System.Drawing.Size(162, 50);
+            this.btnManageTask.TabIndex = 8;
+            this.btnManageTask.Text = "Quản lý task";
+            this.btnManageTask.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnManageTask.UseVisualStyleBackColor = true;
+            this.btnManageTask.Click += new System.EventHandler(this.btnManageTask_Click);
             // 
             // btnManageProjectLecturer
             // 
@@ -110,15 +117,14 @@
             this.btnManageProjectLecturer.ForeColor = System.Drawing.Color.White;
             this.btnManageProjectLecturer.Image = ((System.Drawing.Image)(resources.GetObject("btnManageProjectLecturer.Image")));
             this.btnManageProjectLecturer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageProjectLecturer.Location = new System.Drawing.Point(3, 10);
+            this.btnManageProjectLecturer.Location = new System.Drawing.Point(0, 87);
             this.btnManageProjectLecturer.Name = "btnManageProjectLecturer";
             this.btnManageProjectLecturer.Size = new System.Drawing.Size(162, 50);
-            this.btnManageProjectLecturer.TabIndex = 2;
+            this.btnManageProjectLecturer.TabIndex = 7;
             this.btnManageProjectLecturer.Text = "Quản Lý đồ án";
             this.btnManageProjectLecturer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageProjectLecturer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnManageProjectLecturer.UseVisualStyleBackColor = true;
-            this.btnManageProjectLecturer.Click += new System.EventHandler(this.btnManageProjectLecturer_Click);
             // 
             // panelTitleBar
             // 
@@ -166,24 +172,6 @@
             this.panelDesktopPane.Size = new System.Drawing.Size(1005, 552);
             this.panelDesktopPane.TabIndex = 3;
             // 
-            // pnButton
-            // 
-            this.pnButton.Controls.Add(this.btnExitForm);
-            this.pnButton.Controls.Add(this.btnViewDeadlineLecturer);
-            this.pnButton.Controls.Add(this.btnManageProjectLecturer);
-            this.pnButton.Location = new System.Drawing.Point(3, 87);
-            this.pnButton.Name = "pnButton";
-            this.pnButton.Size = new System.Drawing.Size(165, 552);
-            this.pnButton.TabIndex = 13;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(203, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(970, 639);
-            this.panel1.TabIndex = 0;
-            this.panel1.Visible = false;
-            // 
             // frmManageProjectMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,7 +188,6 @@
             this.panelLogo.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
-            this.pnButton.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -208,15 +195,14 @@
         #endregion
 
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Button btnExitForm;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Button btnViewDeadlineLecturer;
-        private System.Windows.Forms.Button btnManageProjectLecturer;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Button btnCloseChildForm;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panelDesktopPane;
-        private System.Windows.Forms.Panel pnButton;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnExitForm;
+        private System.Windows.Forms.Button btnManageTask;
+        private System.Windows.Forms.Button btnManageProjectLecturer;
     }
 }

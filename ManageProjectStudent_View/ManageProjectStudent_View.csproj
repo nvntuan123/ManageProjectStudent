@@ -207,6 +207,12 @@
     <Compile Include="frmManageCourse.Designer.cs">
       <DependentUpon>frmManageCourse.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmManageFaculty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageFaculty.Designer.cs">
+      <DependentUpon>frmManageFaculty.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmManageLecturerInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +224,12 @@
     </Compile>
     <Compile Include="frmManageProject.Designer.cs">
       <DependentUpon>frmManageProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageProjectTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageProjectTask.Designer.cs">
+      <DependentUpon>frmManageProjectTask.cs</DependentUpon>
     </Compile>
     <Compile Include="frmManageStudentInformation.cs">
       <SubType>Form</SubType>
@@ -301,11 +313,17 @@
     <EmbeddedResource Include="frmManageCourse.resx">
       <DependentUpon>frmManageCourse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmManageFaculty.resx">
+      <DependentUpon>frmManageFaculty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmManageLecturerInformation.resx">
       <DependentUpon>frmManageLecturerInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmManageProject.resx">
       <DependentUpon>frmManageProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageProjectTask.resx">
+      <DependentUpon>frmManageProjectTask.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmManageStudentInformation.resx">
       <DependentUpon>frmManageStudentInformation.cs</DependentUpon>

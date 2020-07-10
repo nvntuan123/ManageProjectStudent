@@ -89,8 +89,10 @@ namespace ManageProjectStudent_View
 
         private void btnSubmitProject_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ManageProjectStudent_View.frmSubmitProject(), sender);
-            lblTitle.Text = "Nộp File Cho Nhiệm Vụ";
+            this.Hide();
+            frmSubmitProject frmSubmitProject = new frmSubmitProject();
+            frmSubmitProject.ShowDialog();
+            this.Close();
         }
 
         private void btnViewDeadlineStudent_Click(object sender, EventArgs e)

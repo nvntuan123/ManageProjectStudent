@@ -621,6 +621,7 @@
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmManageSubject";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmManageSubject";
             this.Load += new System.EventHandler(this.frmManageSubject_Load);
             this.panelMenu.ResumeLayout(false);

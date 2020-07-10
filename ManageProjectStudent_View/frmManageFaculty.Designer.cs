@@ -1,6 +1,6 @@
 ﻿namespace ManageProjectStudent_View
 {
-    partial class frmManageClass
+    partial class frmManageFaculty
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManageClass));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManageFaculty));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
@@ -51,25 +51,21 @@
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.grpInformationClass = new DevExpress.XtraEditors.GroupControl();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.lkeCourse = new DevExpress.XtraEditors.LookUpEdit();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lkeFaculty = new DevExpress.XtraEditors.LookUpEdit();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtClassName = new System.Windows.Forms.TextBox();
+            this.grpInformationFaculty = new DevExpress.XtraEditors.GroupControl();
+            this.txtFacultyName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtClassID = new System.Windows.Forms.TextBox();
+            this.txtFacultyID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.gcListClass = new DevExpress.XtraGrid.GridControl();
-            this.gvClassList = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colClassID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colClassName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colFaculty = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dteStartYear = new DevExpress.XtraEditors.DateEdit();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.gcListFaculty = new DevExpress.XtraGrid.GridControl();
+            this.gvFacultyList = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.LookUpEdit_Faculty = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.colCourse = new DevExpress.XtraGrid.Columns.GridColumn();
             this.LookUpEdit_Course = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.colFacultyID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFacultyName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStartDay = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelMenu.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -77,12 +73,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpInformationClass)).BeginInit();
-            this.grpInformationClass.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lkeCourse.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lkeFaculty.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcListClass)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvClassList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpInformationFaculty)).BeginInit();
+            this.grpInformationFaculty.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dteStartYear.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteStartYear.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcListFaculty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvFacultyList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Faculty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Course)).BeginInit();
             this.SuspendLayout();
@@ -98,7 +94,7 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(174, 520);
-            this.panelMenu.TabIndex = 7;
+            this.panelMenu.TabIndex = 8;
             // 
             // btnUpdate
             // 
@@ -122,7 +118,7 @@
             this.btnUpdate.Size = new System.Drawing.Size(165, 64);
             this.btnUpdate.TabIndex = 126;
             this.btnUpdate.TabStop = false;
-            this.btnUpdate.Text = "Sửa Khóa Học";
+            this.btnUpdate.Text = "Sửa Khoa";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
@@ -147,7 +143,7 @@
             this.btnDelete.Size = new System.Drawing.Size(164, 64);
             this.btnDelete.TabIndex = 125;
             this.btnDelete.TabStop = false;
-            this.btnDelete.Text = "Xóa Khóa Học";
+            this.btnDelete.Text = "Xóa Khoa";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
@@ -174,7 +170,7 @@
             this.btnAdd.Size = new System.Drawing.Size(165, 64);
             this.btnAdd.TabIndex = 124;
             this.btnAdd.TabStop = false;
-            this.btnAdd.Text = "Thêm Khóa Học";
+            this.btnAdd.Text = "Thêm Khoa";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // panelLogo
@@ -201,7 +197,7 @@
             this.panelTitleBar.Location = new System.Drawing.Point(174, 0);
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(927, 87);
-            this.panelTitleBar.TabIndex = 8;
+            this.panelTitleBar.TabIndex = 9;
             // 
             // btnReLoad
             // 
@@ -368,32 +364,86 @@
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(377, 31);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(157, 22);
+            this.lblTitle.Size = new System.Drawing.Size(132, 22);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Quản lý lớp học";
+            this.lblTitle.Text = "Quản lý khoa";
             // 
-            // grpInformationClass
+            // grpInformationFaculty
             // 
-            this.grpInformationClass.Controls.Add(this.btnSave);
-            this.grpInformationClass.Controls.Add(this.lkeCourse);
-            this.grpInformationClass.Controls.Add(this.label9);
-            this.grpInformationClass.Controls.Add(this.lkeFaculty);
-            this.grpInformationClass.Controls.Add(this.label8);
-            this.grpInformationClass.Controls.Add(this.txtClassName);
-            this.grpInformationClass.Controls.Add(this.label7);
-            this.grpInformationClass.Controls.Add(this.txtClassID);
-            this.grpInformationClass.Controls.Add(this.label6);
-            this.grpInformationClass.Controls.Add(this.label1);
-            this.grpInformationClass.Location = new System.Drawing.Point(213, 93);
-            this.grpInformationClass.Name = "grpInformationClass";
-            this.grpInformationClass.Size = new System.Drawing.Size(854, 192);
-            this.grpInformationClass.TabIndex = 9;
-            this.grpInformationClass.Text = "Nhập thông tin lớp";
+            this.grpInformationFaculty.Controls.Add(this.btnSave);
+            this.grpInformationFaculty.Controls.Add(this.dteStartYear);
+            this.grpInformationFaculty.Controls.Add(this.label10);
+            this.grpInformationFaculty.Controls.Add(this.txtFacultyName);
+            this.grpInformationFaculty.Controls.Add(this.label7);
+            this.grpInformationFaculty.Controls.Add(this.txtFacultyID);
+            this.grpInformationFaculty.Controls.Add(this.label6);
+            this.grpInformationFaculty.Location = new System.Drawing.Point(192, 95);
+            this.grpInformationFaculty.Name = "grpInformationFaculty";
+            this.grpInformationFaculty.Size = new System.Drawing.Size(881, 189);
+            this.grpInformationFaculty.TabIndex = 10;
+            this.grpInformationFaculty.Text = "Nhập thông tin khoa";
+            // 
+            // txtFacultyName
+            // 
+            this.txtFacultyName.Location = new System.Drawing.Point(160, 109);
+            this.txtFacultyName.Name = "txtFacultyName";
+            this.txtFacultyName.Size = new System.Drawing.Size(190, 21);
+            this.txtFacultyName.TabIndex = 8;
+            this.txtFacultyName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFacultyName_KeyPress);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(84, 109);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 17);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Tên khoa";
+            // 
+            // txtFacultyID
+            // 
+            this.txtFacultyID.Location = new System.Drawing.Point(160, 56);
+            this.txtFacultyID.Name = "txtFacultyID";
+            this.txtFacultyID.Size = new System.Drawing.Size(190, 21);
+            this.txtFacultyID.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(84, 56);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 17);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Mã khoa";
+            // 
+            // dteStartYear
+            // 
+            this.dteStartYear.EditValue = null;
+            this.dteStartYear.Location = new System.Drawing.Point(597, 53);
+            this.dteStartYear.Margin = new System.Windows.Forms.Padding(4);
+            this.dteStartYear.Name = "dteStartYear";
+            this.dteStartYear.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dteStartYear.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dteStartYear.Size = new System.Drawing.Size(188, 20);
+            this.dteStartYear.TabIndex = 125;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label10.Location = new System.Drawing.Point(474, 56);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(104, 17);
+            this.label10.TabIndex = 124;
+            this.label10.Text = "Ngày thành lập";
             // 
             // btnSave
             // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.Appearance.BackColor = System.Drawing.Color.Silver;
             this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSave.Appearance.ForeColor = System.Drawing.Color.White;
@@ -407,166 +457,55 @@
             this.btnSave.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
             this.btnSave.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnSave.Location = new System.Drawing.Point(357, 149);
+            this.btnSave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSave.Location = new System.Drawing.Point(382, 147);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(154, 38);
-            this.btnSave.TabIndex = 125;
+            this.btnSave.Size = new System.Drawing.Size(122, 37);
+            this.btnSave.TabIndex = 126;
             this.btnSave.TabStop = false;
             this.btnSave.Text = "Lưu";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // lkeCourse
+            // gcListFaculty
             // 
-            this.lkeCourse.Location = new System.Drawing.Point(561, 100);
-            this.lkeCourse.Name = "lkeCourse";
-            this.lkeCourse.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lkeCourse.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colCourseID", "Khóa")});
-            this.lkeCourse.Size = new System.Drawing.Size(190, 20);
-            this.lkeCourse.TabIndex = 8;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(497, 103);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 17);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Khóa";
-            // 
-            // lkeFaculty
-            // 
-            this.lkeFaculty.Location = new System.Drawing.Point(561, 51);
-            this.lkeFaculty.Name = "lkeFaculty";
-            this.lkeFaculty.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lkeFaculty.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colFacultyName", "Khoa"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("colFacultyID", "Mã khoa")});
-            this.lkeFaculty.Size = new System.Drawing.Size(190, 20);
-            this.lkeFaculty.TabIndex = 6;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(497, 51);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 17);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Khoa";
-            // 
-            // txtClassName
-            // 
-            this.txtClassName.Location = new System.Drawing.Point(163, 103);
-            this.txtClassName.Name = "txtClassName";
-            this.txtClassName.Size = new System.Drawing.Size(190, 21);
-            this.txtClassName.TabIndex = 4;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(87, 103);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 17);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Tên lớp ";
-            // 
-            // txtClassID
-            // 
-            this.txtClassID.Location = new System.Drawing.Point(163, 49);
-            this.txtClassID.Name = "txtClassID";
-            this.txtClassID.Size = new System.Drawing.Size(190, 21);
-            this.txtClassID.TabIndex = 2;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(87, 49);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 17);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Mã lớp ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(95, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 0;
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // gcListClass
-            // 
-            this.gcListClass.Location = new System.Drawing.Point(213, 291);
-            this.gcListClass.MainView = this.gvClassList;
-            this.gcListClass.Name = "gcListClass";
-            this.gcListClass.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gcListFaculty.Location = new System.Drawing.Point(192, 303);
+            this.gcListFaculty.MainView = this.gvFacultyList;
+            this.gcListFaculty.Name = "gcListFaculty";
+            this.gcListFaculty.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.LookUpEdit_Faculty,
             this.LookUpEdit_Course});
-            this.gcListClass.Size = new System.Drawing.Size(859, 175);
-            this.gcListClass.TabIndex = 126;
-            this.gcListClass.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvClassList});
+            this.gcListFaculty.Size = new System.Drawing.Size(881, 175);
+            this.gcListFaculty.TabIndex = 127;
+            this.gcListFaculty.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvFacultyList});
             // 
-            // gvClassList
+            // gvFacultyList
             // 
-            this.gvClassList.Appearance.EvenRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gvClassList.Appearance.EvenRow.Options.UseFont = true;
-            this.gvClassList.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gvClassList.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gvClassList.Appearance.OddRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gvClassList.Appearance.OddRow.Options.UseFont = true;
-            this.gvClassList.Appearance.ViewCaption.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gvClassList.Appearance.ViewCaption.Options.UseFont = true;
-            this.gvClassList.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colClassID,
-            this.colClassName,
-            this.colFaculty,
-            this.colCourse});
-            this.gvClassList.GridControl = this.gcListClass;
-            this.gvClassList.Name = "gvClassList";
-            this.gvClassList.OptionsBehavior.Editable = false;
-            this.gvClassList.OptionsSelection.MultiSelect = true;
-            this.gvClassList.OptionsView.EnableAppearanceEvenRow = true;
-            this.gvClassList.OptionsView.EnableAppearanceOddRow = true;
-            this.gvClassList.OptionsView.ShowAutoFilterRow = true;
-            this.gvClassList.OptionsView.ShowGroupPanel = false;
-            this.gvClassList.OptionsView.ShowViewCaption = true;
-            this.gvClassList.ViewCaption = "Danh sách lớp học";
-            this.gvClassList.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvClassList_CustomDrawRowIndicator);
-            this.gvClassList.SelectionChanged += new DevExpress.Data.SelectionChangedEventHandler(this.gvClassList_SelectionChanged);
-            this.gvClassList.RowCountChanged += new System.EventHandler(this.gvClassList_RowCountChanged);
-            // 
-            // colClassID
-            // 
-            this.colClassID.Caption = "Mã lớp";
-            this.colClassID.FieldName = "StrClassID";
-            this.colClassID.Name = "colClassID";
-            this.colClassID.Visible = true;
-            this.colClassID.VisibleIndex = 0;
-            // 
-            // colClassName
-            // 
-            this.colClassName.Caption = "Tên lớp";
-            this.colClassName.FieldName = "StrClassName";
-            this.colClassName.Name = "colClassName";
-            this.colClassName.Visible = true;
-            this.colClassName.VisibleIndex = 1;
-            // 
-            // colFaculty
-            // 
-            this.colFaculty.Caption = "Khoa";
-            this.colFaculty.ColumnEdit = this.LookUpEdit_Faculty;
-            this.colFaculty.FieldName = "StrFacultyID";
-            this.colFaculty.Name = "colFaculty";
-            this.colFaculty.Visible = true;
-            this.colFaculty.VisibleIndex = 2;
+            this.gvFacultyList.Appearance.EvenRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvFacultyList.Appearance.EvenRow.Options.UseFont = true;
+            this.gvFacultyList.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvFacultyList.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gvFacultyList.Appearance.OddRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvFacultyList.Appearance.OddRow.Options.UseFont = true;
+            this.gvFacultyList.Appearance.ViewCaption.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvFacultyList.Appearance.ViewCaption.Options.UseFont = true;
+            this.gvFacultyList.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colFacultyID,
+            this.colFacultyName,
+            this.colStartDay});
+            this.gvFacultyList.GridControl = this.gcListFaculty;
+            this.gvFacultyList.Name = "gvFacultyList";
+            this.gvFacultyList.OptionsBehavior.Editable = false;
+            this.gvFacultyList.OptionsSelection.MultiSelect = true;
+            this.gvFacultyList.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvFacultyList.OptionsView.EnableAppearanceOddRow = true;
+            this.gvFacultyList.OptionsView.ShowAutoFilterRow = true;
+            this.gvFacultyList.OptionsView.ShowGroupPanel = false;
+            this.gvFacultyList.OptionsView.ShowViewCaption = true;
+            this.gvFacultyList.ViewCaption = "Danh sách khoa ";
+            this.gvFacultyList.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvFacultyList_CustomDrawRowIndicator);
+            this.gvFacultyList.SelectionChanged += new DevExpress.Data.SelectionChangedEventHandler(this.gvFacultyList_SelectionChanged);
+            this.gvFacultyList.RowCountChanged += new System.EventHandler(this.gvFacultyList_RowCountChanged);
             // 
             // LookUpEdit_Faculty
             // 
@@ -580,15 +519,6 @@
             this.LookUpEdit_Faculty.Name = "LookUpEdit_Faculty";
             this.LookUpEdit_Faculty.ValueMember = "StrFacultyID";
             // 
-            // colCourse
-            // 
-            this.colCourse.Caption = "Khóa";
-            this.colCourse.ColumnEdit = this.LookUpEdit_Course;
-            this.colCourse.FieldName = "StrCourseID";
-            this.colCourse.Name = "colCourse";
-            this.colCourse.Visible = true;
-            this.colCourse.VisibleIndex = 3;
-            // 
             // LookUpEdit_Course
             // 
             this.LookUpEdit_Course.AutoHeight = false;
@@ -600,19 +530,43 @@
             this.LookUpEdit_Course.Name = "LookUpEdit_Course";
             this.LookUpEdit_Course.ValueMember = "StrCourseID";
             // 
-            // frmManageClass
+            // colFacultyID
+            // 
+            this.colFacultyID.Caption = "Mã khoa";
+            this.colFacultyID.FieldName = "StrFacultyID";
+            this.colFacultyID.Name = "colFacultyID";
+            this.colFacultyID.Visible = true;
+            this.colFacultyID.VisibleIndex = 0;
+            // 
+            // colFacultyName
+            // 
+            this.colFacultyName.Caption = "Tên khoa";
+            this.colFacultyName.FieldName = "StrFacultyName";
+            this.colFacultyName.Name = "colFacultyName";
+            this.colFacultyName.Visible = true;
+            this.colFacultyName.VisibleIndex = 1;
+            // 
+            // colStartDay
+            // 
+            this.colStartDay.Caption = "Ngày thành lập";
+            this.colStartDay.FieldName = "DtFoundedYear";
+            this.colStartDay.Name = "colStartDay";
+            this.colStartDay.Visible = true;
+            this.colStartDay.VisibleIndex = 2;
+            // 
+            // frmManageFaculty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 520);
-            this.Controls.Add(this.gcListClass);
-            this.Controls.Add(this.grpInformationClass);
+            this.Controls.Add(this.gcListFaculty);
+            this.Controls.Add(this.grpInformationFaculty);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmManageClass";
-            this.Text = "frmManageClass";
-            this.Load += new System.EventHandler(this.frmManageClass_Load);
+            this.Name = "frmManageFaculty";
+            this.Text = "frmManageFaculty";
+            this.Load += new System.EventHandler(this.frmManageFaculty_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
@@ -622,13 +576,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpInformationClass)).EndInit();
-            this.grpInformationClass.ResumeLayout(false);
-            this.grpInformationClass.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lkeCourse.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lkeFaculty.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcListClass)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvClassList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpInformationFaculty)).EndInit();
+            this.grpInformationFaculty.ResumeLayout(false);
+            this.grpInformationFaculty.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dteStartYear.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteStartYear.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcListFaculty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvFacultyList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Faculty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Course)).EndInit();
             this.ResumeLayout(false);
@@ -638,6 +592,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panelMenu;
+        private DevExpress.XtraEditors.SimpleButton btnUpdate;
+        private DevExpress.XtraEditors.SimpleButton btnDelete;
+        private DevExpress.XtraEditors.SimpleButton btnAdd;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Button btnReLoad;
@@ -656,26 +613,19 @@
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTitle;
-        private DevExpress.XtraEditors.GroupControl grpInformationClass;
-        private DevExpress.XtraEditors.LookUpEdit lkeCourse;
-        private System.Windows.Forms.Label label9;
-        private DevExpress.XtraEditors.LookUpEdit lkeFaculty;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtClassName;
+        private DevExpress.XtraEditors.GroupControl grpInformationFaculty;
+        private System.Windows.Forms.TextBox txtFacultyName;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtClassID;
+        private System.Windows.Forms.TextBox txtFacultyID;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.SimpleButton btnUpdate;
-        private DevExpress.XtraEditors.SimpleButton btnDelete;
-        private DevExpress.XtraEditors.SimpleButton btnAdd;
-        private DevExpress.XtraGrid.GridControl gcListClass;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvClassList;
+        private DevExpress.XtraEditors.DateEdit dteStartYear;
+        private System.Windows.Forms.Label label10;
         private DevExpress.XtraEditors.SimpleButton btnSave;
-        private DevExpress.XtraGrid.Columns.GridColumn colClassID;
-        private DevExpress.XtraGrid.Columns.GridColumn colClassName;
-        private DevExpress.XtraGrid.Columns.GridColumn colFaculty;
-        private DevExpress.XtraGrid.Columns.GridColumn colCourse;
+        private DevExpress.XtraGrid.GridControl gcListFaculty;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvFacultyList;
+        private DevExpress.XtraGrid.Columns.GridColumn colFacultyID;
+        private DevExpress.XtraGrid.Columns.GridColumn colFacultyName;
+        private DevExpress.XtraGrid.Columns.GridColumn colStartDay;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit LookUpEdit_Faculty;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit LookUpEdit_Course;
     }

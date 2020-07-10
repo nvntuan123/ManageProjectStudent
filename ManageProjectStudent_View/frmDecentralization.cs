@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManageProjectStudent_View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,14 @@ namespace ManageProjectStudent_GUI
 
         private void btnExitForm_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnExitFormManageLecturer_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmHome frmHome = new frmHome();
+            frmHome.ShowDialog();
             this.Close();
         }
     }

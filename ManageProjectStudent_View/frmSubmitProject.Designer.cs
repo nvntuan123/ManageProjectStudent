@@ -112,6 +112,7 @@
             this.btnCloseChildForm.Size = new System.Drawing.Size(75, 87);
             this.btnCloseChildForm.TabIndex = 1;
             this.btnCloseChildForm.UseVisualStyleBackColor = true;
+            this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
             // 
             // btnUpdate
             // 
@@ -132,9 +133,9 @@
             this.btnUpdate.AppearanceHovered.Options.UseForeColor = true;
             this.btnUpdate.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.Image")));
-            this.btnUpdate.Location = new System.Drawing.Point(0, 481);
+            this.btnUpdate.Location = new System.Drawing.Point(0, 546);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(171, 64);
+            this.btnUpdate.Size = new System.Drawing.Size(171, 42);
             this.btnUpdate.TabIndex = 19;
             this.btnUpdate.TabStop = false;
             this.btnUpdate.Text = "Nộp và Sửa";
@@ -159,7 +160,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(174, 639);
+            this.panelMenu.Size = new System.Drawing.Size(174, 617);
             this.panelMenu.TabIndex = 31;
             // 
             // LookUpEdit_Subject
@@ -508,13 +509,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1173, 639);
+            this.ClientSize = new System.Drawing.Size(1173, 617);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.gcListTask);
             this.Controls.Add(this.grpSubmit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSubmitProject";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSubmitProject";
             this.Load += new System.EventHandler(this.frmSubmitProject_Load);
             this.panelTitleBar.ResumeLayout(false);

@@ -176,6 +176,7 @@
             this.btnExit.TabIndex = 13;
             this.btnExit.Text = "Thoát";
             this.btnExit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblError
             // 

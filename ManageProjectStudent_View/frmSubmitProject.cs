@@ -214,5 +214,13 @@ namespace ManageProjectStudent_View
         }
 
         #endregion
+
+        private void btnCloseChildForm_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmManageProjectStudentMain frmManageProjectStudent = new frmManageProjectStudentMain();
+            frmManageProjectStudent.ShowDialog();
+            this.Close();
+        }
     }
 }

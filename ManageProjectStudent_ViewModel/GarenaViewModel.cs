@@ -35,7 +35,7 @@ namespace ManageProjectStudent_ViewModel
         }
         public static bool checkIDCard(string _STR_IDCard)
         {
-            if ((_STR_IDCard.Length > 9) || (_STR_IDCard.Length <= 10))
+            if ((_STR_IDCard.Length >= 8) || (_STR_IDCard.Length <= 11))
                 return false;
             return true;
         }

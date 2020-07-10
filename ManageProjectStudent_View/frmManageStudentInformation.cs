@@ -318,28 +318,50 @@ namespace ManageProjectStudent_View
             else
             {
                 _getData();
-                bool bresult = false;
-                if (_IStatusForm == 1)
+                if(GarenaViewModel.checkPhoneNumber(_StudentModelNow.StrPhone)== false)
                 {
-                    bresult = _Student.addNewStudent(_StudentModelNow);
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Số Điện Thoại Phải 10 Số!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+                else if(GarenaViewModel.checkIDCard(_StudentModelNow.StrCardID) == false)
+                {
+                    DevExpress.XtraEditors.XtraMessageBox.Show("CMND Phải Trên 8 Số!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                } 
                 else
                 {
-                    bresult = _Student.updateCurrentStudent(_StudentModelNow);
-                }
+                    if(_Student.checkStudentID(_StudentModelNow.StrStudentID))
+                    {
+                        DevExpress.XtraEditors.XtraMessageBox.Show("Trùng ID", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        _getData();
+                        bool bresult = false;
+                        if (_IStatusForm == 1)
+                        {
+                            bresult = _Student.addNewStudent(_StudentModelNow);
+                        }
+                        else
+                        {
+                            bresult = _Student.updateCurrentStudent(_StudentModelNow);
+                        }
 
-                if (!bresult)
-                {
-                    DevExpress.XtraEditors.XtraMessageBox.Show("Lưu Thất Bại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (!bresult)
+                        {
+                            DevExpress.XtraEditors.XtraMessageBox.Show("Lưu Thất Bại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            _lstLoadListStudent();
+                            _IStatusForm = 0;
+                            _setStatusForm();
+                            DevExpress.XtraEditors.XtraMessageBox.Show("Lưu Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
                 }
-                else
-                {
-                    _lstLoadListStudent();
-                    _IStatusForm = 0;
-                    _setStatusForm();
-                    DevExpress.XtraEditors.XtraMessageBox.Show("Lưu Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                
+
             }
+
         }
 
         private void btnExport_Click(object sender, EventArgs e)

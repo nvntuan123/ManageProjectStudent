@@ -30,32 +30,85 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManageSubjectMain));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnAddStudentSubject = new System.Windows.Forms.Button();
+            this.btnAddGroupSubject = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.btnManageInformationSubject = new System.Windows.Forms.Button();
-            this.panelDesktopPane = new System.Windows.Forms.Panel();
+            this.panelLogo = new System.Windows.Forms.Panel();
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.btnAddGroup = new System.Windows.Forms.Button();
             this.btnExitFormManageSubject = new System.Windows.Forms.Button();
-            this.panelLogo = new System.Windows.Forms.Panel();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
-            this.panelDesktopPane.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(77)))));
+            this.panelMenu.Controls.Add(this.btnAddStudentSubject);
+            this.panelMenu.Controls.Add(this.btnAddGroupSubject);
+            this.panelMenu.Controls.Add(this.btnReturn);
             this.panelMenu.Controls.Add(this.btnManageInformationSubject);
-            this.panelMenu.Controls.Add(this.panelDesktopPane);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(174, 639);
             this.panelMenu.TabIndex = 6;
+            // 
+            // btnAddStudentSubject
+            // 
+            this.btnAddStudentSubject.FlatAppearance.BorderSize = 0;
+            this.btnAddStudentSubject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddStudentSubject.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStudentSubject.ForeColor = System.Drawing.Color.White;
+            this.btnAddStudentSubject.Image = ((System.Drawing.Image)(resources.GetObject("btnAddStudentSubject.Image")));
+            this.btnAddStudentSubject.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddStudentSubject.Location = new System.Drawing.Point(3, 149);
+            this.btnAddStudentSubject.Name = "btnAddStudentSubject";
+            this.btnAddStudentSubject.Size = new System.Drawing.Size(174, 50);
+            this.btnAddStudentSubject.TabIndex = 12;
+            this.btnAddStudentSubject.Text = "  Thêm sinh viên vào môn học";
+            this.btnAddStudentSubject.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddStudentSubject.UseVisualStyleBackColor = true;
+            this.btnAddStudentSubject.Click += new System.EventHandler(this.btnAddStudentSubject_Click);
+            // 
+            // btnAddGroupSubject
+            // 
+            this.btnAddGroupSubject.FlatAppearance.BorderSize = 0;
+            this.btnAddGroupSubject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddGroupSubject.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddGroupSubject.ForeColor = System.Drawing.Color.White;
+            this.btnAddGroupSubject.Image = ((System.Drawing.Image)(resources.GetObject("btnAddGroupSubject.Image")));
+            this.btnAddGroupSubject.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddGroupSubject.Location = new System.Drawing.Point(3, 205);
+            this.btnAddGroupSubject.Name = "btnAddGroupSubject";
+            this.btnAddGroupSubject.Size = new System.Drawing.Size(174, 50);
+            this.btnAddGroupSubject.TabIndex = 14;
+            this.btnAddGroupSubject.Text = "  Thêm nhóm cho môn học";
+            this.btnAddGroupSubject.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddGroupSubject.UseVisualStyleBackColor = true;
+            this.btnAddGroupSubject.Click += new System.EventHandler(this.btnAddGroupSubject_Click);
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.FlatAppearance.BorderSize = 0;
+            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReturn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.ForeColor = System.Drawing.Color.White;
+            this.btnReturn.Image = global::ManageProjectStudent_View.Properties.Resources.return_30px;
+            this.btnReturn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReturn.Location = new System.Drawing.Point(3, 261);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(174, 50);
+            this.btnReturn.TabIndex = 13;
+            this.btnReturn.Text = "Trở về";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnManageInformationSubject
             // 
@@ -75,16 +128,16 @@
             this.btnManageInformationSubject.UseVisualStyleBackColor = true;
             this.btnManageInformationSubject.Click += new System.EventHandler(this.btnManageInformationSubject_Click);
             // 
-            // panelDesktopPane
+            // panelLogo
             // 
-            this.panelDesktopPane.Controls.Add(this.btnAddStudent);
-            this.panelDesktopPane.Controls.Add(this.btnAddGroup);
-            this.panelDesktopPane.Controls.Add(this.btnExitFormManageSubject);
-            this.panelDesktopPane.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktopPane.Location = new System.Drawing.Point(0, 87);
-            this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(174, 552);
-            this.panelDesktopPane.TabIndex = 9;
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(37)))), ((int)(((byte)(60)))));
+            this.panelLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelLogo.BackgroundImage")));
+            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(174, 87);
+            this.panelLogo.TabIndex = 5;
             // 
             // btnAddStudent
             // 
@@ -101,7 +154,6 @@
             this.btnAddStudent.Text = "  Thêm sinh viên vào môn học";
             this.btnAddStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddStudent.UseVisualStyleBackColor = true;
-            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
             // btnAddGroup
             // 
@@ -118,7 +170,6 @@
             this.btnAddGroup.Text = "  Thêm nhóm cho môn học";
             this.btnAddGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddGroup.UseVisualStyleBackColor = true;
-            this.btnAddGroup.Click += new System.EventHandler(this.btnAddGroup_Click);
             // 
             // btnExitFormManageSubject
             // 
@@ -134,18 +185,6 @@
             this.btnExitFormManageSubject.TabIndex = 10;
             this.btnExitFormManageSubject.Text = "Trở về";
             this.btnExitFormManageSubject.UseVisualStyleBackColor = true;
-            this.btnExitFormManageSubject.Click += new System.EventHandler(this.btnExitFormManageSubject_Click);
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(37)))), ((int)(((byte)(60)))));
-            this.panelLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelLogo.BackgroundImage")));
-            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(174, 87);
-            this.panelLogo.TabIndex = 5;
             // 
             // panelTitleBar
             // 
@@ -171,6 +210,7 @@
             this.btnCloseChildForm.Size = new System.Drawing.Size(75, 87);
             this.btnCloseChildForm.TabIndex = 7;
             this.btnCloseChildForm.UseVisualStyleBackColor = true;
+            this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
             // 
             // lblTitle
             // 
@@ -184,27 +224,27 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Quản lý môn học";
             // 
-            // panel1
+            // panelDesktopPane
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(174, 87);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(999, 552);
-            this.panel1.TabIndex = 8;
+            this.panelDesktopPane.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktopPane.Location = new System.Drawing.Point(174, 87);
+            this.panelDesktopPane.Name = "panelDesktopPane";
+            this.panelDesktopPane.Size = new System.Drawing.Size(999, 552);
+            this.panelDesktopPane.TabIndex = 8;
             // 
             // frmManageSubjectMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1173, 639);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelDesktopPane);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmManageSubjectMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSubject";
             this.panelMenu.ResumeLayout(false);
-            this.panelDesktopPane.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             this.ResumeLayout(false);
@@ -217,12 +257,14 @@
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnManageInformationSubject;
         private System.Windows.Forms.Panel panelDesktopPane;
+        private System.Windows.Forms.Button btnManageInformationSubject;
         private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.Button btnAddGroup;
         private System.Windows.Forms.Button btnExitFormManageSubject;
         private System.Windows.Forms.Button btnCloseChildForm;
+        private System.Windows.Forms.Button btnAddStudentSubject;
+        private System.Windows.Forms.Button btnAddGroupSubject;
+        private System.Windows.Forms.Button btnReturn;
     }
 }

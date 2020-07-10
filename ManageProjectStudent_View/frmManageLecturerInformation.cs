@@ -15,6 +15,8 @@ using ManageProjectStudent_Interface;
 using Unity;
 using ManageProjectStudent_ViewModel;
 using ManageProjectStudent_Model;
+using DevExpress.XtraPrinting;
+using DevExpress.Export;
 
 namespace ManageProjectStudent_View
 {
@@ -402,6 +404,38 @@ namespace ManageProjectStudent_View
             _lstLecturer = _Staff.loadStaff();
             gcListLecturer.DataSource = _lstLecturer;
 
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (gvLecturerList.RowCount > 0)
+                {
+                    var dialog = new SaveFileDialog();
+                    dialog.Title = @"Export file excel";
+                    dialog.FileName = "";
+                    dialog.Filter = @"Micrsoft Excel|*.xlsx";
+                    if (dialog.ShowDialog() == DialogResult.OK)
+                    {
+                        gvLecturerList.ColumnPanelRowHeight = 40;
+                        gvLecturerList.OptionsPrint.AutoWidth = AutoSize;
+                        gvLecturerList.OptionsPrint.ShowPrintExportProgress = true;
+                        gvLecturerList.OptionsPrint.AllowCancelPrintExport = true;
+                        XlsxExportOptions options = new XlsxExportOptions();
+                        options.TextExportMode = TextExportMode.Text;
+                        options.ExportMode = XlsxExportMode.SingleFile;
+                        options.SheetName = "Sheet1";
+
+                        ExportSettings.DefaultExportType = ExportType.Default;
+                        gvLecturerList.ExportToXlsx(dialog.FileName, options);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                DevExpress.XtraEditors.XtraMessageBox.Show("Error" + ex, "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         //key press
 

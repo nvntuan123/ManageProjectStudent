@@ -16,5 +16,9 @@ namespace ManageProjectStudent_Interface
         bool updateCurrentFaculty(FacultyModel faculty);
         bool deleteCurrentFaculty(FacultyModel faculty);
         List<string> lstFacultyID();
+
+        //front-end
+        bool _checkCharacterNumberFaculty(char _C);
+        bool _checkCharacterCharFaculty(char _C);
     }
 }

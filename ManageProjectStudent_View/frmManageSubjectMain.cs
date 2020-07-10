@@ -86,13 +86,6 @@ namespace ManageProjectStudent_View
             childForm.Show();
             //lblTitle.Text = childForm.Text;
         }
-
-        private void btnManageProjectLecturer_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new ManageProjectStudent_View.frmManageProject(), sender);
-            lblTitle.Text = "Quản Lý Đồ Án";
-        }
-
         private void btnViewDeadlineLecturer_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ManageProjectStudent_View.frmViewDeadlineProject(), sender);
@@ -102,7 +95,7 @@ namespace ManageProjectStudent_View
         private void Reset()
         {
             DisableButton();
-            lblTitle.Text = "Quản Lý Đồ Án Cho Giảng Viên";
+            lblTitle.Text = "Quản Lý Môn Học";
             panelTitleBar.BackColor = Color.FromArgb(0, 135, 137);
             panelLogo.BackColor = Color.FromArgb(24, 37, 60);
             currentButton = null;
@@ -111,29 +104,39 @@ namespace ManageProjectStudent_View
 
         private void btnManageInformationSubject_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ManageProjectStudent_View.frmManageSubject(), sender);
-            lblTitle.Text = "Quản Lý Thông Tin Sinh Viên";
+            this.Hide();
+            frmManageSubject frmManageSubject = new frmManageSubject();
+            frmManageSubject.ShowDialog();
+            this.Close();
         }
 
-        private void btnAddStudent_Click(object sender, EventArgs e)
+        private void btnAddGroupSubject_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ManageProjectStudent_View.frmAddStudentSubject(), sender);
-            lblTitle.Text = "Thêm Sinh Viên Vào Môn Học";
-        }
 
-        private void btnAddGroup_Click(object sender, EventArgs e)
-        {
             OpenChildForm(new ManageProjectStudent_View.frmAddGroupForSubject(), sender);
             lblTitle.Text = "Thêm Nhóm Cho Môn Học";
         }
 
-        private void btnExitFormManageSubject_Click(object sender, EventArgs e)
+        private void btnReturn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
             this.Hide();
             frmHome frmHome = new frmHome();
             frmHome.ShowDialog();
             this.Close();
+        }
+
+        private void btnAddStudentSubject_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ManageProjectStudent_View.frmAddStudentSubject(), sender);
+            lblTitle.Text = "Thêm Sinh Viên Vào Môn Học";
+        }
+
+        private void btnCloseChildForm_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            Reset();
         }
     }
 }

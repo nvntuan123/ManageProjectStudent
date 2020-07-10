@@ -7,45 +7,46 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.Export;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.Drawing;
-using DevExpress.XtraPrinting;
 using ManageProjectStudent_Interface;
+using Unity;
 using ManageProjectStudent_Model;
 using ManageProjectStudent_ViewModel;
-using Unity;
+using DevExpress.XtraEditors.Filtering.Templates;
+using System.Security.AccessControl;
+using DevExpress.XtraPrinting;
+using DevExpress.Export;
+using System.IO;
+using OfficeOpenXml;
+using OfficeOpenXml.Style;
 
 namespace ManageProjectStudent_View
 {
-    public partial class frmManageProject : Form
+    public partial class frmManageProjectTask : Form
     {
-        public frmManageProject()
+        public frmManageProjectTask()
         {
             InitializeComponent();
         }
         #region Properties
         private bool indicatorIcon = true;
-        private IProject _Project = Config.Container.Resolve<IProject>();
-        private ISubject _Subject = Config.Container.Resolve<ISubject>();
-        private IStaff _Staff = Config.Container.Resolve<IStaff>();
-
         private int _IStatusForm = 0;
-        private ProjectModel _ProjectModelNow = null;
+        private ProjectTaskModel _TaskModelNow = null;
+        private IProjectTask _Task = Config.Container.Resolve<IProjectTask>();
+        private BindingList<ProjectTaskModel> _lstTask = new BindingList<ProjectTaskModel>();
+        private IProject _Project = Config.Container.Resolve<IProject>();
         private BindingList<ProjectModel> _lstProject = new BindingList<ProjectModel>();
-        private BindingList<SubjectModel> _lstSubject = new BindingList<SubjectModel>();
-        private BindingList<StaffModel> _lstLecturer = new BindingList<StaffModel>();
         #endregion
-        #region Method
+        #region Mehthod
         private void _setStatusForm()
         {
-            //txtID.ReadOnly = true;
             switch (_IStatusForm)
             {
                 case 0:
-                    grpInformationProject.Enabled = false;
-                    if (_ProjectModelNow != null)
+                    grpInformationTask.Enabled = false;
+                    if(_TaskModelNow != null)
                     {
                         btnUpdate.Enabled = true;
                         btnDelete.Enabled = true;
@@ -57,110 +58,101 @@ namespace ManageProjectStudent_View
                     }
                     break;
                 case 1:
-                    txtID.Text = string.Empty;
-                    txtProjectName.Text = string.Empty;
-                    lkeSubject.EditValue = null;
-                    lkeLecturer.EditValue = null;
+                    lkeProjectID.EditValue = null;
+                    txtTaskID.Text = "";
+                    txtTaskName.Text = "";
                     dteStartDay.EditValue = null;
                     dteEndDay.EditValue = null;
+                    txtFileName.Text = "";
+                    txtLinkFile.Text = "";
 
-                    grpInformationProject.Enabled = true;
+                    grpInformationTask.Enabled = true;
 
                     btnDelete.Enabled = false;
                     btnUpdate.Enabled = false;
                     btnSave.Enabled = true;
                     break;
-                case 2:
-                    grpInformationProject.Enabled = true;
+                case 2 :
+                    grpInformationTask.Enabled = true;
                     break;
             }
         }
 
         private void _loadData()
         {
-            if (_ProjectModelNow == null)
+            if(_TaskModelNow == null)
             {
-                txtID.Text = string.Empty;
-                txtProjectName.Text = string.Empty;
-                lkeSubject.EditValue = null;
-                lkeLecturer.EditValue = null;
+                lkeProjectID.EditValue = null;
+                txtTaskID.Text = "";
+                txtTaskName.Text = "";
                 dteStartDay.EditValue = null;
                 dteEndDay.EditValue = null;
+                txtFileName.Text = "";
+                txtLinkFile.Text = "";
             }
             else
             {
-                txtID.Text = _ProjectModelNow.StrProjectID;
-                txtProjectName.Text = _ProjectModelNow.StrProjectName;
-                lkeSubject.EditValue = _ProjectModelNow.StrSubjectID;
-                lkeLecturer.EditValue = _ProjectModelNow.StrStaffID;
-                dteStartDay.EditValue = _ProjectModelNow.DtStartDay.Date;
-                dteEndDay.EditValue = _ProjectModelNow.DtStartDay.Date;
+                lkeProjectID.EditValue = _TaskModelNow.StrProjectID;
+                txtTaskID.Text = _TaskModelNow.StrTaskID;
+                txtTaskName.Text = _TaskModelNow.StrTaskName;
+                dteStartDay.EditValue = _TaskModelNow.DtStartDay.Date;
+                dteEndDay.EditValue = _TaskModelNow.DtStartDay.Date;
+                txtFileName.Text = _TaskModelNow.StrFileName;
+                txtLinkFile.Text = _TaskModelNow.StrLinkFile;
             }
         }
 
         private void _getData()
         {
-            if (_ProjectModelNow == null)
+            if (_TaskModelNow == null)
             {
-                _ProjectModelNow = new ProjectModel();
+                _TaskModelNow = new ProjectTaskModel();
             }
-            _ProjectModelNow.StrProjectID = txtID.Text;
-            _ProjectModelNow.StrProjectName = txtProjectName.Text;
-            _ProjectModelNow.StrSubjectID = lkeSubject.GetColumnValue("StrSubjectID").ToString();
-            _ProjectModelNow.StrStaffID = lkeLecturer.GetColumnValue("StrStaffID").ToString();
-            _ProjectModelNow.DtStartDay = (DateTime)dteStartDay.EditValue;
-            _ProjectModelNow.DtEndDay = (DateTime)dteEndDay.EditValue;
-
+            _TaskModelNow.StrProjectID = lkeProjectID.GetColumnValue("StrProjectID").ToString();
+            _TaskModelNow.StrTaskID = txtTaskID.Text;
+            _TaskModelNow.StrTaskName = txtTaskName.Text;
+            _TaskModelNow.DtStartDay = (DateTime)dteStartDay.EditValue;
+            _TaskModelNow.DtEndDay = (DateTime)dteEndDay.EditValue;
+            _TaskModelNow.StrFileName = txtFileName.Text;
+            _TaskModelNow.StrLinkFile = txtLinkFile.Text;
         }
 
-        private void _lstLoadListProject()
+        private void _lstLoadListTask()
         {
-            _lstProject = _Project.loadProject();
-            gcListProject.DataSource = _lstProject;
+            _lstTask = _Task.loadProjectTask();
+            gcListTask.DataSource = _lstTask;
         }
         #endregion
         #region Event
-        private void frmManageProject_Load(object sender, EventArgs e)
+        private void frmManageProjectTask_Load(object sender, EventArgs e)
         {
             dteStartDay.EditValue = DateTime.Now.Date;
             dteEndDay.EditValue = DateTime.Now.Date;
 
-            _lstSubject = _Subject.loadSubject();
-            lkeSubject.Properties.ValueMember = "StrSubjectID";
-            lkeSubject.Properties.DisplayMember = "StrSubjectName";
-            lkeSubject.Properties.DataSource = _lstSubject;
-            lkeSubject.Properties.Columns["colSubjectID"].FieldName = "StrSubjectID";
-            lkeSubject.Properties.Columns["colSubjectName"].FieldName = "StrSubjectName";
-
-            _lstLecturer = _Staff.loadStaff();
-            lkeLecturer.Properties.ValueMember = "StrStaffID";
-            lkeLecturer.Properties.DisplayMember = "StrStaffName";
-            lkeLecturer.Properties.DataSource = _lstLecturer;
-            lkeLecturer.Properties.Columns["colLecturerID"].FieldName = "StrStaffID";
-            lkeLecturer.Properties.Columns["colLecturerName"].FieldName = "StrStaffName";
-
+            _lstProject = _Project.loadProject();
+            lkeProjectID.Properties.ValueMember = "StrProjectID";
+            lkeProjectID.Properties.DisplayMember = "StrProjectID";
+            lkeProjectID.Properties.DataSource = _lstProject;
+            lkeProjectID.Properties.Columns["colProjectID"].FieldName = "StrProjectID";
 
             ///*GridView*/
-            _lstProject = _Project.loadProject();
+            _lstTask = _Task.loadProjectTask();
 
-            LookUpEdit_Subject.DataSource = _lstSubject;
-            LookUpEdit_Subject.Columns["colSubjectID"].FieldName = "StrSubjectID";
-            LookUpEdit_Subject.Columns["colSubjectName"].FieldName = "StrSubjectName";
+            LookUpEdit_Project.DataSource = _lstTask;
+            LookUpEdit_Project.Columns["colProjectID"].FieldName = "StrProjectID";
 
-            LookUpEdit_Lecturer.DataSource = _lstLecturer;
-            LookUpEdit_Lecturer.Columns["colLecturerID"].FieldName = "StrStaffID";
-            LookUpEdit_Lecturer.Columns["colLecturerName"].FieldName = "StrStaffName";
-
-            gcListProject.DataSource = _lstProject;
+            gcListTask.DataSource = _lstTask;
             _setStatusForm();
+            
         }
 
-        private void gvListProject_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
+        private void gvListTask_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
         {
-            if (gvListProject.SelectedRowsCount > 0)
-                _ProjectModelNow = (ProjectModel)gvListProject.GetRow(gvListProject.FocusedRowHandle);
+
+            if (gvListTask.SelectedRowsCount > 0)
+                _TaskModelNow = (ProjectTaskModel)gvListTask.GetRow(gvListTask.FocusedRowHandle);
             else
-                _ProjectModelNow = null;
+                _TaskModelNow = null;
 
             _loadData();
             _IStatusForm = 0;
@@ -169,32 +161,30 @@ namespace ManageProjectStudent_View
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
-            _ProjectModelNow = null;
+            _TaskModelNow = null;
             _IStatusForm = 1;
             _setStatusForm();
-            txtProjectName.Focus();
+            txtTaskID.Focus();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             _IStatusForm = 2;
             _setStatusForm();
-            txtProjectName.Focus();
+            txtTaskID.Focus();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
-            if (_ProjectModelNow != null)
+            if (_TaskModelNow != null)
             {
-                if (_Project.deleteCurrentProject(_ProjectModelNow))
+                if (_Task.deleteCurrentProjectTask(_TaskModelNow))
                 {
-                    _lstLoadListProject();
+                    _lstLoadListTask();
                     DevExpress.XtraEditors.XtraMessageBox.Show("Xóa Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (_lstProject.Count == 0)
+                    if (_lstTask.Count == 0)
                     {
-                        _ProjectModelNow = null;
+                        _TaskModelNow = null;
                         _IStatusForm = 0;
                         _setStatusForm();
                     }
@@ -208,30 +198,25 @@ namespace ManageProjectStudent_View
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtProjectName.Text == "")
+            if (lkeProjectID.EditValue == null)
             {
-                string _STRMesge = "Bạn chưa nhập tên Project";
-                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa chọn Mã đồ án", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (lkeSubject.EditValue == null)
+            else if (txtTaskID.Text == "")
             {
-                string _STRMesge = "Bạn chưa chọn Môn học";
-                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa nhập Mã task", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (lkeLecturer.EditValue == null)
+            else if (txtTaskName.Text == "")
             {
-                string _STRMesge = "Bạn chưa chọn Giảng viên";
-                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa nhập Tên task", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (dteStartDay.EditValue == null)
             {
-                string _STRMesge = "Bạn chưa chọn Ngày bắt đầu";
-                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa chọn Ngày bắt đầu", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (dteEndDay.EditValue == null)
             {
-                string _STRMesge = "Bạn chưa chọn Ngày kết thúc";
-                MessageBox.Show(_STRMesge, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa chọn Ngày kết thúc", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -239,11 +224,11 @@ namespace ManageProjectStudent_View
                 bool bresult = false;
                 if (_IStatusForm == 1)
                 {
-                    bresult = _Project.addNewProject(_ProjectModelNow);
+                    bresult = _Task.addNewProjectTask(_TaskModelNow);
                 }
                 else
                 {
-                    bresult = _Project.updateCurrentProject(_ProjectModelNow);
+                    bresult = _Task.addNewProjectTask(_TaskModelNow);
                 }
 
                 if (!bresult)
@@ -252,7 +237,7 @@ namespace ManageProjectStudent_View
                 }
                 else
                 {
-                    _lstLoadListProject();
+                    _lstLoadListTask();
                     _IStatusForm = 0;
                     _setStatusForm();
                     DevExpress.XtraEditors.XtraMessageBox.Show("Lưu Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -262,32 +247,21 @@ namespace ManageProjectStudent_View
 
         private void btnReLoad_Click(object sender, EventArgs e)
         {
-
             _IStatusForm = 0;
             _setStatusForm();
-            _lstProject = _Project.loadProject();
-            gcListProject.DataSource = _lstProject;
+            _lstTask = _Task.loadProjectTask();
+            gcListTask.DataSource = _lstTask;
         }
 
         private void btnCloseChildForm_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmManageProjectMain frmManageProjectMain = new frmManageProjectMain();
-            frmManageProjectMain.ShowDialog();
+            frmManageProjectStudentMain frm = new frmManageProjectStudentMain();
+            frm.ShowDialog();
             this.Close();
         }
 
-        private void txtProjectName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!_Project._checkCharacterNumberProject(e.KeyChar))
-            {
-                e.Handled = true;
-                ((TextBox)sender).Focus();
-                DevExpress.XtraEditors.XtraMessageBox.Show("Không được nhập ký tự số, chỉ được nhập chữ.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void gvListProject_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
+        private void gvListTask_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
         {
             try
             {
@@ -333,7 +307,7 @@ namespace ManageProjectStudent_View
             }
         }
 
-        private void gvListProject_RowCountChanged(object sender, EventArgs e)
+        private void gvListTask_RowCountChanged(object sender, EventArgs e)
         {
             GridView gridview = ((GridView)sender);
             if (!gridview.GridControl.IsHandleCreated) return;
@@ -341,13 +315,12 @@ namespace ManageProjectStudent_View
             SizeF size = gr.MeasureString(gridview.RowCount.ToString(), gridview.PaintAppearance.Row.GetFont());
             gridview.IndicatorWidth = Convert.ToInt32(size.Width + 0.999f) + GridPainter.Indicator.ImageSize.Width + 20;
         }
-        #endregion
 
         private void btnExport_Click(object sender, EventArgs e)
         {
             try
             {
-                if (gvListProject.RowCount > 0)
+                if (gvListTask.RowCount > 0)
                 {
                     var dialog = new SaveFileDialog();
                     dialog.Title = @"Export file excel";
@@ -355,17 +328,17 @@ namespace ManageProjectStudent_View
                     dialog.Filter = @"Micrsoft Excel|*.xlsx";
                     if (dialog.ShowDialog() == DialogResult.OK)
                     {
-                        gvListProject.ColumnPanelRowHeight = 40;
-                        gvListProject.OptionsPrint.AutoWidth = AutoSize;
-                        gvListProject.OptionsPrint.ShowPrintExportProgress = true;
-                        gvListProject.OptionsPrint.AllowCancelPrintExport = true;
+                        gvListTask.ColumnPanelRowHeight = 40;
+                        gvListTask.OptionsPrint.AutoWidth = AutoSize;
+                        gvListTask.OptionsPrint.ShowPrintExportProgress = true;
+                        gvListTask.OptionsPrint.AllowCancelPrintExport = true;
                         XlsxExportOptions options = new XlsxExportOptions();
                         options.TextExportMode = TextExportMode.Text;
                         options.ExportMode = XlsxExportMode.SingleFile;
                         options.SheetName = "Sheet1";
 
                         ExportSettings.DefaultExportType = ExportType.Default;
-                        gvListProject.ExportToXlsx(dialog.FileName, options);
+                        gvListTask.ExportToXlsx(dialog.FileName, options);
                     }
                 }
             }
@@ -374,5 +347,6 @@ namespace ManageProjectStudent_View
                 DevExpress.XtraEditors.XtraMessageBox.Show("Error" + ex, "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
     }
 }

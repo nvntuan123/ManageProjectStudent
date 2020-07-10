@@ -96,12 +96,6 @@ namespace ManageProjectStudent_View
             this.Close();
         }
 
-        private void btnViewDeadlineLecturer_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new ManageProjectStudent_View.frmViewDeadlineProject(), sender);
-            lblTitle.Text = "   Xem Hạn Nộp  ";
-        }
-
         private void btnExitForm_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
@@ -126,6 +120,14 @@ namespace ManageProjectStudent_View
             if (activeForm != null)
                 activeForm.Close();
             Reset();
+        }
+
+        private void btnManageTask_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmManageProjectTask frm = new frmManageProjectTask();
+            frm.ShowDialog();
+            
         }
     }
 }

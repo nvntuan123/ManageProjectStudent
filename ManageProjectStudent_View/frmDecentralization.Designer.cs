@@ -122,6 +122,7 @@
             this.btnExitFormManageLecturer.Size = new System.Drawing.Size(70, 84);
             this.btnExitFormManageLecturer.TabIndex = 7;
             this.btnExitFormManageLecturer.UseVisualStyleBackColor = true;
+            this.btnExitFormManageLecturer.Click += new System.EventHandler(this.btnExitFormManageLecturer_Click);
             // 
             // lblTitle
             // 
@@ -429,6 +430,7 @@
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDecentralization";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDecentralization";
             this.panelMenu.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);

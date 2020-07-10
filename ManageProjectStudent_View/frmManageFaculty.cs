@@ -24,133 +24,107 @@ using OfficeOpenXml.Style;
 
 namespace ManageProjectStudent_View
 {
-    public partial class frmManageClass : Form
+    public partial class frmManageFaculty : Form
     {
-        public frmManageClass()
+        public frmManageFaculty()
         {
             InitializeComponent();
         }
+        #region Anh Thu
         #region Properties
         private bool indicatorIcon = true;
         private int _IStatusForm = 0;
-        private IClass _Class = Config.Container.Resolve<IClass>();
-        private ClassModel _ClassModelNow = null;
-        private BindingList<ClassModel> _lstClass = new BindingList<ClassModel>();
+        private FacultyModel _FacultyModelNow = null;
         private IFaculty _Faculty = Config.Container.Resolve<IFaculty>();
         private BindingList<FacultyModel> _lstFaculty = new BindingList<FacultyModel>();
-        private ICourse _Course = Config.Container.Resolve<ICourse>();
-        private BindingList<CourseModel> _lstCourse = new BindingList<CourseModel>();
         #endregion
-        #region Mehtod
+        #region Method
         private void _setStatusForm()
         {
             switch (_IStatusForm)
             {
                 case 0:
-                    grpInformationClass.Enabled = false;
-                    if (_ClassModelNow != null)
+                    grpInformationFaculty.Enabled = false;
+                    if(_FacultyModelNow != null)
                     {
                         btnDelete.Enabled = true;
                         btnUpdate.Enabled = true;
-                    }
+                    }  
                     else
                     {
                         btnDelete.Enabled = false;
                         btnUpdate.Enabled = false;
-                    }
+                    }    
                     break;
                 case 1:
-                    txtClassID.Text = "";
-                    txtClassName.Text = "";
-                    lkeFaculty.EditValue = null;
-                    lkeCourse.EditValue = null;
+                    txtFacultyID.Text = "";
+                    txtFacultyName.Text = "";
+                    dteStartYear.EditValue = null;
 
-                    grpInformationClass.Enabled = true;
+                    grpInformationFaculty.Enabled = true;
 
                     btnAdd.Enabled = true;
                     btnDelete.Enabled = true;
                     btnUpdate.Enabled = true;
                     break;
                 case 2:
-                    grpInformationClass.Enabled = true;
+                    grpInformationFaculty.Enabled = true;
                     break;
-            }
+            }    
         }
 
         private void _loadData()
         {
-            if (_ClassModelNow == null)
+            if(_FacultyModelNow == null)
             {
-                txtClassID.Text = "";
-                txtClassName.Text = "";
-                lkeFaculty.EditValue = null;
-                lkeCourse.EditValue = null;
+                txtFacultyID.Text = "";
+                txtFacultyName.Text = "";
+                dteStartYear.EditValue = null;
             }
             else
             {
-                txtClassID.Text = _ClassModelNow.StrClassID;
-                txtClassName.Text = _ClassModelNow.StrClassName;
-                lkeFaculty.EditValue = _ClassModelNow.StrFacultyID;
-                lkeCourse.EditValue = _ClassModelNow.StrCourseID;
+                txtFacultyID.Text = _FacultyModelNow.StrFacultyID;
+                txtFacultyName.Text = _FacultyModelNow.StrFacultyName;
+                dteStartYear.EditValue = _FacultyModelNow.DtFoundedYear.Date;
             }
         }
 
         private void _getData()
         {
-            if (_ClassModelNow == null)
+            if(_FacultyModelNow == null)
             {
-                _ClassModelNow = new ClassModel();
+                _FacultyModelNow = new FacultyModel();
             }
-            _ClassModelNow.StrClassID = txtClassID.Text;
-            _ClassModelNow.StrClassName = txtClassName.Text;
-            _ClassModelNow.StrFacultyID = lkeFaculty.GetColumnValue("StrFacultyID").ToString();
-            _ClassModelNow.StrCourseID = lkeCourse.GetColumnValue("StrCourseID").ToString();
+            _FacultyModelNow.StrFacultyID = txtFacultyID.Text;
+            _FacultyModelNow.StrFacultyName = txtFacultyName.Text;
+            _FacultyModelNow.DtFoundedYear = (DateTime)dteStartYear.EditValue;
         }
 
-        private void _lstLoadListClass()
-        {
-            _lstClass = _Class.loadClass();
-            gcListClass.DataSource = _lstClass;
-        }
-        #endregion
-        #region Event
-        //load
-        private void frmManageClass_Load(object sender, EventArgs e)
+        private void _lstLoadListFaculty()
         {
             _lstFaculty = _Faculty.loadFaculty();
-            lkeFaculty.Properties.ValueMember = "StrFacultyID";
-            lkeFaculty.Properties.DisplayMember = "StrFacultyName";
-            lkeFaculty.Properties.DataSource = _lstFaculty;
-            lkeFaculty.Properties.Columns["colFacultyID"].FieldName = "StrFacultyID";
-            lkeFaculty.Properties.Columns["colFacultyName"].FieldName = "StrFacultyName";
+            gcListFaculty.DataSource = _lstFaculty;
+        }
+        #endregion
 
-            _lstCourse = _Course.loadCourse();
-            lkeCourse.Properties.ValueMember = "StrCourseID";
-            lkeCourse.Properties.DisplayMember = "StrCourseID";
-            lkeCourse.Properties.DataSource = _lstCourse;
-            lkeCourse.Properties.Columns["colCourseID"].FieldName = "StrCourseID";
+        #region Event
+        //load
+        private void frmManageFaculty_Load(object sender, EventArgs e)
+        {
+            dteStartYear.EditValue = DateTime.Now.Date;
 
-            ///*GridView*/
-            _lstClass = _Class.loadClass();
-
-            LookUpEdit_Faculty.DataSource = _lstFaculty;
-            LookUpEdit_Faculty.Columns["colFacultyID"].FieldName = "StrFacultyID";
-            LookUpEdit_Faculty.Columns["colFacultyName"].FieldName = "StrFacultyName";
-
-            LookUpEdit_Course.DataSource = _lstCourse;
-            LookUpEdit_Course.Columns["colCourseID"].FieldName = "StrCourseID";
-
-            gcListClass.DataSource = _lstClass;
+            _lstFaculty = _Faculty.loadFaculty();
+            gcListFaculty.DataSource = _lstFaculty;
             _setStatusForm();
         }
 
         //selection changed
-        private void gvClassList_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
+        private void gvFacultyList_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
         {
-            if (gvClassList.SelectedRowsCount > 0)
-                _ClassModelNow = (ClassModel)gvClassList.GetRow(gvClassList.FocusedRowHandle);
+            if (gvFacultyList.SelectedRowsCount > 0)
+                _FacultyModelNow = (FacultyModel)gvFacultyList.GetRow(gvFacultyList.FocusedRowHandle);
             else
-                _ClassModelNow = null;
+                _FacultyModelNow = null;
 
             _loadData();
             _IStatusForm = 0;
@@ -158,17 +132,32 @@ namespace ManageProjectStudent_View
         }
 
         //click
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            _FacultyModelNow = null;
+            _IStatusForm = 1;
+            _setStatusForm();
+            txtFacultyID.Focus();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            _IStatusForm = 2;
+            _setStatusForm();
+            txtFacultyID.Focus();
+        }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (_ClassModelNow != null)
+            if (_FacultyModelNow != null)
             {
-                if (_Class.deleteCurrentClass(_ClassModelNow))
+                if (_Faculty.deleteCurrentFaculty(_FacultyModelNow))
                 {
-                    _lstLoadListClass();
+                    _lstLoadListFaculty();
                     DevExpress.XtraEditors.XtraMessageBox.Show("Xóa Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (_lstClass.Count == 0)
+                    if (_lstFaculty.Count == 0)
                     {
-                        _ClassModelNow = null;
+                        _FacultyModelNow = null;
                         _IStatusForm = 0;
                         _setStatusForm();
                     }
@@ -180,72 +169,12 @@ namespace ManageProjectStudent_View
             }
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            _ClassModelNow = null;
-            _IStatusForm = 1;
-            _setStatusForm();
-            txtClassID.Focus();
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            if (txtClassID.Text == "")
-            {
-                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa nhập Mã lớp", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (txtClassName.Text == "")
-            {
-                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa nhập Tên lớp", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (lkeFaculty.EditValue == null)
-            {
-                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa chọn Khoa", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (lkeCourse.EditValue == null)
-            {
-                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa chọn Khóa", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                _getData();
-                bool bresult = false;
-                if (_IStatusForm == 1)
-                {
-                    bresult = _Class.addNewClass(_ClassModelNow);
-                }
-                else
-                {
-                    bresult = _Class.updateCurrentClass(_ClassModelNow);
-                }
-
-                if (!bresult)
-                {
-                    DevExpress.XtraEditors.XtraMessageBox.Show("Lưu Thất Bại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    _lstLoadListClass();
-                    _IStatusForm = 0;
-                    _setStatusForm();
-                    DevExpress.XtraEditors.XtraMessageBox.Show("Lưu Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            _IStatusForm = 2;
-            _setStatusForm();
-            txtClassID.Focus();
-        }
-
         private void btnReLoad_Click(object sender, EventArgs e)
         {
             _IStatusForm = 0;
             _setStatusForm();
-            _lstClass = _Class.loadClass();
-            gcListClass.DataSource = _lstClass;
+            _lstFaculty = _Faculty.loadFaculty();
+            gcListFaculty.DataSource = _lstFaculty;
         }
 
         private void btnExitFormManageCourse_Click(object sender, EventArgs e)
@@ -256,8 +185,59 @@ namespace ManageProjectStudent_View
             this.Close();
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (txtFacultyID.Text == "")
+            {
+                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa nhập Mã khoa", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (txtFacultyName.Text == "")
+            {
+                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa nhập Tên khoa", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (dteStartYear.EditValue == null)
+            {
+                DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa chọn Ngày thành lập", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                _getData();
+                bool bresult = false;
+                if (_IStatusForm == 1)
+                {
+                    bresult = _Faculty.addNewFaculty(_FacultyModelNow);
+                }
+                else
+                {
+                    bresult = _Faculty.updateCurrentFaculty(_FacultyModelNow);
+                }
+
+                if (!bresult)
+                {
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Lưu Thất Bại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    _lstLoadListFaculty();
+                    _IStatusForm = 0;
+                    _setStatusForm();
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Lưu Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        //keypress
+        private void txtFacultyName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!_Faculty._checkCharacterNumberFaculty(e.KeyChar))
+            {
+                e.Handled = true;
+                ((TextBox)sender).Focus();
+                DevExpress.XtraEditors.XtraMessageBox.Show("Không được nhập ký tự số, chỉ được nhập chữ.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
         //stt
-        private void gvClassList_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
+        private void gvFacultyList_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
         {
             try
             {
@@ -303,7 +283,7 @@ namespace ManageProjectStudent_View
             }
         }
 
-        private void gvClassList_RowCountChanged(object sender, EventArgs e)
+        private void gvFacultyList_RowCountChanged(object sender, EventArgs e)
         {
             GridView gridview = ((GridView)sender);
             if (!gridview.GridControl.IsHandleCreated) return;
@@ -311,6 +291,8 @@ namespace ManageProjectStudent_View
             SizeF size = gr.MeasureString(gridview.RowCount.ToString(), gridview.PaintAppearance.Row.GetFont());
             gridview.IndicatorWidth = Convert.ToInt32(size.Width + 0.999f) + GridPainter.Indicator.ImageSize.Width + 20;
         }
+        #endregion
+
         #endregion
     }
 }

@@ -107,6 +107,14 @@ namespace ManageProjectStudent_ViewModel
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        public bool _checkCharacterNumberClass(char _C)
+        {
+            return GarenaViewModel._checkCharacterNumber(_C);
+        }
+        public bool _checkCharacterCharClass(char _C)
+        {
+            return GarenaViewModel._checkCharacterChar(_C);
+        }
     }
     #endregion
 }

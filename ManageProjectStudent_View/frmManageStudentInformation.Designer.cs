@@ -87,6 +87,7 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.btnImport = new DevExpress.XtraEditors.SimpleButton();
+
             this.btnExport = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Faculty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties.CalendarTimeProperties)).BeginInit();
@@ -900,9 +901,9 @@
             this.btnExport.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnExport.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnExport.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnExport.Location = new System.Drawing.Point(1120, 500);
+            this.btnExport.Location = new System.Drawing.Point(1126, 384);
             this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(189, 59);
+            this.btnExport.Size = new System.Drawing.Size(183, 175);
             this.btnExport.TabIndex = 123;
             this.btnExport.TabStop = false;
             this.btnExport.Text = "Export";
@@ -914,7 +915,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1322, 579);
             this.Controls.Add(this.btnExport);
-            this.Controls.Add(this.btnImport);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.gcListStudent);

@@ -59,6 +59,9 @@
             this.itemManageClass = new DevExpress.XtraEditors.TileItem();
             this.itemManagSubject = new DevExpress.XtraEditors.TileItem();
             this.itemManageGroup = new DevExpress.XtraEditors.TileItem();
+            this.panUser = new System.Windows.Forms.Panel();
+            this.lblHienThi_ChucVu = new DevExpress.XtraEditors.LabelControl();
+            this.lblHienThi_Ten = new DevExpress.XtraEditors.LabelControl();
             this.panelMenuHome.SuspendLayout();
             this.panUser.SuspendLayout();
             this.SuspendLayout();
@@ -408,6 +411,67 @@
             this.itemManageGroup.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.itemManageGroup.Name = "itemManageGroup";
             this.itemManageGroup.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.itemManageGroup_ItemClick);
+            // 
+            // panUser
+            // 
+            this.panUser.Controls.Add(this.lblHienThi_ChucVu);
+            this.panUser.Controls.Add(this.lblHienThi_Ten);
+            this.panUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panUser.Location = new System.Drawing.Point(0, 48);
+            this.panUser.Name = "panUser";
+            this.panUser.Size = new System.Drawing.Size(264, 147);
+            this.panUser.TabIndex = 15;
+            // 
+            // lblHienThi_ChucVu
+            // 
+            this.lblHienThi_ChucVu.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.lblHienThi_ChucVu.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblHienThi_ChucVu.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblHienThi_ChucVu.Appearance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblHienThi_ChucVu.Appearance.Options.UseBackColor = true;
+            this.lblHienThi_ChucVu.Appearance.Options.UseFont = true;
+            this.lblHienThi_ChucVu.Appearance.Options.UseForeColor = true;
+            this.lblHienThi_ChucVu.Appearance.Options.UseImageAlign = true;
+            this.lblHienThi_ChucVu.Appearance.Options.UseTextOptions = true;
+            this.lblHienThi_ChucVu.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblHienThi_ChucVu.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblHienThi_ChucVu.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblHienThi_ChucVu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblHienThi_ChucVu.IndentBetweenImageAndText = 20;
+            this.lblHienThi_ChucVu.LineLocation = DevExpress.XtraEditors.LineLocation.Bottom;
+            this.lblHienThi_ChucVu.LineStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.lblHienThi_ChucVu.Location = new System.Drawing.Point(0, 60);
+            this.lblHienThi_ChucVu.Name = "lblHienThi_ChucVu";
+            this.lblHienThi_ChucVu.Size = new System.Drawing.Size(264, 60);
+            this.lblHienThi_ChucVu.TabIndex = 0;
+            this.lblHienThi_ChucVu.Text = "Chức Danh";
+            // 
+            // lblHienThi_Ten
+            // 
+            this.lblHienThi_Ten.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.lblHienThi_Ten.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblHienThi_Ten.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblHienThi_Ten.Appearance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblHienThi_Ten.Appearance.Options.UseBackColor = true;
+            this.lblHienThi_Ten.Appearance.Options.UseFont = true;
+            this.lblHienThi_Ten.Appearance.Options.UseForeColor = true;
+            this.lblHienThi_Ten.Appearance.Options.UseImageAlign = true;
+            this.lblHienThi_Ten.Appearance.Options.UseTextOptions = true;
+            this.lblHienThi_Ten.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lblHienThi_Ten.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.lblHienThi_Ten.AppearanceHovered.Options.UseBackColor = true;
+            this.lblHienThi_Ten.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblHienThi_Ten.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblHienThi_Ten.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblHienThi_Ten.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.lblHienThi_Ten.IndentBetweenImageAndText = 20;
+            this.lblHienThi_Ten.LineLocation = DevExpress.XtraEditors.LineLocation.Bottom;
+            this.lblHienThi_Ten.LineStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.lblHienThi_Ten.Location = new System.Drawing.Point(0, 0);
+            this.lblHienThi_Ten.Name = "lblHienThi_Ten";
+            this.lblHienThi_Ten.Size = new System.Drawing.Size(264, 60);
+            this.lblHienThi_Ten.TabIndex = 0;
+            this.lblHienThi_Ten.Text = "Name";
             // 
             // frmHome
             // 

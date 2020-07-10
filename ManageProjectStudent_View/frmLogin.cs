@@ -25,31 +25,6 @@ namespace ManageProjectStudent_View
         #endregion
 
         #region Event
-
-        //private void btnLogin_Click(object sender, EventArgs e)
-        //{
-
-        //    if (_Staff.checkStaffID(this.txtUsers.Text) == true || _Student.checkStudentID(this.txtUsers.Text) == true)
-        //    {
-        //        if (_Staff.checkCardID(txtPassword.Text) == true || _Student.checkCardID(txtPassword.Text) == true)
-        //        {
-        //            this.Close();
-        //            frmHome frmHome = new frmHome();
-        //            frmHome.ShowDialog();
-        //        }
-        //        else
-        //        {
-        //            txtPassword.Clear();
-        //            MessageBox.Show("Sai Mat Khau");
-        //        }
-        //    }
-        //    else
-        //    {
-        //        txtUsers.Clear();
-        //        MessageBox.Show("Tên Đăng Nhập Sai");
-        //    }
-        //    // if(this.txtUsers.Text == "Admin" && txtPassword.Text ==)
-        //}
         #endregion
 
         private void frmLogin_Load(object sender, EventArgs e)

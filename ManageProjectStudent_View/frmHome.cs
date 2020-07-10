@@ -191,8 +191,8 @@ namespace ManageProjectStudent_View
             else if (IStatusLogin == 2)
             {
                 this.Hide();
-                frmManageFaculty f = new frmManageFaculty(IStatusLogin,StaffModel);
-                f.ShowDialog();
+             //   frmManageFaculty f = new frmManageFaculty(IStatusLogin,StaffModel);
+               // f.ShowDialog();
                 this.Close();
             }
         }

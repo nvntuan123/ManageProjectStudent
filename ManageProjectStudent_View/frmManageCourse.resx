@@ -192,6 +192,28 @@
         K0dQpyaPWTy8eF0Qfg71aW6ifhVSV0H9XC97mdNo/AEWcgBeYHt0ygAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btnReLoad.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAA99JREFUWEfN
+        WEuMDEEYXnaxQbwdHEg8QiJeJ4+QkHDgIhHEhRWJixNxYSMS4UAikhUcPCKWcHIRNiESHNnLSqzHIuu2
+        1jIz3dVVNSPstq9m/mGm+p/eaVPWfMmX3an6/kdVV/9V1Q2u4Ct1MQiCJfSz/iCkeulLNSgCdTmVSk2i
+        5voBJRgS+3wpW6jr/8H3cwuElPs8qc8iwUxJgkV2eNnsXJKPDIQQ07HejmOGepiEIvSk0n6gToRhOI5c
+        /BuYAJ6UrQjq20lUR9kD+43kzi2klEsR5HU0aAIq9QEJbiKX7oCRb0YAGQlYPWGrD+IJjCGX7oBRb0GA
+        71ZAlkLpn0z7I8/LzSd3ZTClyAvUAfqZHBkplyOAsgLa7MAM706n05OtMvPFC/ROchWBUmoWNF1GK5Ta
+        T83VA4+jGY/lXUlAm51C6zUkz6NYqJHw+UwmM4WaI0AVWARdb4mvnK/1KuquDp5Sx0oc2GznSgYSuyNE
+        dh39ZGESgf1Xy5/hC/gcRbJ4eJ43FQaVSskNkkWAAKPp34rIBMEG+Phh+cwTS2I7yeKBUnCUcwB2cjOX
+        FELqw4xvw26SxANCrt4N4fGsJElNwCAbsbu8YmKEw8bwcrl5rGGg7pHECfCCbasQ5yRJeGDj38saSrmH
+        JE6AWWxGjQ3sOFhez0jCA+vjtG1kiIPoTJI4A/zet+OA/dTNA4J2y8BQUbdTYAYvMLEwuWETSaJAVb/L
+        GPVSt1NUqrVxRR4zqG8zRt+o2ymwnM4wscwMNpMkCkz7JcZoCEbOD5uYjFtMrPjlBKNDjBFekux6kjgD
+        /H6y44Bd1M1DCL2WMQLlOZI4AU5KK7g4uBFeIQkPPMqxEHq2IZgyezTJagae1E0mhtmPd5GkMrANXeOM
+        MYttJKkJaSmXwR93uPX7wnA8ySoDRXkxxJyDQZShrST7K5gSUvmcmWACMIvXeSf5E03suc3c3MyeTj9/
+        wySH0vKU8WmoUlrPJunwMGIY2Rel5zgNzyBJBOlsdg40he3LOpXQrfAN+YkQg2olafXAgt0B4yFy8qA/
+        DCdQVxkwo00IcASaP/cXStAkhovRVbRxS6bIh/DRmHeWFDj+nDKP2yRBTWVAIquty1KRuEzpt0y7Rfm+
+        pupg1hu35vKfPwqlojjDyanURyFyC8mlO2DULQjwORIwAfGyPDGDJJfuYEaMANwWVRVLPiS5/8pQhHFO
+        L0XOTiCGuCXKtkSlpFaYb4MI/NhKJE8MQONvd2GdypaBgXAimY0szAtEa7L8Mu7oBugMvu9PM9+mkVzh
+        ra63BIsw58Z8/avXBA3MjhN7r0iEhoZfdr8jwsMs8LwAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="btnExitFormManageCourse.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAcdJREFUWEft

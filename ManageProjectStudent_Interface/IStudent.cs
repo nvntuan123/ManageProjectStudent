@@ -16,6 +16,7 @@ namespace ManageProjectStudent_Interface
         bool updateCurrentStudent(StudentModel student);
         bool deleteCurrentStudent(StudentModel student);
         List<string> lstStudentID();
+        StudentModel getStudentSelected(string StrStudentID);
         bool checkCardID(string CardID);
         bool checkStudentID(string StudentID);
         bool _checkCharacterNumberStudent(char _C);

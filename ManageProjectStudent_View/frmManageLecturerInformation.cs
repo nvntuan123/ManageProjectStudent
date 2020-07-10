@@ -20,9 +20,17 @@ namespace ManageProjectStudent_View
 {
     public partial class frmManageLecturerInformation : Form
     {
+        private int IStatus;
+        private StaffModel StaffModel;
         public frmManageLecturerInformation()
         {
             InitializeComponent();
+        }
+        public frmManageLecturerInformation(int IStatusLogin, StaffModel staff)
+        {
+            InitializeComponent();
+            IStatus = IStatusLogin;
+            StaffModel = staff;
         }
 
         #region Properties
@@ -390,7 +398,7 @@ namespace ManageProjectStudent_View
         private void btnExitFormManageLecturer_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmHome frmHome = new frmHome();
+            frmHome frmHome = new frmHome(IStatus, StaffModel);
             frmHome.ShowDialog();
             this.Close();
         }

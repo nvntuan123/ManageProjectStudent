@@ -37,6 +37,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnLogin = new Guna.UI.WinForms.GunaGradientButton();
             this.btnExit = new Guna.UI.WinForms.GunaGradientButton();
+            this.lblError = new DevExpress.XtraEditors.LabelControl();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.lblPass = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -173,7 +176,44 @@
             this.btnExit.TabIndex = 13;
             this.btnExit.Text = "Thoát";
             this.btnExit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnExit.Click += new System.EventHandler(this.gunaGradientButton2_Click);
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // lblError
+            // 
+            this.lblError.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.Appearance.ForeColor = System.Drawing.Color.Yellow;
+            this.lblError.Appearance.Options.UseFont = true;
+            this.lblError.Appearance.Options.UseForeColor = true;
+            this.lblError.Location = new System.Drawing.Point(555, 222);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(10, 19);
+            this.lblError.TabIndex = 14;
+            this.lblError.Text = "*";
+            this.lblError.Visible = false;
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.Yellow;
+            this.lblUser.Location = new System.Drawing.Point(269, 170);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(144, 15);
+            this.lblUser.TabIndex = 15;
+            this.lblUser.Text = "Bạn chưa nhập tài khoản";
+            this.lblUser.Visible = false;
+            // 
+            // lblPass
+            // 
+            this.lblPass.AutoSize = true;
+            this.lblPass.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPass.ForeColor = System.Drawing.Color.Yellow;
+            this.lblPass.Location = new System.Drawing.Point(269, 257);
+            this.lblPass.Name = "lblPass";
+            this.lblPass.Size = new System.Drawing.Size(145, 15);
+            this.lblPass.TabIndex = 16;
+            this.lblPass.Text = "Bạn chưa nhập mật khẩu";
+            this.lblPass.Visible = false;
             // 
             // frmLogin
             // 
@@ -181,6 +221,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(77)))));
             this.ClientSize = new System.Drawing.Size(846, 529);
+            this.Controls.Add(this.lblPass);
+            this.Controls.Add(this.lblUser);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
@@ -193,6 +236,7 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -209,5 +253,8 @@
         private System.Windows.Forms.Label label3;
         private Guna.UI.WinForms.GunaGradientButton btnLogin;
         private Guna.UI.WinForms.GunaGradientButton btnExit;
+        private DevExpress.XtraEditors.LabelControl lblError;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Label lblPass;
     }
 }

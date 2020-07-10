@@ -16,15 +16,16 @@ using ManageProjectStudent_Model;
 using ManageProjectStudent_ViewModel;
 using DevExpress.XtraEditors.Filtering.Templates;
 using System.Security.AccessControl;
+using DevExpress.XtraPrinting;
+using DevExpress.Export;
+using System.IO;
+using OfficeOpenXml;
+using OfficeOpenXml.Style;
 
 namespace ManageProjectStudent_View
 {
     public partial class frmManageStudentInformation : Form
     {
-        public frmManageStudentInformation()
-        {
-            InitializeComponent();
-        }
         #region Properties
         private bool indicatorIcon = true;
         private IStudent _Student = Config.Container.Resolve<IStudent>();
@@ -35,7 +36,20 @@ namespace ManageProjectStudent_View
         private BindingList<ClassModel> _lstClass = new BindingList<ClassModel>();
         private IClass _Class = Config.Container.Resolve<IClass>();
         private IFaculty _Faculty = Config.Container.Resolve<IFaculty>();
+        private int IStatus;
+        private StaffModel StaffModel;
         #endregion
+        public frmManageStudentInformation()
+        {
+            InitializeComponent();
+        }
+        public frmManageStudentInformation(int IStatusLogin, StaffModel staff)
+        {
+            InitializeComponent();
+            IStatus = IStatusLogin;
+            StaffModel = staff;
+        }
+     
         #region Method
         private void _setStatusForm()
         {
@@ -44,7 +58,7 @@ namespace ManageProjectStudent_View
                 case 0: // View
                     grpInformationStudent.Enabled = false;
                     dteBirthday.Enabled = true;
-                    if(_StudentModelNow != null)
+                    if (_StudentModelNow != null)
                     {
                         btnUpdate.Enabled = true;
                         btnDelete.Enabled = true;
@@ -81,12 +95,11 @@ namespace ManageProjectStudent_View
                     grpInformationStudent.Enabled = true;
                     btnSave.Enabled = true;
                     break;
-            }    
-        }    
-
+            }
+        }
         private void _loadData()
         {
-            if(_StudentModelNow==null)
+            if (_StudentModelNow == null)
             {
                 txtID.Text = string.Empty;
                 txtFullName.Text = string.Empty;
@@ -113,7 +126,7 @@ namespace ManageProjectStudent_View
                 txtEmail.Text = _StudentModelNow.StrEmail;
                 txtIDCard.Text = _StudentModelNow.StrCardID;
                 txtAddress.Text = _StudentModelNow.StrAddress;
-                if(_StudentModelNow.StrSex == "Nam")
+                if (_StudentModelNow.StrSex == "Nam")
                 {
                     radNam.Checked = true;
                     radNu.Checked = false;
@@ -138,10 +151,9 @@ namespace ManageProjectStudent_View
                 lkeFaculty.EditValue = _StudentModelNow.StrFacultyID;
             }
         }
-
         private void _getData()
         {
-            if(_StudentModelNow == null)
+            if (_StudentModelNow == null)
             {
                 _StudentModelNow = new StudentModel();
             }
@@ -173,17 +185,14 @@ namespace ManageProjectStudent_View
             _StudentModelNow.StrClassID = lkeClass.GetColumnValue("StrClassID").ToString();
             _StudentModelNow.StrFacultyID = lkeFaculty.GetColumnValue("StrFacultyID").ToString();
         }
-
         private void _lstLoadListStudent()
         {
             _lstStudent = _Student.loadStudent();
             gcListStudent.DataSource = _lstStudent;
         }
         #endregion
-
         #region Event
         //load
-
         private void frmManageStudentInformation_Load(object sender, EventArgs e)
         {
             dteBirthday.EditValue = DateTime.Now.Date;
@@ -249,9 +258,9 @@ namespace ManageProjectStudent_View
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if(_StudentModelNow != null)
+            if (_StudentModelNow != null)
             {
-                if(_Student.deleteCurrentStudent(_StudentModelNow))
+                if (_Student.deleteCurrentStudent(_StudentModelNow))
                 {
                     _lstLoadListStudent();
                     DevExpress.XtraEditors.XtraMessageBox.Show("Xóa Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -266,81 +275,156 @@ namespace ManageProjectStudent_View
                 {
                     DevExpress.XtraEditors.XtraMessageBox.Show("Xóa Thất Bại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            } 
-            
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(txtFullName.Text == "")
+            if (txtFullName.Text == "")
             {
                 DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa nhập tên Sinh viên", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }    
-            else if(dteBirthday.EditValue == null)
+            }
+            else if (dteBirthday.EditValue == null)
             {
                 DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa chọn Ngày sinh", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }   
-            else if(dteStartYear.EditValue == null)
+            }
+            else if (dteStartYear.EditValue == null)
             {
                 DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa chọn Ngày bắt đầu", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }   
-            else if(txtPhoneNumber.Text == "")
+            }
+            else if (txtPhoneNumber.Text == "")
             {
                 DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa nhập Số điện thoại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }   
-            else if(txtEmail.Text == "")
+            }
+            else if (txtEmail.Text == "")
             {
                 DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa nhập Email", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }  
-            else if(txtIDCard.Text == "")
+            }
+            else if (txtIDCard.Text == "")
             {
                 DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa nhập Chứng minh nhân dân", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }   
-            else if(txtAddress.Text == "")
+            }
+            else if (txtAddress.Text == "")
             {
                 DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa nhập Địa chỉ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            } 
-            else if(!(radNam.Checked) && !(radNu.Checked))
+            }
+            else if (!(radNam.Checked) && !(radNu.Checked))
             {
                 DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa chọn Giới tính", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if(!(radAvailable.Checked) && !(radUnavailable.Checked))
+            else if (!(radAvailable.Checked) && !(radUnavailable.Checked))
             {
                 DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa chọn Trạng thái", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }  
-            else if(lkeClass.EditValue == null)
+            }
+            else if (lkeClass.EditValue == null)
             {
                 DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa chọn Lớp học", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }    
-            else if(lkeFaculty.EditValue == null)
+            }
+            else if (lkeFaculty.EditValue == null)
             {
                 DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa chọn Khoa", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }   
+            }
             else
             {
                 _getData();
                 bool bresult = false;
-                if(_IStatusForm == 1)
+                if (_IStatusForm == 1)
                 {
                     bresult = _Student.addNewStudent(_StudentModelNow);
-                } 
+                }
                 else
                 {
                     bresult = _Student.updateCurrentStudent(_StudentModelNow);
-                }  
-                
-                if(!bresult)
+                }
+
+                if (!bresult)
                 {
                     DevExpress.XtraEditors.XtraMessageBox.Show("Lưu Thất Bại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }  
+                }
                 else
                 {
                     _lstLoadListStudent();
                     _IStatusForm = 0;
                     _setStatusForm();
                     DevExpress.XtraEditors.XtraMessageBox.Show("Lưu Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }    
-            }    
+                }
+            }
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (gvStudentList.RowCount > 0)
+                {
+                    var dialog = new SaveFileDialog();
+                    dialog.Title = @"Export file excel";
+                    dialog.FileName = "";
+                    dialog.Filter = @"Micrsoft Excel|*.xlsx";
+                    if (dialog.ShowDialog() == DialogResult.OK)
+                    {
+                        gvStudentList.ColumnPanelRowHeight = 40;
+                        gvStudentList.OptionsPrint.AutoWidth = AutoSize;
+                        gvStudentList.OptionsPrint.ShowPrintExportProgress = true;
+                        gvStudentList.OptionsPrint.AllowCancelPrintExport = true;
+                        XlsxExportOptions options = new XlsxExportOptions();
+                        options.TextExportMode = TextExportMode.Text;
+                        options.ExportMode = XlsxExportMode.SingleFile;
+                        options.SheetName = "Sheet1";
+
+                        ExportSettings.DefaultExportType = ExportType.Default;
+                        gvStudentList.ExportToXlsx(dialog.FileName, options);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                DevExpress.XtraEditors.XtraMessageBox.Show("Error" + ex, "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var _DLG_OpenExcel = new OpenFileDialog();
+                _DLG_OpenExcel.Title = @"Import File Excel";
+                if (_DLG_OpenExcel.ShowDialog() == DialogResult.OK)
+                {
+                    string _STR_FileName = Path.GetFileName(_DLG_OpenExcel.FileName);
+                    // Open file excel
+                    var package = new ExcelPackage(new FileInfo(_DLG_OpenExcel.FileName));
+                    //Take out the first sheet
+                    ExcelWorksheet workSheet = package.Workbook.Worksheets[1];
+                    BindingList<StudentModel> _lstStudent_Import = new BindingList<StudentModel>();
+                    //Browse sequentially from the second to the last row of the Excel file, because Excel starts from 1 and not 0
+                    for (int i = workSheet.Dimension.Start.Row + 1; i < workSheet.Dimension.End.Row; ++i)
+                    {
+                        try
+                        {
+
+                            int j = 1; //  j as row.
+                            string StrStudentID = "";
+                            string StrStudentName = "";
+                            DateTime DtBirthDay = new DateTime();
+                            string StrCardID = "";
+                            string StrEmail = "";
+                            string _StrAddress = "";
+                            DateTime _DtStartYear = new DateTime();
+                            bool _BStatus;
+
+                        }
+                        catch
+                        {
+
+                        }
+                    }
+                }
+            }
+            catch
+            {
+
+            }
         }
 
         private void btnReLoad_Click(object sender, EventArgs e)
@@ -354,12 +438,13 @@ namespace ManageProjectStudent_View
         private void btnExitFormManageStudent_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmHome frmHome = new frmHome();
+            frmHome frmHome = new frmHome(IStatus, StaffModel);
             frmHome.ShowDialog();
             this.Close();
         }
 
         //key press
+
         private void txtFullName_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!_Student._checkCharacterNumberStudent(e.KeyChar))
@@ -390,7 +475,8 @@ namespace ManageProjectStudent_View
             }
         }
 
-        //checkedchange
+        //checked changed
+
         private void radNam_CheckedChanged(object sender, EventArgs e)
         {
             if (radNam.Checked)
@@ -424,6 +510,7 @@ namespace ManageProjectStudent_View
         }
 
         //stt
+
         private void gvStudentList_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
         {
             try

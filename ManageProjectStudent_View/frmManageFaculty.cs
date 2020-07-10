@@ -20,11 +20,19 @@ namespace ManageProjectStudent_View
     public partial class frmManageFaculty : Form
     {
         private IManageFaculty IMF = Config.Container.Resolve<IManageFaculty>();
+        private int IStatus;
+        private StaffModel StaffModel;
         public frmManageFaculty()
         {
             InitializeComponent();
             txtIDFaculty.KeyPress += new KeyPressEventHandler(IMF.txtIDFaculty_KeyPress);
         }
-       
+        public frmManageFaculty(int IStatusLogin,StaffModel staff)
+        {
+            InitializeComponent();
+            IStatus = IStatusLogin;
+            StaffModel = staff;
+            txtIDFaculty.KeyPress += new KeyPressEventHandler(IMF.txtIDFaculty_KeyPress);
+        }
     }
 }

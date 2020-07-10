@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ManageProjectStudent_Model;
 
 namespace ManageProjectStudent_View
 {
@@ -16,10 +17,21 @@ namespace ManageProjectStudent_View
         private Random random;
         private int tempIndex;
         private Form activeForm;
+        private int IStatus;
+        private StudentModel StudentModel;
+
         public frmManageProjectStudentMain()
         {
             InitializeComponent();
             random = new Random();
+            btnCloseChildForm.Visible = false;
+        }
+        public frmManageProjectStudentMain(int IStatusLogin, StudentModel student)
+        {
+            InitializeComponent();
+            random = new Random();
+            IStatus = IStatusLogin;
+            StudentModel = student;
             btnCloseChildForm.Visible = false;
         }
 
@@ -89,8 +101,10 @@ namespace ManageProjectStudent_View
 
         private void btnSubmitProject_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ManageProjectStudent_View.frmSubmitProject(), sender);
-            lblTitle.Text = "Nộp File Cho Nhiệm Vụ";
+            this.Hide();
+            frmSubmitProject frmSubmitProject = new frmSubmitProject();
+            frmSubmitProject.ShowDialog();
+            this.Close();
         }
 
         private void btnViewDeadlineStudent_Click(object sender, EventArgs e)
@@ -102,7 +116,7 @@ namespace ManageProjectStudent_View
         {
             ActivateButton(sender);
             this.Hide();
-            frmHome frmHome = new frmHome();
+            frmHome frmHome = new frmHome(IStatus,StudentModel);
             frmHome.ShowDialog();
             this.Close();
         }

@@ -16,7 +16,8 @@ namespace ManageProjectStudent_Model
         private string _StrTaskName;
         private DateTime _DtStartDay;
         private DateTime _DtEndDay;
-
+        private string _StrFileName;
+        private string _StrLinkFile;
 
         [Key]
         [Column("ProjectID", TypeName = "char", Order = 0)]
@@ -38,6 +39,12 @@ namespace ManageProjectStudent_Model
         [Column("EndDay", TypeName = "Date", Order = 4)]
         public DateTime DtEndDay { get => _DtEndDay; set => _DtEndDay = value; }
 
+        [Column("FileName", TypeName = "nvarchar", Order = 5)]
+        [StringLength(100)]
+        public string StrFileName { get => _StrFileName; set => _StrFileName = value; }
+
+        [Column("LinkFile", TypeName = "varchar", Order = 6)]
+        public string StrLinkFile { get => _StrLinkFile; set => _StrLinkFile = value; }
         // Khai bao khoa ngoai.
         public virtual ProjectModel ProjectModel { get; set; }
 

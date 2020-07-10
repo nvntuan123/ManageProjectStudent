@@ -86,6 +86,8 @@
             this.btnExitFormManageStudent = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.btnImport = new DevExpress.XtraEditors.SimpleButton();
+            this.btnExport = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Faculty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties)).BeginInit();
@@ -492,7 +494,7 @@
             this.gcListStudent.Name = "gcListStudent";
             this.gcListStudent.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.LookUpEdit_Class});
-            this.gcListStudent.Size = new System.Drawing.Size(1127, 237);
+            this.gcListStudent.Size = new System.Drawing.Size(922, 175);
             this.gcListStudent.TabIndex = 44;
             this.gcListStudent.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvStudentList});
@@ -715,7 +717,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(174, 640);
+            this.panelMenu.Size = new System.Drawing.Size(174, 579);
             this.panelMenu.TabIndex = 45;
             // 
             // btnUpdate
@@ -735,10 +737,10 @@
             this.btnUpdate.AppearanceHovered.Options.UseFont = true;
             this.btnUpdate.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.Image")));
-            this.btnUpdate.Location = new System.Drawing.Point(0, 455);
+            this.btnUpdate.Location = new System.Drawing.Point(0, 430);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(171, 64);
-            this.btnUpdate.TabIndex = 18;
+            this.btnUpdate.Size = new System.Drawing.Size(171, 59);
+            this.btnUpdate.TabIndex = 21;
             this.btnUpdate.TabStop = false;
             this.btnUpdate.Text = "Sửa Sinh Viên";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -760,10 +762,10 @@
             this.btnDelete.AppearanceHovered.Options.UseFont = true;
             this.btnDelete.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(0, 541);
+            this.btnDelete.Location = new System.Drawing.Point(0, 516);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(170, 64);
-            this.btnDelete.TabIndex = 17;
+            this.btnDelete.Size = new System.Drawing.Size(170, 59);
+            this.btnDelete.TabIndex = 20;
             this.btnDelete.TabStop = false;
             this.btnDelete.Text = "Xóa Sinh Viên";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -787,10 +789,10 @@
             this.btnAdd.AppearanceHovered.Options.UseForeColor = true;
             this.btnAdd.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(0, 369);
+            this.btnAdd.Location = new System.Drawing.Point(0, 344);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(171, 64);
-            this.btnAdd.TabIndex = 16;
+            this.btnAdd.Size = new System.Drawing.Size(171, 59);
+            this.btnAdd.TabIndex = 19;
             this.btnAdd.TabStop = false;
             this.btnAdd.Text = "Thêm Sinh Viên";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -860,11 +862,59 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Quản Lí Thông Tinh Sinh Viên";
             // 
+            // btnImport
+            // 
+            this.btnImport.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.btnImport.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnImport.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnImport.Appearance.Options.UseBackColor = true;
+            this.btnImport.Appearance.Options.UseFont = true;
+            this.btnImport.Appearance.Options.UseForeColor = true;
+            this.btnImport.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.btnImport.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnImport.AppearanceHovered.Options.UseBackColor = true;
+            this.btnImport.AppearanceHovered.Options.UseFont = true;
+            this.btnImport.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnImport.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnImport.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnImport.Location = new System.Drawing.Point(1120, 384);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(189, 59);
+            this.btnImport.TabIndex = 122;
+            this.btnImport.TabStop = false;
+            this.btnImport.Text = "Import";
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // btnExport
+            // 
+            this.btnExport.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.btnExport.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnExport.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnExport.Appearance.Options.UseBackColor = true;
+            this.btnExport.Appearance.Options.UseFont = true;
+            this.btnExport.Appearance.Options.UseForeColor = true;
+            this.btnExport.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.btnExport.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnExport.AppearanceHovered.Options.UseBackColor = true;
+            this.btnExport.AppearanceHovered.Options.UseFont = true;
+            this.btnExport.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnExport.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnExport.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnExport.Location = new System.Drawing.Point(1120, 500);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(189, 59);
+            this.btnExport.TabIndex = 123;
+            this.btnExport.TabStop = false;
+            this.btnExport.Text = "Export";
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
             // frmManageStudentInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1322, 640);
+            this.ClientSize = new System.Drawing.Size(1322, 579);
+            this.Controls.Add(this.btnExport);
+            this.Controls.Add(this.btnImport);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.gcListStudent);
@@ -945,9 +995,6 @@
         private System.Windows.Forms.Button btnExitFormManageStudent;
         private System.Windows.Forms.Label lblTitle;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
-        private DevExpress.XtraEditors.SimpleButton btnUpdate;
-        private DevExpress.XtraEditors.SimpleButton btnDelete;
-        private DevExpress.XtraEditors.SimpleButton btnAdd;
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit LookUpEdit_Faculty;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit LookUpEdit_Class;
@@ -957,5 +1004,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn colStartYear;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private DevExpress.XtraEditors.SimpleButton btnUpdate;
+        private DevExpress.XtraEditors.SimpleButton btnDelete;
+        private DevExpress.XtraEditors.SimpleButton btnAdd;
+        private DevExpress.XtraEditors.SimpleButton btnImport;
+        private DevExpress.XtraEditors.SimpleButton btnExport;
     }
 }

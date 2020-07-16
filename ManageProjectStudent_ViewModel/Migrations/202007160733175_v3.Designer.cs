@@ -7,13 +7,13 @@ namespace ManageProjectStudent_ViewModel.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class v10 : IMigrationMetadata
+    public sealed partial class v3 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(v10));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(v3));
         
         string IMigrationMetadata.Id
         {
-            get { return "202007010218438_v10"; }
+            get { return "202007160733175_v3"; }
         }
         
         string IMigrationMetadata.Source

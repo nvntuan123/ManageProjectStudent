@@ -15,12 +15,12 @@ namespace ManageProjectStudent_Model
         private string _StrGroupID;
 
         [Key]
-        [Column("StudentID", TypeName = "char", Order = 0)]
+        [Column("StudentID", TypeName = "varchar", Order = 0)]
         [StringLength(10)]
         public string StrStudentID { get => _StrStudentID; set => _StrStudentID = value; }
 
         [Key]
-        [Column("GroupID", TypeName = "char", Order = 1)]
+        [Column("GroupID", TypeName = "varchar", Order = 1)]
         [StringLength(10)]
         public string StrGroupID { get => _StrGroupID; set => _StrGroupID = value; }
 

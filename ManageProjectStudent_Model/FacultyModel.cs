@@ -16,7 +16,7 @@ namespace ManageProjectStudent_Model
         private DateTime _DtFoundedYear;
 
         [Key]
-        [Column("FacultyID", TypeName = "char", Order = 0)]
+        [Column("FacultyID", TypeName = "varchar", Order = 0)]
         [StringLength(10)]
         public string StrFacultyID { get => _StrFacultyID; set => _StrFacultyID = value; }
 

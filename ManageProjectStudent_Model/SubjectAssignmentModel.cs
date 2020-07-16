@@ -21,17 +21,17 @@ namespace ManageProjectStudent_Model
         private int _IPracticalLesson;
 
         [Key]
-        [Column("TrainingProgramID", TypeName = "char", Order = 0)]
+        [Column("TrainingProgramID", TypeName = "varchar", Order = 0)]
         [StringLength(10)]
         public string StrTrainingProgramID { get => _StrTrainingProgramID; set => _StrTrainingProgramID = value; }
 
         [Key]
-        [Column("FacultyID", TypeName = "char", Order = 1)]
+        [Column("FacultyID", TypeName = "varchar", Order = 1)]
         [StringLength(10)]
         public string StrFacultyID { get => _StrFacultyID; set => _StrFacultyID = value; }
 
         [Key]
-        [Column("SubjectID", TypeName = "char", Order = 2)]
+        [Column("SubjectID", TypeName = "varchar", Order = 2)]
         [StringLength(10)]
         public string StrSubjectID { get => _StrSubjectID; set => _StrSubjectID = value; }
 

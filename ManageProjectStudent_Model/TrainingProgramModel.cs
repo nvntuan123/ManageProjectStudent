@@ -15,7 +15,7 @@ namespace ManageProjectStudent_Model
         private string _StrTrainingProgramName;
 
         [Key]
-        [Column("TrainingProgramID", TypeName = "char", Order = 0)]
+        [Column("TrainingProgramID", TypeName = "varchar", Order = 0)]
         [StringLength(10)]
         public string StrTrainingProgramID { get => _StrTrainingProgramID; set => _StrTrainingProgramID = value; }
 

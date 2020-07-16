@@ -54,9 +54,12 @@
     <Compile Include="ClassModel.cs" />
     <Compile Include="ClassGroupOfSubject.cs" />
     <Compile Include="CourseModel.cs" />
+    <Compile Include="DecentralizeModel.cs" />
     <Compile Include="ExamResultModel.cs" />
     <Compile Include="ExamTimesModel.cs" />
     <Compile Include="FacultyModel.cs" />
+    <Compile Include="LanguageModel.cs" />
+    <Compile Include="LanguageWordModel.cs" />
     <Compile Include="StaffModel.cs" />
     <Compile Include="ProjectModel.cs" />
     <Compile Include="ProjectTaskModel.cs" />
@@ -69,6 +72,7 @@
     <Compile Include="SubjectModel.cs" />
     <Compile Include="TeachAndStudy.cs" />
     <Compile Include="TrainingProgramModel.cs" />
+    <Compile Include="WordModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

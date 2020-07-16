@@ -17,7 +17,7 @@ namespace ManageProjectStudent_Model
         private string _StrCourseID;
 
         [Key]
-        [Column("ClassID", TypeName = "char", Order = 0)]
+        [Column("ClassID", TypeName = "varchar", Order = 0)]
         [StringLength(10)]
         public string StrClassID { get => _StrClassID; set => _StrClassID = value; }
 
@@ -26,11 +26,11 @@ namespace ManageProjectStudent_Model
         public string StrClassName { get => _StrClassName; set => _StrClassName = value; }
 
         // Khai tao khoa ngoai 
-        [Column("FacultyID", TypeName = "char", Order = 3)]
+        [Column("FacultyID", TypeName = "varchar", Order = 3)]
         [StringLength(10)]
         public string StrFacultyID { get => _StrFacultyID; set => _StrFacultyID = value; }
 
-        [Column("Course", TypeName = "char", Order = 4)]
+        [Column("Course", TypeName = "varchar", Order = 4)]
         [StringLength(10)]
         public string StrCourseID { get => _StrCourseID; set => _StrCourseID = value; }
 

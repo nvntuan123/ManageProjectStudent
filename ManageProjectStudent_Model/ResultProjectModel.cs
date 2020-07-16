@@ -17,13 +17,13 @@ namespace ManageProjectStudent_Model
 
         // Khoi tao khoa ngoai de mapping.
         [Key]
-        [Column("ProjectID", TypeName = "char", Order = 0)]
+        [Column("ProjectID", TypeName = "varchar", Order = 0)]
         [StringLength(10)]
         public string StrProjectID { get => _StrProjectID; set => _StrProjectID = value; }
 
         [Key]
         [StringLength(10)]
-        [Column("StudentID", TypeName = "char", Order = 1)]
+        [Column("StudentID", TypeName = "varchar", Order = 1)]
         public string StrStudentID { get => _StrStudentID; set => _StrStudentID = value; }
         // Khoi tao khoa ngoai de mapping.
 

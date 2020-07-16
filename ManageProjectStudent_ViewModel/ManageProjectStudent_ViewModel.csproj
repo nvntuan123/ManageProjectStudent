@@ -83,34 +83,19 @@
     <Compile Include="ManageFacultyViewModel.cs" />
     <Compile Include="ManageMultiLanguageViewModel.cs" />
     <Compile Include="ManageSubjectViewModel.cs" />
-    <Compile Include="Migrations\202006300720417_v8.cs" />
-    <Compile Include="Migrations\202006300720417_v8.designer.cs">
-      <DependentUpon>202006300720417_v8.cs</DependentUpon>
+    <Compile Include="Migrations\202007160718545_v1.cs" />
+    <Compile Include="Migrations\202007160718545_v1.designer.cs">
+      <DependentUpon>202007160718545_v1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202007010210053_v9.cs" />
-    <Compile Include="Migrations\202007010210053_v9.designer.cs">
-      <DependentUpon>202007010210053_v9.cs</DependentUpon>
+    <Compile Include="Migrations\202007160728185_v2.cs" />
+    <Compile Include="Migrations\202007160728185_v2.designer.cs">
+      <DependentUpon>202007160728185_v2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202007010218438_v10.cs" />
-    <Compile Include="Migrations\202007010218438_v10.designer.cs">
-      <DependentUpon>202007010218438_v10.cs</DependentUpon>
+    <Compile Include="Migrations\202007160733175_v3.cs" />
+    <Compile Include="Migrations\202007160733175_v3.designer.cs">
+      <DependentUpon>202007160733175_v3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202007032307285_v11.cs" />
-    <Compile Include="Migrations\202007032307285_v11.designer.cs">
-      <DependentUpon>202007032307285_v11.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007081506109_v12.cs" />
-    <Compile Include="Migrations\202007081506109_v12.designer.cs">
-      <DependentUpon>202007081506109_v12.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007160521592_v13.cs" />
-    <Compile Include="Migrations\202007160521592_v13.designer.cs">
-      <DependentUpon>202007160521592_v13.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007160541374_v14.cs" />
-    <Compile Include="Migrations\202007160541374_v14.designer.cs">
-      <DependentUpon>202007160541374_v14.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProjectTaskViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResultProjectViewModel.cs" />
@@ -118,35 +103,6 @@
     <Compile Include="SubjectViewModel.cs" />
     <Compile Include="SubmitProjectViewModel.cs" />
     <Compile Include="DBManageProjectStudentViewModel.cs" />
-    <Compile Include="Migrations\202006250417343_v1.cs" />
-    <Compile Include="Migrations\202006250417343_v1.designer.cs">
-      <DependentUpon>202006250417343_v1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006250516126_v2.cs" />
-    <Compile Include="Migrations\202006250516126_v2.designer.cs">
-      <DependentUpon>202006250516126_v2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006250641089_v3.cs" />
-    <Compile Include="Migrations\202006250641089_v3.designer.cs">
-      <DependentUpon>202006250641089_v3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006250809035_v4.cs" />
-    <Compile Include="Migrations\202006250809035_v4.designer.cs">
-      <DependentUpon>202006250809035_v4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006250901581_v5.cs" />
-    <Compile Include="Migrations\202006250901581_v5.designer.cs">
-      <DependentUpon>202006250901581_v5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006270941553_v6.cs" />
-    <Compile Include="Migrations\202006270941553_v6.designer.cs">
-      <DependentUpon>202006270941553_v6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006270944385_V7.cs" />
-    <Compile Include="Migrations\202006270944385_V7.designer.cs">
-      <DependentUpon>202006270944385_V7.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NotifyPropertyChangedInvocatorAttribute.cs" />
     <Compile Include="ProjectViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -170,50 +126,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202006250417343_v1.resx">
-      <DependentUpon>202006250417343_v1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006250516126_v2.resx">
-      <DependentUpon>202006250516126_v2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006250641089_v3.resx">
-      <DependentUpon>202006250641089_v3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006250809035_v4.resx">
-      <DependentUpon>202006250809035_v4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006250901581_v5.resx">
-      <DependentUpon>202006250901581_v5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006270941553_v6.resx">
-      <DependentUpon>202006270941553_v6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006270944385_V7.resx">
-      <DependentUpon>202006270944385_V7.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006300720417_v8.resx">
-      <DependentUpon>202006300720417_v8.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007010210053_v9.resx">
-      <DependentUpon>202007010210053_v9.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007010218438_v10.resx">
-      <DependentUpon>202007010218438_v10.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007032307285_v11.resx">
-      <DependentUpon>202007032307285_v11.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007081506109_v12.resx">
-      <DependentUpon>202007081506109_v12.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007160521592_v13.resx">
-      <DependentUpon>202007160521592_v13.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007160541374_v14.resx">
-      <DependentUpon>202007160541374_v14.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
@@ -224,6 +136,17 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202007160718545_v1.resx">
+      <DependentUpon>202007160718545_v1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007160728185_v2.resx">
+      <DependentUpon>202007160728185_v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007160733175_v3.resx">
+      <DependentUpon>202007160733175_v3.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

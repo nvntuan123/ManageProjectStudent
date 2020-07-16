@@ -16,7 +16,7 @@ namespace ManageProjectStudent_Model
         private DateTime _DtExamTime;
 
         [Key]
-        [Column("ExamTimesID", TypeName = "char", Order = 0)]
+        [Column("ExamTimesID", TypeName = "varchar", Order = 0)]
         [StringLength(10)]
         public string StrExamTimesID { get => _StrExamTimesID; set => _StrExamTimesID = value; }
 

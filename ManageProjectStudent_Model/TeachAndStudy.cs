@@ -18,16 +18,16 @@ namespace ManageProjectStudent_Model
         private DateTime _DtSchoolYear;
 
         [Key]
-        [Column("StaffID", TypeName = "char", Order = 0)]
+        [Column("StaffID", TypeName = "varchar", Order = 0)]
         [StringLength(10)]
         public string StrStaffID { get => _StrStaffID; set => _StrStaffID = value; }
         [Key]
-        [Column("StudentID", TypeName = "char", Order = 1)]
+        [Column("StudentID", TypeName = "varchar", Order = 1)]
         [StringLength(10)]
         public string StrStudentID { get => _StrStudentID; set => _StrStudentID = value; }
 
         [Key]
-        [Column("SubjectID", TypeName = "char", Order = 3)]
+        [Column("SubjectID", TypeName = "varchar", Order = 3)]
         [StringLength(10)]
         public string StrSubjectID { get => _StrSubjectID; set => _StrSubjectID = value; }
 

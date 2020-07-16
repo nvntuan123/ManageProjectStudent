@@ -16,7 +16,7 @@ namespace ManageProjectStudent_Model
         private DateTime _DtEndYear;
 
         [Key]
-        [Column("CourseID", TypeName = "char", Order = 0)]
+        [Column("CourseID", TypeName = "varchar", Order = 0)]
         [StringLength(10)]
         public string StrCourseID { get => _StrCourseID; set => _StrCourseID = value; }
 

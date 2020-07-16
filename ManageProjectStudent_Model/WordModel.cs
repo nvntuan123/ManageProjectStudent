@@ -16,7 +16,7 @@ namespace ManageProjectStudent_Model
         private string _StrModule;
 
         [Key]
-        [Column("WordID", TypeName = "char", Order = 0)]
+        [Column("WordID", TypeName = "varchar", Order = 0)]
         [StringLength(10)]
         public string StrWordId { get => _StrWordId; set => _StrWordId = value; }
 

@@ -17,17 +17,17 @@ namespace ManageProjectStudent_Model
         private decimal _DGrade;
 
         [Key]
-        [Column("StudentID", TypeName = "char", Order = 0)]
+        [Column("StudentID", TypeName = "varchar", Order = 0)]
         [StringLength(10)]
         public string StrStudentID { get => _StrStudentID; set => _StrStudentID = value; }
 
         [Key]
-        [Column("ExamTimesID", TypeName = "char", Order = 1)]
+        [Column("ExamTimesID", TypeName = "varchar", Order = 1)]
         [StringLength(10)]
         public string StrExamTimesID { get => _StrExamTimesID; set => _StrExamTimesID = value; }
 
         [Key]
-        [Column("SubjectID", TypeName = "char", Order = 2)]
+        [Column("SubjectID", TypeName = "varchar", Order = 2)]
         [StringLength(10)]
         public string StrSubjectID { get => _StrSubjectID; set => _StrSubjectID = value; }
 

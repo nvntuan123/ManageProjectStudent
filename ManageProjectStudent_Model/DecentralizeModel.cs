@@ -24,7 +24,8 @@ namespace ManageProjectStudent_Model
         [StringLength(100)]
         public string StrFrmID { get => _StrFrmID; set => _StrFrmID = value; }
 
-        [Column("StaffTypeID", TypeName = "char", Order = 1)]
+        [Key]
+        [Column("StaffTypeID", TypeName = "varchar", Order = 1)]
         [StringLength(10)]
         public string StrStaffTypeID { get => _StrStaffTypeID; set => _StrStaffTypeID = value; }
 
@@ -43,11 +44,6 @@ namespace ManageProjectStudent_Model
         [Column("Access", Order = 6)]
         public bool BAccess { get => _BAccess; set => _BAccess = value; }
 
-        public ICollection<StaffTypeModel> StaffTypeModels { get; set; }
-
-        public DecentralizeModel()
-        {
-            this.StaffTypeModels = new HashSet<StaffTypeModel>();
-        }
+        public virtual StaffTypeModel StaffTypeModel { get; set; }
     }
 }

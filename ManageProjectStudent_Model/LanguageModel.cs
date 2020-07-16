@@ -17,7 +17,7 @@ namespace ManageProjectStudent_Model
         private bool _BStatus;
 
         [Key]
-        [Column("LanguageID", TypeName = "char", Order = 0)]
+        [Column("LanguageID", TypeName = "varchar", Order = 0)]
         [StringLength(10)]
         public string StrLanguageID { get => _StrLanguageID; set => _StrLanguageID = value; }
        

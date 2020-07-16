@@ -26,7 +26,7 @@ namespace ManageProjectStudent_Model
 
 
         [Key]
-        [Column("StudentID", TypeName = "char", Order = 0)]
+        [Column("StudentID", TypeName = "varchar", Order = 0)]
         [StringLength(10)]
         public string StrStudentID { get => _StrStudentID; set => _StrStudentID = value; }
 
@@ -57,16 +57,16 @@ namespace ManageProjectStudent_Model
        [StringLength(10)]
        public string StrSex { get => _StrSex; set => _StrSex = value; }
 
-       [Column("Phone", TypeName = "char", Order = 9)]
+       [Column("Phone", TypeName = "varchar", Order = 9)]
        [StringLength(30)]
         public string StrPhone { get => _StrPhone; set => _StrPhone = value; }
 
-        [Column("FacultyID", TypeName = "char", Order = 10)]
+        [Column("FacultyID", TypeName = "varchar", Order = 10)]
         [StringLength(10)]
 
         public string StrFacultyID { get => _StrFacultyID; set => _StrFacultyID = value; }
 
-        [Column("ClassID", TypeName = "char", Order = 11)]
+        [Column("ClassID", TypeName = "varchar", Order = 11)]
         [StringLength(10)]
         public string StrClassID { get => _StrClassID; set => _StrClassID = value; }
 

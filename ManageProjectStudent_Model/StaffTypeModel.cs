@@ -15,7 +15,7 @@ namespace ManageProjectStudent_Model
         private string _StrStaffTypeName;
 
         [Key]
-        [Column("StaffTypeID", TypeName = "char", Order = 0)]
+        [Column("StaffTypeID", TypeName = "varchar", Order = 0)]
         [StringLength(10)]
         public string StrStaffTypeID { get => _StrStaffTypeID; set => _StrStaffTypeID = value; }
 
@@ -24,13 +24,13 @@ namespace ManageProjectStudent_Model
         public string StrStaffTypeName { get => _StrStaffTypeName; set => _StrStaffTypeName = value; }
 
         //tao khoa ngoai
-        public virtual DecentralizeModel DecentralizeModel { get; set; }
         //tao moi lien ket 
         public ICollection<StaffModel> StaffModels { get; set; }
-
+        public ICollection<DecentralizeModel> DecentralizeModels { get; set; }
         public StaffTypeModel()
         {
             this.StaffModels = new HashSet<StaffModel>();
+            this.DecentralizeModels = new HashSet<DecentralizeModel>();
         }
     }
 }

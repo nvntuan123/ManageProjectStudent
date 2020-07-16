@@ -17,7 +17,7 @@ namespace ManageProjectStudent_Model
         private DateTime _DtEndDay;
         private string _StrFacultyID;
         [Key]
-        [Column("SubjectID", TypeName = "char", Order = 0)]
+        [Column("SubjectID", TypeName = "varchar", Order = 0)]
         [StringLength(10)]
         public string StrSubjectID { get => _StrSubjectID; set => _StrSubjectID = value; }
 
@@ -32,7 +32,7 @@ namespace ManageProjectStudent_Model
         public DateTime DtEndDay { get => _DtEndDay; set => _DtEndDay = value; }
 
         //khai tao khoa ngoai
-        [Column("FacultyID", TypeName = "char", Order = 4)]
+        [Column("FacultyID", TypeName = "varchar", Order = 4)]
         [StringLength(10)]
         public string StrFacultyID { get => _StrFacultyID; set => _StrFacultyID = value; }
 

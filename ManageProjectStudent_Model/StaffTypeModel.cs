@@ -23,6 +23,8 @@ namespace ManageProjectStudent_Model
         [StringLength(100)]
         public string StrStaffTypeName { get => _StrStaffTypeName; set => _StrStaffTypeName = value; }
 
+        //tao khoa ngoai
+        public virtual DecentralizeModel DecentralizeModel { get; set; }
         //tao moi lien ket 
         public ICollection<StaffModel> StaffModels { get; set; }
 

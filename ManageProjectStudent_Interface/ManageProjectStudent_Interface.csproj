@@ -47,9 +47,11 @@
     <Compile Include="IClass.cs" />
     <Compile Include="IClassGroupOfSubject.cs" />
     <Compile Include="ICourse.cs" />
+    <Compile Include="IDecentralize.cs" />
     <Compile Include="IExamResult.cs" />
     <Compile Include="IExamTimes.cs" />
     <Compile Include="IFaculty.cs" />
+    <Compile Include="ILanguage.cs" />
     <Compile Include="IManageClass.cs" />
     <Compile Include="IManageCourse.cs" />
     <Compile Include="IManageFaculty.cs" />
@@ -63,6 +65,8 @@
     <Compile Include="IStudent.cs" />
     <Compile Include="ISubject.cs" />
     <Compile Include="ISubmitProject.cs" />
+    <Compile Include="IWord.cs" />
+    <Compile Include="IWordLanguage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

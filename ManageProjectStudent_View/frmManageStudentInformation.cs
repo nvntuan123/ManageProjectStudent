@@ -468,8 +468,8 @@ namespace ManageProjectStudent_View
         private void btnExitFormManageStudent_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmHome frmHome = new frmHome(IStatus, StaffModel);
-            frmHome.ShowDialog();
+            //frmHome frmHome = new frmHome(IStatus, StaffModel);
+            //frmHome.ShowDialog();
             this.Close();
         }
 

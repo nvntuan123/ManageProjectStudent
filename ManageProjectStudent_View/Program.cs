@@ -24,6 +24,7 @@ namespace ManageProjectStudent_View
             Container.RegisterType<IProjectTask, ProjectTaskViewModel>();
             Container.RegisterType<ISubject, SubjectViewModel>();
             Container.RegisterType<ICourse, CourseViewModel>();
+            Container.RegisterType<IStaffType, StaffTypeViewModel>();
             // Thu
             // Thong
             Container.RegisterType<IManageClass, ManageClassViewModel>();
@@ -52,7 +53,7 @@ namespace ManageProjectStudent_View
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Application.Run(new frmHome());
         }
     }
 }

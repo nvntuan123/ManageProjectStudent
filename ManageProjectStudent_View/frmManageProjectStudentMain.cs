@@ -115,9 +115,9 @@ namespace ManageProjectStudent_View
         private void btnExitFormProjectStudent_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            this.Hide();
-            frmHome frmHome = new frmHome(IStatus,StudentModel);
-            frmHome.ShowDialog();
+            //this.Hide();
+            //frmHome frmHome = new frmHome();
+            //frmHome.ShowDialog();
             this.Close();
         }
 

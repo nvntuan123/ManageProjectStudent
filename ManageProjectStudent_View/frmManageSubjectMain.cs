@@ -131,9 +131,9 @@ namespace ManageProjectStudent_View
         private void btnReturn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            this.Hide();
-            frmHome frmHome = new frmHome(IStatus, StaffModel) ;
-            frmHome.ShowDialog();
+            //this.Hide();
+            //frmHome frmHome = new frmHome(IStatus, StaffModel) ;
+            //frmHome.ShowDialog();
             this.Close();
         }
 

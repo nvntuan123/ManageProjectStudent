@@ -137,13 +137,13 @@ namespace ManageProjectStudent_View
             this.Hide();
             if(IStatus == 1)
             {
-                frmHome frmHome = new frmHome(1,StudentModel);
-                frmHome.ShowDialog();
+                //frmHome frmHome = new frmHome(1,StudentModel);
+                //frmHome.ShowDialog();
             }
             else if (IStatus == 2)
             {
-                frmHome frmHome = new frmHome(2,StaffModel);
-                frmHome.ShowDialog();
+                //frmHome frmHome = new frmHome(2,StaffModel);
+                //frmHome.ShowDialog();
             }
             this.Close();
         }

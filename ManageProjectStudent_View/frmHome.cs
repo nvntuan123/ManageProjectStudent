@@ -9,40 +9,57 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManageProjectStudent_Model;
+using ManageProjectStudent_Interface;
+using Unity;
+using DevExpress.XtraGrid.Views.Layout;
 
 namespace ManageProjectStudent_View
 {
     public partial class frmHome : Form
     {
-        private Button currentButton;
-        private Random random;
-        private int tempIndex;
-        private int _IStatusLogin;  // 1:student ;  2:leturer
-        private StudentModel _studentModel;
-        private StaffModel _staffModel;
-        public int IStatusLogin { get => _IStatusLogin; set => _IStatusLogin = value; }
-    
-        public StudentModel StudentModel { get => _studentModel; set => _studentModel = value; }
-        public StaffModel StaffModel { get => _staffModel; set => _staffModel = value; }
-
         public frmHome()
         {
             InitializeComponent();
             random = new Random();
         }
-        public frmHome(int IStatus , StudentModel student)
+        #region Properties
+        private Button currentButton;
+        private Random random;
+        private int tempIndex;
+        private IStudent _Student = Config.Container.Resolve<IStudent>();
+        private IStaffType _StaffType = Config.Container.Resolve<IStaffType>();
+        BindingList<StaffTypeModel> lstStaffType = new BindingList<StaffTypeModel>();
+        bool BStatusLogin = false;
+        #endregion
+        #region Method
+        private void setStatusLogin(bool bStatus, StudentModel student, StaffModel staff)
         {
-            InitializeComponent();
-            IStatusLogin = IStatus;
-            StudentModel = student;   
-            random = new Random();
-        }
-        public frmHome(int IStatus, StaffModel staff)
-        {
-            InitializeComponent();
-            IStatusLogin = IStatus;
-            StaffModel = staff;
-            random = new Random();
+            BStatusLogin = bStatus;
+            if (bStatus)
+            {
+                if (student != null)
+                {
+                    lblDisplayName.Text = student.StrStudentName;
+                    lblType.Text = "Sinh viên";
+                }
+                else
+                {
+                    lblDisplayName.Text = staff.StrStaffName;
+                    if (lstStaffType == null)
+                        lstStaffType = new BindingList<StaffTypeModel>();
+
+                    lstStaffType = _StaffType.loadStaffType();
+
+                    foreach (StaffTypeModel staffType in lstStaffType)
+                    {
+                        if (staff.StrStaffTypeID == staffType.StrStaffTypeID)
+                        {
+                            lblType.Text = staffType.StrStaffTypeName;
+                            break;
+                        }
+                    }
+                }
+            }
         }
         private Color SelectThemeColor()
         {
@@ -85,14 +102,21 @@ namespace ManageProjectStudent_View
                 }
             }
         }
-
+        #endregion
+        #region Event
         private void btnLogin_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            this.Hide();
-            frmLogin f = new frmLogin();
-            f.ShowDialog();
-            this.Close();
+            if (!BStatusLogin)
+            {
+                frmLogin frm = new frmLogin();
+                frm.login = setStatusLogin;
+                frm.ShowDialog();
+            }
+            else
+            {
+                setStatusLogin(false, null, null);
+            }
         }
 
         private void btnInformation_Click(object sender, EventArgs e)
@@ -122,146 +146,53 @@ namespace ManageProjectStudent_View
 
         private void itemManageMultiLanguage_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            this.Hide();
-            if (IStatusLogin == 1)
-            {
-                frmManageLanguageMain frmManageLanguageMain = new frmManageLanguageMain(IStatusLogin,StudentModel);
-                frmManageLanguageMain.ShowDialog();
-            }
-            else if (IStatusLogin == 2)
-            {
-                frmManageLanguageMain frmManageLanguageMain = new frmManageLanguageMain(IStatusLogin,StaffModel);
-                frmManageLanguageMain.ShowDialog();
-            }
-            this.Close();
+           
         }
 
         private void itemDecentralization_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            MessageBox.Show("Chức năng đang được phát triển");
-            //if (BStatusLogin == true)
-            //{
-            //    this.Hide();
-            //    frmDecentralization frmDecentralization = new frmDecentralization();
-            //    frmDecentralization.ShowDialog();
-            //    this.Close();
-            //}    
-            //else
-            //{
-            //    MessageBox.Show("Bạn không có quyền thực hiện chức năng này");
-            //}
+           
         }
 
         private void itemManageStudent_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            if (IStatusLogin == 1)
-            {
-                MessageBox.Show("Bạn không có quyền thực hiện chức năng này");
-            }
-            else if (IStatusLogin == 2)
-            {
-                this.Hide();
-                frmManageStudentInformation f = new frmManageStudentInformation(IStatusLogin,StaffModel);
-                f.ShowDialog();
-                this.Close();
-            }
+            
         }
 
         private void itemManageLecturer_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            if (IStatusLogin == 1)
-            {
-                MessageBox.Show("Bạn không có quyền thực hiện chức năng này");
-            }
-            else if (IStatusLogin == 2)
-            {
-                this.Hide();
-                frmManageLecturerInformation f = new frmManageLecturerInformation(IStatusLogin, StaffModel);
-                f.ShowDialog();
-                this.Close();
-            }
+           
         }
 
         private void itemManageFaculty_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            if (IStatusLogin == 1)
-            {
-                MessageBox.Show("Bạn không có quyền thực hiện chức năng này");
-            }
-            else if (IStatusLogin == 2)
-            {
-                this.Hide();
-             //   frmManageFaculty f = new frmManageFaculty(IStatusLogin,StaffModel);
-               // f.ShowDialog();
-                this.Close();
-            }
+            
         }
 
         private void itemManageProject_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            if (IStatusLogin == 1)
-            {
-                this.Hide();
-                frmManageProjectStudentMain f = new frmManageProjectStudentMain(IStatusLogin, StudentModel) ;
-                f.ShowDialog();
-                this.Close();
-            }
-            else if (IStatusLogin == 2)
-            {
-                this.Hide();
-                frmManageProjectMain f = new frmManageProjectMain(IStatusLogin,StaffModel);
-                f.ShowDialog();
-                this.Close();
-            }    
+            
         }
 
         private void itemManagSubject_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            if (IStatusLogin == 1)
-            {
-                MessageBox.Show("Bạn không có quyền thực hiện chức năng này");
-            }
-            else if (IStatusLogin == 2)
-            {
-                this.Hide();
-                frmManageSubjectMain f = new frmManageSubjectMain(IStatusLogin, StaffModel);
-                f.ShowDialog();
-                this.Close();
-            }
+            
         }
 
         private void itemManageGroup_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            MessageBox.Show("Đang trong quá trình phát triển");
+            
         }
 
         private void frmHome_Load(object sender, EventArgs e)
         {    
-            if (IStatusLogin == 1)
-            {
-                lblHienThi_Ten.Text = StudentModel.StrStudentName;
-                lblHienThi_ChucVu.Text = "Sinh Viên";
-            }
-            else if (IStatusLogin == 2)
-            {
-                lblHienThi_Ten.Text = StaffModel.StrStaffName;
-                lblHienThi_ChucVu.Text = "Giảng Viên";
-            }
+            
         }
 
         private void itemManageClass_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            if (IStatusLogin == 1)
-            {
-                MessageBox.Show("Bạn không có quyền thực hiện chức năng này");
-            }
-            else if (IStatusLogin == 2)
-            {
-                this.Hide();
-                frmManageClass f = new frmManageClass(IStatusLogin, StaffModel);
-                f.ShowDialog();
-                this.Close();
-            }
+            
         }
+        #endregion
     }
 }

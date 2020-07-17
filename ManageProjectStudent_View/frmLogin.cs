@@ -22,6 +22,9 @@ namespace ManageProjectStudent_View
         public static StaffModel lecturerSelected = null;
         public static IStudent Student = Config.Container.Resolve<IStudent>();
         public static IStaff Lecturer = Config.Container.Resolve<IStaff>();
+        public delegate void Login(bool bStatus, StudentModel student, StaffModel staff);
+        public Login login = null;
+
         #endregion
 
         #region Event
@@ -76,13 +79,19 @@ namespace ManageProjectStudent_View
                     bCheckUser = true;
                     if(Student.checkCardID(txtPassword.Text) == true)
                     {
-                        bCheckPass = true;
-                        studentSelected = Student.getStudentSelected(txtUsers.Text);
-                        frmHome f = new frmHome(1,studentSelected);
-                        f.StudentModel = studentSelected;
-                        f.ShowDialog();
-                        this.Hide();
-                        this.Close();
+                        bCheckUser = true;
+                        if (Student.checkCardID(txtPassword.Text) == true)
+                        {
+                            bCheckPass = true;
+                            studentSelected = Student.getStudentSelected(txtUsers.Text);
+                            if (login != null)
+                            {
+                                login(true, studentSelected, null);
+                            }
+                            //frmHome frmHome = new frmHome();
+                            //frmHome.ShowDialog();
+                            this.Close();
+                        }
                     }
                 }
                 if (Lecturer.checkStaffID(txtUsers.Text) == true)
@@ -92,10 +101,12 @@ namespace ManageProjectStudent_View
                     {
                         bCheckPass = true;
                         lecturerSelected = Lecturer.getStaffSelected(txtUsers.Text);
-                        this.Hide();
-                        frmHome f = new frmHome(2,lecturerSelected);
-                        f.StaffModel = lecturerSelected;
-                        f.ShowDialog();
+                        if (login != null)
+                        {
+                            login(true, null, lecturerSelected);
+                        }
+                        //frmHome frmHome = new frmHome();
+                        //frmHome.ShowDialog();
                         this.Close();
                     }
                 }

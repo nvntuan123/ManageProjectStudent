@@ -407,9 +407,9 @@ namespace ManageProjectStudent_View
 
         private void btnExitFormManageLecturer_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmHome frmHome = new frmHome(IStatus, StaffModel);
-            frmHome.ShowDialog();
+            //this.Hide();
+            //frmHome frmHome = new frmHome();
+            //frmHome.ShowDialog();
             this.Close();
         }
 

@@ -20,8 +20,8 @@ namespace ManageProjectStudent_View
             InitializeComponent();
             // Thong
             txtIDLanguage.KeyPress += new KeyPressEventHandler(IMML.txtIDLanguage_KeyPress);
-            txtKeyword.KeyPress += new KeyPressEventHandler(IMML.txtKeyword_KeyPress);
-            txtLanguageName.KeyPress += new KeyPressEventHandler(IMML.txtLanguageName_KeyPress);
+            //txtKeyword.KeyPress += new KeyPressEventHandler(IMML.txtKeyword_KeyPress);
+            //txtLanguageName.KeyPress += new KeyPressEventHandler(IMML.txtLanguageName_KeyPress);
             //Thong
         }
 

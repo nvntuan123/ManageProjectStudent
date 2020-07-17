@@ -38,5 +38,6 @@ namespace ManageProjectStudent_ViewModel
         public DbSet<LanguageModel> LanguageModels { get; set; }
         public DbSet<LanguageWordModel> LanguageWordModels { get; set; }
         public DbSet<DecentralizeModel> DecentralizeModels { get; set; }
+        public DbSet<FormModel> FormModels { get; set; }
     }
 }

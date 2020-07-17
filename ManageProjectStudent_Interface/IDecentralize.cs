@@ -15,6 +15,9 @@ namespace ManageProjectStudent_Interface
         bool updateCurrentDecentralizef(DecentralizeModel Decentralize);
         bool deleteCurrentDecentralize(DecentralizeModel Decentralize);
         DecentralizeModel getDecentralizeStaffSelected(string StrStaffType);
+        List<DecentralizeModel> getListDecentralizeStaff(string StrStaffType);
+        List<string> getListDecentralizeStaffID(string StrStaffType);
+
 
     }
 }

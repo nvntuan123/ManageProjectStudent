@@ -120,7 +120,8 @@ namespace ManageProjectStudent_View
 
         private void btnManageLanguage_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ManageProjectStudent_View.frmManageMultiLanguage(), sender);
+            frmAddGroupForSubject frm = new frmAddGroupForSubject();
+            frm.ShowDialog();
             lblTitle.Text = "Quản lý thông tin ngôn ngữ";
         }
 

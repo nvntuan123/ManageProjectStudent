@@ -61,6 +61,20 @@ namespace ManageProjectStudent_ViewModel
             try
             {
                 _Context.StaffTypeModels.Add(staffType);
+                DecentralizeModel staff = new DecentralizeModel();
+                foreach (FormModel x in _Context.FormModels )
+                {
+                    staff.StrStaffTypeID = staffType.StrStaffTypeID;
+                    staff.BView = true;
+                    staff.BAdd = false;
+                    staff.BDelete = false;
+                    staff.BDelete = false;
+                    staff.BFullFuncion = false;
+                    staff.BAccess = false;
+                    staff.StrFormID = x.StrFormID;
+                    _Context.DecentralizeModels.Add(staff);
+                }
+                
                 return (_Context.SaveChanges() != 0);
             }
             catch

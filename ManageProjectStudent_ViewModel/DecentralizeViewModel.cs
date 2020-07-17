@@ -26,7 +26,7 @@ namespace ManageProjectStudent_ViewModel
                 var Result = (from x in _Context.DecentralizeModels.AsEnumerable()
                               select new DecentralizeModel
                               {
-                                 StrFrmID = x.StrFrmID,
+                                 StrFormID = x.StrFormID,
                                  StrStaffTypeID = x.StrStaffTypeID,
                                  BFullFuncion = x.BFullFuncion,
                                  BAdd = x.BAdd,
@@ -43,14 +43,17 @@ namespace ManageProjectStudent_ViewModel
                    (x => x.StrStaffTypeID == StrStaffType);
             return Staff;
         }
-        public string getByIDMaxStudent()
+        public List<DecentralizeModel> getListDecentralizeStaff(string StrStaffType)
         {
-            using (var _Context = new DBManageProjectStudentViewModel())
-            {
-                var query = _Context.StudentModels.OrderByDescending(c => c.StrStudentID).Select(c => c.StrStudentID);
-                var Result = query.First();
-                return Result;
-            }
+            var Staff = _Context.DecentralizeModels.Where   
+                   (x => x.StrStaffTypeID == StrStaffType).ToList();
+            return Staff;
+        }
+        public List<string> getListDecentralizeStaffID(string StrStaffType)
+        {
+            var Staff = _Context.DecentralizeModels.Where
+                   (x => x.StrStaffTypeID == StrStaffType).Select(x=> x.StrStaffTypeID).ToList();
+            return Staff;
         }
         public bool addNewDecentralize(DecentralizeModel Decentralize)
         {
@@ -73,7 +76,7 @@ namespace ManageProjectStudent_ViewModel
                  (x => x.StrStaffTypeID == Decentralize.StrStaffTypeID);
                 if (DecentralizeToUpdate != null)
                 {
-                    DecentralizeToUpdate.StrFrmID = Decentralize.StrFrmID;
+                    DecentralizeToUpdate.StrFormID = Decentralize.StrFormID;
                     DecentralizeToUpdate.BFullFuncion = Decentralize.BFullFuncion;
                     DecentralizeToUpdate.BAdd = Decentralize.BAdd;
                     DecentralizeToUpdate.BEdit = Decentralize.BEdit;

@@ -45,6 +45,36 @@ namespace ManageProjectStudent_ViewModel
                 return Result;
             }
         }
+        public BindingList<ProjectTaskModel> getListProjectTaskForStudent(string StrStudentID)
+        {
+            var query = _Context.ResultProjectModels.Where(x => x.StrStudentID == StrStudentID).Select(x => x.StrProjectID).ToList();
+            BindingList<ProjectTaskModel> Result = new BindingList<ProjectTaskModel>();
+            foreach (string ProjectID in query)
+            {
+                var query1 = _Context.ProjectTaskModels.Where(x => x.StrProjectID == ProjectID).ToList();
+                foreach (ProjectTaskModel x in query1)
+                {
+                    Result.Add(x);
+                }
+            }
+            return Result;
+        }
+
+        public BindingList<ProjectTaskModel> getListProjectTaskForStaff(string StrStaffID)
+        {
+            var query = _Context.ProjectModels.Where(x => x.StrStaffID == StrStaffID).Select(x => x.StrProjectID).ToList();
+            BindingList<ProjectTaskModel> Result = new BindingList<ProjectTaskModel>();
+            foreach (string ProjectID in query)
+            {
+                var query1 = _Context.ProjectTaskModels.Where(x => x.StrProjectID == ProjectID).ToList();
+                foreach (ProjectTaskModel x in query1)
+                {
+                    Result.Add(x);
+                }
+            }
+            return Result;
+        }
+
         public List<string> lstProjectTaskID()
         {
             using (var _Context = new DBManageProjectStudentViewModel())

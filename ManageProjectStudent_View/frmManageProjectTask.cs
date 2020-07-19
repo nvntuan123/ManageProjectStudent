@@ -38,6 +38,10 @@ namespace ManageProjectStudent_View
         private BindingList<ProjectTaskModel> _lstTask = new BindingList<ProjectTaskModel>();
         private IProject _Project = Config.Container.Resolve<IProject>();
         private BindingList<ProjectModel> _lstProject = new BindingList<ProjectModel>();
+
+        private StaffModel StaffModel = null;
+        private IDecentralize _Decen = Config.Container.Resolve<IDecentralize>();
+        private DecentralizeModel Decentralize = null;
         #endregion
         #region Mehthod
         private void _setStatusForm()
@@ -48,8 +52,33 @@ namespace ManageProjectStudent_View
                     grpInformationTask.Enabled = false;
                     if(_TaskModelNow != null)
                     {
-                        btnUpdate.Enabled = true;
-                        btnDelete.Enabled = true;
+                        if (Decentralize.BView == true)
+                        {
+                            if (Decentralize.BAdd == true)
+                            {
+                                btnAdd.Enabled = true;
+                            }
+                            else
+                            {
+                                btnAdd.Enabled = false;
+                            }
+                            if (Decentralize.BDelete == true)
+                            {
+                                btnDelete.Enabled = true;
+                            }
+                            else
+                            {
+                                btnDelete.Enabled = false;
+                            }
+                            if (Decentralize.BEdit == true)
+                            {
+                                btnUpdate.Enabled = true;
+                            }
+                            else
+                            {
+                                btnUpdate.Enabled = false;
+                            }
+                        }
                     }
                     else
                     {
@@ -119,13 +148,26 @@ namespace ManageProjectStudent_View
 
         private void _lstLoadListTask()
         {
-            _lstTask = _Task.loadProjectTask();
+            //_lstTask = _Task.loadProjectTask();
+            _lstTask = _Task.getListProjectTaskForStaff(frmHome.staffModel.StrStaffID);
             gcListTask.DataSource = _lstTask;
         }
         #endregion
         #region Event
         private void frmManageProjectTask_Load(object sender, EventArgs e)
         {
+            StaffModel = frmHome.staffModel;
+            if (frmHome.lstDecent != null)
+            {
+                foreach (DecentralizeModel decen in frmHome.lstDecent)
+                {
+                    if (StaffModel.StrStaffTypeID == decen.StrStaffTypeID && this.Name == decen.StrFormID)
+                    {
+                        Decentralize = _Decen.getDecentralizeStaffIdForm(decen.StrStaffTypeID, decen.StrFormID);
+                    }
+                }
+            }
+
             dteStartDay.EditValue = DateTime.Now.Date;
             dteEndDay.EditValue = DateTime.Now.Date;
 
@@ -136,7 +178,8 @@ namespace ManageProjectStudent_View
             lkeProjectID.Properties.Columns["colProjectID"].FieldName = "StrProjectID";
 
             ///*GridView*/
-            _lstTask = _Task.loadProjectTask();
+            //_lstTask = _Task.loadProjectTask();
+            _lstTask = _Task.getListProjectTaskForStaff(frmHome.staffModel.StrStaffID);
 
             LookUpEdit_Project.DataSource = _lstTask;
             LookUpEdit_Project.Columns["colProjectID"].FieldName = "StrProjectID";
@@ -249,7 +292,8 @@ namespace ManageProjectStudent_View
         {
             _IStatusForm = 0;
             _setStatusForm();
-            _lstTask = _Task.loadProjectTask();
+            //_lstTask = _Task.loadProjectTask();
+            _lstTask = _Task.getListProjectTaskForStaff(frmHome.staffModel.StrStaffID);
             gcListTask.DataSource = _lstTask;
         }
 

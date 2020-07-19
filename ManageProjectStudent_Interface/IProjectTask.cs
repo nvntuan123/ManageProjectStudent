@@ -17,5 +17,7 @@ namespace ManageProjectStudent_Interface
         bool updateCurrentProjectTask(ProjectTaskModel ProjectTask);
         bool deleteCurrentProjectTask(ProjectTaskModel ProjectTask);
         bool addLinkFile(ProjectTaskModel projectTask);
+        BindingList<ProjectTaskModel> getListProjectTaskForStudent(string StrStudentID);
+        BindingList<ProjectTaskModel> getListProjectTaskForStaff(string StrStaffID);
     }
 }

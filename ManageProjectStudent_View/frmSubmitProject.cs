@@ -79,7 +79,8 @@ namespace ManageProjectStudent_View
 
         private void _lstLoadListTask()
         {
-            _lstTask = _ProjectTk.loadProjectTask();
+            //_lstTask = _ProjectTk.loadProjectTask();
+            _lstTask = _ProjectTk.getListProjectTaskForStudent(frmHome.studentModel.StrStudentID);
             gcListTask.DataSource = _lstTask;
         }
         #endregion
@@ -87,7 +88,8 @@ namespace ManageProjectStudent_View
         //load
         private void frmSubmitProject_Load(object sender, EventArgs e)
         {
-            _lstTask = _ProjectTk.loadProjectTask();
+            //_lstTask = _ProjectTk.loadProjectTask();
+            _lstTask = _ProjectTk.getListProjectTaskForStudent(frmHome.studentModel.StrStudentID);
             lkeTask.Properties.ValueMember = "StrTaskID";
             lkeTask.Properties.DisplayMember = "StrTaskName";
             lkeTask.Properties.DataSource = _lstTask;
@@ -102,7 +104,8 @@ namespace ManageProjectStudent_View
             lkeProject.Properties.Columns["colProjectName"].FieldName = "StrProjectName";
 
             ///*GridView*/
-            _lstTask = _ProjectTk.loadProjectTask();
+            //_lstTask = _ProjectTk.loadProjectTask();
+            _lstTask = _ProjectTk.getListProjectTaskForStudent(frmHome.studentModel.StrStudentID);
 
             LookUpEdit_Task.DataSource = _lstTask;
             LookUpEdit_Task.Columns["colTaskID"].FieldName = "StrTaskID";

@@ -33,6 +33,10 @@ namespace ManageProjectStudent_View
         private BindingList<SubjectModel> _lstSubject = new BindingList<SubjectModel>();
         private BindingList<FacultyModel> _lstFaculty = new BindingList<FacultyModel>();
         private IFaculty _Faculty = Config.Container.Resolve<IFaculty>();
+
+        private StaffModel StaffModel = null;
+        private IDecentralize _Decen = Config.Container.Resolve<IDecentralize>();
+        private DecentralizeModel Decentralize = null;
         #endregion
         #region Method
         private void _setStatusForm()
@@ -43,8 +47,33 @@ namespace ManageProjectStudent_View
                     grpInformationSubject.Enabled = false;
                     if (_SubjectModelNow != null)
                     {
-                        btnUpdate.Enabled = true;
-                        btnDelete.Enabled = true;
+                        if (Decentralize.BView == true)
+                        {
+                            if (Decentralize.BAdd == true)
+                            {
+                                btnAdd.Enabled = true;
+                            }
+                            else
+                            {
+                                btnAdd.Enabled = false;
+                            }
+                            if (Decentralize.BDelete == true)
+                            {
+                                btnDelete.Enabled = true;
+                            }
+                            else
+                            {
+                                btnDelete.Enabled = false;
+                            }
+                            if (Decentralize.BEdit == true)
+                            {
+                                btnUpdate.Enabled = true;
+                            }
+                            else
+                            {
+                                btnUpdate.Enabled = false;
+                            }
+                        }
                     }
                     else
                     {
@@ -116,6 +145,18 @@ namespace ManageProjectStudent_View
 
         private void frmManageSubject_Load(object sender, EventArgs e)
         {
+            StaffModel = frmHome.staffModel;
+            if (frmHome.lstDecent != null)
+            {
+                foreach (DecentralizeModel decen in frmHome.lstDecent)
+                {
+                    if (StaffModel.StrStaffTypeID == decen.StrStaffTypeID && this.Name == decen.StrFormID)
+                    {
+                        Decentralize = _Decen.getDecentralizeStaffIdForm(decen.StrStaffTypeID, decen.StrFormID);
+                    }
+                }
+            }
+
             dteStartTime.EditValue = DateTime.Now.Date;
             dteEndTime.EditValue = DateTime.Now.Date;
 
@@ -162,6 +203,28 @@ namespace ManageProjectStudent_View
             _IStatusForm = 2;
             _setStatusForm();
             txtName.Focus();
+        }
+
+        private void btnDeleteSubject_Click(object sender, EventArgs e)
+        {
+            if (_SubjectModelNow != null)
+            {
+                if (_Subject.deleteCurrentSubject(_SubjectModelNow))
+                {
+                    _lstLoadListSubject();
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Xóa Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (_lstSubject.Count == 0)
+                    {
+                        _SubjectModelNow = null;
+                        _IStatusForm = 0;
+                        _setStatusForm();
+                    }
+                }
+                else
+                {
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Xóa Thất Bại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -291,27 +354,5 @@ namespace ManageProjectStudent_View
             gridview.IndicatorWidth = Convert.ToInt32(size.Width + 0.999f) + GridPainter.Indicator.ImageSize.Width + 20;
         }
         #endregion
-
-        private void btnDeleteSubject_Click(object sender, EventArgs e)
-        {
-            if (_SubjectModelNow != null)
-            {
-                if (_Subject.deleteCurrentSubject(_SubjectModelNow))
-                {
-                    _lstLoadListSubject();
-                    DevExpress.XtraEditors.XtraMessageBox.Show("Xóa Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (_lstSubject.Count == 0)
-                    {
-                        _SubjectModelNow = null;
-                        _IStatusForm = 0;
-                        _setStatusForm();
-                    }
-                }
-                else
-                {
-                    DevExpress.XtraEditors.XtraMessageBox.Show("Xóa Thất Bại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-        }
     }
 }

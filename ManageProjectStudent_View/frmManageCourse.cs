@@ -33,6 +33,10 @@ namespace ManageProjectStudent_View
         private int _IStatusForm = 0;
         private CourseModel _CourseModelNow = null;
         private BindingList<CourseModel> _lstCourse = new BindingList<CourseModel>();
+
+        private StaffModel StaffModel = null;
+        private IDecentralize _Decen = Config.Container.Resolve<IDecentralize>();
+        private DecentralizeModel Decentralize = null;
         #endregion
         #region Method
         private void _setStatusForm()
@@ -43,8 +47,33 @@ namespace ManageProjectStudent_View
                     grpCourse.Enabled = false;
                     if(_CourseModelNow != null)
                     {
-                        btnDelete.Enabled = true;
-                        btnUpdate.Enabled = true;
+                        if (Decentralize.BView == true)
+                        {
+                            if (Decentralize.BAdd == true)
+                            {
+                                btnAdd.Enabled = true;
+                            }
+                            else
+                            {
+                                btnAdd.Enabled = false;
+                            }
+                            if (Decentralize.BDelete == true)
+                            {
+                                btnDelete.Enabled = true;
+                            }
+                            else
+                            {
+                                btnDelete.Enabled = false;
+                            }
+                            if (Decentralize.BEdit == true)
+                            {
+                                btnUpdate.Enabled = true;
+                            }
+                            else
+                            {
+                                btnUpdate.Enabled = false;
+                            }
+                        }
                     } 
                     else
                     {
@@ -107,6 +136,18 @@ namespace ManageProjectStudent_View
         //load
         private void frmManageCourse_Load(object sender, EventArgs e)
         {
+            StaffModel = frmHome.staffModel;
+            if (frmHome.lstDecent != null)
+            {
+                foreach (DecentralizeModel decen in frmHome.lstDecent)
+                {
+                    if (StaffModel.StrStaffTypeID == decen.StrStaffTypeID && this.Name == decen.StrFormID)
+                    {
+                        Decentralize = _Decen.getDecentralizeStaffIdForm(decen.StrStaffTypeID, decen.StrFormID);
+                    }
+                }
+            }
+
             dteStartYear.EditValue = DateTime.Now.Date;
             dteEndYear.EditValue = DateTime.Now.Date;
 

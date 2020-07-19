@@ -40,6 +40,14 @@ namespace ManageProjectStudent_ViewModel
                 return Result;
             }
         }
+        public string getStaffTypeName(string StaffTypeID)
+        {
+            using (var _Context = new DBManageProjectStudentViewModel())
+            {
+                var Result = _Context.StaffTypeModels.Where(x => x.StrStaffTypeID == StaffTypeID).Select(x => x.StrStaffTypeName).SingleOrDefault();
+                return Result;
+            }
+        }
 
         public string getByIDAutoStaffType()
         {

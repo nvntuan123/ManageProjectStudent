@@ -140,5 +140,17 @@ namespace ManageProjectStudent_View
             frm.ShowDialog();
             
         }
+
+        private void btnManageProjectLecturer_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmManageProject frm = new frmManageProject();
+            frm.ShowDialog();
+        }
+
+        private void btnExitForm_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

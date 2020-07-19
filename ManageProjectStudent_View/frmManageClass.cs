@@ -26,21 +26,9 @@ namespace ManageProjectStudent_View
 {
     public partial class frmManageClass : Form
     {
-        private IManageClass IMC = Config.Container.Resolve<IManageClass>();
-        private int IStatus;
-        private StaffModel StaffModel;
         public frmManageClass()
         {
             InitializeComponent();
-        }
-
-        public frmManageClass(int IStatusLogin,StaffModel staff)
-        {
-            InitializeComponent();
-            IStatus = IStatusLogin;
-            StaffModel = staff;
-            txtClassName.KeyPress += new KeyPressEventHandler(IMC.txtClassName_KeyPress);
-          //  txtIDClass.KeyPress += new KeyPressEventHandler(IMC.txtIDClass_KeyPress);
         }
         #region Properties
         private bool indicatorIcon = true;
@@ -52,6 +40,10 @@ namespace ManageProjectStudent_View
         private BindingList<FacultyModel> _lstFaculty = new BindingList<FacultyModel>();
         private ICourse _Course = Config.Container.Resolve<ICourse>();
         private BindingList<CourseModel> _lstCourse = new BindingList<CourseModel>();
+
+        private StaffModel StaffModel = null;
+        private IDecentralize _Decen = Config.Container.Resolve<IDecentralize>();
+        private DecentralizeModel Decentralize = null;
         #endregion
         #region Mehtod
         private string getMaxID()
@@ -69,8 +61,33 @@ namespace ManageProjectStudent_View
                     grpInformationClass.Enabled = false;
                     if (_ClassModelNow != null)
                     {
-                        btnDelete.Enabled = true;
-                        btnUpdate.Enabled = true;
+                        if (Decentralize.BView == true)
+                        {
+                            if (Decentralize.BAdd == true)
+                            {
+                                btnAdd.Enabled = true;
+                            }
+                            else
+                            {
+                                btnAdd.Enabled = false;
+                            }
+                            if (Decentralize.BDelete == true)
+                            {
+                                btnDelete.Enabled = true;
+                            }
+                            else
+                            {
+                                btnDelete.Enabled = false;
+                            }
+                            if (Decentralize.BEdit == true)
+                            {
+                                btnUpdate.Enabled = true;
+                            }
+                            else
+                            {
+                                btnUpdate.Enabled = false;
+                            }
+                        }
                     }
                     else
                     {
@@ -136,6 +153,18 @@ namespace ManageProjectStudent_View
         //load
         private void frmManageClass_Load(object sender, EventArgs e)
         {
+            StaffModel = frmHome.staffModel;
+            if (frmHome.lstDecent != null)
+            {
+                foreach (DecentralizeModel decen in frmHome.lstDecent)
+                {
+                    if (StaffModel.StrStaffTypeID == decen.StrStaffTypeID && this.Name == decen.StrFormID)
+                    {
+                        Decentralize = _Decen.getDecentralizeStaffIdForm(decen.StrStaffTypeID, decen.StrFormID);
+                    }
+                }
+            }
+
             _lstFaculty = _Faculty.loadFaculty();
             lkeFaculty.Properties.ValueMember = "StrFacultyID";
             lkeFaculty.Properties.DisplayMember = "StrFacultyName";

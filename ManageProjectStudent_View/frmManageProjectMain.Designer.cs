@@ -71,6 +71,7 @@
             this.btnExitForm.TabIndex = 9;
             this.btnExitForm.Text = "Trở về";
             this.btnExitForm.UseVisualStyleBackColor = true;
+            this.btnExitForm.Click += new System.EventHandler(this.btnExitForm_Click_1);
             // 
             // panelLogo
             // 
@@ -125,6 +126,7 @@
             this.btnManageProjectLecturer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageProjectLecturer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnManageProjectLecturer.UseVisualStyleBackColor = true;
+            this.btnManageProjectLecturer.Click += new System.EventHandler(this.btnManageProjectLecturer_Click_1);
             // 
             // panelTitleBar
             // 

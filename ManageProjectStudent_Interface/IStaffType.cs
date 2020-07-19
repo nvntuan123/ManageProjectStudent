@@ -16,5 +16,6 @@ namespace ManageProjectStudent_Interface
         bool updateCurrentStaffType(StaffTypeModel staffType);
         bool deleteCurrentStaffType(StaffTypeModel staffType);
         List<string> lstStaffTypeID();
+        string getStaffTypeName(string StaffTypeID);
     }
 }

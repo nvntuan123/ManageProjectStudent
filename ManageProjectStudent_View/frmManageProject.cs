@@ -36,6 +36,10 @@ namespace ManageProjectStudent_View
         private BindingList<ProjectModel> _lstProject = new BindingList<ProjectModel>();
         private BindingList<SubjectModel> _lstSubject = new BindingList<SubjectModel>();
         private BindingList<StaffModel> _lstLecturer = new BindingList<StaffModel>();
+
+        private StaffModel StaffModel = null;
+        private IDecentralize _Decen = Config.Container.Resolve<IDecentralize>();
+        private DecentralizeModel Decentralize = null;
         #endregion
         #region Method
         private void _setStatusForm()
@@ -47,8 +51,33 @@ namespace ManageProjectStudent_View
                     grpInformationProject.Enabled = false;
                     if (_ProjectModelNow != null)
                     {
-                        btnUpdate.Enabled = true;
-                        btnDelete.Enabled = true;
+                        if (Decentralize.BView == true)
+                        {
+                            if (Decentralize.BAdd == true)
+                            {
+                                btnAdd.Enabled = true;
+                            }
+                            else
+                            {
+                                btnAdd.Enabled = false;
+                            }
+                            if (Decentralize.BDelete == true)
+                            {
+                                btnDelete.Enabled = true;
+                            }
+                            else
+                            {
+                                btnDelete.Enabled = false;
+                            }
+                            if (Decentralize.BEdit == true)
+                            {
+                                btnUpdate.Enabled = true;
+                            }
+                            else
+                            {
+                                btnUpdate.Enabled = false;
+                            }
+                        }
                     }
                     else
                     {
@@ -122,6 +151,18 @@ namespace ManageProjectStudent_View
         #region Event
         private void frmManageProject_Load(object sender, EventArgs e)
         {
+            StaffModel = frmHome.staffModel;
+            if (frmHome.lstDecent != null)
+            {
+                foreach (DecentralizeModel decen in frmHome.lstDecent)
+                {
+                    if (StaffModel.StrStaffTypeID == decen.StrStaffTypeID && this.Name == decen.StrFormID)
+                    {
+                        Decentralize = _Decen.getDecentralizeStaffIdForm(decen.StrStaffTypeID, decen.StrFormID);
+                    }
+                }
+            }
+
             dteStartDay.EditValue = DateTime.Now.Date;
             dteEndDay.EditValue = DateTime.Now.Date;
 
@@ -277,6 +318,38 @@ namespace ManageProjectStudent_View
             this.Close();
         }
 
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (gvListProject.RowCount > 0)
+                {
+                    var dialog = new SaveFileDialog();
+                    dialog.Title = @"Export file excel";
+                    dialog.FileName = "";
+                    dialog.Filter = @"Micrsoft Excel|*.xlsx";
+                    if (dialog.ShowDialog() == DialogResult.OK)
+                    {
+                        gvListProject.ColumnPanelRowHeight = 40;
+                        gvListProject.OptionsPrint.AutoWidth = AutoSize;
+                        gvListProject.OptionsPrint.ShowPrintExportProgress = true;
+                        gvListProject.OptionsPrint.AllowCancelPrintExport = true;
+                        XlsxExportOptions options = new XlsxExportOptions();
+                        options.TextExportMode = TextExportMode.Text;
+                        options.ExportMode = XlsxExportMode.SingleFile;
+                        options.SheetName = "Sheet1";
+
+                        ExportSettings.DefaultExportType = ExportType.Default;
+                        gvListProject.ExportToXlsx(dialog.FileName, options);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                DevExpress.XtraEditors.XtraMessageBox.Show("Error" + ex, "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void txtProjectName_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!_Project._checkCharacterNumberProject(e.KeyChar))
@@ -342,37 +415,5 @@ namespace ManageProjectStudent_View
             gridview.IndicatorWidth = Convert.ToInt32(size.Width + 0.999f) + GridPainter.Indicator.ImageSize.Width + 20;
         }
         #endregion
-
-        private void btnExport_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (gvListProject.RowCount > 0)
-                {
-                    var dialog = new SaveFileDialog();
-                    dialog.Title = @"Export file excel";
-                    dialog.FileName = "";
-                    dialog.Filter = @"Micrsoft Excel|*.xlsx";
-                    if (dialog.ShowDialog() == DialogResult.OK)
-                    {
-                        gvListProject.ColumnPanelRowHeight = 40;
-                        gvListProject.OptionsPrint.AutoWidth = AutoSize;
-                        gvListProject.OptionsPrint.ShowPrintExportProgress = true;
-                        gvListProject.OptionsPrint.AllowCancelPrintExport = true;
-                        XlsxExportOptions options = new XlsxExportOptions();
-                        options.TextExportMode = TextExportMode.Text;
-                        options.ExportMode = XlsxExportMode.SingleFile;
-                        options.SheetName = "Sheet1";
-
-                        ExportSettings.DefaultExportType = ExportType.Default;
-                        gvListProject.ExportToXlsx(dialog.FileName, options);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                DevExpress.XtraEditors.XtraMessageBox.Show("Error" + ex, "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
     }
 }

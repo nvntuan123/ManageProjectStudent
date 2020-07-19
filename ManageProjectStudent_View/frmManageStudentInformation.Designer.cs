@@ -87,7 +87,6 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.btnImport = new DevExpress.XtraEditors.SimpleButton();
-
             this.btnExport = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Faculty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteBirthday.Properties.CalendarTimeProperties)).BeginInit();
@@ -125,7 +124,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label9.Location = new System.Drawing.Point(796, 75);
+            this.label9.Location = new System.Drawing.Point(796, 65);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(72, 17);
@@ -134,7 +133,7 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(538, 162);
+            this.txtAddress.Location = new System.Drawing.Point(538, 119);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(187, 21);
@@ -144,7 +143,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.Location = new System.Drawing.Point(448, 167);
+            this.label8.Location = new System.Drawing.Point(448, 124);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 17);
@@ -153,7 +152,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(538, 75);
+            this.txtEmail.Location = new System.Drawing.Point(538, 65);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(187, 21);
@@ -170,7 +169,7 @@
             // 
             // txtIDCard
             // 
-            this.txtIDCard.Location = new System.Drawing.Point(538, 118);
+            this.txtIDCard.Location = new System.Drawing.Point(538, 94);
             this.txtIDCard.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDCard.Name = "txtIDCard";
             this.txtIDCard.Size = new System.Drawing.Size(187, 21);
@@ -180,7 +179,7 @@
             // dteBirthday
             // 
             this.dteBirthday.EditValue = null;
-            this.dteBirthday.Location = new System.Drawing.Point(135, 118);
+            this.dteBirthday.Location = new System.Drawing.Point(135, 94);
             this.dteBirthday.Margin = new System.Windows.Forms.Padding(4);
             this.dteBirthday.Name = "dteBirthday";
             this.dteBirthday.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -192,7 +191,7 @@
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(136, 75);
+            this.txtFullName.Location = new System.Drawing.Point(136, 65);
             this.txtFullName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(187, 21);
@@ -203,7 +202,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(826, 121);
+            this.label7.Location = new System.Drawing.Point(826, 97);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(34, 17);
@@ -214,7 +213,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(450, 121);
+            this.label6.Location = new System.Drawing.Point(450, 97);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 17);
@@ -225,7 +224,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(451, 79);
+            this.label5.Location = new System.Drawing.Point(451, 69);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 17);
@@ -247,7 +246,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(33, 121);
+            this.label3.Location = new System.Drawing.Point(33, 97);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 17);
@@ -258,7 +257,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(55, 79);
+            this.label2.Location = new System.Drawing.Point(55, 69);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 17);
@@ -314,7 +313,7 @@
             this.grpInformationStudent.Location = new System.Drawing.Point(182, 94);
             this.grpInformationStudent.Margin = new System.Windows.Forms.Padding(4);
             this.grpInformationStudent.Name = "grpInformationStudent";
-            this.grpInformationStudent.Size = new System.Drawing.Size(1127, 273);
+            this.grpInformationStudent.Size = new System.Drawing.Size(1127, 218);
             this.grpInformationStudent.TabIndex = 43;
             this.grpInformationStudent.Text = "Thông tin";
             // 
@@ -322,7 +321,7 @@
             // 
             this.panel2.Controls.Add(this.radAvailable);
             this.panel2.Controls.Add(this.radUnavailable);
-            this.panel2.Location = new System.Drawing.Point(875, 74);
+            this.panel2.Location = new System.Drawing.Point(875, 64);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(224, 24);
             this.panel2.TabIndex = 125;
@@ -391,7 +390,7 @@
             // dteStartYear
             // 
             this.dteStartYear.EditValue = null;
-            this.dteStartYear.Location = new System.Drawing.Point(135, 164);
+            this.dteStartYear.Location = new System.Drawing.Point(135, 121);
             this.dteStartYear.Margin = new System.Windows.Forms.Padding(4);
             this.dteStartYear.Name = "dteStartYear";
             this.dteStartYear.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -405,7 +404,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label10.Location = new System.Drawing.Point(12, 167);
+            this.label10.Location = new System.Drawing.Point(12, 124);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(93, 17);
@@ -428,7 +427,7 @@
             this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
             this.btnSave.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnSave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSave.Location = new System.Drawing.Point(487, 219);
+            this.btnSave.Location = new System.Drawing.Point(487, 177);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(140, 36);
             this.btnSave.TabIndex = 121;
@@ -438,7 +437,7 @@
             // 
             // lkeFaculty
             // 
-            this.lkeFaculty.Location = new System.Drawing.Point(896, 167);
+            this.lkeFaculty.Location = new System.Drawing.Point(896, 124);
             this.lkeFaculty.Name = "lkeFaculty";
             this.lkeFaculty.Properties.Appearance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lkeFaculty.Properties.Appearance.Options.UseFont = true;
@@ -453,7 +452,7 @@
             // 
             // lkeClass
             // 
-            this.lkeClass.Location = new System.Drawing.Point(896, 118);
+            this.lkeClass.Location = new System.Drawing.Point(896, 94);
             this.lkeClass.Name = "lkeClass";
             this.lkeClass.Properties.Appearance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lkeClass.Properties.Appearance.Options.UseFont = true;
@@ -470,7 +469,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label12.Location = new System.Drawing.Point(826, 170);
+            this.label12.Location = new System.Drawing.Point(826, 127);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(42, 17);
@@ -490,12 +489,12 @@
             // 
             // gcListStudent
             // 
-            this.gcListStudent.Location = new System.Drawing.Point(182, 384);
+            this.gcListStudent.Location = new System.Drawing.Point(182, 319);
             this.gcListStudent.MainView = this.gvStudentList;
             this.gcListStudent.Name = "gcListStudent";
             this.gcListStudent.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.LookUpEdit_Class});
-            this.gcListStudent.Size = new System.Drawing.Size(922, 175);
+            this.gcListStudent.Size = new System.Drawing.Size(1127, 224);
             this.gcListStudent.TabIndex = 44;
             this.gcListStudent.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvStudentList});
@@ -557,7 +556,7 @@
             this.colStudentID.Name = "colStudentID";
             this.colStudentID.Visible = true;
             this.colStudentID.VisibleIndex = 0;
-            this.colStudentID.Width = 68;
+            this.colStudentID.Width = 89;
             // 
             // colFullName
             // 
@@ -570,7 +569,7 @@
             this.colFullName.Name = "colFullName";
             this.colFullName.Visible = true;
             this.colFullName.VisibleIndex = 1;
-            this.colFullName.Width = 68;
+            this.colFullName.Width = 89;
             // 
             // colBirthday
             // 
@@ -581,7 +580,7 @@
             this.colBirthday.Name = "colBirthday";
             this.colBirthday.Visible = true;
             this.colBirthday.VisibleIndex = 2;
-            this.colBirthday.Width = 68;
+            this.colBirthday.Width = 89;
             // 
             // colStartYear
             // 
@@ -590,6 +589,7 @@
             this.colStartYear.Name = "colStartYear";
             this.colStartYear.Visible = true;
             this.colStartYear.VisibleIndex = 3;
+            this.colStartYear.Width = 98;
             // 
             // ColSex
             // 
@@ -602,7 +602,7 @@
             this.ColSex.Name = "ColSex";
             this.ColSex.Visible = true;
             this.ColSex.VisibleIndex = 4;
-            this.ColSex.Width = 63;
+            this.ColSex.Width = 83;
             // 
             // colPhoneNumber
             // 
@@ -615,7 +615,7 @@
             this.colPhoneNumber.Name = "colPhoneNumber";
             this.colPhoneNumber.Visible = true;
             this.colPhoneNumber.VisibleIndex = 5;
-            this.colPhoneNumber.Width = 85;
+            this.colPhoneNumber.Width = 112;
             // 
             // colEmail
             // 
@@ -628,7 +628,7 @@
             this.colEmail.Name = "colEmail";
             this.colEmail.Visible = true;
             this.colEmail.VisibleIndex = 6;
-            this.colEmail.Width = 63;
+            this.colEmail.Width = 83;
             // 
             // colIDCard
             // 
@@ -641,7 +641,7 @@
             this.colIDCard.Name = "colIDCard";
             this.colIDCard.Visible = true;
             this.colIDCard.VisibleIndex = 7;
-            this.colIDCard.Width = 68;
+            this.colIDCard.Width = 89;
             // 
             // colAddress
             // 
@@ -654,7 +654,7 @@
             this.colAddress.Name = "colAddress";
             this.colAddress.Visible = true;
             this.colAddress.VisibleIndex = 8;
-            this.colAddress.Width = 68;
+            this.colAddress.Width = 89;
             // 
             // colStatus
             // 
@@ -667,7 +667,7 @@
             this.colStatus.Name = "colStatus";
             this.colStatus.Visible = true;
             this.colStatus.VisibleIndex = 9;
-            this.colStatus.Width = 71;
+            this.colStatus.Width = 93;
             // 
             // colClass
             // 
@@ -681,6 +681,7 @@
             this.colClass.Name = "colClass";
             this.colClass.Visible = true;
             this.colClass.VisibleIndex = 10;
+            this.colClass.Width = 94;
             // 
             // LookUpEdit_Class
             // 
@@ -706,7 +707,7 @@
             this.colFaculty.Name = "colFaculty";
             this.colFaculty.Visible = true;
             this.colFaculty.VisibleIndex = 11;
-            this.colFaculty.Width = 63;
+            this.colFaculty.Width = 94;
             // 
             // panelMenu
             // 
@@ -901,9 +902,9 @@
             this.btnExport.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnExport.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnExport.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnExport.Location = new System.Drawing.Point(1126, 384);
+            this.btnExport.Location = new System.Drawing.Point(669, 507);
             this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(183, 175);
+            this.btnExport.Size = new System.Drawing.Size(140, 36);
             this.btnExport.TabIndex = 123;
             this.btnExport.TabStop = false;
             this.btnExport.Text = "Export";
@@ -923,6 +924,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmManageStudentInformation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmManageStudentInformation";
             this.Load += new System.EventHandler(this.frmManageStudentInformation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Faculty)).EndInit();

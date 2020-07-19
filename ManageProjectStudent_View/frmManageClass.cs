@@ -54,6 +54,13 @@ namespace ManageProjectStudent_View
         private BindingList<CourseModel> _lstCourse = new BindingList<CourseModel>();
         #endregion
         #region Mehtod
+        private string getMaxID()
+        {
+            string _STR_MAX = GarenaViewModel.returnMaxCode(_Class.lstClassID());
+            if (_STR_MAX == "1")
+                return "LH" + _STR_MAX;
+            return _STR_MAX;
+        }
         private void _setStatusForm()
         {
             switch (_IStatusForm)
@@ -72,7 +79,7 @@ namespace ManageProjectStudent_View
                     }
                     break;
                 case 1:
-                    txtClassID.Text = "";
+                    txtClassID.Text = getMaxID();
                     txtClassName.Text = "";
                     lkeFaculty.EditValue = null;
                     lkeCourse.EditValue = null;

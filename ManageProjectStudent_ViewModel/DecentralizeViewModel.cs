@@ -43,11 +43,19 @@ namespace ManageProjectStudent_ViewModel
                    (x => x.StrStaffTypeID == StrStaffType);
             return Staff;
         }
-        public List<DecentralizeModel> getListDecentralizeStaff(string StrStaffType)
+
+        public DecentralizeModel getDecentralizeStaffIdForm(string StrStaffType, string StrFormID)
         {
-            var Staff = _Context.DecentralizeModels.Where   
+            var query = _Context.DecentralizeModels.Where(x => x.StrStaffTypeID == StrStaffType).Where(x => x.StrFormID == StrFormID);
+            var Result = query.SingleOrDefault();
+            return Result;
+        }
+
+        public BindingList<DecentralizeModel> getListDecentralizeStaff(string StrStaffType)
+        {
+            var Staff = _Context.DecentralizeModels.Where
                    (x => x.StrStaffTypeID == StrStaffType).ToList();
-            return Staff;
+            return new BindingList<DecentralizeModel>(Staff);
         }
         public List<string> getListDecentralizeStaffID(string StrStaffType)
         {
@@ -82,8 +90,6 @@ namespace ManageProjectStudent_ViewModel
                     DecentralizeToUpdate.BEdit = Decentralize.BEdit;
                     DecentralizeToUpdate.BDelete = Decentralize.BDelete;
                     DecentralizeToUpdate.BAccess = Decentralize.BAccess;
-
-
                     return (_Context.SaveChanges() != 0);
                 }
                 return false;

@@ -36,32 +36,60 @@ namespace ManageProjectStudent_View
         private BindingList<ClassModel> _lstClass = new BindingList<ClassModel>();
         private IClass _Class = Config.Container.Resolve<IClass>();
         private IFaculty _Faculty = Config.Container.Resolve<IFaculty>();
-        private int IStatus;
-        private StaffModel StaffModel;
+
+        private StaffModel StaffModel = null;
+        private IDecentralize _Decen = Config.Container.Resolve<IDecentralize>();
+        private DecentralizeModel Decentralize = null;
         #endregion
         public frmManageStudentInformation()
         {
             InitializeComponent();
         }
-        public frmManageStudentInformation(int IStatusLogin, StaffModel staff)
-        {
-            InitializeComponent();
-            IStatus = IStatusLogin;
-            StaffModel = staff;
-        }
-     
         #region Method
+        private string getMaxID()
+        {
+            string _STR_MAX = GarenaViewModel.returnMaxCode(_Student.lstStudentID());
+            if (_STR_MAX == "1")
+                return "SV" + _STR_MAX;
+            return _STR_MAX;
+        }
         private void _setStatusForm()
         {
             switch (_IStatusForm)
             {
                 case 0: // View
+                    txtID.ReadOnly = true;
                     grpInformationStudent.Enabled = false;
                     dteBirthday.Enabled = true;
                     if (_StudentModelNow != null)
                     {
-                        btnUpdate.Enabled = true;
-                        btnDelete.Enabled = true;
+                        if(Decentralize.BView == true)
+                        {
+                            if(Decentralize.BAdd == true)
+                            {
+                                btnAdd.Enabled = true;
+                            } 
+                            else
+                            {
+                                btnAdd.Enabled = false;
+                            }
+                            if (Decentralize.BDelete == true)
+                            {
+                                btnDelete.Enabled = true;
+                            }
+                            else
+                            {
+                                btnDelete.Enabled = false;
+                            }
+                            if (Decentralize.BEdit == true)
+                            {
+                                btnUpdate.Enabled = true;
+                            }
+                            else
+                            {
+                                btnUpdate.Enabled = false;
+                            }
+                        }    
                     }
                     else
                     {
@@ -70,7 +98,7 @@ namespace ManageProjectStudent_View
                     }
                     break;
                 case 1:
-                    txtID.Text = string.Empty;
+                    txtID.Text = getMaxID();
                     txtFullName.Text = string.Empty;
                     dteBirthday.EditValue = null;
                     dteStartYear.EditValue = null;
@@ -195,7 +223,19 @@ namespace ManageProjectStudent_View
         //load
         private void frmManageStudentInformation_Load(object sender, EventArgs e)
         {
-            dteBirthday.EditValue = DateTime.Now.Date;
+            StaffModel = frmHome.staffModel;
+            if(frmHome.lstDecent != null)
+            {
+                foreach(DecentralizeModel decen in frmHome.lstDecent)
+                {
+                    if(StaffModel.StrStaffTypeID == decen.StrStaffTypeID && this.Name == decen.StrFormID)
+                    {
+                        Decentralize = _Decen.getDecentralizeStaffIdForm(decen.StrStaffTypeID,decen.StrFormID);
+                    }    
+                }    
+            }    
+        
+             dteBirthday.EditValue = DateTime.Now.Date;
             dteStartYear.EditValue = DateTime.Now.Date;
 
             _lstClass = _Class.loadClass();
@@ -225,6 +265,7 @@ namespace ManageProjectStudent_View
 
             gcListStudent.DataSource = _lstStudent;
             _setStatusForm();
+
         }
 
         //selection changed
@@ -339,7 +380,7 @@ namespace ManageProjectStudent_View
                 {
                     DevExpress.XtraEditors.XtraMessageBox.Show("Số Điện Thoại Phải 10 Số!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else if(GarenaViewModel.checkIDCard(_StudentModelNow.StrCardID) == false)
+                else if(GarenaViewModel.checkIDCard(_StudentModelNow.StrCardID) == true)
                 {
                     DevExpress.XtraEditors.XtraMessageBox.Show("CMND Phải Trên 8 Số!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 } 

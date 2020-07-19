@@ -22,19 +22,10 @@ namespace ManageProjectStudent_View
 {
     public partial class frmManageLecturerInformation : Form
     {
-        private int IStatus;
-        private StaffModel StaffModel;
         public frmManageLecturerInformation()
         {
             InitializeComponent();
         }
-        public frmManageLecturerInformation(int IStatusLogin, StaffModel staff)
-        {
-            InitializeComponent();
-            IStatus = IStatusLogin;
-            StaffModel = staff;
-        }
-
         #region Properties
         private bool indicatorIcon = true;
         private IStaff _Staff = Config.Container.Resolve<IStaff>();
@@ -44,8 +35,19 @@ namespace ManageProjectStudent_View
         private StaffModel _LecturerModelNow = null;
         private BindingList<StaffModel> _lstLecturer = new BindingList<StaffModel>();
         private BindingList<FacultyModel> _lstFaculty = new BindingList<FacultyModel>();
+
+        private StaffModel StaffModel = null;
+        private IDecentralize _Decen = Config.Container.Resolve<IDecentralize>();
+        private DecentralizeModel Decentralize = null;
         #endregion
         #region Method
+        private string getMaxID()
+        {
+            string _STR_MAX = GarenaViewModel.returnMaxCode(_Staff.lstStaffID());
+            if (_STR_MAX == "1")
+                return "NV" + _STR_MAX;
+            return _STR_MAX;
+        }
         private void _setStatusForm()
         {
             //txtID.ReadOnly = true;
@@ -53,12 +55,38 @@ namespace ManageProjectStudent_View
             {
                 case 0: // View
                     grpInformationLecturer.Enabled = false;
+                    txtID.ReadOnly = true;
                     //btnSave.Enabled = false;
                     dteBirthday.Enabled = true;
                     if (_LecturerModelNow != null)
                     {
-                        btnUpdate.Enabled =true;
-                        btnDelete.Enabled = true;
+                        if (Decentralize.BView == true)
+                        {
+                            if (Decentralize.BAdd == true)
+                            {
+                                btnAdd.Enabled = true;
+                            }
+                            else
+                            {
+                                btnAdd.Enabled = false;
+                            }
+                            if (Decentralize.BDelete == true)
+                            {
+                                btnDelete.Enabled = true;
+                            }
+                            else
+                            {
+                                btnDelete.Enabled = false;
+                            }
+                            if (Decentralize.BEdit == true)
+                            {
+                                btnUpdate.Enabled = true;
+                            }
+                            else
+                            {
+                                btnUpdate.Enabled = false;
+                            }
+                        }
                     }
                     else
                     {
@@ -72,7 +100,7 @@ namespace ManageProjectStudent_View
                     //}
                     break;
                 case 1: // Add.
-                    txtID.Text = string.Empty;
+                    txtID.Text = getMaxID();
                     txtFullName.Text = string.Empty;
                     txtIDCard.Text = string.Empty;
                     dteBirthday.EditValue = null;
@@ -204,6 +232,18 @@ namespace ManageProjectStudent_View
         //load
         private void frmManageLecturerInformation_Load(object sender, EventArgs e)
         {
+            StaffModel = frmHome.staffModel;
+            if (frmHome.lstDecent != null)
+            {
+                foreach (DecentralizeModel decen in frmHome.lstDecent)
+                {
+                    if (StaffModel.StrStaffTypeID == decen.StrStaffTypeID && this.Name == decen.StrFormID)
+                    {
+                        Decentralize = _Decen.getDecentralizeStaffIdForm(decen.StrStaffTypeID, decen.StrFormID);
+                    }
+                }
+            }
+
             dteBirthday.EditValue = DateTime.Now.Date;
 
             _lstFaculty = _Faculty.loadFaculty();

@@ -39,13 +39,14 @@
             DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
             this.panelMenuHome = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnInformation = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.panUser = new System.Windows.Forms.Panel();
             this.lblType = new DevExpress.XtraEditors.LabelControl();
             this.lblDisplayName = new DevExpress.XtraEditors.LabelControl();
             this.btnMenu = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnInformation = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.tileControl2 = new DevExpress.XtraEditors.TileControl();
             this.tileGroup3 = new DevExpress.XtraEditors.TileGroup();
             this.itemManageMultiLanguage = new DevExpress.XtraEditors.TileItem();
@@ -60,23 +61,81 @@
             this.itemManagSubject = new DevExpress.XtraEditors.TileItem();
             this.itemManageGroup = new DevExpress.XtraEditors.TileItem();
             this.panelMenuHome.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenuHome
             // 
             this.panelMenuHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(77)))));
+            this.panelMenuHome.Controls.Add(this.panel1);
             this.panelMenuHome.Controls.Add(this.panUser);
             this.panelMenuHome.Controls.Add(this.btnMenu);
-            this.panelMenuHome.Controls.Add(this.btnExit);
-            this.panelMenuHome.Controls.Add(this.btnInformation);
-            this.panelMenuHome.Controls.Add(this.btnLogin);
             this.panelMenuHome.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenuHome.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelMenuHome.Location = new System.Drawing.Point(0, 0);
             this.panelMenuHome.Name = "panelMenuHome";
             this.panelMenuHome.Size = new System.Drawing.Size(264, 647);
             this.panelMenuHome.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnLogin);
+            this.panel1.Controls.Add(this.btnInformation);
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 445);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(264, 202);
+            this.panel1.TabIndex = 4;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
+            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogin.Location = new System.Drawing.Point(3, 40);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(261, 50);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "Đăng Nhập";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // btnInformation
+            // 
+            this.btnInformation.FlatAppearance.BorderSize = 0;
+            this.btnInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInformation.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInformation.ForeColor = System.Drawing.Color.White;
+            this.btnInformation.Image = ((System.Drawing.Image)(resources.GetObject("btnInformation.Image")));
+            this.btnInformation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInformation.Location = new System.Drawing.Point(3, 96);
+            this.btnInformation.Name = "btnInformation";
+            this.btnInformation.Size = new System.Drawing.Size(261, 50);
+            this.btnInformation.TabIndex = 4;
+            this.btnInformation.Text = "Thông Tin";
+            this.btnInformation.UseVisualStyleBackColor = true;
+            this.btnInformation.Click += new System.EventHandler(this.btnInformation_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(3, 152);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(261, 50);
+            this.btnExit.TabIndex = 5;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // panUser
             // 
@@ -91,7 +150,7 @@
             // lblType
             // 
             this.lblType.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.lblType.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblType.Appearance.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblType.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblType.Appearance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblType.Appearance.Options.UseBackColor = true;
@@ -115,7 +174,7 @@
             // lblDisplayName
             // 
             this.lblDisplayName.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.lblDisplayName.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblDisplayName.Appearance.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblDisplayName.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblDisplayName.Appearance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblDisplayName.Appearance.Options.UseBackColor = true;
@@ -145,7 +204,7 @@
             this.btnMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMenu.FlatAppearance.BorderSize = 0;
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.ForeColor = System.Drawing.Color.White;
             this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -156,54 +215,6 @@
             this.btnMenu.Text = "Menu";
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(0, 595);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(264, 50);
-            this.btnExit.TabIndex = 5;
-            this.btnExit.Text = "Thoát";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnInformation
-            // 
-            this.btnInformation.FlatAppearance.BorderSize = 0;
-            this.btnInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInformation.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInformation.ForeColor = System.Drawing.Color.White;
-            this.btnInformation.Image = ((System.Drawing.Image)(resources.GetObject("btnInformation.Image")));
-            this.btnInformation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInformation.Location = new System.Drawing.Point(0, 539);
-            this.btnInformation.Name = "btnInformation";
-            this.btnInformation.Size = new System.Drawing.Size(264, 50);
-            this.btnInformation.TabIndex = 4;
-            this.btnInformation.Text = "Thông Tin";
-            this.btnInformation.UseVisualStyleBackColor = true;
-            this.btnInformation.Click += new System.EventHandler(this.btnInformation_Click);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
-            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogin.Location = new System.Drawing.Point(0, 483);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(264, 50);
-            this.btnLogin.TabIndex = 3;
-            this.btnLogin.Text = "Đăng Nhập";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // tileControl2
             // 
@@ -216,6 +227,7 @@
             this.tileControl2.Groups.Add(this.tileGroup4);
             this.tileControl2.Groups.Add(this.tileGroup5);
             this.tileControl2.ItemCheckMode = DevExpress.XtraEditors.TileItemCheckMode.Single;
+            this.tileControl2.ItemSize = 155;
             this.tileControl2.Location = new System.Drawing.Point(264, 0);
             this.tileControl2.MaxId = 57;
             this.tileControl2.Name = "tileControl2";
@@ -232,7 +244,7 @@
             // 
             // itemManageMultiLanguage
             // 
-            tileItemElement1.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileItemElement1.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tileItemElement1.Appearance.Normal.Options.UseFont = true;
             tileItemElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             tileItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
@@ -250,7 +262,7 @@
             this.itemDecentralization.AppearanceItem.Normal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(53)))), ((int)(((byte)(177)))));
             this.itemDecentralization.AppearanceItem.Normal.Options.UseBackColor = true;
             this.itemDecentralization.AppearanceItem.Normal.Options.UseBorderColor = true;
-            tileItemElement2.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileItemElement2.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tileItemElement2.Appearance.Normal.Options.UseFont = true;
             tileItemElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             tileItemElement2.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
@@ -276,7 +288,7 @@
             this.itemManageProject.AppearanceItem.Normal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(30)))), ((int)(((byte)(99)))));
             this.itemManageProject.AppearanceItem.Normal.Options.UseBackColor = true;
             this.itemManageProject.AppearanceItem.Normal.Options.UseBorderColor = true;
-            tileItemElement3.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileItemElement3.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tileItemElement3.Appearance.Normal.Options.UseFont = true;
             tileItemElement3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             tileItemElement3.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
@@ -294,7 +306,7 @@
             this.itemManageStudent.AppearanceItem.Normal.BorderColor = System.Drawing.Color.DarkOrange;
             this.itemManageStudent.AppearanceItem.Normal.Options.UseBackColor = true;
             this.itemManageStudent.AppearanceItem.Normal.Options.UseBorderColor = true;
-            tileItemElement4.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileItemElement4.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tileItemElement4.Appearance.Normal.Options.UseFont = true;
             tileItemElement4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
             tileItemElement4.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
@@ -317,7 +329,7 @@
             this.itemManageLecturer.AppearanceItem.Normal.Options.UseBackColor = true;
             this.itemManageLecturer.AppearanceItem.Normal.Options.UseBorderColor = true;
             this.itemManageLecturer.AppearanceItem.Normal.Options.UseFont = true;
-            tileItemElement5.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileItemElement5.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tileItemElement5.Appearance.Normal.Options.UseFont = true;
             tileItemElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
             tileItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
@@ -343,7 +355,7 @@
             this.itemManageFaculty.AppearanceItem.Normal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(29)))), ((int)(((byte)(130)))));
             this.itemManageFaculty.AppearanceItem.Normal.Options.UseBackColor = true;
             this.itemManageFaculty.AppearanceItem.Normal.Options.UseBorderColor = true;
-            tileItemElement6.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileItemElement6.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tileItemElement6.Appearance.Normal.Options.UseFont = true;
             tileItemElement6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
             tileItemElement6.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
@@ -363,6 +375,8 @@
             this.itemManageClass.AppearanceItem.Normal.Options.UseBackColor = true;
             this.itemManageClass.AppearanceItem.Normal.Options.UseBorderColor = true;
             this.itemManageClass.AppearanceItem.Normal.Options.UseFont = true;
+            tileItemElement7.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileItemElement7.Appearance.Normal.Options.UseFont = true;
             tileItemElement7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
             tileItemElement7.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
             tileItemElement7.Text = "Quản lý lớp";
@@ -381,6 +395,8 @@
             this.itemManagSubject.AppearanceItem.Normal.Options.UseBackColor = true;
             this.itemManagSubject.AppearanceItem.Normal.Options.UseBorderColor = true;
             this.itemManagSubject.AppearanceItem.Normal.Options.UseFont = true;
+            tileItemElement8.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileItemElement8.Appearance.Normal.Options.UseFont = true;
             tileItemElement8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
             tileItemElement8.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
             tileItemElement8.Text = "Quản lý môn học";
@@ -399,6 +415,8 @@
             this.itemManageGroup.AppearanceItem.Normal.Options.UseBackColor = true;
             this.itemManageGroup.AppearanceItem.Normal.Options.UseBorderColor = true;
             this.itemManageGroup.AppearanceItem.Normal.Options.UseFont = true;
+            tileItemElement9.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileItemElement9.Appearance.Normal.Options.UseFont = true;
             tileItemElement9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
             tileItemElement9.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
             tileItemElement9.Text = "Quản lý nhóm môn học";
@@ -420,8 +438,10 @@
             this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmHome";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmHome_Load);
             this.panelMenuHome.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.panUser.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -450,5 +470,6 @@
         private System.Windows.Forms.Panel panUser;
         private DevExpress.XtraEditors.LabelControl lblType;
         private DevExpress.XtraEditors.LabelControl lblDisplayName;
+        private System.Windows.Forms.Panel panel1;
     }
 }

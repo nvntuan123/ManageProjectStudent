@@ -51,6 +51,7 @@
     <Compile Include="IExamResult.cs" />
     <Compile Include="IExamTimes.cs" />
     <Compile Include="IFaculty.cs" />
+    <Compile Include="IForm.cs" />
     <Compile Include="ILanguage.cs" />
     <Compile Include="IManageClass.cs" />
     <Compile Include="IManageCourse.cs" />

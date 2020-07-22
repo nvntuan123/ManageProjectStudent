@@ -76,6 +76,7 @@
     <Compile Include="ExamResultViewModel.cs" />
     <Compile Include="ExamTimesViewModel.cs" />
     <Compile Include="FacultyViewModel.cs" />
+    <Compile Include="FormViewModel.cs" />
     <Compile Include="GarenaViewModel.cs" />
     <Compile Include="LanguageViewModel.cs" />
     <Compile Include="ManageClassViewModel.cs" />

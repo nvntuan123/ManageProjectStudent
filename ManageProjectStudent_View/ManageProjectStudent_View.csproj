@@ -165,35 +165,29 @@
     <Compile Include="frmAddGroupForSubject.Designer.cs">
       <DependentUpon>frmAddGroupForSubject.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAddLanguage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmAddLanguage.Designer.cs">
-      <DependentUpon>FrmAddLanguage.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmAddStudentSubject.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAddStudentSubject.Designer.cs">
       <DependentUpon>frmAddStudentSubject.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAddWord.cs">
+    <Compile Include="frmAddWordForLanguage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAddWord.Designer.cs">
-      <DependentUpon>FrmAddWord.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmDecentralization.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDecentralization.Designer.cs">
-      <DependentUpon>frmDecentralization.cs</DependentUpon>
+    <Compile Include="frmAddWordForLanguage.Designer.cs">
+      <DependentUpon>frmAddWordForLanguage.cs</DependentUpon>
     </Compile>
     <Compile Include="frmChangeLanguage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmChangeLanguage.Designer.cs">
       <DependentUpon>frmChangeLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDecentralization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDecentralization.Designer.cs">
+      <DependentUpon>frmDecentralization.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
@@ -261,28 +255,19 @@
     <Compile Include="frmManageSubjectMain.Designer.cs">
       <DependentUpon>frmManageSubjectMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmWorldList.cs">
+    <Compile Include="frmManageWord.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmWorldList.Designer.cs">
-      <DependentUpon>frmWorldList.cs</DependentUpon>
+    <Compile Include="frmManageWord.Designer.cs">
+      <DependentUpon>frmManageWord.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemeColor.cs" />
     <Compile Include="Util.cs" />
     <EmbeddedResource Include="frmAddGroupForSubject.resx">
       <DependentUpon>frmAddGroupForSubject.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAddLanguage.resx">
-      <DependentUpon>FrmAddLanguage.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmAddStudentSubject.resx">
       <DependentUpon>frmAddStudentSubject.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmAddWord.resx">
-      <DependentUpon>FrmAddWord.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmDecentralization.resx">
-      <DependentUpon>frmDecentralization.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="frmManageLanguageMain.cs">
       <SubType>Form</SubType>
@@ -322,8 +307,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddWordForLanguage.resx">
+      <DependentUpon>frmAddWordForLanguage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmChangeLanguage.resx">
       <DependentUpon>frmChangeLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDecentralization.resx">
+      <DependentUpon>frmDecentralization.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
@@ -370,14 +361,14 @@
     <EmbeddedResource Include="frmManageSubjectMain.resx">
       <DependentUpon>frmManageSubjectMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmManageWord.resx">
+      <DependentUpon>frmManageWord.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSubmitProject.resx">
       <DependentUpon>frmSubmitProject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewDeadlineProject.resx">
       <DependentUpon>frmViewDeadlineProject.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmWorldList.resx">
-      <DependentUpon>frmWorldList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

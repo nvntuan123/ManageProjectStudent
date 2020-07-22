@@ -48,6 +48,7 @@ namespace ManageProjectStudent_View
                 return "NV" + _STR_MAX;
             return _STR_MAX;
         }
+
         private void _setStatusForm()
         {
             //txtID.ReadOnly = true;
@@ -240,6 +241,7 @@ namespace ManageProjectStudent_View
                     if (StaffModel.StrStaffTypeID == decen.StrStaffTypeID && this.Name == decen.StrFormID)
                     {
                         Decentralize = _Decen.getDecentralizeStaffIdForm(decen.StrStaffTypeID, decen.StrFormID);
+                        break;
                     }
                 }
             }

@@ -12,13 +12,13 @@ namespace ManageProjectStudent_Interface
     {
         BindingList<DecentralizeModel> loadDecentralize();
         bool addNewDecentralize(DecentralizeModel Decentralize);
-        bool updateCurrentDecentralizef(DecentralizeModel Decentralize);
+        //bool updateCurrentDecentralizef(DecentralizeModel Decentralize);
         bool deleteCurrentDecentralize(DecentralizeModel Decentralize);
         DecentralizeModel getDecentralizeStaffSelected(string StrStaffType);
         DecentralizeModel getDecentralizeStaffIdForm(string StrStaffType, string StrFormID);
         BindingList<DecentralizeModel> getListDecentralizeStaff(string StrStaffType);
         List<string> getListDecentralizeStaffID(string StrStaffType);
-
+        bool updateCurrentDecentralizes(DecentralizeModel Decentralize);
 
     }
 }

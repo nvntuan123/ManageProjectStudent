@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ManageProjectStudent_View
 {
-    public partial class FrmAddLanguage : Form
+    public partial class frmAddWordForLanguage : Form
     {
-        public FrmAddLanguage()
+        public frmAddWordForLanguage()
         {
             InitializeComponent();
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

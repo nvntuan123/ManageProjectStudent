@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ManageProjectStudent_View
 {
-    public partial class FrmAddWord : Form
+    public partial class frmManageWord : Form
     {
-        public FrmAddWord()
+        public frmManageWord()
         {
             InitializeComponent();
         }

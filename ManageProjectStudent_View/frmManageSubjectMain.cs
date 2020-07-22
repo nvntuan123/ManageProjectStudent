@@ -124,8 +124,11 @@ namespace ManageProjectStudent_View
         private void btnAddGroupSubject_Click(object sender, EventArgs e)
         {
 
-            OpenChildForm(new ManageProjectStudent_View.frmAddGroupForSubject(), sender);
-            lblTitle.Text = "Thêm Nhóm Cho Môn Học";
+            //OpenChildForm(new ManageProjectStudent_View.frmAddGroupForSubject(), sender);
+            //lblTitle.Text = "Thêm Nhóm Cho Môn Học";
+            //this.Hide();
+            frmAddGroupForSubject frm = new frmAddGroupForSubject();
+            frm.ShowDialog();
         }
 
         private void btnReturn_Click(object sender, EventArgs e)

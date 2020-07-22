@@ -325,14 +325,6 @@ namespace ManageProjectStudent_View
             {
                 DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa nhập tên Sinh viên", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (_Student.checkStudentID(txtID.Text)== true) 
-            {
-                DevExpress.XtraEditors.XtraMessageBox.Show("Mã Sinh viên bị trùng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (_Student.checkCardID(txtIDCard.Text) == true)
-            {
-                DevExpress.XtraEditors.XtraMessageBox.Show("CMND bị trùng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
             else if (dteBirthday.EditValue == null)
             {
                 DevExpress.XtraEditors.XtraMessageBox.Show("Bạn chưa chọn Ngày sinh", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -386,38 +378,29 @@ namespace ManageProjectStudent_View
                 } 
                 else
                 {
-                    if(_Student.checkStudentID(_StudentModelNow.StrStudentID))
+                    _getData();
+                    bool bresult = false;
+                    if (_IStatusForm == 1)
                     {
-                        DevExpress.XtraEditors.XtraMessageBox.Show("Trùng ID", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        bresult = _Student.addNewStudent(_StudentModelNow);
                     }
                     else
                     {
-                        _getData();
-                        bool bresult = false;
-                        if (_IStatusForm == 1)
-                        {
-                            bresult = _Student.addNewStudent(_StudentModelNow);
-                        }
-                        else
-                        {
-                            bresult = _Student.updateCurrentStudent(_StudentModelNow);
-                        }
+                        bresult = _Student.updateCurrentStudent(_StudentModelNow);
+                    }
 
-                        if (!bresult)
-                        {
-                            DevExpress.XtraEditors.XtraMessageBox.Show("Lưu Thất Bại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            _lstLoadListStudent();
-                            _IStatusForm = 0;
-                            _setStatusForm();
-                            DevExpress.XtraEditors.XtraMessageBox.Show("Lưu Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                    if (!bresult)
+                    {
+                        DevExpress.XtraEditors.XtraMessageBox.Show("Lưu Thất Bại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        _lstLoadListStudent();
+                        _IStatusForm = 0;
+                        _setStatusForm();
+                        DevExpress.XtraEditors.XtraMessageBox.Show("Lưu Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-                
-
             }
 
         }

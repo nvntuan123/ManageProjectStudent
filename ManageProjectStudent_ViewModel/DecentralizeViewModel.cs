@@ -74,14 +74,16 @@ namespace ManageProjectStudent_ViewModel
             {
                 return false;
             }
-        }
+        }      
 
-        public bool updateCurrentDecentralizef(DecentralizeModel Decentralize)
+        public bool updateCurrentDecentralizes(DecentralizeModel Decentralize)
         {
             try
             {
-                var DecentralizeToUpdate = _Context.DecentralizeModels.SingleOrDefault
-                 (x => x.StrStaffTypeID == Decentralize.StrStaffTypeID);
+                var DecentralizeToUpdate = _Context.DecentralizeModels.Where
+                 (x => x.StrStaffTypeID == Decentralize.StrStaffTypeID).Where
+                 (x => x.StrFormID == Decentralize.StrFormID).SingleOrDefault();
+
                 if (DecentralizeToUpdate != null)
                 {
                     DecentralizeToUpdate.StrFormID = Decentralize.StrFormID;
@@ -90,6 +92,8 @@ namespace ManageProjectStudent_ViewModel
                     DecentralizeToUpdate.BEdit = Decentralize.BEdit;
                     DecentralizeToUpdate.BDelete = Decentralize.BDelete;
                     DecentralizeToUpdate.BAccess = Decentralize.BAccess;
+                    DecentralizeToUpdate.BView = Decentralize.BView;
+
                     return (_Context.SaveChanges() != 0);
                 }
                 return false;
@@ -99,6 +103,7 @@ namespace ManageProjectStudent_ViewModel
                 return false;
             }
         }
+
 
         public bool deleteCurrentDecentralize(DecentralizeModel Decentralize)
         {

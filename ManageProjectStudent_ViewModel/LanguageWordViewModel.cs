@@ -14,7 +14,7 @@ using ManageProjectStudent_Interface;
 
 namespace ManageProjectStudent_ViewModel
 {
-    public class LanguageWordViewModel : INotifyPropertyChanged, IWordLanguage
+    public class LanguageWordViewModel : INotifyPropertyChanged, ILanguageWord
     {
         #region by Phuoc
         private static readonly DBManageProjectStudentViewModel _Context = new DBManageProjectStudentViewModel();
@@ -29,6 +29,8 @@ namespace ManageProjectStudent_ViewModel
                                   StrWordID = x.StrWordID,
                                   StrLanguageID = x.StrLanguageID,
                                   StrMean = x.StrMean,
+                                  StrID = x.StrID,
+                                  BStatus = x.BStatus
                               }).ToList();
                 return new BindingList<LanguageWordModel>(Result);
             }
@@ -37,6 +39,12 @@ namespace ManageProjectStudent_ViewModel
         {
             var WordLanguage = _Context.LanguageWordModels.SingleOrDefault
                    (x => x.StrWordID == StrWordID);
+            return WordLanguage;
+        }
+        public LanguageWordModel getWordLanguageSelectedByID(string StrID)
+        {
+            var WordLanguage = _Context.LanguageWordModels.SingleOrDefault
+                   (x => x.StrID == StrID);
             return WordLanguage;
         }
 
@@ -64,11 +72,13 @@ namespace ManageProjectStudent_ViewModel
             try
             {
                 var WordLanguageToUpdate = _Context.LanguageWordModels.SingleOrDefault
-                 (x => x.StrWordID == WordLanguage.StrWordID);
+                 (x => x.StrID == WordLanguage.StrID);
                 if (WordLanguageToUpdate != null)
                 {
                     WordLanguageToUpdate.StrLanguageID = WordLanguage.StrLanguageID;
                     WordLanguageToUpdate.StrMean = WordLanguage.StrMean;
+                    WordLanguageToUpdate.StrWordID = WordLanguage.StrWordID;
+                    WordLanguageToUpdate.BStatus = WordLanguage.BStatus;
 
                     return (_Context.SaveChanges() != 0);
                 }

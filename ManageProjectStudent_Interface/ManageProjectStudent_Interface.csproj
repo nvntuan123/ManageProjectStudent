@@ -67,7 +67,7 @@
     <Compile Include="ISubject.cs" />
     <Compile Include="ISubmitProject.cs" />
     <Compile Include="IWord.cs" />
-    <Compile Include="IWordLanguage.cs" />
+    <Compile Include="ILanguageWord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

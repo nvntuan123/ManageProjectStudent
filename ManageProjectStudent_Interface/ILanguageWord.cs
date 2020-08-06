@@ -8,7 +8,7 @@ using ManageProjectStudent_Model;
 
 namespace ManageProjectStudent_Interface
 {
-    public interface IWordLanguage
+    public interface ILanguageWord
     {
         BindingList<LanguageWordModel> loadLanguageWord();
         LanguageWordModel getWordLanguageSelectedByWordID(string StrWordID);
@@ -16,8 +16,7 @@ namespace ManageProjectStudent_Interface
         bool addNewWord(LanguageWordModel WordLanguage);
         bool updateCurrentWord(LanguageWordModel WordLanguage);
         bool deleteCurrentWordLanguage(LanguageWordModel WordLanguage);
-
-
+        LanguageWordModel getWordLanguageSelectedByID(string StrID);
 
     }
 }

@@ -15,12 +15,13 @@ namespace ManageProjectStudent_Model
         private string _StrLanguageName;
         private bool _BDefault;
         private bool _BStatus;
+        private int _IOrdering;
 
         [Key]
         [Column("LanguageID", TypeName = "varchar", Order = 0)]
         [StringLength(10)]
         public string StrLanguageID { get => _StrLanguageID; set => _StrLanguageID = value; }
-       
+
         [Column("LanguageName", TypeName = "nvarchar", Order = 1)]
         [StringLength(100)]
         public string StrLanguageName { get => _StrLanguageName; set => _StrLanguageName = value; }
@@ -28,11 +29,15 @@ namespace ManageProjectStudent_Model
         [Column("Default", Order = 2)]
         public bool BDefault { get => _BDefault; set => _BDefault = value; }
 
-        [Column("Status", Order = 3 )]
+        [Column("Status", Order = 3)]
         public bool BStatus { get => _BStatus; set => _BStatus = value; }
+
+        [Column("Ordering", Order = 4)]
+        public int IOrdering { get => _IOrdering; set => _IOrdering = value; }
 
         // Khai bao khoa ngoai.
         public ICollection<LanguageWordModel> LanguageWordModel { get; set; }
+      
 
         public LanguageModel()
         {

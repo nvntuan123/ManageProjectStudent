@@ -29,7 +29,8 @@ namespace ManageProjectStudent_ViewModel
                                   StrLanguageID = x.StrLanguageID,
                                   StrLanguageName = x.StrLanguageName,
                                   BDefault = x.BDefault,
-                                  BStatus = x.BStatus
+                                  BStatus = x.BStatus,
+                                  IOrdering = x.IOrdering
                               }).ToList();
                 return new BindingList<LanguageModel>(Result);
             }
@@ -64,7 +65,7 @@ namespace ManageProjectStudent_ViewModel
                     LanguageToUpdate.StrLanguageName = Language.StrLanguageName;
                     LanguageToUpdate.BDefault = Language.BDefault;
                     LanguageToUpdate.BStatus = Language.BStatus;
-
+                    LanguageToUpdate.IOrdering = Language.IOrdering;
                     return (_Context.SaveChanges() != 0);
                 }
                 return false;

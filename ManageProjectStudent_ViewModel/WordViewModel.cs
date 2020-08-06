@@ -52,7 +52,7 @@ namespace ManageProjectStudent_ViewModel
             }
         }
 
-        public bool updateCurrentWordf(WordModel Word)
+        public bool updateCurrentWord(WordModel Word)
         {
             try
             {

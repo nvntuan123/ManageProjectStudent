@@ -13,7 +13,7 @@ namespace ManageProjectStudent_Interface
         BindingList<WordModel> loadWord();
         WordModel getWordSelected(string StrWordID);
         bool addNewWord(WordModel Word);
-        bool updateCurrentWordf(WordModel Word);
+        bool updateCurrentWord(WordModel Word);
         bool deleteCurrentWord(WordModel Word);
 
     }

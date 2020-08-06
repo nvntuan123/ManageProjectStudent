@@ -59,7 +59,10 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema id="root"
+    xmlns=""
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -118,41 +121,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-<<<<<<< HEAD
-  <data name="btnUpdate.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAoRJREFUWEet
-        l7FrFEEchY8gIYhYBJEQxEJCCCEEkSBiEUSsUoh1KrEQsRBJFcR/QSwsUlhYpLAUi2AVLCxExCKIiIiE
-        ICISRCSFiMj5vZ23opu5vZmb++CR3M7vvZnZm5m97aTQ7XalJbSO3qJd9AE9RlfQmEuHD+ETaBO18R4t
-        2DI8CB1HmnEK39G8rcOBwAdVdDpbaMT2Mgg6hn4pNZNLjiiDoGshL5t1R5RB0FrIy2bLEWUQ9DDkZbPj
-        iDII0p4fhG1HlEHQnZCXzXNHlEHQcsjL5p4jyiDoKBpkGy45ohzCnoTMZD6jUdvLIex8FZvOqq3Dg9CN
-        kN2XbXTQtii0j6BD/pgGBh3Jevy2obVyzpYotE8iPStUu+LLaWC4gNq45dIotB9HM+iTis1tN/eHYqnt
-        Lsy6dB+0aTd9RXqyNgdxw2XtUHgE/awscaI/Rrh+Ep1BKyqC5iB2XRqHAmkRvVB1C6/Qom0VfFbnumv6
-        oXIWxQax4fL/oWEMXUVvUApaWMu2y38K6bbXNAdxH02jw7YEuKBtchl9RKn067xGg6i/Ds1+0pYAF6bQ
-        M5RDs/MFFOu8RoM4jfbNXNvsG8rhN2p23i/jC5qzJcAF3bIfas3k797nf80qv3PBxdzbLrQlx+1Pmbke
-        UvGzgobcWy82bZf/EdJ324venQsaBxlAdYLxdxTtIb2e6ay/jv5Fq32m6qgXFDytSvOYsleLV4txwp+1
-        Fmq0lad1vRWK9KB4LUci72yV9y7SLHVwzaFVpPWhzqtBJkGxbqVeRF4izaiNNdvkq0/Keg3sIL1PnHBJ
-        Ppj1NnwRaTY6MvWzTGe9Xse1oG667gDSTPUVqnYeVRnpdDp/AJYRj0pCnLHAAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnDelete.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAmNJREFUWEe1
-        lzFIVVEYxx/hEBIi0RAREU4SDtIQEhHRFA0N4dgQEQ4RTeEQIUiDhEQ0ODSJQ4SIg0g4RERDREiEhIRT
-        RESESIhEiMTr9z/f9+JSvvvud+/1Bz+853q+/7nv3nffOadRhGazeQBv4jNcww+4gCPY7d32BgY4j9+w
-        HZ/xlHevF4JP4y+N0oFNHPCyeiBwH35UekHeoFfXAGEXUmyMIS+vDmEPLTPEPS+vDmFLlhniqZdXh7DX
-        lhliwcurQ9gLywwx7+XVIWzGMkNMeXl1CLtlmSGueXl1CBuwzML8xmNeXh3C5IqSC/LSS+uD0KuWXYhL
-        XlYfhHbhcorPR2+MV9UMwf2oyaYd3/God98bGGAsDbU7t73bXzh3Eu/itHsfL2KXd4lBoRYe7Rj2buqn
-        N+dVOrs7Wjtc9u7FoOAgvld1G855P82eP9OZzkyk8DzopGc/hXnPf877nsCtdKY4N9JA/8I/FDaP+mHp
-        xKDXlJm4dMGH06CCRjc+wB0swqrXDVmzFOOtwY+jVroRHnvtuDVLsayAI/glNWPc8QvIzpr60dqPupst
-        taSXPdiL2ZXWugLm7DjMqF/AE2sm3upcHvSZsK6JDZ34YcdhJj0w+4mUpQ3LYkZtZqSWePITtlhTwIYd
-        h3nuFzBszVJMK+CdHYfZxkOoZ563c8rjjC5gEDWhlGHM78IVa4aYVW2Chj7JJH7VfwLoxyStgvgb2Ufo
-        rvekwbNwUtsxTSjX8RHqC6Utl3bEelXXUd8ZqWNd8IzXylHUo8ljFv8fvC4I70PdzVXUWyE1C+p1Pevd
-        nEbjD2mZIyre+nxlAAAAAElFTkSuQmCC
-</value>
-  </data>
-=======
->>>>>>> design form Word, KeyWord, Language
   <data name="panelLogo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABGdBTUEAALGPC/xhBQAAEhBJREFUeF7t
@@ -232,12 +200,9 @@
         owuWuao5ynHk+FJwBMny6Hm30BG/wCSfk4lzhZhJVwuLFXUsdQ5VbrS89FwMwYRFycZNVD/8ldARv6Af
         QsKkR60UJotTUWXZQR9HnSNaHrIPjaMKlqtYl2ycdkwkOwbholAR/8Ck16vF6oWqxaoFS2ThVtH7q2Nz
         c8p2sr/8YkWSHFrFhJnkIRhC/kVoiH/QG3Mw4TewiOu6iEgCdNR+HFwfghtb7WdHsJlkEqxJ9tRN5j9v
-        rUabH+5tCcAc/Lg6ROAzUERcUedSc2jV8GigXAMU+xk+WI1iw3DQxyFY2jAIj0/KSeP/wyymTPlfEpca
-        I92a2EEAAAAASUVORK5CYII=
-</value>
+        rUabH+5tCcAc/Lg6ROAzUERcUedSc2jV8GigXAMU+xk+WI1iw3DQxyFY2jAIj0/KSeP/wyymTPlfEpca I92a2EEAAAAASUVORK5CYII=
+    </value>
   </data>
-<<<<<<< HEAD
-=======
   <data name="btnUpdate.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAoRJREFUWEet
@@ -252,7 +217,7 @@
         UvGzgobcWy82bZf/EdJ324venQsaBxlAdYLxdxTtIb2e6ay/jv5Fq32m6qgXFDytSvOYsleLV4txwp+1
         Fmq0lad1vRWK9KB4LUci72yV9y7SLHVwzaFVpPWhzqtBJkGxbqVeRF4izaiNNdvkq0/Keg3sIL1PnHBJ
         Ppj1NnwRaTY6MvWzTGe9Xse1oG667gDSTPUVqnYeVRnpdDp/AJYRj0pCnLHAAAAAAElFTkSuQmCC
-</value>
+    </value>
   </data>
   <data name="btnDelete.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -268,9 +233,8 @@
         h3nuFzBszVJMK+CdHYfZxkOoZ563c8rjjC5gEDWhlGHM78IVa4aYVW2Chj7JJH7VfwLoxyStgvgb2Ufo
         rvekwbNwUtsxTSjX8RHqC6Utl3bEelXXUd8ZqWNd8IzXylHUo8ljFv8fvC4I70PdzVXUWyE1C+p1Pevd
         nEbjD2mZIyre+nxlAAAAAElFTkSuQmCC
-</value>
+    </value>
   </data>
->>>>>>> design form Word, KeyWord, Language
   <data name="btnAdd.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAn9JREFUWEe1
@@ -283,12 +247,9 @@
         86g/liK6vSfrwtXh82s2PIAO+KTmAwxa8RH+wjJsel+vDVPJOwAxrnkVnEV9XDE89d5xG6ZSdADrmjyF
         n8IwjlEPT1419ad1PKFKVKNtfcLtmLzT2tXknG1HM+Lhz2wYWAsr5kDNhJUG9rTji21HM+mByXekLD2w
         7NvmNZO4iHqw+YD7bGlyz7ajWfLwPhumUvQdmNbkG9uO5ieeQJ3frCenogO4pMlu1AXlfxjzBfpteIgH
-        OIppX/JZ9QYY6J3oPG1rJgL9mYS7IF5jniP0qbeHxZOwU49juqAM4hPUF0mPXHoi1rvYRX1npLZ1wDPe
-        K0dQpyaPWTy8eF0Qfg71aW6ifhVSV0H9XC97mdNo/AEWcgBeYHt0ygAAAABJRU5ErkJggg==
-</value>
+        OIppX/JZ9QYY6J3oPG1rJgL9mYS7IF5jniP0qbeHxZOwU49juqAM4hPUF0mPXHoi1rvYRX1npLZ1wDPe K0dQpyaPWTy8eF0Qfg71aW6ifhVSV0H9XC97mdNo/AEWcgBeYHt0ygAAAABJRU5ErkJggg==
+    </value>
   </data>
-<<<<<<< HEAD
-=======
   <data name="btnExit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAfNJREFUWEft
@@ -299,11 +260,9 @@
         sowyow8Jzv3eXgcgEkLMUTqfLMmy6iCWoFWcv/13466eUqo3acmyBDVYdq7NOth/pnAxXLJMQZx7pyMI
         Sh8mShVjJMsUBIB5LhiG8Sal7EgkAS7p48jB8jLVJYiliFL2FBbSIaDTzHZQblDKDfSOccG+rsEqQMG7
         jmAfp7gK8NpeQ7EfI2hdB6uATu+bkbO+k1RB5r0Y4JjS40HvGF5vewM/zWj4ID+S+xT2dJ/nKJyAi96a
-        uO5TOIGPyW0RPHwqNUNDesMHViBo90TN4ROUJgjwiuXk3OqdJI0WMU2/r1A4eXfhOQon6AvexHWfwgl8
-        zEBvdTU1Nf8Wz/sF6phrnlVJOLoAAAAASUVORK5CYII=
-</value>
+        uO5TOIGPyW0RPHwqNUNDesMHViBo90TN4ROUJgjwiuXk3OqdJI0WMU2/r1A4eXfhOQon6AvexHWfwgl8 zEBvdTU1Nf8Wz/sF6phrnlVJOLoAAAAASUVORK5CYII=
+    </value>
   </data>
->>>>>>> design form Word, KeyWord, Language
   <data name="btnReLoad.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAA99JREFUWEfN
@@ -322,27 +281,9 @@
         wySH0vKU8WmoUlrPJunwMGIY2Rel5zgNzyBJBOlsdg40he3LOpXQrfAN+YkQg2olafXAgt0B4yFy8qA/
         DCdQVxkwo00IcASaP/cXStAkhovRVbRxS6bIh/DRmHeWFDj+nDKP2yRBTWVAIquty1KRuEzpt0y7Rfm+
         pupg1hu35vKfPwqlojjDyanURyFyC8mlO2DULQjwORIwAfGyPDGDJJfuYEaMANwWVRVLPiS5/8pQhHFO
-        L0XOTiCGuCXKtkSlpFaYb4MI/NhKJE8MQONvd2GdypaBgXAimY0szAtEa7L8Mu7oBugMvu9PM9+mkVzh
-        ra63BIsw58Z8/avXBA3MjhN7r0iEhoZfdr8jwsMs8LwAAAAASUVORK5CYII=
-</value>
+        L0XOTiCGuCXKtkSlpFaYb4MI/NhKJE8MQONvd2GdypaBgXAimY0szAtEa7L8Mu7oBugMvu9PM9+mkVzh ra63BIsw58Z8/avXBA3MjhN7r0iEhoZfdr8jwsMs8LwAAAAASUVORK5CYII=
+    </value>
   </data>
-<<<<<<< HEAD
-  <data name="btnExitFormManageLecturer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAfNJREFUWEft
-        l71OwzAQgAMLQrAj8fcITCAhhOAJECysjLwDDIxMIDHxBjAAA/AcvACwgFhQEVV+fM5UzDk6t9eQNO5P
-        UiPlkyy5d7X91Y0viVdTw4iieJu6bqGUmgiEuAgBbijkDkYuEKCcE+Ryzgmm5ZwSzJJzRjBPzgnBXnK6
-        jVWwSC5pAE8+wOGgDec/wFq69S3lEi1rh5XcyJt48YU8k1IukEY++IsWcVDz7ySVNMB/5gQ3aZJ0smkK
-        sYJf/koNrrI9NhpqlnSyKZIc9pDgLk0343gZ59kNhLzCOVtda0RwP9ROjvoUB1KuhwI++Bq+EEeUzidP
-        sowyow8Jzv3eXgcgEkLMUTqfLMmy6iCWoFWcv/13466eUqo3acmyBDVYdq7NOth/pnAxXLJMQZx7pyMI
-        Sh8mShVjJMsUBIB5LhiG8Sal7EgkAS7p48jB8jLVJYiliFL2FBbSIaDTzHZQblDKDfSOccG+rsEqQMG7
-        jmAfp7gK8NpeQ7EfI2hdB6uATu+bkbO+k1RB5r0Y4JjS40HvGF5vewM/zWj4ID+S+xT2dJ/nKJyAi96a
-        uO5TOIGPyW0RPHwqNUNDesMHViBo90TN4ROUJgjwiuXk3OqdJI0WMU2/r1A4eXfhOQon6AvexHWfwgl8
-        zEBvdTU1Nf8Wz/sF6phrnlVJOLoAAAAASUVORK5CYII=
-</value>
-  </data>
-=======
->>>>>>> design form Word, KeyWord, Language
   <data name="btnSave.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAopJREFUWEe1
@@ -358,6 +299,6 @@
         PM38i24r4mYYpAyCNAnLnnT9aKn2JhzHE3hfHX3o3k85rBwCR/ESvnJiFa9xxunK16S7oY5tbLq7HiTq
         n7BeFJfxOt7DJ6hJp4G1pLouY/dhNIwPsUv+E2+QMOhe1ErQLXFrGZ3Of7XhV58bV22cAAAAAElFTkSu
         QmCC
-</value>
+    </value>
   </data>
 </root>

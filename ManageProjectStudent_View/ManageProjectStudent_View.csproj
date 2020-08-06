@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0"
+  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -171,25 +172,17 @@
     <Compile Include="frmAddStudentSubject.Designer.cs">
       <DependentUpon>frmAddStudentSubject.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="frmAddWordForLanguage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAddWordForLanguage.Designer.cs">
       <DependentUpon>frmAddWordForLanguage.cs</DependentUpon>
-=======
+    </Compile>
     <Compile Include="frmConnect.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmConnect.Designer.cs">
       <DependentUpon>frmConnect.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmDecentralization.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDecentralization.Designer.cs">
-      <DependentUpon>frmDecentralization.cs</DependentUpon>
->>>>>>> design form Word, KeyWord, Language
     </Compile>
     <Compile Include="frmChangeLanguage.cs">
       <SubType>Form</SubType>
@@ -287,15 +280,6 @@
     <Compile Include="frmManageSubjectMain.Designer.cs">
       <DependentUpon>frmManageSubjectMain.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="frmManageWord.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmManageWord.Designer.cs">
-      <DependentUpon>frmManageWord.cs</DependentUpon>
-    </Compile>
-=======
->>>>>>> design form Word, KeyWord, Language
     <Compile Include="ThemeColor.cs" />
     <Compile Include="Util.cs" />
     <EmbeddedResource Include="frmAddGroupForSubject.resx">
@@ -304,15 +288,9 @@
     <EmbeddedResource Include="frmAddStudentSubject.resx">
       <DependentUpon>frmAddStudentSubject.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
-=======
     <EmbeddedResource Include="frmConnect.resx">
       <DependentUpon>frmConnect.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDecentralization.resx">
-      <DependentUpon>frmDecentralization.cs</DependentUpon>
-    </EmbeddedResource>
->>>>>>> design form Word, KeyWord, Language
     <Compile Include="frmManageLanguageMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -404,9 +382,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmManageSubjectMain.resx">
       <DependentUpon>frmManageSubjectMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmManageWord.resx">
-      <DependentUpon>frmManageWord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSubmitProject.resx">
       <DependentUpon>frmSubmitProject.cs</DependentUpon>

@@ -380,7 +380,7 @@
             this.radNu.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radNu.Location = new System.Drawing.Point(153, -2);
             this.radNu.Name = "radNu";
-            this.radNu.Size = new System.Drawing.Size(44, 24);
+            this.radNu.Size = new System.Drawing.Size(46, 24);
             this.radNu.TabIndex = 40;
             this.radNu.TabStop = true;
             this.radNu.Text = "Nữ";
@@ -739,7 +739,7 @@
             this.btnUpdate.AppearanceHovered.Options.UseFont = true;
             this.btnUpdate.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.Image")));
-            this.btnUpdate.Location = new System.Drawing.Point(0, 430);
+            this.btnUpdate.Location = new System.Drawing.Point(1, 430);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(171, 59);
             this.btnUpdate.TabIndex = 21;
@@ -764,7 +764,7 @@
             this.btnDelete.AppearanceHovered.Options.UseFont = true;
             this.btnDelete.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(0, 516);
+            this.btnDelete.Location = new System.Drawing.Point(1, 516);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(170, 59);
             this.btnDelete.TabIndex = 20;
@@ -791,7 +791,7 @@
             this.btnAdd.AppearanceHovered.Options.UseForeColor = true;
             this.btnAdd.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(0, 344);
+            this.btnAdd.Location = new System.Drawing.Point(1, 344);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(171, 59);
             this.btnAdd.TabIndex = 19;
@@ -902,12 +902,18 @@
             this.btnExport.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnExport.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnExport.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+<<<<<<< HEAD
             this.btnExport.Location = new System.Drawing.Point(669, 507);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(140, 36);
+=======
+            this.btnExport.Location = new System.Drawing.Point(1110, 384);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(199, 175);
+>>>>>>> design form Word, KeyWord, Language
             this.btnExport.TabIndex = 123;
             this.btnExport.TabStop = false;
-            this.btnExport.Text = "Export";
+            this.btnExport.Text = "Xuất Danh Sách Sinh Viên";
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // frmManageStudentInformation

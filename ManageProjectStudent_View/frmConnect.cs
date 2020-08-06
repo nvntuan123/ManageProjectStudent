@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ManageProjectStudent_View
+{
+    public partial class frmConnect : Form
+    {
+        public frmConnect()
+        {
+            InitializeComponent();
+        }
+
+        private void frmConnect_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTestConnect_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+    }
+}

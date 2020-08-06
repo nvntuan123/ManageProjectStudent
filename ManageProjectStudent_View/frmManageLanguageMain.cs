@@ -120,9 +120,9 @@ namespace ManageProjectStudent_View
 
         private void btnManageLanguage_Click(object sender, EventArgs e)
         {
-            frmAddGroupForSubject frm = new frmAddGroupForSubject();
+            frmManageLanguage frm = new frmManageLanguage();
             frm.ShowDialog();
-            lblTitle.Text = "Quản lý thông tin ngôn ngữ";
+            lblTitle.Text = "Quản Lý Thông Tin Ngôn Ngữ";
         }
 
         private void btnChangeLanguage_Click(object sender, EventArgs e)

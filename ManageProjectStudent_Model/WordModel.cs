@@ -24,7 +24,7 @@ namespace ManageProjectStudent_Model
         [StringLength(100)]
         public string StrWordName { get => _StrWordName; set => _StrWordName = value; }
  
-        [Column("Module", TypeName = "nvarchar", Order = 2)]
+        [Column("Module", TypeName = "varchar", Order = 2)]
         [StringLength(100)]
         public string StrModule { get => _StrModule; set => _StrModule = value; }
 

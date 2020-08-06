@@ -1,19 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.Drawing;
 using ManageProjectStudent_Interface;
 using Unity;
-using ManageProjectStudent_ViewModel;
 using ManageProjectStudent_Model;
 using DevExpress.XtraPrinting;
 using DevExpress.Export;
@@ -461,7 +454,6 @@ namespace ManageProjectStudent_View
             _setStatusForm();
             _lstLecturer = _Staff.loadStaff();
             gcListLecturer.DataSource = _lstLecturer;
-
         }
 
         private void btnExport_Click(object sender, EventArgs e)

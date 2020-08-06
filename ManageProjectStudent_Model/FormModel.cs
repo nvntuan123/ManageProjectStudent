@@ -23,8 +23,6 @@ namespace ManageProjectStudent_Model
         [StringLength(100)]
         public string StrFormName { get => _StrFormName; set => _StrFormName = value; }
 
-        
-
         // Tao moi quan he
         public ICollection<DecentralizeModel> DecentralizeModels { get; set; }
 

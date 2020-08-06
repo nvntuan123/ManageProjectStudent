@@ -171,11 +171,25 @@
     <Compile Include="frmAddStudentSubject.Designer.cs">
       <DependentUpon>frmAddStudentSubject.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="frmAddWordForLanguage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAddWordForLanguage.Designer.cs">
       <DependentUpon>frmAddWordForLanguage.cs</DependentUpon>
+=======
+    <Compile Include="frmConnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConnect.Designer.cs">
+      <DependentUpon>frmConnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDecentralization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDecentralization.Designer.cs">
+      <DependentUpon>frmDecentralization.cs</DependentUpon>
+>>>>>>> design form Word, KeyWord, Language
     </Compile>
     <Compile Include="frmChangeLanguage.cs">
       <SubType>Form</SubType>
@@ -219,6 +233,24 @@
     <Compile Include="frmManageFaculty.Designer.cs">
       <DependentUpon>frmManageFaculty.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmManageKeyWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageKeyWord.Designer.cs">
+      <DependentUpon>frmManageKeyWord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageWord.Designer.cs">
+      <DependentUpon>frmManageWord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageLanguage.Designer.cs">
+      <DependentUpon>frmManageLanguage.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmManageLecturerInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,12 +287,15 @@
     <Compile Include="frmManageSubjectMain.Designer.cs">
       <DependentUpon>frmManageSubjectMain.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="frmManageWord.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmManageWord.Designer.cs">
       <DependentUpon>frmManageWord.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> design form Word, KeyWord, Language
     <Compile Include="ThemeColor.cs" />
     <Compile Include="Util.cs" />
     <EmbeddedResource Include="frmAddGroupForSubject.resx">
@@ -269,17 +304,20 @@
     <EmbeddedResource Include="frmAddStudentSubject.resx">
       <DependentUpon>frmAddStudentSubject.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+=======
+    <EmbeddedResource Include="frmConnect.resx">
+      <DependentUpon>frmConnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDecentralization.resx">
+      <DependentUpon>frmDecentralization.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> design form Word, KeyWord, Language
     <Compile Include="frmManageLanguageMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmManageLanguageMain.Designer.cs">
       <DependentUpon>frmManageLanguageMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmManageMultiLanguage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmManageMultiLanguage.Designer.cs">
-      <DependentUpon>frmManageMultiLanguage.cs</DependentUpon>
     </Compile>
     <Compile Include="frmManageProjectMain.cs">
       <SubType>Form</SubType>
@@ -331,6 +369,15 @@
     <EmbeddedResource Include="frmManageFaculty.resx">
       <DependentUpon>frmManageFaculty.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmManageKeyWord.resx">
+      <DependentUpon>frmManageKeyWord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageWord.resx">
+      <DependentUpon>frmManageWord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageLanguage.resx">
+      <DependentUpon>frmManageLanguage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmManageLecturerInformation.resx">
       <DependentUpon>frmManageLecturerInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,9 +392,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmManageLanguageMain.resx">
       <DependentUpon>frmManageLanguageMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmManageMultiLanguage.resx">
-      <DependentUpon>frmManageMultiLanguage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmManageProjectMain.resx">
       <DependentUpon>frmManageProjectMain.cs</DependentUpon>

@@ -219,6 +219,7 @@ namespace ManageProjectStudent_View
             gcListStudent.DataSource = _lstStudent;
         }
         #endregion
+
         #region Event
         //load
         private void frmManageStudentInformation_Load(object sender, EventArgs e)
@@ -622,4 +623,3 @@ namespace ManageProjectStudent_View
         #endregion
     }
 }
-       

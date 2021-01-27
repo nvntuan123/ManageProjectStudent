@@ -62,7 +62,7 @@ namespace ManageProjectStudent_ViewModel
                 return Result;
             }
         }
-    
+
         public bool addNewStudent(StudentModel student)
         {
             try

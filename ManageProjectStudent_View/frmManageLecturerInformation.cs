@@ -10,6 +10,7 @@ using Unity;
 using ManageProjectStudent_Model;
 using DevExpress.XtraPrinting;
 using DevExpress.Export;
+using ManageProjectStudent_ViewModel;
 
 namespace ManageProjectStudent_View
 {

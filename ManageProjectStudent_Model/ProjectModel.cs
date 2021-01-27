@@ -32,7 +32,7 @@ namespace ManageProjectStudent_Model
         [Column("EndDay", TypeName = "Date", Order = 3)]
         public DateTime DtEndDay { get => _DtEndDay; set => _DtEndDay = value; }
 
-        //khoi tao khoa ngoai
+        //Khoi tao khoa ngoai
         [Column("StaffID", TypeName = "varchar", Order = 4)]
         [StringLength(10)]
         public string StrStaffID { get => _StrStaffID; set => _StrStaffID = value; }
@@ -45,7 +45,7 @@ namespace ManageProjectStudent_Model
         public virtual StaffModel StaffModel { get; set; }
         public virtual SubjectModel SubjectModel { get; set; }
 
-        //tao moi lien ket
+        //Tao moi lien ket
         public ICollection<ResultProjectModel> ResultProjectModels { get; set; }
         public ICollection<ProjectTaskModel> ProjectTaskModels { get; set; }
 

@@ -12,7 +12,6 @@ namespace ManageProjectStudent_ViewModel
     {
         public DBManageProjectStudentViewModel() : base("DBManageProjectStudent")
         {
-            //var _InitIalizer = new MigrateDatabaseToLatestVersion<DBManageProjectStudentViewModel, Migrations.Configuration>();
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<DBManageProjectStudentViewModel, Migrations.Configuration>());
         }
 

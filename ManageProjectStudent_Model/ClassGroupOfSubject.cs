@@ -25,7 +25,7 @@ namespace ManageProjectStudent_Model
         [StringLength(100)]
         public string StrGroupName { get => _StrGroupName; set => _StrGroupName = value; }
 
-        //Khai tao Khoa ngoai
+        //Khoi tao Khoa ngoai
         [Column("StaffID", TypeName = "varchar", Order = 2)]
         [StringLength(10)]
         public string StrStaffID { get => _StrStaffID; set => _StrStaffID = value; }
@@ -46,6 +46,5 @@ namespace ManageProjectStudent_Model
         {
             this.StudentClassGroups = new HashSet<StudentClassGroup>();
         }
-
     }
 }

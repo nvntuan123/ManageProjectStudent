@@ -53,12 +53,12 @@ namespace ManageProjectStudent_Model
         [Column("Status", TypeName = "bit", Order = 7)]
         public bool BStatus { get => _BStatus; set => _BStatus = value; }
 
-       [Column("Sex", TypeName = "nvarchar", Order = 8)]
-       [StringLength(10)]
-       public string StrSex { get => _StrSex; set => _StrSex = value; }
+        [Column("Sex", TypeName = "nvarchar", Order = 8)]
+        [StringLength(10)]
+        public string StrSex { get => _StrSex; set => _StrSex = value; }
 
-       [Column("Phone", TypeName = "varchar", Order = 9)]
-       [StringLength(30)]
+        [Column("Phone", TypeName = "varchar", Order = 9)]
+        [StringLength(30)]
         public string StrPhone { get => _StrPhone; set => _StrPhone = value; }
 
         [Column("FacultyID", TypeName = "varchar", Order = 10)]

@@ -74,7 +74,7 @@ namespace ManageProjectStudent_View
                 //bool bCheckStudent = false;
                 //bool bCheckLecturer = false;
 
-                if(Student.checkStudentID(txtUsers.Text) == true)
+                if(Student.checkStudentID(txtUsers.Text)==true)
                 {
                     bCheckUser = true;
                     if(Student.checkCardID(txtPassword.Text) == true)
@@ -94,6 +94,7 @@ namespace ManageProjectStudent_View
                         }
                     }
                 }
+
                 if (Lecturer.checkStaffID(txtUsers.Text) == true)
                 {
                     bCheckUser = true;
@@ -110,7 +111,6 @@ namespace ManageProjectStudent_View
                         this.Close();
                     }
                 }
-
                 else if (bCheckUser == false)
                 {
                     DevExpress.XtraEditors.XtraMessageBox.Show("Sai Tài Khoản!", "Thông Báo");
@@ -125,7 +125,7 @@ namespace ManageProjectStudent_View
                     lblError.Visible = true;
                     txtPassword.Focus();
                 }    
-            }    
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)

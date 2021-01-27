@@ -9,8 +9,7 @@
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-            
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(ManageProjectStudent_ViewModel.DBManageProjectStudentViewModel context)

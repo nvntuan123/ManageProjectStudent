@@ -30,7 +30,7 @@ namespace ManageProjectStudent_ViewModel
                                   StrLanguageID = x.StrLanguageID,
                                   StrMean = x.StrMean,
                                   StrID = x.StrID,
-                                  BStatus = x.BStatus
+                                  StrStatus = x.StrStatus
                               }).ToList();
                 return new BindingList<LanguageWordModel>(Result);
             }
@@ -78,7 +78,7 @@ namespace ManageProjectStudent_ViewModel
                     WordLanguageToUpdate.StrLanguageID = WordLanguage.StrLanguageID;
                     WordLanguageToUpdate.StrMean = WordLanguage.StrMean;
                     WordLanguageToUpdate.StrWordID = WordLanguage.StrWordID;
-                    WordLanguageToUpdate.BStatus = WordLanguage.BStatus;
+                    WordLanguageToUpdate.StrStatus = WordLanguage.StrStatus;
 
                     return (_Context.SaveChanges() != 0);
                 }
